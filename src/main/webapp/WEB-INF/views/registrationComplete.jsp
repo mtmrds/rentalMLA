@@ -13,5 +13,7 @@
 
 	<a>ご登録ありがとうございました(^_-)-☆</a>
 
+	<jsp:include page="footer.jsp" />
+
 </body>
 </html>

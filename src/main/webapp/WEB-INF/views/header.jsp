@@ -11,5 +11,7 @@
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
         <a href="     ">メニュー</a>
+
+        <jsp:include page="footer.jsp" />
     </p>
 </header>
