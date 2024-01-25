@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<!--<jsp:useBean id="item_bean" scope="request" class="shopping.ItemBean"/>-->
+
 
 <%-- 購入確認画面 --%>
 <!DOCTYPE html>
