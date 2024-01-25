@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import jp.ken.rental.dao.MembersDao;
+import jp.ken.rental.entity.Members;
 import jp.ken.rental.groups.GroupOrder;
 import jp.ken.rental.model.MemberModel;
 
@@ -21,7 +23,7 @@ public class AController {
 	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String toSearch(Model model) {
 		model.addAttribute("membeModel",new MemberModel());
-		model.addAttribute("headline","登録");
+		model.addAttribute("headline","会員登録");
 		return "jsp";
 	}
 
@@ -29,14 +31,32 @@ public class AController {
 	public String searchMembers(Model model, @Validated(GroupOrder.class)@ModelAttribute MemberModel memberModel,
 			BindingResult result) {
 		if(result.hasErrors()) {
+		model.addAttribute("headline","会員登録");
+		return "jsp";
+	}
+
+		Members members = new Members();
+		members.setName(memberModel.getName());
+		members.setEmail(memberModel.getEmail());
+		members.setPhone(memberModel.getPhone());
+		members.setBirthday(Members.parseDate(memberModel.getBirthday()));
+		members.setCard(memberModel.getCard());
 
 
-
-
-
-
-			model.addAttribute("headline","登録");
+		int numberOfRow = membersDao.insert(members);
+		if(numberOfRow == 0) {
+			model.addAttribute("message","登録に失敗しました。");
+			model.addAttribute("headline","会員登録");
+			return "jsp";
 		}
 
+		return "redirect:/jsp";
     }
+
+	@RequestMapping(value = "/search",method = RequestMethod.GET)
+	public String toCopm(Model model) {
+		model.addAttribute("headline","会員登録完了");
+		return "jsp";
+
+
 }
