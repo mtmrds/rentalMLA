@@ -24,7 +24,7 @@ public class AController {
 	public String toSearch(Model model) {
 		model.addAttribute("membeModel",new MemberModel());
 		model.addAttribute("headline","会員登録");
-		return "header";
+		return "registration";
 	}
 
 	@RequestMapping(value = "/header",method = RequestMethod.POST)
@@ -32,7 +32,7 @@ public class AController {
 			BindingResult result) {
 		if(result.hasErrors()) {
 		model.addAttribute("headline","会員登録");
-		return "header";
+		return "registration";
 	}
 
 		Members members = new Members();
@@ -47,7 +47,7 @@ public class AController {
 		if(numberOfRow == 0) {
 			model.addAttribute("message","登録に失敗しました。");
 			model.addAttribute("headline","会員登録");
-			return "jsp";
+			return "registration";
 		}
 
 		return "redirect:/header";
