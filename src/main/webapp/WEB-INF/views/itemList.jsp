@@ -1,5 +1,4 @@
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="shopping.ItemBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 
 <%-- 商品一覧画面 --%>
@@ -11,12 +10,11 @@
 </head>
 <body>
 <%-- TODO:2-1 jsp:includeでヘッダー画面を読み込む --%>
-<jsp:include page="header.jsp"></jsp:include>
+<!--<jsp:include page="header.jsp"></jsp:include>-->
 
     <main>
         <h1>商品一覧</h1>
     <%-- リクエストスコープからBeanクラスの配列を取得 --%>
-    <% ArrayList<ItemBean> itemList = (ArrayList<ItemBean>) request.getAttribute("itemList"); %>
 
     <form action="./BuyItemServlet">
         <table class="shopping_table">
@@ -28,9 +26,9 @@
                     <th>在庫数</th>
                     <th>数量</th>
                 </tr>
-
+<!--
                 <%-- Beanの要素数分（商品の種類分）テーブルを作成 --%>
-                <% for (ItemBean bean : itemList) {%>
+              <!--
                 <tr>
                     <%-- 商品ID --%>
                     <td><%= bean.getItemId()%></td>
@@ -62,6 +60,7 @@
         </table>
         <a class="common_button" href="./">戻る</a>
     </form>
+-->
 </main>
 </body>
 </html>

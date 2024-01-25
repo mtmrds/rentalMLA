@@ -31,9 +31,9 @@
                 <tr>
                 <!-- エラーでてます -->
                     <%-- 商品ID --%>
-                    <td><%= bean.getItemId()%></td>
+                    <td></td>
                     <%-- 商品名 --%>
-                    <td><%= bean.getItemName()%></td>
+                    <td></td>
                     <%-- 数量（在庫） --%>
                     <td class="int"><bean.getQuantity()%></td>
                 </tr>
