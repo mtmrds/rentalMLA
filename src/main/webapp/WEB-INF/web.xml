@@ -2,6 +2,11 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<<<<<<< HEAD
+=======
+
+<!-- フィルター部品の設定 -->
+>>>>>>> 8b336772fc6353dec0a4275ef8d66db60d1d7a77
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -14,6 +19,16 @@
 			<param-value>true</param-value>
 		</init-param>
 	</filter>
+<<<<<<< HEAD
+=======
+
+		<!-- フィルターの適用範囲 -->
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+>>>>>>> 8b336772fc6353dec0a4275ef8d66db60d1d7a77
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
