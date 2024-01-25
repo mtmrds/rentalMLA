@@ -10,6 +10,6 @@
         <jsp:getProperty name=" " property="name" />さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
-        <a href="     ">メニュー</a>
+        <a href="       ">メニュー</a>
     </p>
 </header>
