@@ -34,6 +34,7 @@ public class AController {
 
 
 
+
 			model.addAttribute("headline","登録");
 		}
 
