@@ -12,10 +12,25 @@ import jp.ken.rental.groups.Group1;
 public class MemberModel {
 	@NotEmpty(message = "氏名が未入力です")
 	private String name;
+	@NotEmpty(message = "郵便番号が未入力です")
+	@Pattern(regexp = "^[0-9]{3}-[0-9]{4}$", message = "郵便番号を正しく入力して下さい")
+	private String zip;
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+	public String getCard() {
+		return card;
+	}
+	public void setCard(String card) {
+		this.card = card;
+	}
 	@NotEmpty(message = "住所が未入力です")
 	private String address;
 	@NotEmpty(message = "電話番号が未入力です")
-	@Pattern(regexp = "0[0-9]{9,10}", message ="電話番号を正しく入力して下さい",
+	@Pattern(regexp = "0[0-9]{9,10}", message = "電話番号を正しく入力して下さい",
 	groups = Group1.class)
 	private String phone;
 	@NotEmpty(message = "メールアドレスが未入力です")
