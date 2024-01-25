@@ -20,19 +20,19 @@ public class AController {
 	@Autowired
 	private MembersDao membersDao ;
 
-	@RequestMapping(value = "/search",method = RequestMethod.GET)
+	@RequestMapping(value = "/header",method = RequestMethod.GET)
 	public String toSearch(Model model) {
 		model.addAttribute("membeModel",new MemberModel());
 		model.addAttribute("headline","会員登録");
-		return "jsp";
+		return "header";
 	}
 
-	@RequestMapping(value = "/search",method = RequestMethod.POST)
+	@RequestMapping(value = "/header",method = RequestMethod.POST)
 	public String searchMembers(Model model, @Validated(GroupOrder.class)@ModelAttribute MemberModel memberModel,
 			BindingResult result) {
 		if(result.hasErrors()) {
 		model.addAttribute("headline","会員登録");
-		return "jsp";
+		return "header";
 	}
 
 		Members members = new Members();
@@ -50,13 +50,15 @@ public class AController {
 			return "jsp";
 		}
 
-		return "redirect:/jsp";
+		return "redirect:/header";
     }
 
-	@RequestMapping(value = "/search",method = RequestMethod.GET)
+	@RequestMapping(value = "/header",method = RequestMethod.GET)
 	public String toCopm(Model model) {
 		model.addAttribute("headline","会員登録完了");
-		return "jsp";
+		return "header";
 
 
+
+	}
 }
