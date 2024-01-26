@@ -45,9 +45,9 @@ public class MembersDao {
 		return membersList;
 	}
 
-	public Members getMembersById(Integer id) {
+	public Members getMembersById(String string) {
 		String sql = "SELECT * FROM members WHERE id=?";
-		Object[] parameters = {id};
+		Object[] parameters = {string};
 		try {
 			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 			return members;
