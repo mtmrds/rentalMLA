@@ -15,7 +15,7 @@
 </head>
 <body>
 		<form:form modelAttribute="loginModel">
-			<h1>ようこそMusic Life Agencyへ！</h1>
+			<h1>ようこそMusic Life Agencyへ！!!!!!!!!</h1>
 			<button type="button">メニュー</button>
 			<form action="/search" method="GET"></form>
 		<label for="searchInput">検索:</label>
