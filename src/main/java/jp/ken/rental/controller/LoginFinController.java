@@ -17,9 +17,10 @@ public class LoginFinController {
 		model.addAttribute("message", "登録が完了しました");
 		return "registrationComplete";
 	}
-	
+
 	public String toLogout(Model model, SessionStatus status) {
 		status.setComplete();
 		return "redirect:/logintop";
 	}
+
 }
