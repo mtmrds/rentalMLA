@@ -15,9 +15,15 @@
 </head>
 <body>
 		<form:form modelAttribute="loginModel">
-			<h1>ようこそMusic Life Agencyへ！</h1>
-			<p>ログインIDとパスワードを入力して下さい</p>
-			<h3>ログインID</h3>
+			<h1>ようこそMusic Life Agencyへ！!!!!!!!!</h1>
+			<button type="button">メニュー</button>
+			<form action="/search" method="GET"></form>
+		<label for="searchInput">検索:</label>
+		<input type="text" id="searchInput">
+			<div style="text-align: right;"></div>
+			 <button type="button">新規会員登録</button>
+			 <button type="button">ログイン</button>
+			<button type="button">カート</button>
 		</form:form>
 </body>
 </html>
