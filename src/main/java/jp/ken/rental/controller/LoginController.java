@@ -1,6 +1,5 @@
 package jp.ken.rental.controller;
-<<<<<<< HEAD
-=======
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,8 +38,8 @@ public class LoginController {
 				return "loginTop";
 			}
 	}
-=======
->>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
