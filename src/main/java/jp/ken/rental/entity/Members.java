@@ -11,7 +11,7 @@ public class Members implements Serializable{
 	private String zip;
 	private String address;
 	private String phone;
-	private String email;
+	private String mail;
 	private java.sql.Date birthday;
 	private String card;
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
@@ -26,7 +26,6 @@ public class Members implements Serializable{
 			return null;
 		}
 	}
-
 	public Integer getId() {
 		return id;
 	}
@@ -67,12 +66,12 @@ public class Members implements Serializable{
 		this.phone = phone;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMail() {
+		return mail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public java.sql.Date getBirthday() {
@@ -94,6 +93,7 @@ public class Members implements Serializable{
 	public static SimpleDateFormat getDateformat() {
 		return dateFormat;
 	}
+<<<<<<< HEAD
 
 	public String getPassword() {
 		return password;
@@ -103,4 +103,6 @@ public class Members implements Serializable{
 		this.password = password;
 	}
 
+=======
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 }
