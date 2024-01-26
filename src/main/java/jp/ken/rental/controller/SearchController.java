@@ -35,11 +35,16 @@ public class SearchController {
 
 		if(itemNoIsEmpty && titleIsEmpty) {
 
+		/*
+		List<Members> membersList= membersDao.getList();
+
+
 		/*	List<Members> membersList= membersDao.getList();
 
 			List<Members> membersList= membersDao.getListByName();
 
 			model.addAttribute("membersList",membersList);
+		*/
 		}else if(!itemNoIsEmpty && titleIsEmpty) {
 		*/
 			try {
@@ -67,8 +72,6 @@ public class SearchController {
 		}else {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
 		}
-
-
 		model.addAttribute("headline","商品検索");
 		return "itemList";
 	}
