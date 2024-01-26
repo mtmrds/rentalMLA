@@ -1,13 +1,12 @@
 package jp.ken.rental.model;
 
 public class ItemModel {
-	private int itemNo;
+	private String itemNo;
 	private String title;
-
-	public int getItemNo() {
+	public String getItemNo() {
 		return itemNo;
 	}
-	public void setItemNo(int itemNo) {
+	public void setItemNo(String itemNo) {
 		this.itemNo = itemNo;
 	}
 	public String getTitle() {
@@ -16,7 +15,6 @@ public class ItemModel {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 
 
 }
