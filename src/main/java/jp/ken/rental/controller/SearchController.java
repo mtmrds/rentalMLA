@@ -34,7 +34,7 @@ public class SearchController {
 
 
 		if(itemNoIsEmpty && titleIsEmpty) {
-			List<Members> membersList= membersDao.getList();
+			List<Members> membersList= membersDao.getListByName();
 			model.addAttribute("membersList",membersList);
 		}else if(!itemNoIsEmpty && titleIsEmpty) {
 			try {
