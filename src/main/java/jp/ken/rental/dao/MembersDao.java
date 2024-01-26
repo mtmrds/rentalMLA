@@ -26,9 +26,7 @@ public class MembersDao {
 		private RowMapper<Members> membersMapper = new BeanPropertyRowMapper<Members>(Members.class);
 
 
-	private RowMapper<Members>  membersMapper = new BeanPropertyRowMapper<Members>(Members.class);
-
-	public List<Members> getList(){
+		public List<Members> getList(){
 		String sql = "SELECT * FROM members";
 		List<Members> membersList = jdbcTemplate.query(sql, membersMapper);
 
