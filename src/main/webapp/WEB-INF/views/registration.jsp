@@ -76,6 +76,9 @@
 						<form:errors path="plan" element="span" cssClass="errors"/>
 					</td>
 				</tr>
+				<tr>
+					<td><input type="submit" value="登録する"></td>
+				</tr>
 			</table>
 		</form:form>
 		</main>
