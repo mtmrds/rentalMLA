@@ -48,8 +48,8 @@ public class MembersDao {
 			String sql = "SELECT * FROM members WHERE user_name = ?;";
 			Object[] parameters = { name };
 			try{
-				Members membersSearch = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
-				return membersSearch;//membersSearchをリターン
+				Members memSearch = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+				return memSearch;//memSearchをリターン
 			} catch(EmptyResultDataAccessException e) {
 				e.printStackTrace();
 				return null;
