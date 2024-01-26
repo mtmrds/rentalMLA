@@ -22,4 +22,5 @@ public class LoginFinController {
 		status.setComplete();
 		return "redirect:/logintop";
 	}
+
 }
