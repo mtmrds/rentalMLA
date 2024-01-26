@@ -16,7 +16,7 @@ import jp.ken.rental.model.MemberModel;
 
 
 @Controller
-public class AController {
+public class SetController {
 	@Autowired
 	private MembersDao membersDao ;
 
