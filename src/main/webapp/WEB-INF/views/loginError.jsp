@@ -12,15 +12,25 @@
 <head>
 <meta charset="UTF-8">
 <title>レンタルサイト エラー画面</title>
-<!-- css要らないなら消してもいいのかも-->
-<link href="css/shopping.css" rel="stylesheet" type="text/css" />
+<style>
+.errors{
+	color: #ff0000;
+}
+</style>
 </head>
 <body>
-<h1>ログインエラー</h1>
-        <p>入力されたユーザは存在しません...</p>
-         <form>
-         <!-- class=""の2箇所は仮-->
-            <a class="common_button" href="./LoginServlet?submit=logout">戻る</a>
-            </form>
+	<header>
+		<h1>ログインエラー</h1>
+	</header>
+	<main>
+		<p class="error"><c:out value="" /></p>
+		<p><a href="<c:out value="}" />">戻る</a></p>
+	</main>
+	<footer>
+		<hr>
+<body>
+<h2>入力されたユーザは存在しません<h2>
+<form:input path="name" size="20" />
+<form:errors path="*" element="div" cssClass="errors" />
 </body>
 </html>
