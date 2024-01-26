@@ -56,7 +56,7 @@ public class SetController {
 	@RequestMapping(value = "/aaa",method = RequestMethod.GET)
 	public String toCopm(Model model) {
 		model.addAttribute("headline","会員登録完了");
-		return "header";
+		return "registrationComplete";
 
 
 	}
