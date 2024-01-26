@@ -52,7 +52,7 @@ public class SetController {
 
 		return "redirect:/header";
     }
-	@RequestMapping(value = "/aaa",method = RequestMethod.GET)
+	@RequestMapping(value = "/test",method = RequestMethod.GET)
 	public String toCopm(Model model) {
 		model.addAttribute("headline","会員登録完了");
 
