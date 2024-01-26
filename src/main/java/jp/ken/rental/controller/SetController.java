@@ -37,7 +37,7 @@ public class SetController {
 
 		Members members = new Members();
 		members.setName(memberModel.getName());
-		members.setEmail(memberModel.getEmail());
+		members.setMail(memberModel.getMail());
 		members.setPhone(memberModel.getPhone());
 		members.setBirthday(Members.parseDate(memberModel.getBirthday()));
 		members.setCard(memberModel.getCard());
@@ -53,7 +53,7 @@ public class SetController {
 		return "redirect:/header";
     }
 
-	@RequestMapping(value = "/header",method = RequestMethod.GET)
+	@RequestMapping(value = "/headerT",method = RequestMethod.GET)
 	public String toCopm(Model model) {
 		model.addAttribute("headline","会員登録完了");
 		return "header";
