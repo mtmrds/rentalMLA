@@ -32,8 +32,7 @@
 				</tbody>
 			</table>
 			<div class="buttons">
-				<input class="common_button" type="submit" name="submit"
-					value="ログイン" />
+				<input class="common_button" type="submit"  name="login"  value="ログイン" />
 
 				<%-- ログイン済みの場合はログアウトボタンを表示 --%>
 				<!-- ()内のligin_stateの箇所は仮-->
@@ -41,8 +40,7 @@
 				if ("login".equals(session.getAttribute("login_state"))) {
 				%>
 				<!-- class="common_button"の箇所は仮-->
-				<input class="common_button" type="submit" name="submit"
-					value="ログアウト" />
+				<input class="common_button" type="submit" name="logout" value="ログアウト" />
 				<%
 				}
 				%>
