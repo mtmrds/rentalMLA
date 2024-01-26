@@ -20,23 +20,35 @@ public class SearchController {
 	@Autowired
 	private MembersDao membersDao ;
 
-	@RequestMapping(value = "/bbb",method = RequestMethod.GET)
+	@RequestMapping(value = "/ccc",method = RequestMethod.GET)
 	public String toSearch(Model model) {
 		model.addAttribute("itemModel",new ItemModel());
 		model.addAttribute("headline","商品検索");
 		return "itemList";
 	}
 
-	@RequestMapping(value = "/bbb",method = RequestMethod.POST)
+	@RequestMapping(value = "/ccc",method = RequestMethod.POST)
 	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
 
 		if(itemNoIsEmpty && titleIsEmpty) {
+<<<<<<< HEAD
 			List<Members> membersList= membersDao.getListByName();
+=======
+
+
+
+			List<Members> membersList= membersDao.getList();
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 			model.addAttribute("membersList",membersList);
+
 		}else if(!itemNoIsEmpty && titleIsEmpty) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 			try {
 				Integer id = new Integer(itemModel.getItemNo());
 				Members members = membersDao.getMembersById(id);
@@ -62,8 +74,6 @@ public class SearchController {
 		}else {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
 		}
-
-
 		model.addAttribute("headline","商品検索");
 		return "itemList";
 	}

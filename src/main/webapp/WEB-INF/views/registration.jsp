@@ -98,7 +98,7 @@
 
 		<footer>
 			<div class="copyright">
-				<jsp:include page="footer.jsp" />
+				<!--<jsp:include page="footer.jsp" />-->
 			</div>
 		</footer>
 	</div>
