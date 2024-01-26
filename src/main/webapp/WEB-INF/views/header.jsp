@@ -13,7 +13,7 @@
 
         <a href="menue">メニュー</a>
 
-        <jsp:include page="footer.jsp" />　
+        <!--<jsp:include page="footer.jsp" />　-->
 
     </p>
 </header>

@@ -32,7 +32,7 @@
 		<td><input type="submit" value="登録する"></td>
 	</tr>
 
-	<jsp:include page="footer.jsp" />
+	<!--<jsp:include page="footer.jsp" />-->
 
 </body>
 </html>
