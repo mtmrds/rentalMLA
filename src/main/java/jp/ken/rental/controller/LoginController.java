@@ -1,3 +1,4 @@
+package jp.ken.rental.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,6 +35,8 @@ public class LoginController {
         boolean loginIdIsEmpty = loginModel.getLoginId().isEmpty();
         boolean passwordIsEmpty = loginModel.getPassword().isEmpty();
 
+
+
         // IDとパスワードが両方入力された場合のみ認証を試行する
         if (!loginIdIsEmpty && !passwordIsEmpty) {
             Members member = membersDao.getMembersById(loginModel.getLoginId());
@@ -51,7 +54,7 @@ public class LoginController {
     }
 
     private String hashPassword(String password) {
-    	return BCrypt.checkpw();
-    }
 
+    	return "top";
+    }
 }
