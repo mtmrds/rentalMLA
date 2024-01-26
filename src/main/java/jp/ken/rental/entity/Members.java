@@ -93,7 +93,7 @@ public class Members implements Serializable{
 	public static SimpleDateFormat getDateformat() {
 		return dateFormat;
 	}
-<<<<<<< HEAD
+
 
 	public String getPassword() {
 		return password;
@@ -103,6 +103,4 @@ public class Members implements Serializable{
 		this.password = password;
 	}
 
-=======
->>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 }
