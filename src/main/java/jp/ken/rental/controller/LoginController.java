@@ -1,4 +1,4 @@
-package jp.ken.rental.controller;
+package jp.ken.rental.set;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +13,10 @@ import jp.ken.rental.model.LoginModel;
 
 @Controller
 @RequestMapping("loginTop")
-@SessionAttributes("loginModel")
+@SessionAttributes("LoginModel")
 public class LoginController {
 
-		@ModelAttribute("loginModel")
+		@ModelAttribute("LoginModel")
 		public LoginModel setupLoginForm() {
 			return new LoginModel();
 		}

@@ -66,10 +66,10 @@ public class MemberModel {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getEmail() {
+	public String getMail() {
 		return email;
 	}
-	public void setEmail(String email) {
+	public void setMail(String email) {
 		this.email = email;
 	}
 	public String getBirthday() {
