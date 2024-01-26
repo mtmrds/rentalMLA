@@ -46,7 +46,7 @@ public class SearchController {
 			model.addAttribute("membersList",membersList);
 		*/
 		}else if(!itemNoIsEmpty && titleIsEmpty) {
-		*/
+
 			try {
 				Integer id = new Integer(itemModel.getItemNo());
 				Members members = membersDao.getMembersById(id);
