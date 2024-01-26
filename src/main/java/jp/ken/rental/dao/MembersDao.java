@@ -56,6 +56,17 @@ public class MembersDao {
 			return null;
 		}
 	}
+		public Members getMembersByPassword(String string) {
+			String sql = "SELECT * FROM members WHERE password=?";
+			Object[] parameters = {string};
+			try {
+				Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+				return members;
+			}catch(EmptyResultDataAccessException e){
+				e.printStackTrace();
+				return null;
+			}
+	}
 
 	public int insert(Members members) {
 		String sql = "INSERT INTO members(name,zip,address,phone,email,birthday,card)VALUES(?,?,?,?,?.?,?);";
