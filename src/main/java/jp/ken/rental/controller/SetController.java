@@ -1,4 +1,4 @@
-package jp.ken.rental.set;
+package jp.ken.rental.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import jp.ken.rental.model.MemberModel;
 
 
 @Controller
-public class AController {
+public class SetController {
 	@Autowired
 	private MembersDao membersDao ;
 
