@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 
 public class Members implements Serializable{
 	private Integer id;
+	private String password;
 	private String name;
 	private String zip;
 	private String address;
@@ -92,4 +93,16 @@ public class Members implements Serializable{
 	public static SimpleDateFormat getDateformat() {
 		return dateFormat;
 	}
+<<<<<<< HEAD
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+=======
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 }
