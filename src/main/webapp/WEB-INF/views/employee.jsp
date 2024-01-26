@@ -13,20 +13,20 @@
 </head>
 <body>
 	<div class="sample1">
-			<h1>商品管理画面</h1>
-			<form:form modelAttribute="itemModel" >
-		<div>
-			<label>商品ID</label>
-			<form:input path="itemNo" size="20"/>
-		</div>
-		<div>
-			<label>タイトル</label>
-			<form:input path="title" size="30"/>
-		</div>
-		<div>
-			<p><input type="submit" value="登録する"></p>
-		</div>
-	</form:form>
+		<h1>商品管理画面</h1>
+		<form:form modelAttribute="itemModel" >
+			<div>
+				<label>商品ID</label>
+				<form:input path="itemNo" size="20"/>
+			</div>
+			<div>
+				<label>タイトル</label>
+				<form:input path="title" size="30"/>
+			</div>
+			<div>
+				<p><input type="submit" value="登録する"></p>
+			</div>
+		</form:form>
 	</div>
 </body>
 </html>
