@@ -7,11 +7,11 @@
 <header>
     <%-- ログイン済みの場合は名前を表示 --%>
     <p>
-        <jsp:getProperty name=" " property="name" />さん
+       <c:out value="${memberModel.name}"/>さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
 
-        <a href="     ">メニュー</a>
+        <a href="menue">メニュー</a>
 
         <jsp:include page="footer.jsp" />
 
