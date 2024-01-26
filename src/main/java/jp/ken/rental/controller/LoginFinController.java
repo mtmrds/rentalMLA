@@ -9,7 +9,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 @Controller
 @RequestMapping("finish")
-@SessionAttributes({"loginModel", "membersModel"})
+@SessionAttributes({"loginModel", "memberModel"})
 public class LoginFinController {
 
 	@RequestMapping(method = RequestMethod.POST)
