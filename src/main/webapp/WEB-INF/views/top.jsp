@@ -14,10 +14,13 @@
 .errors{
 	color: #ff0000;
 }
-body {
-	color: black;
 
-	background-image: url(../../../../image/R.png);
+body {
+    color: white;
+    background-image:url(resources/image/R.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1 {
@@ -28,7 +31,7 @@ h1 {
 </style>
 </head>
 <body>
-		
+
 		<form:form modelAttribute="loginModel">
 			<h1>ようこそMusic Life Agencyへ！</h1>
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
