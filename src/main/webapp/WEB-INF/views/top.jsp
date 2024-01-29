@@ -28,6 +28,7 @@ h1 {
 </style>
 </head>
 <body>
+		
 		<form:form modelAttribute="loginModel">
 			<h1>ようこそMusic Life Agencyへ！</h1>
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
