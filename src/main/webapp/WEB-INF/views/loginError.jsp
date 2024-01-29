@@ -11,10 +11,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>レンタルサイト エラー画面</title>
+<title>エラー画面</title>
 <style>
-.errors{
-	color: #ff0000;
+h2{
+	color: 	#ED1A3D;
 }
 </style>
 </head>
@@ -26,10 +26,9 @@
 		<p class="error"><c:out value="" /></p>
 		<p><a href="<c:out value="}" />">戻る</a></p>
 	</main>
-	<footer>
 		<hr>
-<body>
-<h2>入力されたユーザは存在しません<h2>
+</body>
+<h2>入力されたユーザは存在しません</h2>
 <form:input path="name" size="20" />
 <form:errors path="*" element="div" cssClass="errors" />
 </body>
