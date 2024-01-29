@@ -21,7 +21,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String toLogin(Model model) {
         model.addAttribute("LoginModel", new LoginModel());
-        return "loginTop";
+        return "top";
     }
 
     // POSTリクエストでログイン試行
@@ -29,7 +29,7 @@ public class LoginController {
     public String toLoginTrial(@Validated @ModelAttribute LoginModel loginModel, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("message", "入力エラーがあります");
-            return "loginTop";
+            return "top";
         }
 
         boolean loginIdIsEmpty = loginModel.getLoginId().isEmpty();
@@ -45,11 +45,11 @@ public class LoginController {
                 return "itemList";
             } else {
                 model.addAttribute("message", "IDまたはパスワードが正しくありません。");
-                return "loginTop";
+                return "top";
             }
         } else {
             model.addAttribute("message", "IDとパスワードの両方を入力してください。");
-            return "loginTop";
+            return "top";
         }
     }
 
