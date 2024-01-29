@@ -28,7 +28,6 @@ h1 {
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
 			<form action="/search" method="GET"></form>
 		<label for="searchInput">検索:</label>
-		<input type="submit" value="検索する" class="btn">
 		<input type="text" id="searchInput">
 		<input type="submit" value="検索する" class="btn">
 			<div style="text-align: right;"></div>
