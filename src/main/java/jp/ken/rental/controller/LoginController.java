@@ -21,7 +21,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String toLogin(Model model) {
         model.addAttribute("LoginModel", new LoginModel());
-        return "top";
+        return "login";
     }
 
     // POSTリクエストでログイン試行
@@ -29,7 +29,7 @@ public class LoginController {
     public String toLoginTrial(@Validated @ModelAttribute LoginModel loginModel, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("message", "入力エラーがあります");
-            return "top";
+            return "login";
         }
 
         boolean loginIdIsEmpty = loginModel.getLoginId().isEmpty();
@@ -42,14 +42,14 @@ public class LoginController {
             Members member = membersDao.getMembersById(loginModel.getLoginId());
             if (member != null && member.getPassword().equals(hashPassword(loginModel.getPassword()))) {
                 // ログイン成功時の処理
-                return "itemList";
+                return "top";
             } else {
                 model.addAttribute("message", "IDまたはパスワードが正しくありません。");
-                return "top";
+                return "redirect:/login";
             }
         } else {
             model.addAttribute("message", "IDとパスワードの両方を入力してください。");
-            return "top";
+            return "login";
         }
     }
 

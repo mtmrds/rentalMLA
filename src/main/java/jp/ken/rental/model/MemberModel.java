@@ -39,6 +39,7 @@ public class MemberModel {
 	message = "英数字を含む８文字以上でパスワードを入力して下さい",
 	groups = Group1.class)
 	private String password;
+
 	public String getName() {
 		return name;
 	}
@@ -81,6 +82,7 @@ public class MemberModel {
 	public void setCard(String card) {
 		this.card = card;
 	}
+
 	public String getPassword() {
 		return password;
 	}
@@ -89,4 +91,6 @@ public class MemberModel {
 	}
 
 
+
+	
 }
