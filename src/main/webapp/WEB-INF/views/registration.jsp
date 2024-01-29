@@ -48,8 +48,8 @@
 				<tr>
 					<td>メールアドレス</td>
 					<td>
-						<form:input path="mail" size="25"/>
-						<form:errors path="mail" element="div" cssClass="errors"/>
+						<form:input path="email" size="25"/>
+						<form:errors path="email" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
@@ -87,6 +87,13 @@
 								月額：5400円		上限レンタル枚数：無制限/月
 						</small>
 						<form:errors path="plan" element="span" cssClass="errors"/>
+					</td>
+				</tr>
+				<tr>
+					<td>パスワード（英数字含む８文字以上）</td>
+					<td>
+						<form:input path="passward" size="25"/>
+						<form:errors path="passward" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
