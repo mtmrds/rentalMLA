@@ -37,7 +37,7 @@ public class SetController {
 
 		Members members = new Members();
 		members.setName(memberModel.getName());
-		members.setMail(memberModel.getMail());
+		members.setMail(memberModel.getEmail());
 		members.setPhone(memberModel.getPhone());
 		members.setBirthday(Members.parseDate(memberModel.getBirthday()));
 		members.setCard(memberModel.getCard());
