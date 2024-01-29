@@ -11,6 +11,15 @@
 .errors{
 	color: #ff0000;
 }
+body {
+	color: white;
+	background-color: black;
+}
+
+h1 {
+	 font-family: "system-ui";
+
+}
 </style>
 </head>
 <body>
