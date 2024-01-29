@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" href="resources/image/favicon.png" sizes="any">
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
 <style>
@@ -17,7 +18,7 @@
 
 body {
     color: white;
-    background-image:url(resources/image/R.jpg);
+    background-image:url(resources/image/brack.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;　
@@ -25,15 +26,26 @@ body {
 
 h1 {
 	font-family: 'Noto Serif JP', serif;
-	text-align: center
 
+}
+
+.logo img {
+	height: 100px;
+	width: 100px;
+}
+
+.logo {
+	text-align: center;
 }
 </style>
 </head>
 <body>
 
 		<form:form modelAttribute="loginModel">
-			<h1>ようこそMusic Life Agencyへ！</h1>
+			<div class="logo">
+				<img src="resources/image/logo.png">
+				<h1>ようこそMusic Life Agencyへ！</h1>
+			</div>
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
 			<form action="/search" method="GET"></form>
 		<label for="searchInput">検索:</label>
