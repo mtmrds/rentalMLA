@@ -15,18 +15,20 @@
 	color: #ff0000;
 }
 body {
-	color: white;
-	background-color:black;
+	color: black;
 
+	background-image: url(../../../../image/R.png);
 }
 
 h1 {
 	font-family: 'Noto Serif JP', serif;
+	text-align: center
 
 }
 </style>
 </head>
 <body>
+		
 		<form:form modelAttribute="loginModel">
 			<h1>ようこそMusic Life Agencyへ！</h1>
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
