@@ -38,7 +38,8 @@ public class MemberModel {
 	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i",
 	message = "英数字を含む８文字以上でパスワードを入力して下さい",
 	groups = Group1.class)
-	private String passward;
+	private String password;
+
 	public String getName() {
 		return name;
 	}
@@ -81,12 +82,15 @@ public class MemberModel {
 	public void setCard(String card) {
 		this.card = card;
 	}
-	public String getPassward() {
-		return passward;
+
+	public String getPassword() {
+		return password;
 	}
-	public void setPassward(String passward) {
-		this.passward = passward;
+	public void setPassword(String password) {
+		this.password = password;
 	}
+
+
 
 	
 }
