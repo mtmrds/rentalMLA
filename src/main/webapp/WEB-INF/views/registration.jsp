@@ -7,7 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>会員登録画面</title>
-<link rel="stylesheet" href="/rentaIMLA/resources/styles.css">
+<style>
+
+</style>
 </head>
 <body>
 	<div class="container">
@@ -59,6 +61,8 @@
 						<form:errors path="birthday" element="span" cssClass="errors" />
 					</td>
 				</tr>
+
+					<td><input type="submit"  name = "sss" value="登録する"></td>
 				<tr>
 					<td>クレジットカード</td>
 					<td>
@@ -76,6 +80,7 @@
 				</tr>
 				<tr>
 					<td><input type="submit" value="登録する"></td>
+
 				</tr>
 			</table>
 		</form:form>

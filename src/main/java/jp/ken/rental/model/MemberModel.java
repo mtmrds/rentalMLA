@@ -38,10 +38,19 @@ public class MemberModel {
 	@NotEmpty(message = "カード情報が未入力です")
 	private String card;
 
+/*
 	@NotEmpty(message = "パスワードが未入力です")
-	/*
-	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i", message = "英数字を含む８文字以上でパスワードを入力して下さい", groups = Group1.class)
 	*/
+	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i", message = "英数字を含む８文字以上でパスワードを入力して下さい", groups = Group1.class)
+	/*
+
+	*/
+  /*
+  @NotEmpty(message = "パスワードが未入力です")
+	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i",
+	message = "英数字を含む８文字以上でパスワードを入力して下さい",
+	groups = Group1.class)
+  */
 	private String password;
 
 	public String getName() {
