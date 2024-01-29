@@ -4,6 +4,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <footer>
 	<div>
-		<small>株式会社 Music Life Agency</small>
+		<small>&copy;株式会社 Music Life Agency</small>
 	</div>
 </footer>
