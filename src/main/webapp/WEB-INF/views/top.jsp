@@ -15,13 +15,14 @@
 	color: #ff0000;
 }
 body {
-	color: white;
-	background-color:black;
+	color: black;
 
+	background-image: url(../../../../image/R.png);
 }
 
 h1 {
 	font-family: 'Noto Serif JP', serif;
+	text-align: center
 
 }
 </style>
