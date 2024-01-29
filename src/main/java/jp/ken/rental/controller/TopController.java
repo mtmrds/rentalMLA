@@ -28,27 +28,25 @@ public class TopController {
 	}
 	@RequestMapping(value = "/top", method = RequestMethod.POST)
 	public String toConfirm(@ModelAttribute LoginModel lgModel, Model model) {
-
+		//ログイン認証
 		boolean userIsEmpty = lgModel.getLoginId().isEmpty();
 		boolean passIsEmpty = lgModel.getPassword().isEmpty();
 
 		if(userIsEmpty && passIsEmpty) {
-			model.addAttribute("errorMessage","ユーザー名とパスワードは入力必須項目です");
+			//バリデ。errorMessageで各内容を指定
+			model.addAttribute("errorMessage", "ユーザー名とパスワードは入力必須項目です");
 		} else if(userIsEmpty || passIsEmpty) {
-			model.addAttribute("errorMessage","ユーザー名とパスワードは入力必須項目です");
+			model.addAttribute("errorMessage", "ユーザー名とパスワードは入力必須項目です");
 		} else if(!userIsEmpty && !passIsEmpty) {
-
-		String userName = new String(lgModel.getLoginId());
-        String password = new String(lgModel.getPassword());
-        Members user = membersDao.getMembersByUserPass(userName,password);
-
+			String userName = new String(lgModel.getLoginId());
+			String password = new String(lgModel.getPassword());
+			Members user = membersDao.getMembersByUserPass(userName, password);
         if(user == null) {
-        model.addAttribute("errorMessage","ユーザー名もしくはパスワードが間違っています。");
+        	model.addAttribute("errorMessage", "ユーザー名もしくはパスワードが間違っています");
         } else {
-        return "redirect:mypage";//「マイページに飛ばす」という処理をしたいので仮で「mypage」を置いてます
-        }
+        	return "redirect:mypage";//「マイページに飛ばす」という処理をしたいので仮で「mypage」を置いてます
+        	}
         }
 		return "top";
-
 	}
 }
