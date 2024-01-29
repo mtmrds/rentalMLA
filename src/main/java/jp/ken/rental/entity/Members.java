@@ -8,7 +8,7 @@ public class Members implements Serializable{
 	private Integer id;
 	private String password;
 	private String name;
-	private String zip;
+	private String zip;//データベース追加します
 	private String address;
 	private String phone;
 	private String mail;
