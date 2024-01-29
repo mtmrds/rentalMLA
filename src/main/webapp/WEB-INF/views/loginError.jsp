@@ -24,7 +24,7 @@ h2{
 	</header>
 	<main>
 		<p class="error"><c:out value="" /></p>
-		<p><a href="<c:out value="}" />">戻る</a></p>
+		<p><a href="<c:out value="top" />">戻る</a></p>
 	</main>
 		<hr>
 </body>
