@@ -22,9 +22,9 @@
 		<input type="text" id="searchInput">
 		<input type="submit" value="検索する" class="btn">
 			<div style="text-align: right;"></div>
-			 <button type="button">新規会員登録</button>
-			 <button type="button">ログイン</button>
-			<button type="button">カート</button>
+			<a href="aaa">新規会員登録</a>
+			<a href="login">ログイン</a>
+			<a href="ccc">カート</a>
 		</form:form>
 </body>
 </html>
