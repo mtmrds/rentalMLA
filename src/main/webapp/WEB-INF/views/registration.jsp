@@ -58,9 +58,11 @@
 					<td>生年月日（YYYY/MM/DD）</td>
 					<td>
 						<form:input path="birthday" />
-						<form:errors path="bairthday" element="span" cssClass="errors" />
+						<form:errors path="birthday" element="span" cssClass="errors" />
 					</td>
 				</tr>
+
+					<td><input type="submit"  name = "sss" value="登録する"></td>
 				<tr>
 					<td>クレジットカード</td>
 					<td>
@@ -100,6 +102,7 @@
 				</tr>
 				<tr>
 					<td><input type="submit" value="登録する"></td>
+
 				</tr>
 			</table>
 		</form:form>

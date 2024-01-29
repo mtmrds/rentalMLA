@@ -34,10 +34,10 @@ public class MemberModel {
 	@CreditCardNumber(message = "カード情報を正しく入力して下さい" ,
 	groups = Group1.class)
 	private String card;
-	@NotEmpty(message = "パスワードが未入力です")
+	/*@NotEmpty(message = "パスワードが未入力です")
 	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i",
 	message = "英数字を含む８文字以上でパスワードを入力して下さい",
-	groups = Group1.class)
+	groups = Group1.class)*/
 	private String password;
 
 	public String getName() {
@@ -92,5 +92,5 @@ public class MemberModel {
 
 
 
-	
+
 }
