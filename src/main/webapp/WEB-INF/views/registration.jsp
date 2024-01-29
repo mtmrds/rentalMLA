@@ -70,34 +70,12 @@
 						<form:errors path="card" element="span" cssClass="errors"/>
 					</td>
 				</tr>
-				<tr>
-					<td>加入プラン選択 </td>
-					<td>
-						<form:radiobutton path="plan"  label="お試しプラン" value="trial" checked="true" />
-						<small>
-								※新規登録月限定<br>
-								月額：324円		上限レンタル枚数：2枚/月
-						</small><br>
-						<form:radiobutton path="plan"  label="Bronzeプラン" value="bronze" />
-						<small>
-								月額：1080円		上限レンタル枚数：6枚/月
-						</small><br>
-						<form:radiobutton path="plan"  label="Silverプラン" value="silver" />
-						<small>
-								月額：2160円		上限レンタル枚数：12枚/月
-						</small><br>
-						<form:radiobutton path="plan"  label="Goldプラン" value="gold"  />
-						<small>
-								月額：5400円		上限レンタル枚数：無制限/月
-						</small><br>
-						<form:errors path="plan" element="span" cssClass="errors"/>
-					</td>
-				</tr>
+
 				<tr>
 					<td>パスワード（英数字含む８文字以上）</td>
 					<td>
-						<form:input path="passward" size="25"/>
-						<form:errors path="passward" element="div" cssClass="errors"/>
+						<form:input path="password" size="25"/>
+						<form:errors path="password" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>

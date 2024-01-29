@@ -14,7 +14,7 @@ import jp.ken.rental.model.MemberModel;
 @RequestMapping("aaa")
 @SessionAttributes({"loginModel", "memberModel"})
 public class SetController {
-
+	
 	@ModelAttribute("memberModel")
 		public MemberModel setupMemberModel() {
 		return new MemberModel();
@@ -35,9 +35,7 @@ public class SetController {
 	@RequestMapping(method = RequestMethod.POST, params = "sss")
 	public String toCopm () {
 
+
 		return "registrationComplete";
-
-
-
-	}
+		}
 }
