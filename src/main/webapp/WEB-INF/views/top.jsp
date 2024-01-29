@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
 <style>
@@ -13,11 +16,12 @@
 }
 body {
 	color: white;
-	background-color: black;
+	background-color:black;
+
 }
 
 h1 {
-	 font-family: "system-ui";
+	font-family: 'Noto Serif JP', serif;
 
 }
 </style>
