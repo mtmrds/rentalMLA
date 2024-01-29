@@ -20,7 +20,7 @@ body {
     background-image:url(resources/image/R.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;　
 }
 
 h1 {
