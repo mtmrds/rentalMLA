@@ -34,25 +34,22 @@ public class MemberModel {
 	@CreditCardNumber(message = "カード情報を正しく入力して下さい" ,
 	groups = Group1.class)
 	private String card;
-
-	public String getZip() {
-		return zip;
-	}
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-	public String getCard() {
-		return card;
-	}
-	public void setCard(String card) {
-		this.card = card;
-	}
-
+	@NotEmpty(message = "パスワードが未入力です")
+	@Pattern(regexp = "/^(?=.*?[a-z])(?=.*?\\d)[a-z\\d]{8,100}$/i",
+	message = "英数字を含む８文字以上でパスワードを入力して下さい",
+	groups = Group1.class)
+	private String password;
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
 	public String getAddress() {
 		return address;
@@ -66,10 +63,10 @@ public class MemberModel {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getMail() {
+	public String getEmail() {
 		return email;
 	}
-	public void setMail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	public String getBirthday() {
@@ -78,5 +75,18 @@ public class MemberModel {
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
+	public String getCard() {
+		return card;
+	}
+	public void setCard(String card) {
+		this.card = card;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 }
