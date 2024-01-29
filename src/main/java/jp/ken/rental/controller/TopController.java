@@ -15,6 +15,7 @@ import jp.ken.rental.model.LoginModel;
 @Controller
 @SessionAttributes("loginModel")
 public class TopController {
+
 	@Autowired
 	private MembersDao membersDao;
 
@@ -49,4 +50,5 @@ public class TopController {
         }
 		return "top";
 	}
+
 }

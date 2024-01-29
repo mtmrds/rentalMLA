@@ -7,13 +7,17 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.LoginModel;
 
+
 @Controller
+@SessionAttributes({"loginModel", "memberModel"})
 public class LoginController {
+
     @Autowired
     private MembersDao membersDao;
 
@@ -57,4 +61,5 @@ public class LoginController {
 
     	return "top";
     }
+
 }

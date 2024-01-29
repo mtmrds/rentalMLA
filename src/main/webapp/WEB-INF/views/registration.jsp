@@ -14,7 +14,7 @@
 	<jsp:include page="header.jsp"/>
 		<header><h1>会員登録画面</h1></header>
 		<main>
-		<form:form modelAttribute="MemberModel">
+		<form:form modelAttribute="memberModel">
 			<table>
 				<tr>
 					<td>氏名</td>
