@@ -40,19 +40,24 @@ h1 {
 </style>
 </head>
 <body>
+	<!-- 当jspをレンタルサイトの表紙として、各ページ遷移等の起点にしたい感じっす 元村 -->
 
 		<form:form modelAttribute="loginModel">
-			<div class="logo">
-				<img src="resources/image/logo.png">
-				<h1>ようこそMusic Life Agencyへ！！</h1>
-			</div>
+
+		<!--　ログインした後の名前を表示する機能を実装 -->
+		<c:if test="${not empty loginModel.name}">
+		<p>ようこそ、${loginModel.name}さん</p>
+		</c:if>
+
+			<h1>ようこそMusic Life Agencyへ！</h1>
+
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
 			<form action="/search" method="GET"></form>
 		<label for="searchInput">検索:</label>
 		<input type="text" id="searchInput">
 		<input type="submit" value="検索する" class="btn">
 			<div style="text-align: right;"></div>
-			<a href="aaa">新規会員登録</a>
+			<a href="setRegist">新規会員登録</a>
 			<a href="login">ログイン</a>
 			<a href="ccc">カート</a>
 		</form:form>
