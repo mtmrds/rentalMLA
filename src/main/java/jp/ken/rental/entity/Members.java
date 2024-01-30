@@ -15,11 +15,11 @@ public class Members implements Serializable{
 	private java.sql.Date birthday;
 	private String card;
 	//itemEntity
-	private String itemNo;
+	private Integer itemNo;
 	private String title;
 	private String type;
 	private String category;
-	private String quantity;
+	private Integer quantity;
 
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
@@ -112,10 +112,10 @@ public class Members implements Serializable{
 	}
 
 	//itemのゲッターセッター
-	public String getItemNo() {
+	public Integer getItemNo() {
 		return itemNo;
 	}
-	public void setItemNo(String itemNo) {
+	public void setItemNo(Integer itemNo) {
 		this.itemNo = itemNo;
 	}
 	public String getTitle() {
@@ -136,10 +136,10 @@ public class Members implements Serializable{
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 
