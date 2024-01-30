@@ -61,8 +61,6 @@
 						<form:errors path="birthday" element="span" cssClass="errors" />
 					</td>
 				</tr>
-
-
 				<tr>
 					<td>クレジットカード</td>
 					<td>
@@ -80,7 +78,6 @@
 				</tr>
 				<tr>
 					<td><input type="submit" value="登録する" class="btn" ></td>
-
 				</tr>
 			</table>
 		</form:form>
