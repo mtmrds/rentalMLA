@@ -5,15 +5,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" href="resources/image/favicon.png" sizes="any">
+<meta charset=UTF-8>
+
 <title>会員登録画面</title>
 <style>
 
 </style>
 </head>
 <body>
+
 	<div class="container">
-	<jsp:include page="header.jsp"/>
+
 		<header><h1>会員登録画面</h1></header>
 		<main>
 		<form:form modelAttribute="memberModel">
@@ -26,7 +32,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>郵便番号（ハイフンあり）</td>
+					<td>郵便番号</td><!-- ハイフンありなしは検討します 元村 -->
 					<td>
 						<form:input path="zip" size="25" />
 						<form:errors path="zip" element="div" cssClass="errors" />
@@ -50,8 +56,8 @@
 				<tr>
 					<td>メールアドレス</td>
 					<td>
-						<form:input path="email" size="25"/>
-						<form:errors path="email" element="div" cssClass="errors"/>
+						<form:input path="mail" size="25"/>
+						<form:errors path="mail" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
@@ -61,8 +67,6 @@
 						<form:errors path="birthday" element="span" cssClass="errors" />
 					</td>
 				</tr>
-
-					<td><input type="submit"  name = "sss" value="登録する"></td>
 				<tr>
 					<td>クレジットカード</td>
 					<td>
@@ -79,8 +83,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="登録する"></td>
-
+					<td><input type="submit" value="登録する" class="btn" ></td>
 				</tr>
 			</table>
 		</form:form>

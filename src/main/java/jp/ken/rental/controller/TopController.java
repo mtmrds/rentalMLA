@@ -23,32 +23,43 @@ public class TopController {
 	public LoginModel setupLoginForm() {
 		return new LoginModel();
 	}
+	//トップページを表示
 	@RequestMapping(value = "/top", method = RequestMethod.GET)
-	public String toLogin() {
+	public String toTop() {
 		return "top";
 	}
-	@RequestMapping(value = "/top", method = RequestMethod.POST)
+	//ログイン認証用
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String memLogin() {
+		return "login";
+
+	}
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String toConfirm(@ModelAttribute LoginModel lgModel, Model model) {
-		//ログイン認証
-		boolean userIsEmpty = lgModel.getLoginId().isEmpty();
+
+		boolean mailIsEmpty = lgModel.getMail().isEmpty();
 		boolean passIsEmpty = lgModel.getPassword().isEmpty();
 
-		if(userIsEmpty && passIsEmpty) {
+		if(mailIsEmpty && passIsEmpty) {
 			//バリデ。errorMessageで各内容を指定
-			model.addAttribute("errorMessage", "ユーザー名とパスワードは入力必須項目です");
-		} else if(userIsEmpty || passIsEmpty) {
-			model.addAttribute("errorMessage", "ユーザー名とパスワードは入力必須項目です");
-		} else if(!userIsEmpty && !passIsEmpty) {
-			String userName = new String(lgModel.getLoginId());
+			model.addAttribute("errorMessage", "メールアドレスとパスワードは入力必須項目です");
+		} else if(mailIsEmpty || passIsEmpty) {
+			model.addAttribute("errorMessage", "メールアドレス、パスワードは共に入力必須項目です");
+		} else if(!mailIsEmpty && !passIsEmpty) {
+			String mail = new String(lgModel.getMail());
 			String password = new String(lgModel.getPassword());
-			Members user = membersDao.getMembersByUserPass(userName, password);
+			Members user = membersDao.getMembersByUserPass(mail, password);
         if(user == null) {
-        	model.addAttribute("errorMessage", "ユーザー名もしくはパスワードが間違っています");
+        	model.addAttribute("errorMessage", "メールアドレスもしくはパスワードが間違っています");
+        	return "login";
         } else {
-        	return "redirect:mypage";//「マイページに飛ばす」という処理をしたいので仮で「mypage」を置いてます
+        	//ログイン後にSQLで引っ張ってきた名前を表示する
+        	lgModel.setName(user.getName());
+            model.addAttribute("loginModel", lgModel);
+        	return "redirect:/top";
         	}
         }
-		return "top";
+		return "login";
 	}
 
 }

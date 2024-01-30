@@ -15,6 +15,6 @@
 	<a>ご登録ありがとうございました(^_-)-☆</a>
 
 	<!--<jsp:include page="footer.jsp" />-->
-
+	<p><a href="<c:url value='top' />">トップに戻る</a></p>
 </body>
 </html>
