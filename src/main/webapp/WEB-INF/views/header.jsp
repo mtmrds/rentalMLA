@@ -15,6 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
 
+
+
 </head>
 <%-- header --%>
 <style>
@@ -32,6 +34,7 @@
  }
 
 p{
+	font-family: 'Kaisei Decol', serif;
 	font-family: 'Monomaniac One', sans-serif;
 	text-align: right;
 	font-size: 25px;

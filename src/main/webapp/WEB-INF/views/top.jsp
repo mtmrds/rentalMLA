@@ -11,6 +11,7 @@
 
 
 
+
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
 <style>
@@ -63,7 +64,7 @@ h1{
 		<input type="submit" value="検索する" class="btn">
 			<!-- div style="text-align: right;">-->
 			<br>
-			<a href="setRegist">新規会員登録</a>
+			<a href="setRegist">カイイントウロク</a>
 			<a href="login">ログイン</a>
 
       <a href="cart">カート</a>
