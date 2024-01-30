@@ -64,9 +64,10 @@ public class MembersDao {
 				return null;
 			}
 	}
-	public Members getMembersByUserPass(String name, String password){
-			String sql = "SELECT * FROM members WHERE name = ? AND password = ?;";
-			Object[] parameters = { name, password };
+	//nameだった部分をmailに修正
+	public Members getMembersByUserPass(String mail, String password){
+			String sql = "SELECT * FROM members WHERE mail = ? AND password = ?;";
+			Object[] parameters = { mail, password};
 			try{
 				Members user = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 				return user;
@@ -98,9 +99,9 @@ public class MembersDao {
 			}
 	}
 	public int insert(Members members) {
-		String sql = "INSERT INTO members(name,address,phone,mail,birthday,card)VALUES(?,?,?,?.?,?);";
-		Object[] parameters = { members.getName(), members.getAddress(), members.getPhone(),
-								members.getMail(), members.getBirthday(), members.getCard() };
+		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(), members.getAddress(),
+		                        members.getPhone(), members.getMail(), members.getPassword(), members.getCard() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
