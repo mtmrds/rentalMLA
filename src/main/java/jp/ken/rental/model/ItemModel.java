@@ -1,7 +1,7 @@
 	package jp.ken.rental.model;
 
   public class ItemModel {
-	  private String itemNo;
+	  private String itemNo;//Integerから変更
 	  private String title;
 	  private String type;
 	  private String category;
