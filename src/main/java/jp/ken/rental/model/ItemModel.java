@@ -1,16 +1,16 @@
 	package jp.ken.rental.model;
 
   public class ItemModel {
-	  private Integer itemNo;
+	  private String itemNo;//Integerから変更
 	  private String title;
 	  private String type;
 	  private String category;
 	  private Integer quantity;
 
-	public Integer getItemNo() {
+	public String getItemNo() {
 		return itemNo;
 	}
-	public void setItemNo(Integer itemNo) {
+	public void setItemNo(String itemNo) {
 		this.itemNo = itemNo;
 	}
 	public String getTitle() {
