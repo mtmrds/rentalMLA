@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
@@ -16,12 +17,13 @@ import jp.ken.rental.model.ItemModel;
 
 
 @Controller
+@SessionAttributes("itemModel")
 public class SearchController {
 	@Autowired
 	private MembersDao membersDao ;
 
 	@RequestMapping(value = "/search",method = RequestMethod.GET)
-	public String toSearch(Model model) {
+	public String toItemSearch(Model model) {
 
 		model.addAttribute("itemModel", new ItemModel());
 		model.addAttribute("headline","商品検索");
@@ -29,38 +31,38 @@ public class SearchController {
 	}
 
 	@RequestMapping(value = "/search",method = RequestMethod.POST)
-	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
+	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
 		if(itemNoIsEmpty && titleIsEmpty) {
-
-			List<Members> membersList= membersDao.getList();
-			model.addAttribute("membersList",membersList);
+			//全件検索
+			List<Members> itemList= membersDao.getItemList();
+			model.addAttribute("itemList",itemList);
 
 		} else if(!itemNoIsEmpty && titleIsEmpty) {
 
 			try {
 				Integer itemNo = new Integer(itemModel.getItemNo());
-				Members members = membersDao.getMembersById(itemNo);
+				Members members = membersDao.getItemById(itemNo);
 
 				if(members == null) {
 					model.addAttribute("message","該当データがありません");
 				} else {
-					List<Members>membersList = new ArrayList<Members>();
-					membersList.add(members);
-					model.addAttribute("membersList",membersList);
+					List<Members>itemList = new ArrayList<Members>();
+					itemList.add(members);
+					model.addAttribute("itemList",itemList);
 				}
 			} catch(NumberFormatException e) {
 				model.addAttribute("message","IDが不正です");
 			}
 		} else if(itemNoIsEmpty && !titleIsEmpty) {
-			List<Members>membersList = membersDao.getListByItemTitle(itemModel.getTitle());
+			List<Members>itemList = membersDao.getListByItemTitle(itemModel.getTitle());
 
-			if(membersList.isEmpty()) {
+			if(itemList.isEmpty()) {
 				model.addAttribute("message","該当データがありません");
 			} else {
-				model.addAttribute("membersList",membersList);
+				model.addAttribute("itemList",itemList);
 			}
 		} else {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
