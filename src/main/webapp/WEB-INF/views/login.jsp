@@ -42,7 +42,6 @@ table {
     padding: 2em;
 }
 
-
 </style>
 </head>
 <body>
