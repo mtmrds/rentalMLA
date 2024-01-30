@@ -25,11 +25,12 @@ body{
   border-radius: 0.5em;/*角の丸み*/
 
   font-family: 'Monomaniac One', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 h2{
 color: grey;
-border-bottom: double 5px #feefb6;
+background: linear-gradient(transparent 70%, #feefb6 90%);
+
 }
 h3{
  color: grey;
@@ -57,7 +58,7 @@ table {
 				<tr>
 				<td colspan="2"><h2>ログイン</h2></td>
 				<tr>
-				<td><h3>メールアドレス</h3></td>
+				<td><h3>メールアドレス:</h3></td>
 				<td>
 						<form:input path="mail"/>
 				</td>
@@ -66,7 +67,7 @@ table {
 				</td>
 				</tr>
 				<tr>
-					<td><h3>パスワード</h3></td>
+					<td><h3>パスワード:</h3></td>
 					<td>
 						<form:password path="password" />
 					</td>
