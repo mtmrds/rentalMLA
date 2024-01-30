@@ -22,8 +22,10 @@ public class SearchController {
 
 	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String toSearch(Model model) {
+
 		model.addAttribute("itemModel", new ItemModel());
 		model.addAttribute("headline","商品検索");
+		//model.addAttribute("headline","商品検索");
 		return "cartcontent";
 	}
 
