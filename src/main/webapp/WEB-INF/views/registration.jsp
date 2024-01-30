@@ -45,7 +45,7 @@ body{
 					</td>
 				</tr>
 				<tr>
-					<td>郵便番号</td><!-- ハイフンありなしは検討します 元村 -->
+					<td>郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
 					<td>
 						<form:input path="zip" size="25" />
 						<form:errors path="zip" element="div" cssClass="errors" />
