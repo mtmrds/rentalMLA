@@ -15,8 +15,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
 
-
-
 </head>
 <%-- header --%>
 <style>
@@ -52,14 +50,11 @@ p{
 </div>
   	<p>
        <c:out value="${memberModel.name}"/>さん
-
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
-
+	</p>
 
       <!-- メニューボタン削除 -->
 
-
         <!--<jsp:include page="footer.jsp" />　-->
-</p>
 
 </header>
