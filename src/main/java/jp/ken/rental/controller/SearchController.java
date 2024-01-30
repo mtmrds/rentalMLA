@@ -25,8 +25,7 @@ public class SearchController {
 
 		model.addAttribute("itemModel", new ItemModel());
 		model.addAttribute("headline","商品検索");
-		//model.addAttribute("headline","商品検索");
-		return "cartcontent";
+		return "itemSearch";
 	}
 
 	@RequestMapping(value = "/search",method = RequestMethod.POST)
@@ -68,6 +67,6 @@ public class SearchController {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
 		}
 		model.addAttribute("headline","商品検索");
-		return "cartcontent";
+		return "itemSearch";
 	}
 }
