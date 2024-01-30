@@ -33,8 +33,6 @@ p{
 
 <p>
 <h1>Music Life Agency</h1>
-
-  	<h1>Music Life Agency</h1>
   	<p>
 
        <c:out value="${memberModel.name}"/>さん
@@ -47,16 +45,4 @@ p{
 
 </p>
 
- <style>
-
-   h1{}
-    font-family: 'Noto Serif JP', serif;
-
-
-	}
-
- </style>
-</header>
-
-     </p>
 </header>
