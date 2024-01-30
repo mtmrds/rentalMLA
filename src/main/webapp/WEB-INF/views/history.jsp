@@ -8,11 +8,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
+
         <title>レンタルサイト 購入履歴</title>
         <link href="css/shopping.css" rel="stylesheet" type="text/css" />
     </head>
+<style>
 
+<!-- 背景画像、文字フォント -->
+body{
+	background-image:url(resources/image/pink_gold_buble.jpg);
+	font-family: 'Kaisei Decol', serif;
+	font-family: 'Monomaniac One', sans-serif;
+}
+
+</style>
     <body>
+
+
+
         <!--<jsp:include page="header.jsp"/>-->
 
         <h1><jsp:getProperty name="login_user_bean" property="name" />さんの購入履歴</h1>
