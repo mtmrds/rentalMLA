@@ -46,7 +46,7 @@ table {
 </style>
 </head>
 <body>
-	<h1>ログイン画面</h1>
+	<h1>☆ログイン画面☆</h1>
 	<form:form modelAttribute="loginModel" >
 
 			<table>
