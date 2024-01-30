@@ -30,14 +30,33 @@ p{
 </style>
 <header>
     <%-- ログイン済みの場合は名前を表示 --%>
+
+<p>
+<h1>Music Life Agency</h1>
+
   	<h1>Music Life Agency</h1>
   	<p>
+
        <c:out value="${memberModel.name}"/>さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
 
-        <a href="menue">メニュー</a>
+       <a href="menue">メニュー</a>
 
         <!--<jsp:include page="footer.jsp" />　-->
+
+</p>
+
+ <style>
+
+   h1{}
+    font-family: 'Noto Serif JP', serif;
+
+
+	}
+
+ </style>
+</header>
+
      </p>
 </header>
