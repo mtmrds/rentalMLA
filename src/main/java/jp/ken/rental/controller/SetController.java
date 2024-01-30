@@ -56,6 +56,7 @@ public class SetController {
 	    int numberOfRow = membersDao.insert(members);
 
 	    if (numberOfRow == 0) {
+	    	//ここが怪しい
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "registration";
 	    }
