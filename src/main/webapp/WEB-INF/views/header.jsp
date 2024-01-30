@@ -27,15 +27,14 @@
     font-size: 30px;
     }
 .logo img{
- 	height: 10px;
-	width: 10px;
+ 	height: 50px;
+	width: 50px;
  }
 
 p{
 	font-family: 'Monomaniac One', sans-serif;
-
 	text-align: right;
-	font-size: 25px;	
+	font-size: 25px;
 }
 
 </style>
