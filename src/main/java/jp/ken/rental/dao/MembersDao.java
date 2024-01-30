@@ -25,14 +25,12 @@ public class MembersDao {
 		private PlatformTransactionManager transactionManager;
 		private RowMapper<Members> membersMapper = new BeanPropertyRowMapper<Members>(Members.class);
 
-
 		public List<Members> getList(){
 		String sql = "SELECT * FROM members";
 		List<Members> membersList = jdbcTemplate.query(sql, membersMapper);
 
 		return membersList;
 	}
-
 	public List<Members> getListByName(String name){
 		String sql = "SELECT * FROM members WHERE name LIKE ?";
 		name = name.replace("%", "\\%").replace("_", "\\_");

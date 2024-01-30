@@ -1,12 +1,11 @@
-package jp.ken.rental.model;
+	package jp.ken.rental.model;
 
-public class ItemModel {
-
-	private String itemNo;
-	private String title;
-	private String type;
-	private String category;
-	private String quantity;
+  public class ItemModel {
+	  private String itemNo;
+	  private String title;
+	  private String type;
+	  private String category;
+	  private String quantity;
 
 	public String getItemNo() {
 		return itemNo;
@@ -38,5 +37,4 @@ public class ItemModel {
 	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
-
-}
+ }
