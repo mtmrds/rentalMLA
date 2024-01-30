@@ -14,13 +14,26 @@
 <title>会員登録画面</title>
 <style>
 
+body{
+   background-image:url(resources/image/pink_gold_buble.jpg);
+   background-size: cover;
+
+ h1{
+ color: grey;
+   background: #f6bfbc; /*背景色*/
+  padding: 0.5em;/*文字周りの余白*/
+  border-radius: 0.5em;/*角の丸み*/
+
+  font-family: 'Monomaniac One', sans-serif;
+}
+
 </style>
 </head>
 <body>
 
 	<div class="container">
 
-		<header><h1>会員登録画面</h1></header>
+		<header><h1>☆会員登録画面☆</h1></header>
 		<main>
 		<form:form modelAttribute="memberModel">
 			<table>
