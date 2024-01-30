@@ -25,8 +25,13 @@ body{
   border-radius: 0.5em;/*角の丸み*/
 
   font-family: 'Monomaniac One', sans-serif;
+  font-size: 40px;
 }
 h2{
+color: grey;
+border-bottom: double 5px #feefb6;
+}
+h3{
  color: grey;
   font-family: 'Monomaniac One', sans-serif;
 }
@@ -51,20 +56,18 @@ table {
 
 			<table>
 				<tr>
-
-					<td><h2>ログイン</h2></td>
-
-					<td><h2>メールアドレス</h2></td>
-
-					<td>
+				<td colspan="2"><h2>ログイン</h2></td>
+				<tr>
+				<td><h3>メールアドレス</h3></td>
+				<td>
 						<form:input path="mail"/>
-					</td>
-					<td>
+				</td>
+				<td>
 						<form:errors path="mail" element="div" cssClass="error" />
-					</td>
+				</td>
 				</tr>
 				<tr>
-					<td><h2>パスワード</h2></td>
+					<td><h3>パスワード</h3></td>
 					<td>
 						<form:password path="password" />
 					</td>
