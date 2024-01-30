@@ -83,7 +83,7 @@ body {
 			<div style="text-align: right;"></div>
 			<a href="setRegist">新規会員登録</a>
 			<a href="login">ログイン</a>
-			<a href="ccc">カート</a>
+			<a href="search">カート</a>
 		</form:form>
 		</div>
 </body>
