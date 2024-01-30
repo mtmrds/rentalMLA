@@ -41,8 +41,8 @@ public class SearchController {
 		} else if(!itemNoIsEmpty && titleIsEmpty) {
 
 			try {
-				Integer id = new Integer(itemModel.getItemNo());
-				Members members = membersDao.getMembersById(id);
+				Integer itemNo = new Integer(itemModel.getItemNo());
+				Members members = membersDao.getMembersById(itemNo);
 
 				if(members == null) {
 					model.addAttribute("message","該当データがありません");
@@ -55,7 +55,7 @@ public class SearchController {
 				model.addAttribute("message","IDが不正です");
 			}
 		} else if(itemNoIsEmpty && !titleIsEmpty) {
-			List<Members>membersList = membersDao.getListByName(itemModel.getTitle());
+			List<Members>membersList = membersDao.getListByItemTitle(itemModel.getTitle());
 
 			if(membersList.isEmpty()) {
 				model.addAttribute("message","該当データがありません");
