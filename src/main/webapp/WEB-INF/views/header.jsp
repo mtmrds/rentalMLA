@@ -25,24 +25,33 @@ h1{
 p{
 	font-family: 'Monomaniac One', sans-serif;
 	font-size: 25px;
+	text-align: right;
+}
+.imgh1 {
+	display: flex;
+}
+.imagh1 img{
+	height: 10px;
+	width: 10px;
 }
 
 </style>
 <header>
     <%-- ログイン済みの場合は名前を表示 --%>
 
-<p>
-<h1>Music Life Agency</h1>
-  	<p>
 
+<div class="imgh1">
+	<img src="resources/image/logo.png"  >
+	<h1>Music Life Agency</h1>
+</div>
+  	<p>
        <c:out value="${memberModel.name}"/>さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
 
-       <a href="menue">メニュー</a>
+      <!-- メニューボタン削除 -->
 
         <!--<jsp:include page="footer.jsp" />　-->
-
 </p>
 
 </header>
