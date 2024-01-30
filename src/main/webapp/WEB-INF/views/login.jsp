@@ -22,6 +22,7 @@ body{
 .error{
 		color: #ff0000;
 }
+
 table {
     margin: 150px auto;
     background-color: #f39f86;
@@ -29,6 +30,7 @@ table {
     color: #fff;
     padding: 2em;
 }
+
 
 </style>
 </head>
