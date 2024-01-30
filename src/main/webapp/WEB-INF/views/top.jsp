@@ -44,7 +44,7 @@ h1 {
 		<form:form modelAttribute="loginModel">
 			<div class="logo">
 				<img src="resources/image/logo.png">
-				<h1>ようこそMusic Life Agencyへ！</h1>
+				<h1>ようこそMusic Life Agencyへ！！</h1>
 			</div>
 			<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
 			<form action="/search" method="GET"></form>
