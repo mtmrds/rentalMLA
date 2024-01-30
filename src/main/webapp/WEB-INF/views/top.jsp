@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
 
+
+
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
 <style>
@@ -23,16 +25,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-.logo img {
-	height: 100px;
-	width: 100px;
-}
-.logo {
-	font-family: 'Monomaniac One', sans-serif;
-	text-align: center;
-}
-.logo h1{
+
+
+h1{
 		font-family: 'Monomaniac One', sans-serif;
+		text-align: center;
 		font-size: 80px;
 
 }
@@ -54,13 +51,13 @@ body {
 		<c:if test="${not empty loginModel.name}">
 		<p>ようこそ、${loginModel.name}さん</p>
 		</c:if>
-			<div class="logo">
-				<img src="resources/image/logo.png">
-				<h1>☆レンタルサイト☆</h1>
-			</div>
-		<p> <a href="http://localhost:8080/rental/WEB-INF/views/top.jsp">メニュー</a></p>
+
+		<h1>☆レンタルサイト☆</h1>
+
+		<!-- メニュー削除 -->
 		<div style="text-align: center" class="top">
-			<form action="/search" method="GET"></form>
+
+		<form action="/search" method="GET"></form>
 		<label for="searchInput">検索:</label>
 		<input type="text" id="searchInput">
 		<input type="submit" value="検索する" class="btn">
