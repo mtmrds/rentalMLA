@@ -62,7 +62,6 @@
 					</td>
 				</tr>
 
-					<td><input type="submit"  name = "sss" value="登録する"></td>
 				<tr>
 					<td>クレジットカード</td>
 					<td>
@@ -79,7 +78,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="submit" value="登録する"></td>
+					<td><input type="submit"  name = "sss" value="登録する"></td>
 
 				</tr>
 			</table>
