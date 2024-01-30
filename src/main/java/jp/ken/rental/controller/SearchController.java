@@ -22,18 +22,10 @@ public class SearchController {
 
 	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String toSearch(Model model) {
-    
-    //多分重複。コンフリ回避抜けるために特に編集せずに以下の内容にしています
 		model.addAttribute("itemModel", new ItemModel());
-		//model.addAttribute("headline","商品検索");
-		return "itemList";
-	}
-	@RequestMapping(value = "/ccc",method = RequestMethod.POST)
-		model.addAttribute("itemModel",new ItemModel());
 		model.addAttribute("headline","商品検索");
 		return "cartcontent";
 	}
-  //多分重複。コンフリ回避抜けるために編集せずに上記の内容にしています
 
 	@RequestMapping(value = "/search",method = RequestMethod.POST)
 	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
