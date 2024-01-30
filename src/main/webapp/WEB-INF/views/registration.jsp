@@ -16,7 +16,7 @@
 body{
    background-image:url(resources/image/pink_gold_buble.jpg);
    background-size: cover;
-
+}
  h1{
  color: grey;
    background: #f6bfbc; /*背景色*/
