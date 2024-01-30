@@ -23,8 +23,8 @@ public class SearchController {
 	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String toSearch(Model model) {
 
-    //多分重複。コンフリ回避抜けるために特に編集せずに以下の内容にしています
 		model.addAttribute("itemModel", new ItemModel());
+		model.addAttribute("headline","商品検索");
 		//model.addAttribute("headline","商品検索");
 		return "cartcontent";
 	}
