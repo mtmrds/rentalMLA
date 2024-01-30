@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
@@ -16,20 +17,20 @@ import jp.ken.rental.model.ItemModel;
 
 
 @Controller
-public class SearchController {
+@SessionAttributes({"loginModel", "memberModel"})
+public class CartController {
 	@Autowired
 	private MembersDao membersDao ;
 
-	@RequestMapping(value = "/search",method = RequestMethod.GET)
-	public String toSearch(Model model) {
+	@RequestMapping(value = "/cart",method = RequestMethod.GET)
+	public String toCart(Model model) {
 
 		model.addAttribute("itemModel", new ItemModel());
-		model.addAttribute("headline","商品検索");
-		return "itemSearch";
+		return "cartcontent";
 	}
-
-	@RequestMapping(value = "/search",method = RequestMethod.POST)
-	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
+/*これからしたまだ何もしてないから編集する*/
+	@RequestMapping(value = "/cart",method = RequestMethod.POST)
+	public String cartMembers(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
@@ -67,6 +68,7 @@ public class SearchController {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
 		}
 		model.addAttribute("headline","商品検索");
-		return "itemSearch";
+		return "cartcontent";
 	}
+
 }

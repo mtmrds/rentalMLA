@@ -15,7 +15,6 @@
 .errors{
 	color: #ff0000;
 }
-
 body {
     color: grey;
     background-image:url(resources/image/pink_gold_buble.jpg);
@@ -23,9 +22,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
+.logo img {
+	height: 100px;
+	width: 100px;
+}
 
 .logo {
 	font-family: 'Monomaniac One', sans-serif;
@@ -69,7 +71,8 @@ body {
 			<br>
 			<a href="setRegist">新規会員登録</a>
 			<a href="login">ログイン</a>
-      <a href="search">カート</a>
+
+      <a href="cart">カート</a>
 			</div>
 
 		</form:form>
