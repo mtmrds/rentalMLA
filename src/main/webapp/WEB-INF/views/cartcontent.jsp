@@ -10,7 +10,8 @@
 </head>
 <body>
     <jsp:include page="header.jsp"></jsp:include>
-        <main>
+            <main>
+            <!--
             <h1>カート内一覧</h1>
             <hr size="1">
             <div>
@@ -42,6 +43,12 @@
                 <% } else { %>
                     <p>カートに商品がありません。</p>
                 <% } %>
+            </div>
+            -->
+            <div>
+            	<form method="POST" action="payment">
+            		<input type="submit" value="確定する">
+				</form>
             </div>
         </main>
     <jsp:include page="footer.jsp"></jsp:include>

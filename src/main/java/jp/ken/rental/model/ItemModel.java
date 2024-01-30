@@ -1,11 +1,11 @@
 	package jp.ken.rental.model;
 
   public class ItemModel {
-	  private String itemNo;
+	  private String itemNo;//Integerから変更
 	  private String title;
 	  private String type;
 	  private String category;
-	  private String quantity;
+	  private Integer quantity;
 
 	public String getItemNo() {
 		return itemNo;
@@ -31,10 +31,10 @@
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getQuantity() {
+	public Integer getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(String quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
  }

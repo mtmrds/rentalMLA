@@ -26,8 +26,17 @@ body {
     background-position: center;
 }
 
+.logo img {
+	height: 100px;
+	width: 100px;
+}
 
-h1{
+.logo {
+	font-family: 'Monomaniac One', sans-serif;
+	text-align: center;
+
+}
+.logo h1{
 		font-family: 'Monomaniac One', sans-serif;
 		text-align: center;
 		font-size: 80px;
@@ -35,7 +44,7 @@ h1{
 }
 .top{
 	font-family: 'Monomaniac One', sans-serif;
-		font-size: 25px;
+	font-size: 25px;
 
 }
 </style>
@@ -52,9 +61,11 @@ h1{
 		<p>ようこそ、${loginModel.name}さん</p>
 		</c:if>
 
-		<h1>☆レンタルサイト☆</h1>
+			<div class="logo">
+				<h1>☆レンタルサイト☆</h1>
+			</div>
+		<!-- メニュボタン削除 -->
 
-		<!-- メニュー削除 -->
 		<div style="text-align: center" class="top">
 
 		<form action="/search" method="GET"></form>

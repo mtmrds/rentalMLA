@@ -121,4 +121,84 @@ public class MembersDao {
 		}
 		return numberOfRow;
 	}
+
+
+	//item
+
+	public List<Members> getItemList(){
+		String sql = "SELECT * FROM movitem";
+		List<Members> itemList = jdbcTemplate.query(sql, membersMapper);
+
+		return itemList;
+	}
+
+	public List<Members> getListByItemTitle(String title){
+		String sql = "SELECT * FROM movitem WHERE title LIKE ?";
+		title = title.replace("%", "\\%").replace("_", "\\_");
+		title = "%" + title + "%";
+		Object[] parameters = {title};
+		List<Members> itemList = jdbcTemplate.query(sql, parameters , membersMapper);
+
+		return itemList;
+	}
+
+	public Members getItemById(String string) {
+		String sql = "SELECT * FROM movitem WHERE item_no=?";
+		Object[] parameters = {string};
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		}catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public Members toItemSearch(String title){
+		String sql = "SELECT * FROM movitem WHERE title = ?;";
+		Object[] parameters = { title };
+		try{
+			Members memSearch = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return memSearch;//memSearchをリターン
+		} catch(EmptyResultDataAccessException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public Members getItemById(Integer itemNo) {
+		String sql = "SELECT * FROM movitem WHERE item_no=?";
+		Object[] parameters = { itemNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+	public int insertItem(Members members) {
+		String sql = "INSERT INTO movitem(item_no, title, type, category) VALUES(?, ?, ?, ?, ?)";
+		Object[] parameters = { members.getItemNo(), members.getTitle(), members.getType(), members.getCategory() };
+
+		TransactionStatus transactionStatus = null;
+		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+		int numberOfRow = 0;
+
+		try {
+			transactionStatus = transactionManager.getTransaction(transactionDefinition);
+			numberOfRow = jdbcTemplate.update(sql,parameters);
+			transactionManager.commit(transactionStatus);
+		} catch(DataAccessException e){
+			e.printStackTrace();
+			transactionManager.rollback(transactionStatus);
+		} catch(TransactionException e) {
+			e.printStackTrace();
+			if(transactionStatus != null) {
+				transactionManager.rollback(transactionStatus);
+			}
+		}
+		return numberOfRow;
+	}
+
 }

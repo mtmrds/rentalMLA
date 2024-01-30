@@ -33,7 +33,6 @@ public class SearchController {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
-
 		if(itemNoIsEmpty && titleIsEmpty) {
 
 			List<Members> membersList= membersDao.getList();

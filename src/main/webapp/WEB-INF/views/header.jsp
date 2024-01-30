@@ -27,33 +27,37 @@
     font-size: 30px;
     }
 .logo img{
- 	height: 50px;
-	width: 50px;
+ 	height: 10px;
+	width: 10px;
  }
 
 p{
 	font-family: 'Monomaniac One', sans-serif;
+
 	text-align: right;
-	font-size: 30px;
+	font-size: 25px;	
 }
 
 </style>
 <header>
     <%-- ログイン済みの場合は名前を表示 --%>
 
+
 <div class="logo">
 		<img src="resources/image/logo.png">
 		<h1>Music Life Agency</h1>
+
 </div>
   	<p>
        <c:out value="${memberModel.name}"/>さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
 
-       <!-- メニュー削除 -->
+
+      <!-- メニューボタン削除 -->
+
 
         <!--<jsp:include page="footer.jsp" />　-->
-
 </p>
 
 </header>
