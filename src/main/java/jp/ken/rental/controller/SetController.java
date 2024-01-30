@@ -34,7 +34,7 @@ public class SetController {
 	@RequestMapping(value = "/compRegist", method = RequestMethod.GET)
 	public String toCompRegist(Model model) {
 		model.addAttribute("memberModel", new MemberModel());
-        return "registration";
+        return "registrationComplete";
 	}
 	@RequestMapping(value = "/compRegist", method = RequestMethod.POST)
 	public String toComp(Model model, @Validated @ModelAttribute MemberModel memberModel, BindingResult result) {
@@ -62,6 +62,6 @@ public class SetController {
 	    }
 	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
 	    //model.addAttribute("memberModel", memberModel);
-	    return "registrationComplete";
+	    return "redirect:/registrationComplete";
 	    }
 }

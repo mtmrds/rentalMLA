@@ -22,11 +22,10 @@ public class SearchController {
 
 	@RequestMapping(value = "/ccc",method = RequestMethod.GET)
 	public String toSearch(Model model) {
-		model.addAttribute("itemModel",new ItemModel());
-		model.addAttribute("headline","商品検索");
+		model.addAttribute("itemModel", new ItemModel());
+		//model.addAttribute("headline","商品検索");
 		return "itemList";
 	}
-
 	@RequestMapping(value = "/ccc",method = RequestMethod.POST)
 	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
@@ -38,7 +37,7 @@ public class SearchController {
 			List<Members> membersList= membersDao.getList();
 			model.addAttribute("membersList",membersList);
 
-		}else if(!itemNoIsEmpty && titleIsEmpty) {
+		} else if(!itemNoIsEmpty && titleIsEmpty) {
 
 			try {
 				Integer id = new Integer(itemModel.getItemNo());
@@ -46,23 +45,23 @@ public class SearchController {
 
 				if(members == null) {
 					model.addAttribute("message","該当データがありません");
-				}else {
+				} else {
 					List<Members>membersList = new ArrayList<Members>();
 					membersList.add(members);
 					model.addAttribute("membersList",membersList);
 				}
-			}catch(NumberFormatException e) {
+			} catch(NumberFormatException e) {
 				model.addAttribute("message","IDが不正です");
 			}
-		}else if(itemNoIsEmpty && !titleIsEmpty) {
+		} else if(itemNoIsEmpty && !titleIsEmpty) {
 			List<Members>membersList = membersDao.getListByName(itemModel.getTitle());
 
 			if(membersList.isEmpty()) {
 				model.addAttribute("message","該当データがありません");
-			}else {
+			} else {
 				model.addAttribute("membersList",membersList);
 			}
-		}else {
+		} else {
 			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
 		}
 		model.addAttribute("headline","商品検索");

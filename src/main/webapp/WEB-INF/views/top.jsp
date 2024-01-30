@@ -15,7 +15,6 @@
 .errors{
 	color: #ff0000;
 }
-
 body {
     color: white;
     background-image:url(resources/image/brack.jpg);
@@ -23,17 +22,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 h1 {
 	font-family: 'Noto Serif JP', serif;
-
 }
-
 .logo img {
 	height: 100px;
 	width: 100px;
 }
-
 .logo {
 	text-align: center;
 }
@@ -59,7 +54,7 @@ h1 {
 			<div style="text-align: right;"></div>
 			<a href="setRegist">新規会員登録</a>
 			<a href="login">ログイン</a>
-			<a href="ccc">カート</a>
+			<a href="search">カート</a>
 		</form:form>
 </body>
 </html>
