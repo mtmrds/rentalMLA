@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="container">
-	<jsp:include page="header.jsp"/>
+
 		<header><h1>会員登録画面</h1></header>
 		<main>
 		<form:form modelAttribute="memberModel">
