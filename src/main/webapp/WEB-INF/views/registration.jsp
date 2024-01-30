@@ -11,7 +11,7 @@
 <link rel="icon" href="resources/image/favicon.png" sizes="any">
 <meta charset=UTF-8>
 
-<title>会員登録画面</title>
+<title> 会員登録画面 </title>
 <style>
 
 body{
