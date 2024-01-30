@@ -8,8 +8,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- 文字フォント -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>在庫管理画面</title>
+
+<!-- 文字フォント -->
+<style>
+	sample1{
+		font-family: 'Kaisei Decol', serif;
+		font-family: 'Monomaniac One', sans-serif;
+
+	}
+
+<!-- 背景画像 -->
+body{
+	background-image:url(resources/image/pink_gold_buble.jpg);
+}
+
+</style>
+
 </head>
 <body>
 	<div class="sample1">
