@@ -72,8 +72,9 @@ body {
 			<br>
 			<a href="setRegist">新規会員登録</a>
 			<a href="login">ログイン</a>
-			<a href="ccc">カート</a>
+      <a href="search">カート</a>
 			</div>
+
 		</form:form>
 
 </body>

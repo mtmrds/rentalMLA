@@ -5,15 +5,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" href="resources/image/favicon.png" sizes="any">
+<meta charset=UTF-8>
+
 <title>会員登録画面</title>
 <style>
 
 </style>
 </head>
 <body>
+
 	<div class="container">
-	<jsp:include page="header.jsp"/>
+
 		<header><h1>会員登録画面</h1></header>
 		<main>
 		<form:form modelAttribute="memberModel">

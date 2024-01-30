@@ -20,14 +20,14 @@ public class SearchController {
 	@Autowired
 	private MembersDao membersDao ;
 
-	@RequestMapping(value = "/ccc",method = RequestMethod.GET)
+	@RequestMapping(value = "/search",method = RequestMethod.GET)
 	public String toSearch(Model model) {
 		model.addAttribute("itemModel",new ItemModel());
 		model.addAttribute("headline","商品検索");
 		return "cartcontent";
 	}
 
-	@RequestMapping(value = "/ccc",method = RequestMethod.POST)
+	@RequestMapping(value = "/search",method = RequestMethod.POST)
 	public String searchMembers(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
