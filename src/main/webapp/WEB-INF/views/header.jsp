@@ -18,21 +18,24 @@
 </head>
 <%-- header --%>
 <style>
-h1{
+
+.logo{
+	display: flex;
+}
+.logo h1{
     font-family: 'Sacramento', cursive;
+    font-size: 30px;
     }
+.logo img{
+ 	height: 10px;
+	width: 10px;
+ }
 
 p{
 	font-family: 'Monomaniac One', sans-serif;
-	font-size: 25px;
+
 	text-align: right;
-}
-.imgh1 {
-	display: flex;
-}
-.imagh1 img{
-	height: 10px;
-	width: 10px;
+	font-size: 25px;	
 }
 
 </style>
@@ -40,16 +43,19 @@ p{
     <%-- ログイン済みの場合は名前を表示 --%>
 
 
-<div class="imgh1">
-	<img src="resources/image/logo.png"  >
-	<h1>Music Life Agency</h1>
+<div class="logo">
+		<img src="resources/image/logo.png">
+		<h1>Music Life Agency</h1>
+
 </div>
   	<p>
        <c:out value="${memberModel.name}"/>さん
 
         <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
 
+
       <!-- メニューボタン削除 -->
+
 
         <!--<jsp:include page="footer.jsp" />　-->
 </p>
