@@ -13,7 +13,6 @@
 
 <title> 会員登録画面 </title>
 <style>
-
 body{
    background-image:url(resources/image/pink_gold_buble.jpg);
    background-size: cover;
@@ -26,6 +25,21 @@ body{
 
   font-family: 'Monomaniac One', sans-serif;
 }
+
+table {
+	border-collapse;
+  width: 100%;
+}
+
+  td, th {
+	padding: 8px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  tr{
+    line-height: 1;
+  }
 
 </style>
 </head>
