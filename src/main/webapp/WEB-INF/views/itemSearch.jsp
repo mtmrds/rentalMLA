@@ -48,7 +48,7 @@ body{
 					<form:input path="itemNo"/>
 					<label for="name">タイトル</label>
 					<form:input path="title"/>
-					<input type="submit" value="検索する" class="btn">
+					<input type="submit" name="SearchItem" value="検索する" class="btn">
 				</div>
 				<div class="form-row errors">
 					<c:out value="${message}"/>
@@ -62,6 +62,7 @@ body{
 						<th>タイプ</th>
 						<th>カテゴリー</th>
 						<th>在庫</th>
+						<th>カート</th>
 					</tr>
 					<c:forEach var="items" items="${itemList}">
 						<tr>
@@ -70,6 +71,13 @@ body{
 							<td><c:out value="${items.type}"/></td>
 							<td><c:out value="${items.category}"/></td>
 							<td><c:out value="${items.quantity}"/></td>
+							<td>
+								<form:form modelAttribute="itemModel">
+									<form:hidden path="itemNo" value="${members.itemNo}"/>
+
+									<input type="submit" name="add" value="カート入れる"/>
+								</form:form>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>
