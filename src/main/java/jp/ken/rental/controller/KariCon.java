@@ -35,11 +35,11 @@ public class KariCon {
 
 	    @RequestMapping(method = RequestMethod.POST)
 	    String removeFromCart(@Validated MembersDao membersDao, BindingResult bindingResult, Model model) {
-	        if (bindingResult.hasErrors()) {
-	            model.addAttribute("error", "商品がチェックされていません"); // (1)
+	        	if (bindingResult.hasErrors()) {
+	            model.addAttribute("error", "商品がチェックされていません");
 	            return viewCart(model);
 	        }
-	        membersDao.remove(membersDao.getCartListId(model));
+	        membersDao.remove(membersDao.getCartListId(null));
 	        return "redirect:/cartcontent";
 	    }
 }
