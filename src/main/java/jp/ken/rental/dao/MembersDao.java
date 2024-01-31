@@ -237,4 +237,24 @@ public class MembersDao {
 		return numberOfRow;
 	}
 
+
+	public Members getCartListId(Members cartListNo) {
+		String sql = "SELECT * FROM history WHERE item_no=?";
+		Object[] parameters = { cartListNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+		return null;
+	}
+
+	}
+	public int remove(Members cartListid) {
+
+		String sql = "DELETE FROM history WHERE item_no=?";
+	    Object[] parameters = {cartListid};
+	    return jdbcTemplate.update(sql, parameters);
+	}
+
 }

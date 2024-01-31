@@ -18,14 +18,16 @@ text-align:center:
 
 	<div id ="wapper">
 	<jsp:include page="header.jsp"></jsp:include>
-	<main>
+
 		<h1>カート内一覧</h1>
+
 
 <%-- わかんないんでとりあえずコメントアウト
 	<hr size="1">
 			<% List<String> cart =(List<String>) session.getAttribute("cartList"); %>
 
 			 <% if(cart != null && !cart.isEmpty()) { %>
+
 
 				<table border="1">
 				<%
@@ -59,9 +61,12 @@ text-align:center:
 	</div>
 
 	</main>
-	<div id ="wapper">
-	<jsp:include page="footer.jsp"></jsp:include>
-	</div>
+           <form method="POST" action="cart">
+            <input type="submit" value="確認する">
+				</form>
+
+        </main>
+    <jsp:include page="footer.jsp"/>
 
 
 </body>

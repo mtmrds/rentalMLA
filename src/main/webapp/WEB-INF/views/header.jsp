@@ -19,18 +19,27 @@
 </head>
 <%-- header --%>
 <style>
-
-.logo{
+.logo a {
 	display: flex;
+	width:29%;
+	color:inherit;
+	text-decoration:none;
 }
+
+.logo img{
+ 	height: 70px;
+	width: 70px;
+	margin: 10px 1px 10px 5px;
+	boder:1px;
+ }
+
 .logo h1{
     font-family: 'Sacramento', cursive;
-    font-size: 30px;
+    font-size: 45px;
+    margin:10px;
+    padding:10px;
     }
-.logo img{
- 	height: 50px;
-	width: 50px;
- }
+
 .link{
 	font-family: 'Yomogi', cursive;
 
@@ -52,8 +61,11 @@ p{
 
 
 <div class="logo">
+	<a href="top"  alt="トップページに戻る">
 		<img src="resources/image/logo.png">
 		<h1>Music Life Agency</h1>
+	</a>
+
 
 </div>
 	<!--
@@ -65,7 +77,7 @@ p{
 
 	 <div class="link">
 	 <!-- リンクボタンを追加しました -->
-	 <a href="a">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>
+	 <a href="mypage" alt="マイページ">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>
 	 </div>
 
   	<p>

@@ -13,7 +13,8 @@
 <!-- 文字フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+
 
 
 <meta charset="UTF-8">
@@ -25,34 +26,37 @@ h2{
 
 <!-- 文字フォント -->
 h1,h2,p{
-	font-family: 'Kaisei Decol', serif;
-	font-family: 'Monomaniac One', sans-serif;
+	font-family: 'Yomogi', cursive;
 
 }
 <!-- 背景画像 -->
 body{
-	background-image:url(resources/image/pink_gold_buble.jpg);
+	background-image:url(resources/image/pink.jpg);
 }
 
 </style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
-	<header>
+
 		<h1>ログインエラー</h1>
-	</header>
+
 	<main>
 		<!--
 		<p class="error"><c:out value="" /></p>
 		<p><a href="<c:out value="top" />">戻る</a></p>
 		-->
 	</main>
-		<hr>
-		<jsp:include: page="footer.jsp"/>
+		<h2>入力されたユーザは存在しません</h2>
+	<!--
+	<form:input path="name" size="20" />
+	<form:errors path="*" element="div" cssClass="errors" />
+
 </body>
 <h2>入力されたユーザは存在しません</h2>
 	<!--
 	<form:input path="name" size="20" />
 	<form:errors path="*" element="div" cssClass="errors" />
 	-->
+	<jsp:include page="footer.jsp" />
 </html>

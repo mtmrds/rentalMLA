@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,7 +30,7 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
-	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	@RequestMapping(value = "/search", params="SearchItem" , method = RequestMethod.POST)
 	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
@@ -68,4 +70,37 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
+
+
+	//cartに追加する処理
+
+
+	@RequestMapping(value = "/addCart", method = RequestMethod.GET)
+	public String toCompRegist(Model model) {
+		model.addAttribute("itemModel", new ItemModel());
+        return "redirect:/search";
+	}
+	@RequestMapping(value = "/addCart",params="add", method = RequestMethod.POST)
+	public String toComp(Model model, @Validated @ModelAttribute ItemModel itemModel, BindingResult result) {
+
+		if (result.hasErrors()) {
+	        return "";  //わからん😢
+	    }
+	    Members members = new Members();
+
+	    members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
+	    members.setTitle(itemModel.getTitle());
+
+	    int numberOfRow = membersDao.insertCart(members);
+
+	    	if (numberOfRow == 0) {
+	    		//ここが怪しい
+	    		//model.addAttribute("message", "登録に失敗しました。");
+
+	    		return "";  //わからん😢
+	    	}
+	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
+	    //model.addAttribute("memberModel", memberModel);
+	    return "redirect:/search";
+	    }
 }
