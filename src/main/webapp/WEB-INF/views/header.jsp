@@ -77,7 +77,7 @@ p{
 
 	 <div class="link">
 	 <!-- リンクボタンを追加しました -->
-	 <a href="a">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>
+	 <a href="mypage" alt="マイページ">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>
 	 </div>
 
   	<p>
