@@ -15,22 +15,20 @@ import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.ItemModel;
 
-
 @Controller
 @SessionAttributes("itemModel")
 public class SearchController {
 	@Autowired
 	private MembersDao membersDao ;
 
-	@RequestMapping(value = "/search",method = RequestMethod.GET)
+	//TopControllerでredirectをかますことでここに飛ぶ
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public String toItemSearch(Model model) {
-
 		model.addAttribute("itemModel", new ItemModel());
-		model.addAttribute("headline","商品検索");
+		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
-
-	@RequestMapping(value = "/search",method = RequestMethod.POST)
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
 	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
@@ -38,7 +36,7 @@ public class SearchController {
 		if(itemNoIsEmpty && titleIsEmpty) {
 			//全件検索
 			List<Members> itemList= membersDao.getItemList();
-			model.addAttribute("itemList",itemList);
+			model.addAttribute("itemList", itemList);
 
 		} else if(!itemNoIsEmpty && titleIsEmpty) {
 
@@ -47,27 +45,27 @@ public class SearchController {
 				Members members = membersDao.getItemById(itemNo);
 
 				if(members == null) {
-					model.addAttribute("message","該当データがありません");
+					model.addAttribute("message", "該当データがありません");
 				} else {
 					List<Members>itemList = new ArrayList<Members>();
 					itemList.add(members);
-					model.addAttribute("itemList",itemList);
+					model.addAttribute("itemList", itemList);
 				}
 			} catch(NumberFormatException e) {
-				model.addAttribute("message","IDが不正です");
+				model.addAttribute("message", "IDが不正です");
 			}
 		} else if(itemNoIsEmpty && !titleIsEmpty) {
 			List<Members>itemList = membersDao.getListByItemTitle(itemModel.getTitle());
 
 			if(itemList.isEmpty()) {
-				model.addAttribute("message","該当データがありません");
+				model.addAttribute("message", "該当データがありません");
 			} else {
-				model.addAttribute("itemList",itemList);
+				model.addAttribute("itemList", itemList);
 			}
 		} else {
-			model.addAttribute("message","IDまたはタイトルのいずれかを入力してください");
+			model.addAttribute("message", "IDまたはタイトルのいずれかを入力してください");
 		}
-		model.addAttribute("headline","商品検索");
+		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
 }

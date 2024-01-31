@@ -76,5 +76,10 @@ body{
 		</main>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
+	<!--
+		何度かページをぐるぐる回って動作をチェックしたときのトップ飛ばしです。
+		デザイン作る上で必要なければ消してOKです 元村　
+	-->
+	<p><a href="top">トップへ</a></p>
 </body>
 </html>

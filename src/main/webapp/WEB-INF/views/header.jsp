@@ -41,6 +41,7 @@ p{
 </style>
 <header>
     <%-- ログイン済みの場合は名前を表示 --%>
+    <form:form modelAttribute="memberModel">
 
 
 <div class="logo">
@@ -48,13 +49,20 @@ p{
 		<h1>Music Life Agency</h1>
 
 </div>
+	<!--
+		下記pタグ内について、
+		${memberModel.name}となっていたので、会員情報で取得したログイン情報を取得できていませんでした
+		また、常に「さん」が出ている状態だったので条件判定ができるJSTLを追加して、
+		${loginModel.name}に変更し、ログイン後だけ表示できるようにしています　元村
+	 -->
   	<p>
-       <c:out value="${memberModel.name}"/>さん
-        <%-- Getのクエリで購入履歴かログアウトか判断させる --%>
+       <c:if test="${not empty loginModel.name}">
+			<p>ようこそ、${loginModel.name}さん</p>
+		</c:if>
 	</p>
 
       <!-- メニューボタン削除 -->
 
         <!--<jsp:include page="footer.jsp" />　-->
-
+    </form:form>
 </header>
