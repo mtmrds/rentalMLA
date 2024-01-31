@@ -34,7 +34,7 @@ table {
 	padding: 8px;
     text-align: left;
     font-weight: bold;
-    
+
   }
 
   tr{
@@ -44,7 +44,7 @@ table {
 </style>
 </head>
 <body>
-
+	<jsp:include page="header.jsp"/>
 	<div class="container">
 
 		<header><h1>☆会員登録画面☆</h1></header>
@@ -118,7 +118,7 @@ table {
 
 		<footer>
 			<div class="copyright">
-				<!--<jsp:include page="footer.jsp" />-->
+				<jsp:include page="footer.jsp" />
 			</div>
 		</footer>
 	</div>

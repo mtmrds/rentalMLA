@@ -21,13 +21,14 @@ body{
 }
 </style>
 <body>
-
+	<jsp:include page="header.jsp"/>
 	<h1>登録完了画面</h1>
 
 	<a>ご登録ありがとうございました(^_-)-☆</a>
 
 	<!--<jsp:include page="footer.jsp" />-->
 	<p><a href="<c:url value='top' />">トップに戻る</a></p>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>
 

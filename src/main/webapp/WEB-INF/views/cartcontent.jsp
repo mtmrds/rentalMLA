@@ -9,7 +9,7 @@
 <title>カート内</title>
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.jsp"/>
             <main>
             <!--
             <h1>カート内一覧</h1>
@@ -51,6 +51,6 @@
 				</form>
             </div>
         </main>
-    <jsp:include page="footer.jsp"></jsp:include>
+    <jsp:include page="footer.jsp"/>
 </body>
 </html>

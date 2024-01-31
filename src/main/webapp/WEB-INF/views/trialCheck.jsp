@@ -9,6 +9,7 @@
 <title>プラン変更</title>
 </head>
 <body>
+	<jsp:include page="header.jsp"/>
 	<h1>☆プラン変更画面☆</h1>
 	<tr>
 		<td>加入プラン選択</td>
@@ -32,7 +33,7 @@
 		<td><input type="submit" value="登録する"></td>
 	</tr>
 
-	<!--<jsp:include page="footer.jsp" />-->
+	<jsp:include page="footer.jsp" />
 
 </body>
 </html>
