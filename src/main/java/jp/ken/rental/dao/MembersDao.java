@@ -237,4 +237,22 @@ public class MembersDao {
 		return numberOfRow;
 	}
 
+
+	public Object getCartListId(Object cartListNo) {
+		String sql = "SELECT * FROM history WHERE item_no=?";
+		Object[] parameters = { cartListNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+		return null;
+	}
+
+	}
+	public void remove(Object cartListId) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
 }
