@@ -34,13 +34,12 @@
 .link{
 	font-family: 'Yomogi', cursive;
 
-	text-align: center;
+	text-align: right;
 	font-size: 25px;
 }
 
 p{
 	font-family: 'Yomogi', cursive;
-
 	text-align: right;
 	font-size: 25px;
 }
