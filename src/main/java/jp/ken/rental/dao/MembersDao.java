@@ -205,7 +205,7 @@ public class MembersDao {
 
 	//cart用
 	public List<Members> getCartList(){
-		String sql = "SELECT * FROM movitem";
+		String sql = "SELECT * FROM history";
 		List<Members> cartList = jdbcTemplate.query(sql, membersMapper);
 
 		return cartList;
@@ -213,8 +213,8 @@ public class MembersDao {
 
 
 	public int insertCart(Members members) {
-		String sql = "INSERT INTO history(title) VALUES(?)";
-		Object[] parameters = { members.getTitle()};
+		String sql = "INSERT INTO history(item_no,title) VALUES(?,?)";
+		Object[] parameters = { members.getItemNo(), members.getTitle()};
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -236,4 +236,5 @@ public class MembersDao {
 		}
 		return numberOfRow;
 	}
+
 }
