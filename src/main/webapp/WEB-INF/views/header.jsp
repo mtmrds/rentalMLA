@@ -77,6 +77,5 @@ p{
 
       <!-- メニューボタン削除 -->
 
-        <!--<jsp:include page="footer.jsp" />　-->
     </form:form>
 </header>
