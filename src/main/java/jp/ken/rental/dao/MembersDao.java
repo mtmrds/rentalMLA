@@ -251,8 +251,8 @@ public class MembersDao {
 
 	}
 	public int remove(int id) {
-		
-		String sql = "DELETE FROM history WHERE id=?";
+
+		String sql = "DELETE FROM history WHERE item_no=?";
 	    Object[] parameters = {id};
 	    return jdbcTemplate.update(sql, parameters);
 	}
