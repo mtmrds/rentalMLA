@@ -16,7 +16,7 @@
 body{
    background-image:url(resources/image/pink_gold_buble.jpg);
    background-size: cover;
-
+}
  h1{
  color: grey;
    background: #f6bfbc; /*背景色*/
@@ -24,8 +24,7 @@ body{
   border-radius: 0.5em;/*角の丸み*/
 
   font-family: 'Monomaniac One', sans-serif;
-}
-
+}d
 table {
 	border-collapse;
   width: 100%;
@@ -35,6 +34,7 @@ table {
 	padding: 8px;
     text-align: left;
     font-weight: bold;
+    
   }
 
   tr{
