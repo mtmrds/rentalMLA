@@ -67,7 +67,7 @@ h1{
 			</form:form>
 			<!-- div style="text-align: right;">-->
 			<br>
-			<a href="setRegist">カイイントウロク</a>
+			<a href="setRegist">会員登録</a>
 			<a href="login">ログイン</a>
 			<a href="cart">カート</a>
 		</div>
