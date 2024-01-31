@@ -201,4 +201,39 @@ public class MembersDao {
 		return numberOfRow;
 	}
 
+
+
+	//cart用
+	public List<Members> getCartList(){
+		String sql = "SELECT * FROM movitem";
+		List<Members> cartList = jdbcTemplate.query(sql, membersMapper);
+
+		return cartList;
+	}
+
+
+	public int insertCart(Members members) {
+		String sql = "INSERT INTO history(title) VALUES(?)";
+		Object[] parameters = { members.getTitle()};
+
+		TransactionStatus transactionStatus = null;
+		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+		int numberOfRow = 0;
+
+		try {
+			transactionStatus = transactionManager.getTransaction(transactionDefinition);
+			numberOfRow = jdbcTemplate.update(sql,parameters);
+			transactionManager.commit(transactionStatus);
+		} catch(DataAccessException e){
+			e.printStackTrace();
+			transactionManager.rollback(transactionStatus);
+		} catch(TransactionException e) {
+			e.printStackTrace();
+			if(transactionStatus != null) {
+				transactionManager.rollback(transactionStatus);
+			}
+		}
+		return numberOfRow;
+	}
 }
