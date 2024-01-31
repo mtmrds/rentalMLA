@@ -250,9 +250,11 @@ public class MembersDao {
 	}
 
 	}
-	public void remove(Object cartListId) {
-		// TODO 自動生成されたメソッド・スタブ
-
+	public int remove(int id) {
+		
+		String sql = "DELETE FROM history WHERE id=?";
+	    Object[] parameters = {id};
+	    return jdbcTemplate.update(sql, parameters);
 	}
 
 }
