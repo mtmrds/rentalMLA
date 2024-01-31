@@ -238,7 +238,7 @@ public class MembersDao {
 	}
 
 
-	public Object getCartListId(Object cartListNo) {
+	public Members getCartListId(Members cartListNo) {
 		String sql = "SELECT * FROM history WHERE item_no=?";
 		Object[] parameters = { cartListNo };
 		try {
@@ -250,10 +250,10 @@ public class MembersDao {
 	}
 
 	}
-	public int remove(int id) {
+	public int remove(Members cartListid) {
 
 		String sql = "DELETE FROM history WHERE item_no=?";
-	    Object[] parameters = {id};
+	    Object[] parameters = {cartListid};
 	    return jdbcTemplate.update(sql, parameters);
 	}
 

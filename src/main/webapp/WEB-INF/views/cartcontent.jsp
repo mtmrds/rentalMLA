@@ -17,7 +17,7 @@ text-align:center:
 
 	<div id ="wapper">
 	<jsp:include page="header.jsp"></jsp:include>
-	<main>
+
 		<h1>カート内一覧</h1>
 
 		<hr size="1">
@@ -37,40 +37,14 @@ text-align:center:
 						<th>商品名</th>
 					</tr >
 				</thead>
-
-				<body>
-				<tr>
-					<td><img src="resources/image/<%= Item.item[itemNo] %> alt="  Item.item[itemNo] "></td>
-					<td><%=Item.item[itemNo] %></td>
-						<form action="cart" method="post">
-							<input type="hidden" name="index" value="<%=index%> ">
-							 <input type="submit" value="削除する">
-						</form>
-				</tr>
-				<%
-					}
-				%>
-				</table>
-				<%
-				}
-				%>
-				<p>カートに商品がありません。</p>
-				<p>
-					<a href="form">トップに戻る</a>
 	</div>
 
-	</main>
-	<div id ="wapper">
-	<jsp:include page="footer.jsp"></jsp:include>
-	</div>
-
-    <jsp:include page="header.jsp"/>
             <main>
 
-            	<form method="POST" action="payment">
+            	<form method="POST" action="cart">
             		<input type="submit" value="確認する">
 				</form>
-            </div>
+
         </main>
     <jsp:include page="footer.jsp"/>
 
