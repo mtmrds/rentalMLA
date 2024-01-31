@@ -79,7 +79,6 @@ table {
 						<form:errors path="phone" element="span" cssClass="errors"/>
 					</td>
 				</tr>
-
 				<tr>
 					<td>メールアドレス</td>
 					<td>
@@ -101,7 +100,6 @@ table {
 						<form:errors path="card" element="span" cssClass="errors"/>
 					</td>
 				</tr>
-
 				<tr>
 					<td>パスワード（英数字含む８文字以上）</td>
 					<td>

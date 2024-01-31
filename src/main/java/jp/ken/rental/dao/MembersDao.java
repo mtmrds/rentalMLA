@@ -97,7 +97,7 @@ public class MembersDao {
 			}
 	}
 	public int insert(Members members) {
-		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO members(name,birthday,zip,address,phone,mail,password,card)VALUES(?,?,?,?,?,?,?,?)";
 		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(), members.getAddress(),
 		                        members.getPhone(), members.getMail(), members.getPassword(), members.getCard() };
 
