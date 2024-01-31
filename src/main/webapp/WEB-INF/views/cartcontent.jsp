@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,40 +21,38 @@ text-align:center:
 	<main>
 		<h1>カート内一覧</h1>
 
-		<hr size="1">
-			<%
-			@SupperssWarnings("unchecked")
-			ArrayList<String> cart = (ArrayList<String>)
-				session.getAttribute("cart"); if(cart != null && !cart.isEmpty()) {
-			%>
+<%-- わかんないんでとりあえずコメントアウト
+	<hr size="1">
+			<% List<String> cart =(List<String>) session.getAttribute("cartList"); %>
+
+			 <% if(cart != null && !cart.isEmpty()) { %>
+
 				<table border="1">
 				<%
 				for(int index = 0; index < cart.size(); index ++){
 					int itemNo = Integer.ParseInt(cart.get(index));
 				%>
-					<thead>
+--%>			<table>
 					<tr>
 						<th>画像</th>
 						<th>商品名</th>
 					</tr >
-				</thead>
 
-				<body>
 				<tr>
-					<td><img src="resources/image/<%= Item.item[itemNo] %> alt="  Item.item[itemNo] "></td>
-					<td><%=Item.item[itemNo] %></td>
+					<td><img src="resources/image/<%--= parameters --%> alt="   "></td>
+					<!--  <td><%-- =Items.item[itemNo] --%></td>-->
 						<form action="cart" method="post">
-							<input type="hidden" name="index" value="<%=index%> ">
+							<input type="hidden" name="index" value="<%--=index--%> ">
 							 <input type="submit" value="削除する">
 						</form>
 				</tr>
-				<%
+				<%--
 					}
-				%>
+				--%>
 				</table>
-				<%
+				<%--
 				}
-				%>
+				--%>
 				<p>カートに商品がありません。</p>
 				<p>
 					<a href="form">トップに戻る</a>
@@ -64,49 +63,6 @@ text-align:center:
 	<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 
-    <jsp:include page="header.jsp"/>
-            <main>
-            <!--
-            <h1>カート内一覧</h1>
-            <hr size="1">
-            <div>
-                <% ArrayList<String> cart = (ArrayList<String>) session.getAttribute("cart"); %>
-                <% if(cart != null && !cart.isEmpty()) { %>
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>画像</th>
-                                <th>商品名</th>
-                                <th>アクション</th>
-                            </tr>
-                        </thead>
-                        <body>
-                            <% for(String item : cart) { %>
-                                <tr>
-                                    <td><img src="resources/image/<%= //画像ソース %>" alt="<%= //画像名 %>"></td>
-                                    <td><%= // %></td>
-                                    <td>
-                                        <form action="" method="post">
-                                            <input type="hidden" name="test" value="<%= //名 %>">
-                                            <input type="submit" value="削除する">
-                                        </form>
-                                    </td>
-                                </tr>
-                            <% } %>
-                        </body>
-                    </table>
-                <% } else { %>
-                    <p>カートに商品がありません。</p>
-               <% } %>
-            </div>
-            -->
-            <div>
-            	<form method="POST" action="payment">
-            		<input type="submit" value="確認する">
-				</form>
-            </div>
-        </main>
-    <jsp:include page="footer.jsp"/>
 
 </body>
 </html>
