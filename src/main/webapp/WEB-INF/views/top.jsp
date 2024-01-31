@@ -42,35 +42,35 @@ h1{
 </style>
 </head>
 <body>
-		<jsp:include page="header.jsp"/>
-
 	<!-- 当jspをレンタルサイトの表紙として、各ページ遷移等の起点にしたい感じっす 元村 -->
-
-		<form:form modelAttribute="loginModel">
-
-		<!--　ログインした後の名前を表示する機能を実装 -->
+	<jsp:include page="header.jsp"/>
+	<form:form modelAttribute="loginModel">
+		<!--
+			ログインした後の名前を表示する機能を実装。
+			ヘッダーにも盛り込んだので現状は重複します
+			よって、構成に応じて下記は消してよいです　元村
+		-->
 		<c:if test="${not empty loginModel.name}">
-		<p>ようこそ、${loginModel.name}さん</p>
+			<p>ようこそ、${loginModel.name}さん</p>
 		</c:if>
-
 		<h1>☆レンタルサイト☆</h1>
 		<!-- メニュボタン削除 -->
-
 		<div style="text-align: center" class="top">
-
-		<form action="/search" method="GET"></form>
-		<label for="searchInput">検索:</label>
-		<input type="text" id="searchInput">
-		<input type="submit" value="検索する" class="btn">
+			<!--
+			     バインディングオブジェクト(ItemModel)を使いたいので、
+				 action="search"だった部分をモデルアトリへ変更しています 元村
+			-->
+			<form:form modelAttribute="itemModel">
+				<label for="searchInput">検索:</label>
+				<input type="text" id="searchInput">
+				<input type="submit" value="検索する" class="btn">
+			</form:form>
 			<!-- div style="text-align: right;">-->
 			<br>
 			<a href="setRegist">カイイントウロク</a>
 			<a href="login">ログイン</a>
-
-      <a href="cart">カート</a>
-			</div>
-
-		</form:form>
-
+			<a href="cart">カート</a>
+		</div>
+	</form:form>
 </body>
 </html>
