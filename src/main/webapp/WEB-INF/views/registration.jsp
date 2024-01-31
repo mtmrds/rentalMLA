@@ -54,14 +54,14 @@ table {
 				<tr>
 					<td>氏名</td>
 					<td>
-						<form:input path="name" size="25"/>
+						<form:input path="name" size="50"/>
 						<form:errors path="name" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
 					<td>郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
 					<td>
-						<form:input path="zip" size="25" />
+						<form:input path="zip" size="50" />
 						<form:errors path="zip" element="div" cssClass="errors" />
 					</td>
 				</tr>
@@ -75,7 +75,7 @@ table {
 				<tr>
 					<td>電話番号（ハイフンなし・半角数字）</td>
 					<td>
-						<form:input path="phone" size="15"/>
+						<form:input path="phone" size="50"/>
 						<form:errors path="phone" element="span" cssClass="errors"/>
 					</td>
 				</tr>
@@ -83,21 +83,21 @@ table {
 				<tr>
 					<td>メールアドレス</td>
 					<td>
-						<form:input path="mail" size="25"/>
+						<form:input path="mail" size="50"/>
 						<form:errors path="mail" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
 					<td>生年月日（YYYY/MM/DD）</td>
 					<td>
-						<form:input path="birthday" />
+						<form:input path="birthday" size="50" />
 						<form:errors path="birthday" element="span" cssClass="errors" />
 					</td>
 				</tr>
 				<tr>
 					<td>クレジットカード</td>
 					<td>
-						<form:input path="card" size="15"/>
+						<form:input path="card" size="50"/>
 						<form:errors path="card" element="span" cssClass="errors"/>
 					</td>
 				</tr>
@@ -105,7 +105,7 @@ table {
 				<tr>
 					<td>パスワード（英数字含む８文字以上）</td>
 					<td>
-						<form:input path="password" size="25"/>
+						<form:input path="password" size="50"/>
 						<form:errors path="password" element="div" cssClass="errors"/>
 					</td>
 				</tr>
