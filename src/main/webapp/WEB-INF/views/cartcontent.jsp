@@ -47,7 +47,7 @@
             -->
             <div>
             	<form method="POST" action="payment">
-            		<input type="submit" value="確定する">
+            		<input type="submit" value="確認する">
 				</form>
             </div>
         </main>
