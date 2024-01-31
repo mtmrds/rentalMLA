@@ -34,6 +34,7 @@ body{
 
 </head>
 <body>
+	<jsp:include page="header.jsp"/>
 	<div class="sample1">
 		<h1>商品管理画面</h1>
 		<form:form modelAttribute="itemModel" >
@@ -50,6 +51,7 @@ body{
 			</div>
 		</form:form>
 	</div>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>
 

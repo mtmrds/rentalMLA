@@ -37,7 +37,7 @@ body{
 </style>
 </head>
 <body>
-
+	<jsp:include page="header.jsp"/>
 	<header>
 		<h1>ログインエラー</h1>
 	</header>
@@ -48,6 +48,7 @@ body{
 		-->
 	</main>
 		<hr>
+		<jsp:include: page="footer.jsp"/>
 </body>
 <h2>入力されたユーザは存在しません</h2>
 	<!--

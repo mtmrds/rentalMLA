@@ -30,7 +30,7 @@ body{
 
 
 
-        <!--<jsp:include page="header.jsp"/>-->
+        <jsp:include page="header.jsp"/>
 
         <h1><jsp:getProperty name="login_user_bean" property="name" />さんの購入履歴</h1>
         <%-- ShoppingServletで付加したattribute: historyをリクエストスコープからBeanクラスのListを取得 --%>
@@ -61,5 +61,6 @@ body{
         <form action="./ShoppingServlet" method="post">
             <input class="common_button" type="submit" value="一覧に戻る">
         </form>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>

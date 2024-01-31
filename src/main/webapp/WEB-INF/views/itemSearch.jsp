@@ -34,6 +34,7 @@ body{
 </style>
 
 <body>
+	<jsp:include page="header.jsp"/>
 	<div class="container">
 	<%-- TODO:2-1 jsp:includeでヘッダー画面を読み込む --%>
 	<jsp:include page="header.jsp"></jsp:include>

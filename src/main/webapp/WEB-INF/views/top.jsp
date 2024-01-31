@@ -7,10 +7,7 @@
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
-
-
-
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
@@ -20,8 +17,8 @@
 }
 body {
     color: grey;
-    background-image:url(resources/image/pink_gold_buble.jpg);
-  	font-family: 'Monomaniac One', sans-serif;
+    background-image:url(resources/image/pink.jpg);
+  	font-family: 'Yomogi', cursive;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,13 +26,13 @@ body {
 
 
 h1{
-		font-family: 'Monomaniac One', sans-serif;
+		font-family: 'Yomogi', cursive;
 		text-align: center;
 		font-size: 80px;
 
 }
 .top{
-	font-family: 'Monomaniac One', sans-serif;
+	font-family: 'Yomogi', cursive;
 	font-size: 25px;
 
 }
@@ -53,7 +50,7 @@ h1{
 		<c:if test="${not empty loginModel.name}">
 			<p>ようこそ、${loginModel.name}さん</p>
 		</c:if>
-		<h1>☆レンタルサイト☆</h1>
+		<h1>レンタルサイト</h1>
 		<!-- メニュボタン削除 -->
 		<div style="text-align: center" class="top">
 			<!--
@@ -67,10 +64,11 @@ h1{
 			</form:form>
 			<!-- div style="text-align: right;">-->
 			<br>
-			<a href="setRegist">カイイントウロク</a>
+			<a href="setRegist">会員登録</a>
 			<a href="login">ログイン</a>
 			<a href="cart">カート</a>
 		</div>
 	</form:form>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

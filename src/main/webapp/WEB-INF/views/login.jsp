@@ -51,6 +51,7 @@ table {
 </style>
 </head>
 <body>
+	<jsp:include page="header.jsp"/>
 	<h1>☆ログイン画面☆</h1>
 	<form:form modelAttribute="loginModel" >
 
@@ -82,5 +83,6 @@ table {
 				</tr>
 			</table>
 		</form:form>
+		<jsp:include page="footer.jsp"/>
 </body>
 </html>

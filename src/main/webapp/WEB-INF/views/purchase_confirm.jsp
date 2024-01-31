@@ -22,7 +22,7 @@ body{
 }
 </style>
 <body>
-<!--<jsp:include page="header.jsp"/>-->
+<jsp:include page="header.jsp"/>
 
 <main>
     <h1>購入確認</h1>
@@ -60,5 +60,6 @@ body{
         <input class="common_button" type="submit" value="一覧に戻る">
     </form>
 </main>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

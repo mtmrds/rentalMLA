@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +34,6 @@
  }
 .link{
 	font-family: 'Yomogi', cursive;
-
 	text-align: right;
 	font-size: 25px;
 }
@@ -47,6 +47,7 @@ p{
 
 </style>
 <header>
+	<%--従業員用のヘッダー --%>
     <%-- ログイン済みの場合は名前を表示 --%>
     <form:form modelAttribute="memberModel">
 
@@ -64,8 +65,8 @@ p{
 	 -->
 
 	 <div class="link">
-	 <!-- リンクボタンを追加しました -->
-	 <a href="a">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>
+	 <!-- リンクボタンを追加しました リンク先は仮で作ってますので後で修正お願いします-->
+	 <a href="a">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">閲覧履歴</a><a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>
 	 </div>
 
   	<p>
