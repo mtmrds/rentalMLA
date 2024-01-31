@@ -20,7 +20,7 @@
 }
 body {
     color: grey;
-    background-image:url(resources/image/pink_gold_buble.jpg);
+    background-image:url(resources/image/pink.jpg);
   	font-family: 'Yomogi', cursive;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ h1{
 		<c:if test="${not empty loginModel.name}">
 			<p>ようこそ、${loginModel.name}さん</p>
 		</c:if>
-		<h1>♡レンタルサイト♡</h1>
+		<h1>レンタルサイト</h1>
 		<!-- メニュボタン削除 -->
 		<div style="text-align: center" class="top">
 			<!--
