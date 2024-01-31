@@ -72,5 +72,6 @@ h1{
 			<a href="cart">カート</a>
 		</div>
 	</form:form>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
