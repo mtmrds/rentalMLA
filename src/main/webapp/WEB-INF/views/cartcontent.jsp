@@ -22,7 +22,7 @@ text-align:center:
 
 		<hr size="1">
 			<%
-			@SupperssWarnings("unchecked")
+			@SupperssWarnings("unchecked")	
 			ArrayList<String> cart = (ArrayList<String>)
 				session.getAttribute("cart"); if(cart != null && !cart.isEmpty()) {
 			%>
