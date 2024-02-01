@@ -14,6 +14,7 @@ public class Members implements Serializable{
 	private String mail;
 	private java.sql.Date birthday;
 	private String card;
+	private String plan;
 	//itemEntity
 	private Integer itemNo;
 	private String title;
@@ -141,6 +142,12 @@ public class Members implements Serializable{
 	}
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+	public String getPlan() {
+		return plan;
+	}
+	public void setPlan(String plan) {
+		this.plan = plan;
 	}
 
 

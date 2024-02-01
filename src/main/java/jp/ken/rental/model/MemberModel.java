@@ -40,6 +40,8 @@ public class MemberModel {
 	@NotEmpty(message = "パスワードが未入力です")
 	private String password;
 
+	private String plan;
+
 	public String getName() {
 		return name;
 	}
@@ -87,5 +89,11 @@ public class MemberModel {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getPlan() {
+		return plan;
+	}
+	public void setPlan(String plan) {
+		this.plan = plan;
 	}
 }
