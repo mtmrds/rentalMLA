@@ -12,45 +12,19 @@
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
 <style>
-.errors{
+.errors {
 	color: #ff0000;
-}
-body {
-    color: grey;
-    background-image:url(resources/image/pink.jpg);
-  	font-family: 'Yomogi', cursive;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-h1{
-		font-family: 'Yomogi', cursive;
-		text-align: center;
-		font-size: 80px;
-
-}
-.top{
-	font-family: 'Yomogi', cursive;
-	font-size: 25px;
-
 }
 </style>
 </head>
 <body>
+	<div class="toppage">
 	<!-- 当jspをレンタルサイトの表紙として、各ページ遷移等の起点にしたい感じっす 元村 -->
 	<jsp:include page="header.jsp"/>
 	<form:form modelAttribute="loginModel">
-		<!--
-			ログインした後の名前を表示する機能を実装。
-			ヘッダーにも盛り込んだので現状は重複します
-			よって、構成に応じて下記は消してよいです　元村
-		-->
-		<c:if test="${not empty loginModel.name}">
-			<p>ようこそ、${loginModel.name}さん</p>
-		</c:if>
+	<div class="title">
 		<h1>レンタルサイト</h1>
+	</div>
 		<!-- メニュボタン削除 -->
 		<div style="text-align: center" class="top">
 			<!--
@@ -70,5 +44,6 @@ h1{
 		</div>
 	</form:form>
 	<jsp:include page="footer.jsp" />
+	</div>
 </body>
 </html>

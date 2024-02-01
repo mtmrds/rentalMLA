@@ -6,24 +6,29 @@
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
-<link rel="icon" href="resources/image/favicon.png" sizes="any">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+
 <meta charset=UTF-8>
 
 <title> 会員登録画面 </title>
 <style>
 body{
-   background-image:url(resources/image/pink_gold_buble.jpg);
+   background-image:url(resources/image/pink.jpg);
    background-size: cover;
 }
  h1{
  color: grey;
-   background: #f6bfbc; /*背景色*/
+   background: #e6e6fa; /*背景色*/
   padding: 0.5em;/*文字周りの余白*/
   border-radius: 0.5em;/*角の丸み*/
+  font-family: 'Yomogi', cursive;
+}
 
-  font-family: 'Monomaniac One', sans-serif;
-}d
+.container{
+	font-family: 'Yomogi', cursive;
+}
+
+
 table {
 	border-collapse;
   width: 100%;
