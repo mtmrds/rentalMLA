@@ -12,75 +12,83 @@
 
 <title> 会員登録画面 </title>
 
+
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="container">
-
 		<header><h1>☆会員登録画面☆</h1></header>
 		<main>
 		<form:form modelAttribute="memberModel">
-			<table>
-				<tr>
-					<td>氏名</td>
-					<td>
-						<form:input path="name" size="50"/>
-						<form:errors path="name" element="div" cssClass="errors"/>
-					</td>
-				</tr>
-				<tr>
-					<td>郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
-					<td>
-						<form:input path="zip" size="50" />
-						<form:errors path="zip" element="div" cssClass="errors" />
-					</td>
-				</tr>
-				<tr>
-					<td>住所</td>
-					<td>
-						<form:input path="address" size="50"/>
-						<form:errors path="address" element="div" cssClass="errors"/>
-					</td>
-				</tr>
-				<tr>
-					<td>電話番号（ハイフンなし・半角数字）</td>
-					<td>
-						<form:input path="phone" size="50"/>
-						<form:errors path="phone" element="span" cssClass="errors"/>
-					</td>
-				</tr>
-				<tr>
-					<td>メールアドレス</td>
-					<td>
-						<form:input path="mail" size="50"/>
-						<form:errors path="mail" element="div" cssClass="errors"/>
-					</td>
-				</tr>
-				<tr>
-					<td>生年月日（YYYY/MM/DD）</td>
-					<td>
-						<form:input path="birthday" size="50" />
-						<form:errors path="birthday" element="span" cssClass="errors" />
-					</td>
-				</tr>
-				<tr>
-					<td>クレジットカード</td>
-					<td>
-						<form:input path="card" size="50"/>
-						<form:errors path="card" element="span" cssClass="errors"/>
-					</td>
-				</tr>
-				<tr>
-					<td>パスワード（英数字含む８文字以上）</td>
-					<td>
-						<form:input path="password" size="50"/>
-						<form:errors path="password" element="div" cssClass="errors"/>
-					</td>
-				</tr>
+			<table border="1">
+					<tr>
+						<td class="regi1">氏名</td>
+						<td colspan="4" class="regi2">
+							<form:input path="name" size="50"/>
+							例）山田 太郎
+							<form:errors path="name" element="div" cssClass="errors"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
+						<td colspan="4" class="regi2">
+							<form:input path="zip" size="50" />
+							例）123-0000
+							<form:errors path="zip" element="div" cssClass="errors" />
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">住所</td>
+						<td colspan="4" class="regi2">
+							<form:input path="address" size="50"/>
+							例）東京都千代田区九段南1-1-1
+							<form:errors path="address" element="div" cssClass="errors"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">電話番号</td>
+						<td colspan="4" class="regi2">
+							<form:input path="phone" size="50"/>
+							例）08012345678 (ハイフンなし・半角数字)
+							<form:errors path="phone" element="span" cssClass="errors"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">メールアドレス</td>
+						<td colspan="4" class="regi2">
+							<form:input path="mail" size="50"/>
+							例）tarou@gamail.com
+							<form:errors path="mail" element="div" cssClass="errors"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">生年月日</td>
+						<td colspan="4" class="regi2">
+							<form:input path="birthday" size="50" />
+							例）2024/02/01
+							<form:errors path="birthday" element="span" cssClass="errors" />
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">クレジットカード</td>
+						<td colspan="4" class="regi2">
+							<form:input path="card" size="50"/>
+							<form:errors path="card" element="span" cssClass="errors"/>
+						</td>
+					</tr>
+					<tr>
+						<td class="regi1">パスワード</td>
+						<td colspan="4" class="regi2">
+							<form:input path="password" size="50"/>
+							※英数字含む８文字以上
+							<form:errors path="password" element="div" cssClass="errors"/>
+						</td>
+					</tr>
 
 				<!-- プラン追加しました　元村 -->
 				<tr>
-					<td>プラン</td>
+					<td class="regi1">プラン</td>
+
 					<td>
 						<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
 						<br>
@@ -106,10 +114,14 @@
 						月額5400円<br>
 						無制限<br>
 					</td>
+
 				</tr>
 				<tr>
-					<td><input type="submit" value="登録する" class="btn" ></td>
+					<td class="regi1" >
+						<input type="submit" value="登録する" class="btn" >
+					</td>
 				</tr>
+
 			</table>
 		</form:form>
 		</main>
