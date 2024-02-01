@@ -118,7 +118,7 @@
 				</tr>
 				<tr>
 					<td class="regi1" >
-						<input type="submit" value="登録する" class="btn" >
+						<input type="submit"  value="登録する" class="btn" >
 					</td>
 				</tr>
 

@@ -35,7 +35,7 @@ public class SearchController {
 
 		if(itemNoIsEmpty && titleIsEmpty) {
 			//全件検索
-			List<Members> itemList= membersDao.getItemList();
+			List<Members> itemList = membersDao.getItemList();
 			model.addAttribute("itemList", itemList);
 
 		} else if(!itemNoIsEmpty && titleIsEmpty) {

@@ -97,9 +97,9 @@ public class MembersDao {
 			}
 	}
 	public int insert(Members members) {
-		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, plan, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(), members.getAddress(),
-		                        members.getPhone(), members.getMail(), members.getPassword(), members.getCard() };
+		                        members.getPhone(), members.getMail(), members.getPassword(), members.getPlan(), members.getCard() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -128,7 +128,6 @@ public class MembersDao {
 	public List<Members> getItemList(){
 		String sql = "SELECT * FROM movitem";
 		List<Members> itemList = jdbcTemplate.query(sql, membersMapper);
-
 		return itemList;
 	}
 
