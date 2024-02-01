@@ -3,32 +3,55 @@
 /*--------------------------------
 ヘッダー
 --------------------------------*/
-header h1{
-  background-color: white;
-	padding:0;
-	margin:0;
+.logo a {
+	display: flex;
+	width:29%;
+	color:inherit;
+	text-decoration:none;
 }
 
-header h2{
-	  background-color: white;
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  background: url(images/musiclife.png) no-repeat left;
-}
-.right {
-    text-align: right;
+.logo img {
+	height: 70px;
+	width: 70px;
+	margin: 10px 1px 10px 5px;
+	boder: 1px;
 }
 
-body {
-    border: solid;
+.logo h1 {
+	font-family: 'Sacramento', cursive;
+	font-size: 45px;
+	margin: 10px;
+	padding: 10px;
 }
 
-
+.linkpage ,p {
+	font-family: 'Yomogi',cursive;
+	text-align: right;
+	font-size: 25px;
+}
 
 /*-------------------------------
-グローバルナビ
+トップページ
 -------------------------------*/
+.toppage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.toppage a {
+	font-family: 'Yomogi',cursive;
+	font-size: 25px;
+}
+
+.title h1 {
+	font-family: 'Yomogi',cursive;
+	font-size: 80px;
+	text-align: center;
+}
+
 
 /*-------------------------------
 メインビジュアル
