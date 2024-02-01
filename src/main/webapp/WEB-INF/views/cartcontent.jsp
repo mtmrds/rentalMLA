@@ -15,26 +15,12 @@ text-align:center:
 </style>
 </head>
 <body>
-<!--
+
 	<div id ="wapper">
 	<jsp:include page="header.jsp"></jsp:include>
 
 		<h1>カート内一覧</h1>
 
-<<<<<<< HEAD
-		<hr size="1">
-	<!--
-			@SupperssWarnings("unchecked")
-			ArrayList<String> cart = (ArrayList<String>)
-				session.getAttribute("cart"); if(cart != null && !cart.isEmpty()) {
-			%>
-
-
-
-				<!--
-				<thead>	<tr>
-
-=======
 
 <%-- わかんないんでとりあえずコメントアウト
 	<hr size="1">
@@ -50,7 +36,6 @@ text-align:center:
 				%>
 --%>			<table>
 					<tr>
->>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 						<th>画像</th>
 						<th>商品名</th>
 					</tr >
@@ -74,16 +59,13 @@ text-align:center:
 				<p>
 					<a href="form">トップに戻る</a>
 	</div>
-<<<<<<< HEAD
--->
-            <main>
 
-            	<form method="POST" action="cart">
-            		<input type="submit" value="確認する">
+	</main>
+           <form method="POST" action="cart">
+            <input type="submit" value="確認する">
 				</form>
 
         </main>
--->
     <jsp:include page="footer.jsp"/>
 
 
