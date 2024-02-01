@@ -24,47 +24,44 @@
 			<table>
 				<tr>
 					<td>会員No</td>
-					<td> 会員No</td>
+					<td> <form:input path="id" size="50"/></td>
 				</tr>
 				<tr>
 					<td>氏名</td>
-					<td> <!-- 名前が入る --> </td>
+					<td><form:input path="name" size="50"/></td>
 				</tr>
 				<tr>
 					<td>郵便番号</td>
-					<td><!-- 郵便番号 --></td>
+					<td><form:input path="zip" size="50" /></td>
 				</tr>
 				<tr>
 					<td>住所</td>
-					<td><!-- 住所 --></td>
+					<td><form:input path="address" size="50"/></td>
 				</tr>
 				<tr>
 					<td>電話番号（ハイフンなし・半角数字）</td>
-					<td><!-- 電話番号（ハイフンなし・半角数字） -->
+					<td><form:input path="phone" size="50"/></td>
 				</tr>
 				<tr>
 					<td>メールアドレス</td>
-					<td><!-- メールアドレス --></td>
+					<td><form:input path="mail" size="50"/></td>
 				</tr>
 				<tr>
 					<td>生年月日</td>
-					<td><!-- 生年月日（YYYY/MM/DD）--></td>
+					<td><form:input path="birthday" size="50" /></td>
 				</tr>
 				<tr>
 					<td>クレジットカード</td>
-					<td><!-- クレジットカード --></td>
+					<td><form:input path="card" size="50"/></td>
 				</tr>
 				<tr>
 					<td>パスワード</td>
-					<td><!-- パスワード（英数字含む８文字以上） --></td>
+					<td><form:input path="password" size="50"/></td>
 				</tr>
 			</table>
 		</div>
 		<div>
-			<button type="button">編集</button>
-		</div>
-		<div>
-			<button type="button">退会</button>
+			<button type="button">更新する</button>
 		</div>
 	<jsp:include page="footer.jsp"/>
 </body>
