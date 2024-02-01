@@ -22,10 +22,12 @@
 <style>
 body{
 	background-image:url(resources/image/pink.jpg);
+
 	font-family: 'Yomogi', cursive;
 }
 .form-row{
 	font-family: 'Yomogi', cursive;
+
 }
 .for-errors{
 	font-family: 'Yomogi', cursive;
