@@ -10,26 +10,29 @@
 <!-- 文字フォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
 
 <meta charset="UTF-8">
 <title>レンタルサイト 商品一覧画面</title>
-<link href="css/shopping.css" rel="stylesheet" type="text/css" />
+<!-- link href="css/shopping.css" rel="stylesheet" type="text/css" />-->
 </head>
 
 <!-- 文字フォント -->
 <style>
-	body{
-	font-family: 'Kaisei Decol', serif;
-	font-family: 'Monomaniac One', sans-serif;
-
-	}
-
-<!-- 背景画像 -->
 body{
 	background-image:url(resources/image/pink.jpg);
+
+	font-family: 'Yomogi', cursive;
 }
+.form-row{
+	font-family: 'Yomogi', cursive;
+
+}
+.for-errors{
+	font-family: 'Yomogi', cursive;
+}
+
 
 </style>
 
@@ -37,7 +40,6 @@ body{
 	<jsp:include page="header.jsp"/>
 	<div class="container">
 	<%-- TODO:2-1 jsp:includeでヘッダー画面を読み込む --%>
-	<jsp:include page="header.jsp"></jsp:include>
 	<main>
 			<form:form modelAttribute="itemModel">
 				<div class="form-row">
@@ -48,7 +50,7 @@ body{
 					<form:input path="itemNo"/>
 					<label for="name">タイトル</label>
 					<form:input path="title"/>
-					<input type="submit" value="検索する" class="btn">
+					<input type="submit" name="SearchItem" value="検索する" class="btn">
 				</div>
 				<div class="form-row errors">
 					<c:out value="${message}"/>
@@ -62,6 +64,7 @@ body{
 						<th>タイプ</th>
 						<th>カテゴリー</th>
 						<th>在庫</th>
+						<th>カート</th>
 					</tr>
 					<c:forEach var="items" items="${itemList}">
 						<tr>
@@ -70,6 +73,13 @@ body{
 							<td><c:out value="${items.type}"/></td>
 							<td><c:out value="${items.category}"/></td>
 							<td><c:out value="${items.quantity}"/></td>
+							<td>
+								<!-- いったん下記でcartcontent.jsoに飛ばすようにしてます -->
+								<form:form modelAttribute="itemModel" action="cart" method="GET" >
+									<form:hidden path="itemNo" value="${members.itemNo}"/>
+									<input type="submit" value="カート入れる"/>
+								</form:form>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -97,9 +97,9 @@ public class MembersDao {
 			}
 	}
 	public int insert(Members members) {
-		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(), members.getAddress(),
-		                        members.getPhone(), members.getMail(), members.getPassword(), members.getCard() };
+		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, plan, card) VALUES(?, ?,?,?,?,?,?,?,?);";
+		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(),members.getAddress(),
+								members.getPhone(), members.getMail(), members.getPassword(), members.getPlan(), members.getCard() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -235,6 +235,26 @@ public class MembersDao {
 			}
 		}
 		return numberOfRow;
+	}
+
+
+	public Members getCartListId(Members cartListNo) {
+		String sql = "SELECT * FROM history WHERE item_no=?";
+		Object[] parameters = { cartListNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+		return null;
+	}
+
+	}
+	public int remove(Members cartListid) {
+
+		String sql = "DELETE FROM history WHERE item_no=?";
+	    Object[] parameters = {cartListid};
+	    return jdbcTemplate.update(sql, parameters);
 	}
 
 }

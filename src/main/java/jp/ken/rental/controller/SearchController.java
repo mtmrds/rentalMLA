@@ -28,7 +28,7 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
-	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	@RequestMapping(value = "/search", params="SearchItem" , method = RequestMethod.POST)
 	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
@@ -68,4 +68,55 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
+
+/* KariConコントローラーがあるので、「itemSearch.jsp」に「cartcontent.jso」へ飛ばす内容を以下で設定。
+	---------------------------------------------------------------------
+   <form:form modelAttribute="itemModel" action="cart" method="GET" >
+   		<form:hidden path="itemNo" value="${members.itemNo}"/>
+   		<input type="submit" value="カート入れる"/>
+   </form:form>
+	---------------------------------------------------------------------
+	以下は使わない可能性があるため、一旦コメントアウトして保持　
+	上記対応は暫定対応なので、見直して変えるかも
+																	/元村
+
+
+
+	//cartに追加する処理
+
+
+	@RequestMapping(value = "/addCart", method = RequestMethod.GET)
+	public String toAdd() {
+        return "cartcontent";
+	}
+	@RequestMapping(value = "/addCart", method = RequestMethod.POST)
+	public String toAddCart(@ModelAttribute ItemModel itemModel, Model model) {
+		return "cartcontent";
+	}
+
+
+		if (result.hasErrors()) {
+	        return "";  //わからん😢
+	    }
+
+	    Members members = new Members();
+
+	    members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
+	    members.setTitle(itemModel.getTitle());
+
+	    int numberOfRow = membersDao.insertCart(members);
+
+	    	if (numberOfRow == 0) {
+	    		//ここが怪しい
+	    		//model.addAttribute("message", "登録に失敗しました。");
+
+	    		return "cartcontent";  //わからん😢
+	    	}
+	    //使う？不明なのでコメントアウト
+	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
+	    //model.addAttribute("memberModel", memberModel);
+	    return "redirect:/cart";
+	    }
+*/
 }
+
