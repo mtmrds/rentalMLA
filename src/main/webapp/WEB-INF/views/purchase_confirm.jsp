@@ -16,7 +16,7 @@
 <style>
 <!-- 背景画像、文字フォント -->
 body{
-	background-image:url(resources/image/pink_gold_buble.jpg);
+	background-image:url(resources/image/pink.jpg);
 	font-family: 'Kaisei Decol', serif;
 	font-family: 'Monomaniac One', sans-serif;
 }

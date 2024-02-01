@@ -28,7 +28,7 @@
 
 <!-- 背景画像 -->
 body{
-	background-image:url(resources/image/pink_gold_buble.jpg);
+	background-image:url(resources/image/pink.jpg);
 }
 
 </style>
