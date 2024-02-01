@@ -9,22 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-
 </head>
-
-<style>
-footer{
-	font-family: 'Yomogi', cursive;
-
-	text-align: right;
-}
-
-}
-</style>
-
 <footer>
-	<div>
-		<small>&copy;株式会社 Music Life Agency</small>
+	<div class="footer">
+		<p><small>&copy;株式会社 Music Life Agency</small></p>
 	</div>
 </footer>
 </html>

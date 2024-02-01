@@ -12,30 +12,43 @@
 td {
 	text-align: center:
 }
+
 </style>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
 
-	<form method="POST" action="cart">
-		<input type="submit" value="確認する">
-	</form>
-	<table>
-	<tr>
-		<th>ID</th>
-		<th>タイトル</th>
-		<th>画像</th>
-	</tr >
-	<tr>
-		<c:forEach var="items" items="${CartList}">
-			<td><c:out value="${items.itemNo}" /></td>
-			<td><c:out value="${items.title}" /></td>
-		</c:forEach>
-	</table>
-		<p><a href="<c:url value='top' />">トップに戻る</a></p>
+	<div id="wapper">
+		<jsp:include page="header.jsp"></jsp:include>
+
+			<a href="form">トップに戻る</a>
+	</div>
+
+
+
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>タイトル</th>
+						<th>画像</th>
+					</tr >
+				<c:forEach var="items" items="${itemList}">
+					<tr>
+						<td><c:out value="${items.itemNo}"/></td>
+						<td><c:out value="${items.title}"/></td>
+
+					</tr>
+				</c:forEach>
+				</table>
+
+
+
+				<p>カートに商品がありません。</p>
+
 			<form:form modelAttribute="loginModel">
-            	<input type="submit"  name = "index" value="確認する">
-			</form:form>
-	<jsp:include page="footer.jsp" />
+            <input type="submit"  name = "index" value="確認する">
+				</form:form>
+
+    <jsp:include page="footer.jsp"/>
+
 </body>
 </html>

@@ -27,8 +27,6 @@
 		<img src="resources/image/logo.png">
 		<h1>Music Life Agency</h1>
 	</a>
-
-
 </div>
 	<!--
 		下記pタグ内について、
