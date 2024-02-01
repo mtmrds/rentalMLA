@@ -26,10 +26,10 @@ td {
 
 			 <% if(cart != null && !cart.isEmpty()) { %>
 
-				<%--
+				<%
 				 List<String> cart =(List<String>) session.getAttribute("cartList");
 
-				--%>
+				%>
 				<%--
 			  if(cart != null && !cart.isEmpty()) {
 				--%>
@@ -80,7 +80,7 @@ td {
 						<th>タイトル</th>
 						<th>画像</th>
 					</tr >
-				<c:forEach var="items" items="${itemList}">
+				<c:forEach var="items" items="${CartList}">
 					<tr>
 						<td><c:out value="${items.itemNo}"/></td>
 						<td><c:out value="${items.title}"/></td>
@@ -107,11 +107,17 @@ td {
 				%>
 				<p>カートに商品がありません。</p>
 
+
+	</main>
+           <form method="POST" action="cart">
+            <input type="submit" value="確認する">
+				</form>--%>
+<p><a href="<c:url value='top' />">トップに戻る</a></p>
+
 			<form:form modelAttribute="loginModel">
             <input type="submit"  name = "index" value="確認する">
 				</form:form>
 
-    <jsp:include page="footer.jsp"/>
 
 
 	</main>
