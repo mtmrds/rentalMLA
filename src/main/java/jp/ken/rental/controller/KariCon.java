@@ -18,6 +18,7 @@ import jp.ken.rental.model.ItemModel;
 @SessionAttributes({"loginModel", "memberModel"})
 
 public class KariCon {
+	private String memId;//m_idフィールドの追加。削除と更新で使う
 
 	    @Autowired
 	    private MembersDao membersDao ;

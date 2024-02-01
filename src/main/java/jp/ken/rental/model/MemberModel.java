@@ -45,55 +45,74 @@ public class MemberModel {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public String getZip() {
 		return zip;
 	}
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
+
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
+
 	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+
 	public String getMail() {
 		return mail;
 	}
-	public void setMail(String email) {
-		this.mail = email;
-	}
+
 	public String getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
+
 	public String getCard() {
 		return card;
 	}
-	public void setCard(String card) {
-		this.card = card;
-	}
+
 	public String getPassword() {
 		return password;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+
+	public void setCard(String card) {
+		this.card = card;
+	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getPlan() {
 		return plan;
 	}
+
 	public void setPlan(String plan) {
 		this.plan = plan;
 	}
+
+
 }

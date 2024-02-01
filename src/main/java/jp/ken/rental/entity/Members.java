@@ -35,121 +35,129 @@ public class Members implements Serializable{
 			return null;
 		}
 	}
+
 	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public String getPassword() {
+		return password;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getZip() {
 		return zip;
-	}
-
-	public void setZip(String zip) {
-		this.zip = zip;
 	}
 
 	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getPhone() {
 		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
 	}
 
 	public String getMail() {
 		return mail;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-
 	public java.sql.Date getBirthday() {
 		return birthday;
-	}
-
-	public void setBirthday(java.sql.Date birthday) {
-		this.birthday = birthday;
 	}
 
 	public String getCard() {
 		return card;
 	}
 
-	public void setCard(String card) {
-		this.card = card;
+	public String getPlan() {
+		return plan;
+	}
+
+	public Integer getItemNo() {
+		return itemNo;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
 	}
 
 	public static SimpleDateFormat getDateformat() {
 		return dateFormat;
 	}
 
-
-	public String getPassword() {
-		return password;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	//itemのゲッターセッター
-	public Integer getItemNo() {
-		return itemNo;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public void setItemNo(Integer itemNo) {
-		this.itemNo = itemNo;
+
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
-	public String getTitle() {
-		return title;
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getType() {
-		return type;
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public void setType(String type) {
-		this.type = type;
+
+	public void setBirthday(java.sql.Date birthday) {
+		this.birthday = birthday;
 	}
-	public String getCategory() {
-		return category;
+
+	public void setCard(String card) {
+		this.card = card;
 	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
-	public Integer getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
-	public String getPlan() {
-		return plan;
-	}
+
 	public void setPlan(String plan) {
 		this.plan = plan;
 	}
 
+	public void setItemNo(Integer itemNo) {
+		this.itemNo = itemNo;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
 
 }
-
