@@ -100,19 +100,16 @@ td {
 				<%
 					}
 				%>
+>
 				</table>
 				<%
 				}
 				%>
 				<p>カートに商品がありません。</p>
-				<p>
-					<a href="form">トップに戻る</a>
-	</div>
 
-	</main>
-           <form method="POST" action="cart">
-            <input type="submit" value="確認する">
-				</form>--%>
+			<form:form modelAttribute="loginModel">
+            <input type="submit"  name = "index" value="確認する">
+				</form:form>
 
     <jsp:include page="footer.jsp"/>
 
