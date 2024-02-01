@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,7 @@ text-align:center:
 
 		<h1>カート内一覧</h1>
 
+<<<<<<< HEAD
 		<hr size="1">
 	<!--
 			@SupperssWarnings("unchecked")
@@ -32,11 +34,47 @@ text-align:center:
 				<!--
 				<thead>	<tr>
 
+=======
+
+<%-- わかんないんでとりあえずコメントアウト
+	<hr size="1">
+			<% List<String> cart =(List<String>) session.getAttribute("cartList"); %>
+
+			 <% if(cart != null && !cart.isEmpty()) { %>
+
+
+				<table border="1">
+				<%
+				for(int index = 0; index < cart.size(); index ++){
+					int itemNo = Integer.ParseInt(cart.get(index));
+				%>
+--%>			<table>
+					<tr>
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 						<th>画像</th>
 						<th>商品名</th>
 					</tr >
-				</thead>
+
+				<tr>
+					<td><img src="resources/image/<%--= parameters --%> alt="   "></td>
+					<!--  <td><%-- =Items.item[itemNo] --%></td>-->
+						<form action="cart" method="post">
+							<input type="hidden" name="index" value="<%--=index--%> ">
+							 <input type="submit" value="削除する">
+						</form>
+				</tr>
+				<%--
+					}
+				--%>
+				</table>
+				<%--
+				}
+				--%>
+				<p>カートに商品がありません。</p>
+				<p>
+					<a href="form">トップに戻る</a>
 	</div>
+<<<<<<< HEAD
 -->
             <main>
 
@@ -47,6 +85,7 @@ text-align:center:
         </main>
 -->
     <jsp:include page="footer.jsp"/>
+
 
 </body>
 </html>
