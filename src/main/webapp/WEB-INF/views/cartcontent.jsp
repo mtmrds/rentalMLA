@@ -20,10 +20,10 @@ text-align:center:
 	<div id ="wapper">
 	<jsp:include page="header.jsp"></jsp:include>
 
-				<%--
+				<%
 				 List<String> cart =(List<String>) session.getAttribute("cartList");
 
-				--%>
+				%>
 				<%--
 			  if(cart != null && !cart.isEmpty()) {
 				--%>
@@ -40,7 +40,7 @@ text-align:center:
 						<th>タイトル</th>
 						<th>画像</th>
 					</tr >
-				<c:forEach var="items" items="${itemList}">
+				<c:forEach var="items" items="${CartList}">
 					<tr>
 						<td><c:out value="${items.itemNo}"/></td>
 						<td><c:out value="${items.title}"/></td>
@@ -73,7 +73,7 @@ text-align:center:
            <form method="POST" action="cart">
             <input type="submit" value="確認する">
 				</form>--%>
-
+<p><a href="<c:url value='top' />">トップに戻る</a></p>
     <jsp:include page="footer.jsp"/>
 
 
