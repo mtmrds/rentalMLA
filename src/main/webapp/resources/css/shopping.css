@@ -5,7 +5,7 @@
 --------------------------------*/
 .logo a {
 	display: flex;
-	width:29%;
+	width:30%;
 	color:inherit;
 	text-decoration:none;
 }
@@ -32,19 +32,9 @@
 
 
 /*-------------------------------
-ログインページ(埋め込みJSP)
+ログインページ(共通部分)
 -------------------------------*/
-.loginpagelink h1 {
-	font-family: 'Monomaniac One \', sans-serif;
-	font-size: 35px;
-	color: grey;
-}
 
-.loginpagelink a {
-	background-color: #e6e6fa;
-	border-radius: 0.5em;
-
-}
 /*-------------------------------
 フッター
 -------------------------------*/
@@ -75,11 +65,9 @@
 	font-size: 80px;
 	text-align: center;
 }
-
-
-
-
-
+.topselect {
+	text-align: center;
+}
 /*-------------------------------
 サイドバー
 -------------------------------*/
