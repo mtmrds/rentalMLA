@@ -20,13 +20,7 @@ body{
 
 
 }
- h1{
- 	color: grey;
-   	background: #f6bfbc; /*背景色*/
-  	padding: 0.5em;/*文字周りの余白*/
-  	border-radius: 0.5em;/*角の丸み*/
-  	font-family: 'Monomaniac One', sans-serif;
-  	font-size: 35px;
+
 }
 h2{
 	color: grey;
@@ -53,7 +47,10 @@ table {
 </style>
 </head>
 <body>
-	<jsp:include page="header.jsp"/>
+	<div class="loginpage">
+	<div class="loginpagelink">
+		<jsp:include page="header.jsp"/>
+	</div>
 	<!-- <h1>☆ログイン画面☆</h1>削除-->
 	<form:form modelAttribute="loginModel" >
 		<table>
@@ -91,5 +88,6 @@ table {
 		</table>
 	</form:form>
 		<jsp:include page="footer.jsp"/>
+	</div>
 </body>
 </html>
