@@ -97,9 +97,9 @@ public class MembersDao {
 			}
 	}
 	public int insert(Members members) {
-		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, plan, card) VALUES(?, ?,?,?,?,?,?,?,?);";
-		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(),members.getAddress(),
-								members.getPhone(), members.getMail(), members.getPassword(), members.getPlan(), members.getCard() };
+		String sql = "INSERT INTO members(name, birthday, zip, address, phone, mail, password, card) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+		Object[] parameters = { members.getName(), members.getBirthday(), members.getZip(), members.getAddress(),
+		                        members.getPhone(), members.getMail(), members.getPassword(), members.getCard() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -246,14 +246,15 @@ public class MembersDao {
 			return members;
 		} catch(EmptyResultDataAccessException e){
 			e.printStackTrace();
+		}catch (Exception e) {
+			System.out.println("籠が空です");
+		}
 		return null;
 	}
-
-	}
-	public int remove(Members cartListid) {
+	public int remove(String string) {
 
 		String sql = "DELETE FROM history WHERE item_no=?";
-	    Object[] parameters = {cartListid};
+	    Object[] parameters = {string};
 	    return jdbcTemplate.update(sql, parameters);
 	}
 

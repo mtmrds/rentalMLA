@@ -40,32 +40,18 @@ text-align:center:
 						<th>商品名</th>
 					</tr >
 
-				<tr>
-					<td><img src="resources/image/<%--= parameters --%> alt="   "></td>
-					<!--  <td><%-- =Items.item[itemNo] --%></td>-->
-						<form action="cart" method="post">
-							<input type="hidden" name="index" value="<%--=index--%> ">
-							 <input type="submit" value="削除する">
-						</form>
-				</tr>
-				<%--
-					}
-				--%>
 				</table>
 				<%--
 				}
 				--%>
 				<p>カートに商品がありません。</p>
-				<p>
-					<a href="form">トップに戻る</a>
-	</div>
 
-	</main>
-           <form method="POST" action="cart">
-            <input type="submit" value="確認する">
-				</form>
 
-        </main>
+			<form:form modelAttribute="loginModel">
+            <input type="submit"  name = "index" value="確認する">
+				</form:form>
+
+
     <jsp:include page="footer.jsp"/>
 
 

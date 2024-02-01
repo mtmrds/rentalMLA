@@ -24,7 +24,7 @@ public class KariCon {
 
 	    @ModelAttribute
 	    ItemModel itemModel() {
-	        return new  ItemModel();
+	        return new ItemModel();
 	    }
 
 	    @RequestMapping(method = RequestMethod.GET)
@@ -33,13 +33,19 @@ public class KariCon {
 	        return "cartcontent";
 	    }
 
+	    @RequestMapping(method = RequestMethod.POST, params = "index")
+	    String viewCart2(Model model) {
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        return "footer";
+	    }
+
 	    @RequestMapping(method = RequestMethod.POST)
-	    String removeFromCart(@Validated MembersDao membersDao, BindingResult bindingResult, Model model) {
+	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
 	        	if (bindingResult.hasErrors()) {
 	            model.addAttribute("error", "商品がチェックされていません");
 	            return viewCart(model);
 	        }
-	        membersDao.remove(membersDao.getCartListId(null));
+	        membersDao.remove(itemModel.getItemNo());
 	        return "redirect:/cartcontent";
 	    }
 }
