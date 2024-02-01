@@ -26,35 +26,28 @@ body{
 	<jsp:include page="header.jsp"/>
 		<main>
 		<h1>決済確認画面</h1>
-	<form:form modelAttribute="MemberModel">
+	<form:form modelAttribute="itemModel">
 	<table>
 		<!-- タイトルと商品画像 -->
 		<tr>
-			<td><%=cart.item[index]%></td>
-			<td>
-				<img src="img/<%=cart.image[index] %>"
-				alt="<%=cart.item[index] %>">
-			</td>
+			<th>&nbsp;</th>
+			<th>タイトル</th>
+			<th>タイプ</th>
+			<th>カテゴリー</th>
+		</tr>
+		<tr>
+			<td>${ itemModel.itemNo }</td><!-- 画像の引っ張り方不明の為「itemNo」にしています -->
+			<td>${ itemModel.title }</td>
+			<td>${ itemModel.type }</td>
+			<td>${ itemModel.category }</td>
 		</tr>
 
 
 		<!-- カート内の最終確認 -->
-		String message;
-		if(cart != null && !cart.isEmpty()){
-			int total = 0;
-			for(String itemName : cart){
-				int index = Integer.parseInt(itemName);
-				total += cart.item[index];
-		}
-		message = "合計：<strong>" + total + "点" + "</strong>になります";
-		}else{
-			message = "カートに商品が入っていません";
-			}
-			request.setAttribute("message",message);
 
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/cartcontent.jsp");
-			dispatcher.forward(request,response);
-			}
+
+
+		<!-- message = "合計：<strong>" + total + "点" + "</strong>になります";-->
 
 
 		<p>
@@ -67,10 +60,6 @@ body{
 
 	</table>
 </form:form>
-
-
-
-
 </main>
     <jsp:include page="footer.jsp"/>
 </body>
