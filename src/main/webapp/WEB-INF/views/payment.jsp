@@ -47,7 +47,7 @@ body{
 
 
 
-		message = "合計：<strong>" + total + "点" + "</strong>になります";
+		<!-- message = "合計：<strong>" + total + "点" + "</strong>になります";-->
 
 
 		<p>
