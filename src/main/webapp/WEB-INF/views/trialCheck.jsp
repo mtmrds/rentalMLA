@@ -5,9 +5,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- 文字フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>プラン変更</title>
 </head>
+<style>
+	<!-- 背景画像、文字フォント -->
+		background-image:url(resources/image/pink.jpg);
+		font-family: 'Kaisei Decol', serif;
+		font-family: 'Monomaniac One', sans-serif;
+</style>
 <body>
 	<jsp:include page="header.jsp"/>
 	<h1>☆プラン変更画面☆</h1>
