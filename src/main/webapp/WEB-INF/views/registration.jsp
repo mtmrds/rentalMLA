@@ -11,41 +11,7 @@
 <meta charset=UTF-8>
 
 <title> 会員登録画面 </title>
-<style>
-body{
-   background-image:url(resources/image/pink.jpg);
-   background-size: cover;
-}
- h1{
- color: grey;
-   background: #e6e6fa; /*背景色*/
-  padding: 0.5em;/*文字周りの余白*/
-  border-radius: 0.5em;/*角の丸み*/
-  font-family: 'Yomogi', cursive;
-}
 
-.container{
-	font-family: 'Yomogi', cursive;
-}
-
-
-table {
-	border-collapse;
-  width: 100%;
-}
-
-  td, th {
-	padding: 8px;
-    text-align: left;
-    font-weight: bold;
-
-  }
-
-  tr{
-    line-height: 1;
-  }
-
-</style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
