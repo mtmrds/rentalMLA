@@ -60,6 +60,11 @@ tr{
  	padding: 50px;
  }
 
+ .errors{
+ 	color: red;
+ 	font-weight: bold;
+ }
+
 </style>
 </head>
 <body>
@@ -73,48 +78,48 @@ tr{
 						<td class="regi1">氏名</td>
 						<td colspan="4" class="regi2">
 							<form:input path="name" size="50"/>
-							<form:errors path="name" element="div" cssClass="errors"/>
 							例）山田 太郎
+							<form:errors path="name" element="div" cssClass="errors"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="regi1">郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
 						<td colspan="4" class="regi2">
 							<form:input path="zip" size="50" />
-							<form:errors path="zip" element="div" cssClass="errors" />
 							例）123-0000
+							<form:errors path="zip" element="div" cssClass="errors" />
 						</td>
 					</tr>
 					<tr>
 						<td class="regi1">住所</td>
 						<td colspan="4" class="regi2">
 							<form:input path="address" size="50"/>
-							<form:errors path="address" element="div" cssClass="errors"/>
 							例）東京都千代田区九段南1-1-1
+							<form:errors path="address" element="div" cssClass="errors"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="regi1">電話番号</td>
 						<td colspan="4" class="regi2">
 							<form:input path="phone" size="50"/>
+							例）08012345678 (ハイフンなし・半角数字)
 							<form:errors path="phone" element="span" cssClass="errors"/>
-							例）08012345678 （ハイフンなし・半角数字）
 						</td>
 					</tr>
 					<tr>
 						<td class="regi1">メールアドレス</td>
 						<td colspan="4" class="regi2">
 							<form:input path="mail" size="50"/>
-							<form:errors path="mail" element="div" cssClass="errors"/>
 							例）tarou@gamail.com
+							<form:errors path="mail" element="div" cssClass="errors"/>
 						</td>
 					</tr>
 					<tr>
 						<td class="regi1">生年月日</td>
 						<td colspan="4" class="regi2">
 							<form:input path="birthday" size="50" />
-							<form:errors path="birthday" element="span" cssClass="errors" />
 							例）2024/02/01
+							<form:errors path="birthday" element="span" cssClass="errors" />
 						</td>
 					</tr>
 					<tr>
@@ -128,8 +133,8 @@ tr{
 						<td class="regi1">パスワード</td>
 						<td colspan="4" class="regi2">
 							<form:input path="password" size="50"/>
-							<form:errors path="password" element="div" cssClass="errors"/>
 							※英数字含む８文字以上
+							<form:errors path="password" element="div" cssClass="errors"/>
 						</td>
 					</tr>
 
