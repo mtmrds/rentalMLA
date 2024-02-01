@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,6 +104,36 @@ table {
 					<td>
 						<form:input path="password" size="50"/>
 						<form:errors path="password" element="div" cssClass="errors"/>
+					</td>
+				</tr>
+
+				<!-- プラン追加しました　元村 -->
+				<tr>
+					<td>プラン</td>
+					<td>
+						<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
+						<br>
+						初月限定！<br>
+						月額324円<br>
+						2枚/月
+					</td>
+					<td>
+						<form:radiobutton path="plan" label="Bronzeプラン" value="Bronzeプラン" />
+						<br>
+						月額1080円<br>
+						6枚/月
+					</td>
+					<td>
+						<form:radiobutton path="plan" label="Silverプラン" value="Silverプラン" />
+						<br>
+						月額2160円<br>
+						6枚/月
+					</td>
+					<td>
+						<form:radiobutton path="plan" label="Goldプラン" value="Goldプラン" />
+						<br>
+						月額5400円<br>
+						無制限<br>
 					</td>
 				</tr>
 				<tr>

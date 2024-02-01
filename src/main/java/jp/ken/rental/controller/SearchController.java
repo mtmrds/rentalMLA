@@ -6,8 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -71,21 +69,36 @@ public class SearchController {
 		return "itemSearch";
 	}
 
+/* KariConコントローラーがあるので、「itemSearch.jsp」に「cartcontent.jso」へ飛ばす内容を以下で設定。
+	---------------------------------------------------------------------
+   <form:form modelAttribute="itemModel" action="cart" method="GET" >
+   		<form:hidden path="itemNo" value="${members.itemNo}"/>
+   		<input type="submit" value="カート入れる"/>
+   </form:form>
+	---------------------------------------------------------------------
+	以下は使わない可能性があるため、一旦コメントアウトして保持　
+	上記対応は暫定対応なので、見直して変えるかも
+																	/元村
+
+
 
 	//cartに追加する処理
 
 
 	@RequestMapping(value = "/addCart", method = RequestMethod.GET)
-	public String toCompRegist(Model model) {
-		model.addAttribute("itemModel", new ItemModel());
-        return "redirect:/search";
+	public String toAdd() {
+        return "cartcontent";
 	}
-	@RequestMapping(value = "/addCart",params="add", method = RequestMethod.POST)
-	public String toComp(Model model, @Validated @ModelAttribute ItemModel itemModel, BindingResult result) {
+	@RequestMapping(value = "/addCart", method = RequestMethod.POST)
+	public String toAddCart(@ModelAttribute ItemModel itemModel, Model model) {
+		return "cartcontent";
+	}
+
 
 		if (result.hasErrors()) {
 	        return "";  //わからん😢
 	    }
+
 	    Members members = new Members();
 
 	    members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
@@ -97,10 +110,13 @@ public class SearchController {
 	    		//ここが怪しい
 	    		//model.addAttribute("message", "登録に失敗しました。");
 
-	    		return "";  //わからん😢
+	    		return "cartcontent";  //わからん😢
 	    	}
+	    //使う？不明なのでコメントアウト
 	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
 	    //model.addAttribute("memberModel", memberModel);
-	    return "redirect:/search";
+	    return "redirect:/cart";
 	    }
+*/
 }
+

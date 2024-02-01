@@ -72,10 +72,10 @@ body{
 							<td><c:out value="${items.category}"/></td>
 							<td><c:out value="${items.quantity}"/></td>
 							<td>
-								<form:form modelAttribute="itemModel">
+								<!-- いったん下記でcartcontent.jsoに飛ばすようにしてます -->
+								<form:form modelAttribute="itemModel" action="cart" method="GET" >
 									<form:hidden path="itemNo" value="${members.itemNo}"/>
-
-									<input type="submit" name="add" value="カート入れる"/>
+									<input type="submit" value="カート入れる"/>
 								</form:form>
 							</td>
 						</tr>

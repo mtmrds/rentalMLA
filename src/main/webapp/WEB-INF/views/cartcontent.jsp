@@ -14,31 +14,30 @@ text-align:center:
 </style>
 </head>
 <body>
-
+<!--
 	<div id ="wapper">
 	<jsp:include page="header.jsp"></jsp:include>
 
 		<h1>カート内一覧</h1>
 
 		<hr size="1">
-			<%
-			@SupperssWarnings("unchecked")	
+	<!--
+			@SupperssWarnings("unchecked")
 			ArrayList<String> cart = (ArrayList<String>)
 				session.getAttribute("cart"); if(cart != null && !cart.isEmpty()) {
 			%>
-				<table border="1">
-				<%
-				for(int index = 0; index < cart.size(); index ++){
-					int itemNo = Integer.ParseInt(cart.get(index));
-				%>
-					<thead>
-					<tr>
+
+
+
+				<!--
+				<thead>	<tr>
+
 						<th>画像</th>
 						<th>商品名</th>
 					</tr >
 				</thead>
 	</div>
-
+-->
             <main>
 
             	<form method="POST" action="cart">
@@ -46,6 +45,7 @@ text-align:center:
 				</form>
 
         </main>
+-->
     <jsp:include page="footer.jsp"/>
 
 </body>

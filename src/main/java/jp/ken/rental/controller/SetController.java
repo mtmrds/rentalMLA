@@ -28,17 +28,7 @@ public class SetController {
         return "registration";
 	}
 	@RequestMapping(value = "/setRegist", method = RequestMethod.POST)
-	public String toRegist() {
-        return "redirect:/compRegist";
-	}
-	@RequestMapping(value = "/compRegist", method = RequestMethod.GET)
-	public String toCompRegist(Model model) {
-		model.addAttribute("memberModel", new MemberModel());
-        return "registrationComplete";
-	}
-	@RequestMapping(value = "/compRegist", method = RequestMethod.POST)
-	public String toComp(Model model, @Validated @ModelAttribute MemberModel memberModel, BindingResult result) {
-
+	public String toRegist(Model model, @Validated @ModelAttribute MemberModel memberModel, BindingResult result) {
 		if (result.hasErrors()) {
 	        return "registration";
 	    }
@@ -51,17 +41,32 @@ public class SetController {
 		members.setPhone(memberModel.getPhone());
 		members.setMail(memberModel.getMail());
 		members.setPassword(memberModel.getPassword());
+		members.setPlan(memberModel.getPlan());
 		members.setCard(memberModel.getCard());
 
 	    int numberOfRow = membersDao.insert(members);
 
 	    if (numberOfRow == 0) {
-	    	//ここが怪しい
+	    	//下記は必要に応じて使うか検討する
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "registration";
 	    }
+	    //下記を使うイメージが固まってないので、コメントアウトしてます
 	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
 	    //model.addAttribute("memberModel", memberModel);
+        return "redirect:/compRegist";
+	}
+	@RequestMapping(value = "/compRegist", method = RequestMethod.GET)
+	public String toCompRegist() {
+		//引数Model model削除。下記もコメントアウト
+		//model.addAttribute("memberModel", new MemberModel());
+        return "registrationComplete";
+	}
+	/*
+	POST通信コメントアウト もし必要なときは使う
+	@RequestMapping(value = "/compRegist", method = RequestMethod.POST)
+	public String toComp() {
 	    return "redirect:/registrationComplete";
 	    }
+	*/
 }
