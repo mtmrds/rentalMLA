@@ -37,7 +37,9 @@ body{
 </style>
 
 <body>
+	<div class="loginpagelink">
 	<jsp:include page="header.jsp"/>
+	</div>
 	<div class="container">
 	<%-- TODO:2-1 jsp:includeでヘッダー画面を読み込む --%>
 	<main>
