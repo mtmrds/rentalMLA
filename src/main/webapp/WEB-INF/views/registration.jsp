@@ -5,12 +5,18 @@
 <!-- 会員登録画面 -->
 <!DOCTYPE html>
 <html>
-					
-					
+
+
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
+	<style type="text/css">
+		.errors{
+			color: red;
+		}
+	</style>
 	</head>
+
 	<body>
 		<div class="registration">
 			<jsp:include page="header.jsp"/>
