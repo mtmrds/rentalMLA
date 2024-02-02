@@ -62,7 +62,11 @@ public class TopController {
         	//ログイン後にSQLで引っ張ってきた名前を表示する
         	lgModel.setName(user.getName());
             model.addAttribute("loginModel", lgModel);
-        	return "redirect:/top";
+            if(lgModel.getMail().equals("tencho@ken.com") && lgModel.getPassword().equals("tencho00")) {
+            	return "test";
+            } else {
+            	return "redirect:/top";
+            	}
         	}
         }
 		return "login";
