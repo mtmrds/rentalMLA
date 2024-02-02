@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
-
+<link href="resources/css/shopping.css" rel="stylesheet">
 </head>
 <%-- header --%>
 <style>
@@ -66,12 +66,12 @@ p{
 
 	 <div class="link">
 	 <!-- リンクボタンを追加しました リンク先は仮で作ってますので後で修正お願いします-->
-	 <a href="a">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">閲覧履歴</a><a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>
+	 <a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">閲覧履歴</a>|<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>
 	 </div>
 
   	<p>
        <c:if test="${not empty loginModel.name}">
-			<p>お疲れ様です、${loginModel.name}さん</p>
+			<p>お疲れ様です、㊓${loginModel.name}さん</p>
 		</c:if>
 
 	</p>
