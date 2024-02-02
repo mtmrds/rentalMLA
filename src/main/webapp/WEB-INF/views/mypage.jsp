@@ -25,7 +25,8 @@ body{
 <body>
 	<jsp:include page="header.jsp"/>
 		<div>
-			<p>マイページ</p>
+			<p style="text-align: left">
+			マイページ</p>
 		</div>
 		<div>
 			<table>
