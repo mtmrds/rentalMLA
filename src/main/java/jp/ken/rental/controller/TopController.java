@@ -71,4 +71,9 @@ public class TopController {
         }
 		return "login";
 	}
+
+	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
+	public String toMypage() {
+		return "mypage";
+	}
 }

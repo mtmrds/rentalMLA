@@ -2,15 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<title>Music Life Agency</title>
+<!-- ログイン画面 -->
+<!DOCTYPE html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>Music Life Agency</title>
 <style>
 
 body{
@@ -26,13 +24,6 @@ h2{
 	color: grey;
 	background: linear-gradient(transparent 70%, #feefb6 90%);
 
-}
-h3{
-	color: grey;
-	font-family: 'Yomogi', cursive;
-}
-.error{
-		color: #ff0000;
 }
 
 table {
