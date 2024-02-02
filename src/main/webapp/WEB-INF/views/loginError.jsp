@@ -10,12 +10,6 @@
 
 <html>
 <head>
-<!-- 文字フォント -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-
-
 
 <meta charset="UTF-8">
 <title>エラー画面</title>

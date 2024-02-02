@@ -5,10 +5,18 @@
 <!-- 会員登録画面 -->
 <!DOCTYPE html>
 <html>
+
+
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
+	<style type="text/css">
+		.errors{
+			color: red;
+		}
+	</style>
 	</head>
+
 	<body>
 		<div class="registration">
 			<jsp:include page="header.jsp"/>
@@ -21,6 +29,7 @@
 						<tr>
 							<td class="regi1"><strong>氏名</strong></td>
 							<td colspan="4" class="regi2">
+
 							<form:input path="name" size="50"/>
 							例）山田 太郎
 							<form:errors path="name" element="div" cssClass="errors"/>

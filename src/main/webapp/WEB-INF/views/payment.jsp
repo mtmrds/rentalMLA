@@ -5,60 +5,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 文字フォント -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8">
 <title>決済確認画面</title>
 <style>
-<!-- 背景画像、文字フォント -->
 body{
 	background-image:url(resources/image/pink.jpg);
-	font-family: 'Kaisei Decol', serif;
-	font-family: 'Monomaniac One', sans-serif;
+	font-family: 'Yomogi', cursive;
+}
+table {
+	text-align: center;
+}
+h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 30px;
+	border-radius: 20px;
 }
 </style>
 </head>
 
 <body>
+	<!-- カート内の最終確認 -->
 	<jsp:include page="header.jsp"/>
 		<main>
 		<h1>決済確認画面</h1>
 	<form:form modelAttribute="itemModel">
-	<table>
+	<table border="1">
 		<!-- タイトルと商品画像 -->
+			<tr>
+				<th>画像</th>
+				<th>タイトル</th>
+				<th>タイプ</th>
+				<th>カテゴリー</th>
+			</tr>
+		<c:forEach var="listCart" items="${cartList}">
+
+			<tr>
+				<td>&nbsp;</td><!-- 画像の引っ張り方不明の為空白にしています -->
+				<td><c:out value="${listCart.title}"/></td>
+				<td><c:out value="${listCart.type}"/></td>
+				<td><c:out value="${listCart.category}"/></td>
+			</tr>
+
+		</c:forEach>
+		</table>
+
+		<table>
 		<tr>
-			<th>&nbsp;</th>
-			<th>タイトル</th>
-			<th>タイプ</th>
-			<th>カテゴリー</th>
+			<td colspan="4"><input type="submit" name = "end" value="決済確定" /></td>
 		</tr>
-		<tr>
-			<td>${ itemModel.itemNo }</td><!-- 画像の引っ張り方不明の為「itemNo」にしています -->
-			<td>${ itemModel.title }</td>
-			<td>${ itemModel.type }</td>
-			<td>${ itemModel.category }</td>
-		</tr>
-
-
-		<!-- カート内の最終確認 -->
-
-
-
-		<!-- message = "合計：<strong>" + total + "点" + "</strong>になります";-->
-
-
-		<p>
-			<a colspan="2" style="text-align:center;">
-				<input type="submit" value="決済"/>
-			</a>
-		</p>
-
-
-
-	</table>
+		</table>
 </form:form>
 </main>
     <jsp:include page="footer.jsp"/>
