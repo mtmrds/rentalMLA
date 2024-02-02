@@ -5,9 +5,9 @@
 --------------------------------*/
 .logo a {
 	display: flex;
-	width:30%;
-	color:inherit;
-	text-decoration:none;
+	width: 438px;
+	color: inherit;
+	text-decoration: none;
 }
 
 .logo img {
@@ -32,10 +32,6 @@
 
 
 /*-------------------------------
-ログインページ(共通部分)
--------------------------------*/
-
-/*-------------------------------
 フッター
 -------------------------------*/
 .footer p {
@@ -44,6 +40,35 @@
 }
 
 
+/*-------------------------------
+ログインページ
+-------------------------------*/
+.loginpage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.loginpage h2 {
+	color: grey;
+	background: linear-gradient(transparent 70%, #feefb6 90%);
+}
+
+.loginpage table {
+    margin: 150px auto;
+    background-color: #f39f86;
+    background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
+    color: #fff;
+    padding: 2em;
+}
+
+.btn-2 {
+	position: relative;
+	left: 144px;
+}
 /*-------------------------------
 トップページ
 -------------------------------*/
@@ -124,6 +149,8 @@ input.btn:hover:before {
 .btn-1 {
 	text-align:center;
 }
+
+
 /*-------------------------------
 会員登録ページ
 -------------------------------*/
@@ -139,6 +166,3 @@ input.btn:hover:before {
 /*-------------------------------
 エラー
 -------------------------------*/
-
-
-}

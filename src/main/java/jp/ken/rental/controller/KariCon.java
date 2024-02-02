@@ -39,6 +39,12 @@ public class KariCon {
 	        return "payment";
 	    }
 
+	    @RequestMapping(method = RequestMethod.POST, params = "end")
+	    String viewCart3(Model model) {
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        return "paymentComp";
+	    }
+
 	    @RequestMapping(method = RequestMethod.POST)
 	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
 	        	if (bindingResult.hasErrors()) {

@@ -9,19 +9,27 @@
 <meta charset="UTF-8">
 <title>マイページ</title>
 <style>
+body{
+	background-image:url(resources/image/pink.jpg);
+	font-family: 'Yomogi', cursive;
+｝
 	.button {
 		height 20px;
 		width 20px;
 	}
+	div {
+	border: 1px solid #000;
+}
 </style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 		<div>
-			<p>マイページ</p>
+			<p style="text-align: left">
+			マイページ</p>
 		</div>
 		<div>
-			<table>
+			<table border="1">
 				<tr>
 					<td>会員No</td>
 					<td> 会員No</td>

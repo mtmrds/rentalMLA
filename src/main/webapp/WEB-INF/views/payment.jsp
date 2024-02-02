@@ -15,6 +15,12 @@ body{
 table {
 	text-align: center;
 }
+h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 30px;
+	border-radius: 20px;
+}
 </style>
 </head>
 
@@ -46,7 +52,7 @@ table {
 
 		<table>
 		<tr>
-			<td colspan="4"><input type="submit" value="決済確定" /></td>
+			<td colspan="4"><input type="submit" name = "end" value="決済確定" /></td>
 		</tr>
 		</table>
 </form:form>
