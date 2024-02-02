@@ -23,7 +23,7 @@
 							<form:input path="itemNo"/>
 							<label for="name"><strong>タイトル</strong></label>
 							<form:input path="title"/>
-							<input type="submit" name="SearchItem" value="検索する" class="btn">
+							<input type="submit" value="検索する" class="btn">
 						</div>
 						<div>
 							<c:out value="${message}"/>
