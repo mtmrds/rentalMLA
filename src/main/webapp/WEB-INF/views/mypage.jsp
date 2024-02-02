@@ -25,11 +25,11 @@ body{
 <body>
 	<jsp:include page="header.jsp"/>
 		<div>
-			<p style="text-align: left"> 
+			<p style="text-align: left">
 			マイページ</p>
 		</div>
 		<div>
-			<table>
+			<table border="1">
 				<tr>
 					<td>会員No</td>
 					<td> 会員No</td>
