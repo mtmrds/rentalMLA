@@ -169,14 +169,6 @@ input.btn:hover:before {
 }
 
 
-
-
 /*-------------------------------
 エラー
 -------------------------------*/
-
-.errors{
-	font-family: 'Yomogi',cursive;
-	color: red;
-
-}
