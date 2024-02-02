@@ -5,6 +5,8 @@
 <!-- 会員登録画面 -->
 <!DOCTYPE html>
 <html>
+					
+					
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
@@ -21,6 +23,7 @@
 						<tr>
 							<td class="regi1">氏名</td>
 							<td colspan="4" class="regi2">
+
 							<form:input path="name" size="50"/>
 							例）山田 太郎
 							<form:errors path="name" element="div" cssClass="errors"/>

@@ -5,10 +5,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 文字フォント  -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
 <meta charset="UTF-8">
 <title>登録完了画面</title>

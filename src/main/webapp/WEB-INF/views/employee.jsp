@@ -8,11 +8,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 文字フォント -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Monomaniac+One&display=swap" rel="stylesheet">
-
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>在庫管理画面</title>
