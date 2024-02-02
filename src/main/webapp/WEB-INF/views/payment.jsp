@@ -15,6 +15,12 @@ body{
 table {
 	text-align: center;
 }
+h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 30px;
+	border-radius: 20px;
+}
 </style>
 </head>
 
