@@ -19,7 +19,7 @@
 				<form:form modelAttribute="memberModel">
 					<table border="1">
 						<tr>
-							<td class="regi1">氏名</td>
+							<td class="regi1"><strong>氏名</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="name" size="50"/>
 							例）山田 太郎
@@ -27,7 +27,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">郵便番号</td><!-- ハイフンありなしは検討します  元村 -->
+							<td class="regi1"><strong>郵便番号</strong></td><!-- ハイフンありなしは検討します  元村 -->
 							<td colspan="4" class="regi2">
 							<form:input path="zip" size="50" />
 							例）123-0000
@@ -35,7 +35,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">住所</td>
+							<td class="regi1"><strong>住所</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="address" size="50"/>
 							例）東京都千代田区九段南1-1-1
@@ -43,7 +43,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">電話番号</td>
+							<td class="regi1"><strong>電話番号</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="phone" size="50"/>
 							例）08012345678 (ハイフンなし・半角数字)
@@ -51,7 +51,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">メールアドレス</td>
+							<td class="regi1"><strong>メールアドレス</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="mail" size="50"/>
 							例）tarou@gamail.com
@@ -59,7 +59,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">生年月日</td>
+							<td class="regi1"><strong>生年月日</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="birthday" size="50" />
 							例）2024/02/01
@@ -67,14 +67,14 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">クレジットカード</td>
+							<td class="regi1"><strong>クレジットカード</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="card" size="50"/>
 							<form:errors path="card" element="span" cssClass="errors"/>
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">パスワード</td>
+							<td class="regi1"><strong>パスワード</strong></td>
 							<td colspan="4" class="regi2">
 							<form:input path="password" size="50"/>
 							※英数字含む８文字以上
@@ -82,7 +82,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1">プラン</td>
+							<td class="regi1"><strong>プラン</strong></td>
 							<td>
 								<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
 								<br>
@@ -110,8 +110,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="regi1" >
-								<input type="submit"  value="登録する" class="btn" >
+							<td class="btn-1" colspan="5">
+								<input type="submit"  value="登録する" class="btn">
 							</td>
 						</tr>
 					</table>
