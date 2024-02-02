@@ -19,6 +19,7 @@ table {
 </head>
 
 <body>
+	<!-- カート内の最終確認 -->
 	<jsp:include page="header.jsp"/>
 		<main>
 		<h1>決済確認画面</h1>
@@ -43,10 +44,6 @@ table {
 		</c:forEach>
 		</table>
 
-
-		<!-- カート内の最終確認 -->
-
-		<!-- message = "合計：<strong>" + total + "点" + "</strong>になります";-->
 		<table>
 		<tr>
 			<td colspan="4"><input type="submit" value="決済確定"/></td>
