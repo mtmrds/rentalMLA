@@ -41,6 +41,14 @@ table {
     padding: 2em;
 
 }
+h1 {
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 30px;
+	border-radius: 20px;
+
+}
+
 
 </style>
 </head>
@@ -49,7 +57,7 @@ table {
 	<div class="loginpagelink">
 		<jsp:include page="header.jsp"/>
 	</div>
-	<!-- <h1>☆ログイン画面☆</h1>削除-->
+	<h1>☆ログイン画面☆</h1>
 	<form:form modelAttribute="loginModel" >
 		<table>
 			<tr>
