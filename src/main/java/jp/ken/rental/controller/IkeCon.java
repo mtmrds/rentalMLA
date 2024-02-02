@@ -22,7 +22,7 @@ public class IkeCon {
 	@Autowired
 	private MembersDao membersDao;
 
-/*
+/*　使わないかも
 	@RequestMapping(value = "/setCartAdd", method = RequestMethod.GET)
 	public String toCartConfirm(Model model) {
 		//空っぽのページ（入力できる状態のページ）を表示する
@@ -30,20 +30,16 @@ public class IkeCon {
         Members pickItem = membersDao.getItemById(Integer.parseInt(mId));
         model.addAttribute("pickItem", pickItem);
         model.addAttribute("headline", "削除ページ");
-
         return "cartAdd";
 	}
-
 	@RequestMapping(value = "/setCartAdd", method = RequestMethod.POST)
 	public String toCartRegist(Model model, @Validated @ModelAttribute ItemModel itemModel, BindingResult result) {
 		if (result.hasErrors()) {
 	        return "cartAdd";
 	    }
 	    Members members = new Members();
-
 	    members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
 	    members.setTitle(itemModel.getTitle());
-
 
 	    int numberOfRow = membersDao.insertCart(members);
 	    if (numberOfRow == 0) {
@@ -51,17 +47,11 @@ public class IkeCon {
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "cartAdd";
 	    }
-
-
-
-
-
 	    //下記を使うイメージが固まってないので、コメントアウトしてます
 	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
 	    //model.addAttribute("memberModel", memberModel);
         return "redirect:/setCartcomp";
-	}
-*/
+	}*/
 	@RequestMapping(value = "/setCartComp", method = RequestMethod.GET)
 	public String toCompRegist(Model model) {
 		//引数Model model削除。下記もコメントアウト

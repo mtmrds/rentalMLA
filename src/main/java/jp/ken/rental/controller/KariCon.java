@@ -26,19 +26,16 @@ public class KariCon {
 	    ItemModel itemModel() {
 	        return new ItemModel();
 	    }
-
 	    @RequestMapping(method = RequestMethod.GET)
 	    String viewCart(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
 	        return "cartcontent";
 	    }
-
 	    @RequestMapping(method = RequestMethod.POST, params = "index")
 	    String viewCart2(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
 	        return "footer";
 	    }
-
 	    @RequestMapping(method = RequestMethod.POST)
 	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
 	        	if (bindingResult.hasErrors()) {

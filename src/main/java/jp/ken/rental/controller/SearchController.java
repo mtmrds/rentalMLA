@@ -43,9 +43,7 @@ public class SearchController {
 			//全件検索
 			List<Members> itemList = membersDao.getItemList();
 			model.addAttribute("itemList", itemList);
-
 		} else if(!itemNoIsEmpty && titleIsEmpty) {
-
 			try {
 				Integer itemNo = new Integer(itemModel.getItemNo());
 				Members members = membersDao.pickItemById(itemNo);
@@ -56,8 +54,8 @@ public class SearchController {
 					List<Members>itemList = new ArrayList<Members>();
 					itemList.add(members);
 					model.addAttribute("itemList", itemList);
-				}
-			} catch(NumberFormatException e) {
+					}
+				} catch(NumberFormatException e) {
 				model.addAttribute("message", "IDが不正です");
 			}
 		} else if(itemNoIsEmpty && !titleIsEmpty) {
@@ -108,9 +106,6 @@ public class SearchController {
 	    return "cartAddComp";
 	}
 }
-
-
-
 /* KariConコントローラーがあるので、「itemSearch.jsp」に「cartcontent.jso」へ飛ばす内容を以下で設定。
 	---------------------------------------------------------------------
    <form:form modelAttribute="itemModel" action="cart" method="GET" >
