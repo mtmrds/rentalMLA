@@ -10,10 +10,11 @@
 <title>プラン変更</title>
 </head>
 <style>
-	<!-- 背景画像、文字フォント -->
+body{
 		background-image:url(resources/image/pink.jpg);
 		font-family: 'Kaisei Decol', serif;
 		font-family: 'Monomaniac One', sans-serif;
+}
 </style>
 <body>
 	<jsp:include page="header.jsp"/>

@@ -46,7 +46,7 @@ table {
 
 		<table>
 		<tr>
-			<td colspan="4"><input type="submit" value="決済確定"/></td>
+			<td colspan="4"><input type="submit" value="決済確定" /></td>
 		</tr>
 		</table>
 </form:form>
