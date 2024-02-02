@@ -6,11 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <title>カート内</title>
 <style>
-td {
-	text-align: center:
+body{
+	background-image:url(resources/image/pink.jpg);
+	font-family: 'Yomogi', cursive;
 }
 </style>
 </head>
@@ -40,12 +44,13 @@ td {
 
 
 		<form:form modelAttribute="loginModel">
-            		<input type="submit"  name = "index" value="確認する">
+            		<input type="submit"  name = "index" value="決済">
         </form:form>
 
 
 
 				<a href="top">トップに戻る</a>
+
     <jsp:include page="footer.jsp"/>
 </body>
 </html>
