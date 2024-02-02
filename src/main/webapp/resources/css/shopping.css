@@ -136,13 +136,9 @@ input.btn:hover:before {
 	background-position: center;
 }
 
-.
 /*-------------------------------
 エラー
 -------------------------------*/
 
-.errors{
-	font-family: 'Yomogi',cursive;
-	color: red;
 
 }
