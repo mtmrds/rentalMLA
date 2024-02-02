@@ -71,7 +71,7 @@ p{
 
   	<p>
        <c:if test="${not empty loginModel.name}">
-			<p>ようこそ、${loginModel.name}さん</p>
+			<p>お疲れ様です、${loginModel.name}さん</p>
 		</c:if>
 
 	</p>
