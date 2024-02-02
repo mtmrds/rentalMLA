@@ -16,8 +16,10 @@ import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.ItemModel;
 
 @Controller
-@SessionAttributes("itemModel")
+@SessionAttributes({"itemModel", "cartList"})
 public class SearchController {
+	private String mId;
+
 	@Autowired
 	private MembersDao membersDao ;
 
@@ -28,11 +30,15 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
-	@RequestMapping(value = "/search", params="SearchItem" , method = RequestMethod.POST)
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
 	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
+		if(itemModel.getTitle().equals("pick")) {
+			mId = itemModel.getItemNo();
+		    return "redirect:/setCartAdd";
+		}
 		if(itemNoIsEmpty && titleIsEmpty) {
 			//全件検索
 			List<Members> itemList = membersDao.getItemList();
@@ -42,7 +48,7 @@ public class SearchController {
 
 			try {
 				Integer itemNo = new Integer(itemModel.getItemNo());
-				Members members = membersDao.getItemById(itemNo);
+				Members members = membersDao.pickItemById(itemNo);
 
 				if(members == null) {
 					model.addAttribute("message", "該当データがありません");
@@ -68,6 +74,42 @@ public class SearchController {
 		model.addAttribute("headline", "商品検索");
 		return "itemSearch";
 	}
+	@RequestMapping(value = "/setCartAdd", method = RequestMethod.GET)
+	public String toCartConfirm(Model model) {
+        model.addAttribute("itemModel", new ItemModel());
+        Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
+        model.addAttribute("pickItem", pickItem);
+        //model.addAttribute("headline", "カートイン");
+        return "cartAdd";
+	}
+	@RequestMapping(value = "/setCartAdd", method = RequestMethod.POST)
+	public String toCartRegist(@ModelAttribute ItemModel itemModel, Model model) {
+		//historyに入る
+		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
+		model.addAttribute("pickItem", pickItem);
+
+		List<Members> cartList = membersDao.getCartList();
+		model.addAttribute("cartList", cartList);
+
+		/*
+		Members members = new Members();
+		members.setTitle(itemModel.getTitle());
+		members.setType(itemModel.getType());
+		*/
+
+		int numberOfRow = membersDao.insertCart(pickItem);
+
+	    //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
+	    if (numberOfRow == 0) {
+	    	//下記は必要に応じて使うか検討する
+	        //model.addAttribute("message", "登録に失敗しました。");
+	        return "top";
+	    }
+	    return "cartAddComp";
+	}
+}
+
+
 
 /* KariConコントローラーがあるので、「itemSearch.jsp」に「cartcontent.jso」へ飛ばす内容を以下で設定。
 	---------------------------------------------------------------------
@@ -118,5 +160,4 @@ public class SearchController {
 	    return "redirect:/cart";
 	    }
 */
-}
 

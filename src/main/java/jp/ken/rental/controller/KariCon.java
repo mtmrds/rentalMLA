@@ -15,10 +15,9 @@ import jp.ken.rental.model.ItemModel;
 
 @Controller
 @RequestMapping("cart")
-@SessionAttributes({"loginModel", "memberModel"})
+@SessionAttributes({"loginModel", "memberModel", "cartList"})
 
 public class KariCon {
-	private String memId;//m_idフィールドの追加。削除と更新で使う
 
 	    @Autowired
 	    private MembersDao membersDao ;

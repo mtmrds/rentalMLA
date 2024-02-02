@@ -13,7 +13,7 @@ import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.LoginModel;
 
 @Controller
-@SessionAttributes("loginModel")
+@SessionAttributes({"loginModel", "cartList"})
 public class TopController {
 
 	@Autowired

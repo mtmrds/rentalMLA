@@ -21,9 +21,19 @@ body{
 <body>
 	<jsp:include page="header.jsp"/>
 	<h1>カートに商品を入れますか？</h1>
+	<form:form modelAttribute="itemModel">
+    			<table>
+        			<tr>
+        				<td>${pickItem.itemNo }</td>
+         				<td>${pickItem.title }</td>
+         				<td>${pickItem.type }</td>
+         				<td>${pickItem.category }</td>
+        			</tr>
+        		</table>
+        		<p><input type="submit" value="カートIN" ></p>
+    </form:form>
+	<!-- 下記は直飛びなので、商品情報が入らない -->
 
-
-	<p><a href="<c:url value='setCartComp' />">カートに入れる</a></p>
 	<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
 	<p><a href="<c:url value='top' />">トップに戻る</a></p>
 	<jsp:include page="footer.jsp"/>
