@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
+import jp.ken.rental.model.ItemModel;
 import jp.ken.rental.model.LoginModel;
 
 @Controller
@@ -41,7 +42,7 @@ public class TopController {
 		return "login";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String toConfirm(@ModelAttribute LoginModel lgModel, Model model) {
+	public String toConfirm(@ModelAttribute LoginModel lgModel, Model model,@ModelAttribute ItemModel itemModel ) {
 
 		boolean mailIsEmpty = lgModel.getMail().isEmpty();
 		boolean passIsEmpty = lgModel.getPassword().isEmpty();
@@ -62,6 +63,7 @@ public class TopController {
         	//ログイン後にSQLで引っ張ってきた名前を表示する
         	lgModel.setName(user.getName());
             model.addAttribute("loginModel", lgModel);
+            model.addAttribute("itemModel", itemModel);
             if(lgModel.getMail().equals("tencho@ken.com") && lgModel.getPassword().equals("tencho00")) {
             	return "tenchoEmp";
             } else {
