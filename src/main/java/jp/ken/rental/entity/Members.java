@@ -16,7 +16,8 @@ public class Members implements Serializable{
 	private String card;
 	private String plan;
 	//itemEntity
-	private Integer itemNo;
+	private String itemNo;
+
 	private String title;
 	private String type;
 	private String category;
@@ -76,7 +77,7 @@ public class Members implements Serializable{
 		return plan;
 	}
 
-	public Integer getItemNo() {
+	public String getItemNo() {
 		return itemNo;
 	}
 
@@ -140,7 +141,7 @@ public class Members implements Serializable{
 		this.plan = plan;
 	}
 
-	public void setItemNo(Integer itemNo) {
+	public void setItemNo(String itemNo) {
 		this.itemNo = itemNo;
 	}
 

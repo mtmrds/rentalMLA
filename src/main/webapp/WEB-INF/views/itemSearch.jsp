@@ -76,12 +76,19 @@ body{
 							<td><c:out value="${items.category}"/></td>
 							<td><c:out value="${items.quantity}"/></td>
 							<td>
+
 								<!-- いったん下記でcartcontent.jsoに飛ばすようにしてます -->
+							<!--
 							<form:form modelAttribute="itemModel" action="setCartAdd" method="GET" >
    								<form:hidden path="itemNo" value="${members.itemNo}"/>
    								<input type="submit" value="カート入れる"/>
   							</form:form>
-
+  							-->
+  								<form:form modelAttribute="itemModel">
+									<form:hidden path="itemNo" value="${items.itemNo }" />
+									<form:hidden path="title" value="pick"/>
+									<input type="submit" value="カートに入れる"/>
+								</form:form>
 							</td>
 						</tr>
 					</c:forEach>

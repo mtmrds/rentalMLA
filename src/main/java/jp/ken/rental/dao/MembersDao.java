@@ -121,16 +121,12 @@ public class MembersDao {
 		}
 		return numberOfRow;
 	}
-
-
 	//item
-
 	public List<Members> getItemList(){
 		String sql = "SELECT * FROM movitem";
 		List<Members> itemList = jdbcTemplate.query(sql, membersMapper);
 		return itemList;
 	}
-
 	public List<Members> getListByItemTitle(String title){
 		String sql = "SELECT * FROM movitem WHERE title LIKE ?";
 		title = title.replace("%", "\\%").replace("_", "\\_");
@@ -140,10 +136,10 @@ public class MembersDao {
 
 		return itemList;
 	}
-
-	public Members getItemById(String string) {
+	//↓引数がString　Stringになってたので修正
+	public Members getItemById(String itemNo) {
 		String sql = "SELECT * FROM movitem WHERE item_no=?";
-		Object[] parameters = {string};
+		Object[] parameters = { itemNo };
 		try {
 			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 			return members;
@@ -152,7 +148,6 @@ public class MembersDao {
 			return null;
 		}
 	}
-
 	public Members toItemSearch(String title){
 		String sql = "SELECT * FROM movitem WHERE title = ?;";
 		Object[] parameters = { title };
@@ -164,7 +159,8 @@ public class MembersDao {
 			return null;
 		}
 	}
-	public Members getItemById(Integer itemNo) {
+	//ピックした商品情報を取る
+	public Members pickItemById(Integer itemNo) {
 		String sql = "SELECT * FROM movitem WHERE item_no=?";
 		Object[] parameters = { itemNo };
 		try {
@@ -199,9 +195,6 @@ public class MembersDao {
 		}
 		return numberOfRow;
 	}
-
-
-
 	//cart用
 	public List<Members> getCartList(){
 		String sql = "SELECT * FROM history";
@@ -209,11 +202,10 @@ public class MembersDao {
 
 		return cartList;
 	}
-
-
+	//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定できるようにした
 	public int insertCart(Members members) {
-		String sql = "INSERT INTO history(item_no,title) VALUES(?,?)";
-		Object[] parameters = { members.getItemNo(), members.getTitle()};
+		String sql = "INSERT INTO history(title, type) VALUES(?, ?)";
+		Object[] parameters = { members.getTitle(), members.getType() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -235,8 +227,6 @@ public class MembersDao {
 		}
 		return numberOfRow;
 	}
-
-
 	public Members getCartListId(Members cartListNo) {
 		String sql = "SELECT * FROM history WHERE item_no=?";
 		Object[] parameters = { cartListNo };
@@ -256,5 +246,4 @@ public class MembersDao {
 	    Object[] parameters = {string};
 	    return jdbcTemplate.update(sql, parameters);
 	}
-
 }

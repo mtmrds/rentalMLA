@@ -15,7 +15,7 @@ import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.MemberModel;
 
 @Controller
-@SessionAttributes({"loginModel", "memberModel"})
+@SessionAttributes({"loginModel", "memberModel", "cartList"})
 public class SetController {
 	@Autowired
 	private MembersDao membersDao;

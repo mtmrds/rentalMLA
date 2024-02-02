@@ -17,21 +17,35 @@ td {
 <body>
 	<div id="wapper">
 		<jsp:include page="header.jsp"></jsp:include>
-			<a href="form">トップに戻る</a>
 	</div>
-				<table>
-					<tr>
+	<form:form modelAttribute="itemModel">
+    			<table>
+    				<tr>
 						<th>ID</th>
 						<th>タイトル</th>
 						<th>画像</th>
-					</tr >
-					<tr>
 					</tr>
-				</table>
-				<p>カートに商品がありません。</p>
-			<form:form modelAttribute="loginModel">
-            <input type="submit"  name = "index" value="確認する">
-				</form:form>
+					<c:forEach var="listCart" items="${cartList}">
+        			<tr>
+						<td><c:out value="${listCart.title}"/></td>
+						<td><c:out value="${listCart.type}"/></td>
+						<td><c:out value="${listCart.category}"/></td>
+        			</tr>
+        			</c:forEach>
+        		</table>
+			<tr>
+				<td>カートに商品がありません。</td>
+	</form:form>
+
+
+
+		<form:form modelAttribute="loginModel">
+            		<input type="submit"  name = "index" value="確認する">
+        </form:form>
+
+
+
+				<a href="top">トップに戻る</a>
     <jsp:include page="footer.jsp"/>
 </body>
 </html>
