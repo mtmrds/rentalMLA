@@ -9,10 +9,17 @@
 <meta charset="UTF-8">
 <title>マイページ</title>
 <style>
+body{
+	background-image:url(resources/image/pink.jpg);
+	font-family: 'Yomogi', cursive;
+｝
 	.button {
 		height 20px;
 		width 20px;
 	}
+	div {
+	border: 1px solid #000;
+}
 </style>
 </head>
 <body>
