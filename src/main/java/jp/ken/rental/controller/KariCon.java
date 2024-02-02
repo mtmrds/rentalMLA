@@ -34,7 +34,7 @@ public class KariCon {
 	    @RequestMapping(method = RequestMethod.POST, params = "index")
 	    String viewCart2(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
-	        return "footer";
+	        return "payment";
 	    }
 	    @RequestMapping(method = RequestMethod.POST)
 	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
