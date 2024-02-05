@@ -243,7 +243,7 @@ public class MembersDao {
 	public boolean addToCartAndUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
         String updateStockSql = "UPDATE movitem SET quantity = ? WHERE item_no = ?";
-        String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
+        //String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
 
         TransactionStatus transactionStatus = null;
         DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -269,7 +269,9 @@ public class MembersDao {
 
                 return true;
             } else {
-                // 在庫がない場合は何もせずにfalseを返す
+            	// 在庫がない場合はエラーメッセージを表示してfalseを返す
+            	//バック側の確認用
+                System.out.println("在庫が不足しています。");
                 return false;
             }
         } catch (EmptyResultDataAccessException e) {
