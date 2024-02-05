@@ -36,7 +36,7 @@
 
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
-				<a href="mypage" alt="マイページ">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">閲覧履歴</a>　
+				<a href="mypage" alt="マイページ">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>　
 	 		</div>
 
 			 <!--ログイン後だけ表示できる-->
