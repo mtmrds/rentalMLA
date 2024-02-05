@@ -36,7 +36,6 @@ h1{
 				<th>画像</th>
 				<th>タイトル</th>
 				<th>タイプ</th>
-				<th>カテゴリー</th>
 			</tr>
 		<c:forEach var="listCart" items="${cartList}">
 
@@ -44,7 +43,6 @@ h1{
 				<td>&nbsp;</td><!-- 画像の引っ張り方不明の為空白にしています -->
 				<td><c:out value="${listCart.title}"/></td>
 				<td><c:out value="${listCart.type}"/></td>
-				<td><c:out value="${listCart.category}"/></td>
 			</tr>
 
 		</c:forEach>
