@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
@@ -45,10 +46,30 @@ public class KariCon {
 	        return "paymentComp";
 	    }
 	    @RequestMapping(method = RequestMethod.POST, params = "delete")
-	    String viewCart4(Model model) {
-	        model.addAttribute("membersList", membersDao.getCartList());
-	        membersDao.remove(model);
+	    String viewCart4(@RequestParam("delete") String delete, @RequestParam("cNo") int cNo, Model model) {
+	        if (delete != null && delete.equals("削除")) {
+	            // ボタンが押された場合の処理
+	            membersDao.remove(cNo);
+	        }
+
+	        model.addAttribute("cartList", membersDao.getCartList());
 	        return "cartcontent";
 	    }
+
+	    /*
+
+	    @RequestMapping(method = RequestMethod.POST, params = "delete")
+	    String viewCart4(@RequestParam("cNo") int cNo, Model model) {
+	    	    model.addAttribute("membersList", membersDao.getCartList());
+	    	    membersDao.remove(cNo);
+	    	    return "cartcontent";
+	    	}
+
+	    	/*
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        membersDao.remove();
+	        return "cartcontent";
+	        */
+
 }
 
