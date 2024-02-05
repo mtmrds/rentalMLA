@@ -14,17 +14,25 @@
 		<div class="cartcontent">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="itemModel">
-    			<table>
+    			<table border="1">
     				<tr>
 						<th>ID</th>
-						<th>タイトル</th>
 						<th>画像</th>
+						<th>タイトル</th>
+						<th>タイプ</th>
+						<th>ジャンル</th>
+						<th>&nbsp;</th>
 					</tr>
 					<c:forEach var="listCart" items="${cartList}">
 					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
 						<td><c:out value="${listCart.category}"/></td>
+						<td>
+							<input type="submit" value="削除">
+						</td>
 					</tr>
 				</c:forEach>
 			</table>
