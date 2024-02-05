@@ -57,13 +57,19 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+
+
+
 	min-height: 100vh;
+
 }
 
 .loginpage h2 {
 	color: grey;
-	background: linear-gradient(transparent 70%, orchid 90%);
+	background: ;
 	font-size:30px;
+	border-bottom: solid 5px lightblue;
+	border-radius:  5px;
 }
 
 .loginpage table {
@@ -76,6 +82,15 @@
     opacity: 0.8;
 
 }
+
+
+
+/* ボタン初期
+.btn-2 {
+	position: relative;
+	left: 144px;
+}
+*/
 
 
 
@@ -224,9 +239,32 @@ input.btn:hover:before {
 	border-collapse: collapse;
 }
 
+
+.registration h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+
+/*-------------------------------
+決済確認画面
+-------------------------------*/
+
+.payment h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+
+
 .registration table td {
 	border: double;
 }
+
 
 .registrationtitle  {
 	background-color: violet;
