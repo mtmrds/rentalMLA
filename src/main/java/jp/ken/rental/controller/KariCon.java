@@ -50,6 +50,5 @@ public class KariCon {
 	        membersDao.remove(model);
 	        return "cartcontent";
 	    }
-
 }
 
