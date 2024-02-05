@@ -165,10 +165,17 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-
 }
 
 
 /*-------------------------------
-エラー
+カートコンテンツ
 -------------------------------*/
+.cartcontent {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
