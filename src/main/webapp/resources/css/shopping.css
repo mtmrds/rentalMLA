@@ -77,36 +77,7 @@
 
 }
 
-/* ボタン初期
-.btn-2 {
-	position: relative;
-	left: 144px;
-}
-*/
 
-/*
-.btn-2 {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 120px;
-	margin: auto;
-	padding: 1rem 4rem;
-	font-weight: bold;
-	border: 2px solid hotpink;
-	color: hotpink;
-	border-radius: 100vh;
-	transition: 0.5s;
-	align="center"
-
-}
-.btn-2:hover {
-	color: #fff;
-	background: hotpink;
-	align="center"
-}
-*/
 
 .btn-2 {
 	font-family: 'Yomogi',cursive;
