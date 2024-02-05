@@ -9,7 +9,7 @@
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
 		<style>
-		.errors{
+			.errors{
 			font-family: 'Yomogi',cursive;
 			color: red;
 			font-weight: bold;
