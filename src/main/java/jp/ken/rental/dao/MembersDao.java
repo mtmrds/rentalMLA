@@ -239,12 +239,6 @@ public class MembersDao {
 		}
 		return null;
 	}
-	public int remove(String string) {
-		String sql = "DELETE FROM history WHERE item_no=?";
-	    Object[] parameters = { string };
-	    return jdbcTemplate.update(sql, parameters);
-	}
-
 
 	public boolean addToCartAndUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
@@ -267,7 +261,8 @@ public class MembersDao {
                 jdbcTemplate.update(updateStockSql, currentStock - 1, itemNo);
 
                 // カートに商品を追加
-                jdbcTemplate.update(insertCartSql, itemNo, "type"); // "type"は仮の値で適宜変更
+                //jdbcTemplate.update(insertCartSql, itemNo, "type"); // "type"は仮の値で適宜変更
+
 
                 // トランザクションコミット
                 transactionManager.commit(transactionStatus);
@@ -277,7 +272,6 @@ public class MembersDao {
                 // 在庫がない場合は何もせずにfalseを返す
                 return false;
             }
-
         } catch (EmptyResultDataAccessException e) {
             e.printStackTrace();
             // トランザクションロールバック
@@ -294,9 +288,15 @@ public class MembersDao {
             return false;
         }
 	}
+
+	public int remove(String string) {
+		String sql = "DELETE FROM history WHERE item_no=?";
+	    Object[] parameters = { string };
+	    return jdbcTemplate.update(sql, parameters);
+	}
+
 	public int clearCart(Model model) {
 		String sql = "DELETE FROM history";
 		 return jdbcTemplate.update(sql);
-
 	}
 }
