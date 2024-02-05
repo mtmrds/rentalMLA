@@ -20,50 +20,53 @@ body{
 	div {
 	border: 1px solid #000;
 }
+table tr{
+  background-image: linear-gradient(40deg, #fce043 0%, #fb7ba2 74%);
+  }
 </style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 		<div>
 			<p style="text-align: left">
-			マイページ</p>
+			☆マイページ☆</p>
 		</div>
 		<div>
 			<table border="1">
 				<tr>
-					<td>会員No</td>
-					<td> 会員No</td>
+					<td><strong>会員No</strong></td>
+					<td width="500">&nbsp;</td>
 				</tr>
 				<tr>
-					<td>氏名</td>
+					<td><strong>氏名</strong></td>
 					<td> <!-- 名前が入る --> </td>
 				</tr>
 				<tr>
-					<td>郵便番号</td>
+					<td><strong>郵便番号</strong></td>
 					<td><!-- 郵便番号 --></td>
 				</tr>
 				<tr>
-					<td>住所</td>
+					<td><strong>住所</strong></td>
 					<td><!-- 住所 --></td>
 				</tr>
 				<tr>
-					<td>電話番号（ハイフンなし・半角数字）</td>
+					<td><strong>電話番号（ハイフンなし・半角数字）</strong></td>
 					<td><!-- 電話番号（ハイフンなし・半角数字） -->
 				</tr>
 				<tr>
-					<td>メールアドレス</td>
+					<td><strong>メールアドレス</strong></td>
 					<td><!-- メールアドレス --></td>
 				</tr>
 				<tr>
-					<td>生年月日</td>
+					<td><strong>生年月日</strong></td>
 					<td><!-- 生年月日（YYYY/MM/DD）--></td>
 				</tr>
 				<tr>
-					<td>クレジットカード</td>
+					<td><strong>クレジットカード</strong></td>
 					<td><!-- クレジットカード --></td>
 				</tr>
 				<tr>
-					<td>パスワード</td>
+					<td><strong>パスワード</strong></td>
 					<td><!-- パスワード（英数字含む８文字以上） --></td>
 				</tr>
 			</table>
