@@ -291,11 +291,13 @@ public class MembersDao {
         }
 	}
 
-	public int remove(Model model) {
-		String sql = "DELETE FROM history WHERE cNo=?";
-		 Object[] parameters = { model };
-		 return jdbcTemplate.update(sql,parameters);
+	public int remove(int cNo) {
+	    String sql = "DELETE FROM history WHERE cNo=?";
+	    Object[] parameters = { cNo };
+	    return jdbcTemplate.update(sql, parameters);
 	}
+
+
 
 	public int clearCart(Model model) {
 		String sql = "DELETE FROM history";

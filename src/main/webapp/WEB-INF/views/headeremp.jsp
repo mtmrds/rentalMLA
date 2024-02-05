@@ -33,10 +33,16 @@
 		 <!-- 各種ページのリンク -->
 		 <div class="linkpage">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		 	<a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>|<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　
 =======
+=======
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 		 	<a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>　</br>
 		 	<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　
+<<<<<<< HEAD
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
+=======
 >>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 		 </div>
 
