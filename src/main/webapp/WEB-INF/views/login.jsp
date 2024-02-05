@@ -8,7 +8,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Music Life Agency</title>
-
+		<style>
+			.errors {
+			font-family: 'Yomogi',cursive;
+			color: red;
+			font-weight: bold;
+		}
+		</style>
 	</head>
 	<body>
 		<div class="loginpage">
@@ -25,8 +31,6 @@
 					</td>
 					<td>
 						<form:input path="mail"/>
-					</td>
-					<td>
 						<form:errors path="mail" element="div" cssClass="error" />
 					</td>
 				</tr>
@@ -36,9 +40,7 @@
 					</td>
 					<td>
 						<form:password path="password" />
-					</td>
-					<td>
-						<form:errors path="password" element="div" cssClass="error" />
+						<form:errors path="password" element="div" cssClass="errors"/>
 					</td>
 				</tr>
 				<tr>
