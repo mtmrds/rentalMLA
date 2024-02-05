@@ -13,6 +13,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionException;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
+import org.springframework.ui.Model;
 
 import jp.ken.rental.entity.Members;
 
@@ -223,6 +224,7 @@ public class MembersDao {
 			}
 		}
 		return numberOfRow;
+
 	}
 	public Members getCartListId(Members cartListNo) {
 		String sql = "SELECT * FROM history WHERE item_no=?";
@@ -237,9 +239,68 @@ public class MembersDao {
 		}
 		return null;
 	}
-	public int remove(String string) {
-		String sql = "DELETE FROM history WHERE item_no=?";
-	    Object[] parameters = { string };
+
+	public boolean addToCartAndUpdateStock(int itemNo) {
+        String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
+        String updateStockSql = "UPDATE movitem SET quantity = ? WHERE item_no = ?";
+        //String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
+
+        TransactionStatus transactionStatus = null;
+        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+        try {
+            // トランザクション開始
+            transactionStatus = transactionManager.getTransaction(transactionDefinition);
+
+            // 商品の在庫を取得
+            int currentStock = jdbcTemplate.queryForObject(getStockSql, new Object[]{itemNo}, Integer.class);
+
+            // 在庫が1つ以上ある場合
+            if (currentStock > 0) {
+                // 在庫を減らす
+                jdbcTemplate.update(updateStockSql, currentStock - 1, itemNo);
+
+                // カートに商品を追加
+                //jdbcTemplate.update(insertCartSql, itemNo, "type"); // "type"は仮の値で適宜変更
+
+
+                // トランザクションコミット
+                transactionManager.commit(transactionStatus);
+
+                return true;
+            } else {
+            	// 在庫がない場合はエラーメッセージを表示してfalseを返す
+            	//バック側の確認用
+                System.out.println("在庫が不足しています。");
+                return false;
+            }
+        } catch (EmptyResultDataAccessException e) {
+            e.printStackTrace();
+            // トランザクションロールバック
+            if (transactionStatus != null) {
+                transactionManager.rollback(transactionStatus);
+            }
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            // トランザクションロールバック
+            if (transactionStatus != null) {
+                transactionManager.rollback(transactionStatus);
+            }
+            return false;
+        }
+	}
+
+	public int remove(int cNo) {
+	    String sql = "DELETE FROM history WHERE cNo=?";
+	    Object[] parameters = { cNo };
 	    return jdbcTemplate.update(sql, parameters);
+	}
+
+
+
+	public int clearCart(Model model) {
+		String sql = "DELETE FROM history";
+		 return jdbcTemplate.update(sql);
 	}
 }

@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+<!-- ヘッダー -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -36,7 +36,7 @@
 
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
-				<a href="mypage" alt="マイページ">マイページ</a>　<a href="cart">カート</a>　<a href="b">閲覧履歴</a>　
+				<a href="mypage" alt="マイページ">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>　
 	 		</div>
 
 			 <!--ログイン後だけ表示できる-->
@@ -47,8 +47,6 @@
 					</c:if>
 				</p>
 			</div>
-
-			 <!-- メニューボタン削除 -->
 		</form:form>
 	</header>
 </html>

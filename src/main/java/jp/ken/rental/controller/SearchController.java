@@ -84,22 +84,55 @@ public class SearchController {
 	}
 	@RequestMapping(value = "/setCartAdd", method = RequestMethod.POST)
 	public String toCartRegist(@ModelAttribute ItemModel itemModel, Model model) {
-		//historyに入る
-		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
-		model.addAttribute("pickItem", pickItem);
 
-		List<Members> cartList = membersDao.getCartList();
-		model.addAttribute("cartList", cartList);
+		// 商品の在庫を減らし、カートに追加する
+        boolean addToCartSuccess = membersDao.addToCartAndUpdateStock(Integer.parseInt(mId));
+        //historyに入る
+      	Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
+      	model.addAttribute("pickItem", pickItem);
 
-		int numberOfRow = membersDao.insertCart(pickItem);
+      	List<Members> cartList = membersDao.getCartList();
+        model.addAttribute("cartList", cartList);
 
-	    //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
-	    if (numberOfRow == 0) {
+        int numberOfRow = membersDao.insertCart(pickItem);
+
+
+
+        if (!addToCartSuccess) {
+            model.addAttribute("message", "在庫が不足しています。");
+            return "outOfStock";
+        }
+
+
+        if (numberOfRow == 0) {
 	    	//下記は必要に応じて使うか検討する
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "top";
 	    }
 	    return "cartAddComp";
+
+        // カートに商品を追加し、カート一覧を取得
+        //Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
+        //model.addAttribute("pickItem", pickItem);
+
+        //List<Members> cartList = membersDao.getCartList();
+        //model.addAttribute("cartList", cartList);
+
+        // カートへの追加が成功した場合
+
+
+
+
+
+
+		//List<Members> cartList = membersDao.getCartList();
+		//model.addAttribute("cartList", cartList);
+
+
+
+	    //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
+
+
 	}
 }
 

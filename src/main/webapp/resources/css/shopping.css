@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*--------------------------------
 全ページ共通
 -------------------------------*/
@@ -57,6 +58,10 @@
 	background-repeat: no-repeat;
 	background-position: center;
 
+
+
+	min-height: 100vh;
+
 }
 
 .loginpage h2 {
@@ -79,6 +84,7 @@
 }
 
 
+
 /* ボタン初期
 .btn-2 {
 	position: relative;
@@ -86,29 +92,7 @@
 }
 */
 
-/*
-.btn-2 {
-	display: block;
-	text-align: center;
-	vertical-align: middle;
-	text-decoration: none;
-	width: 120px;
-	margin: auto;
-	padding: 1rem 4rem;
-	font-weight: bold;
-	border: 2px solid hotpink;
-	color: hotpink;
-	border-radius: 100vh;
-	transition: 0.5s;
-	align="center"
 
-}
-.btn-2:hover {
-	color: #fff;
-	background: hotpink;
-	align="center"
-}
-*/
 
 .btn-2 {
 	font-family: 'Yomogi',cursive;
@@ -149,6 +133,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 .toppage a {
@@ -166,16 +151,31 @@
 	text-align: center;
 }
 
+.body {
+	height: 100px;
+}
 /*ボタン(後で装飾)*/
-
 input.btn{
-	border: 2px solid #000;
-	border-radius: 0;
-	background: #fff;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+	 display: inline-block;
+  padding: 0.8em 3em;
+  background-color: #e3364a; /* 背景色 */
+  box-shadow: 0 5px 0 #ca1c30; /* 影の太さ・色 */
+  border-radius: 60px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none; /* 文字の下線を消す */
+/* 青色 */
+background-color: #61b0e2;
+box-shadow: 0 5px 0 #369ada;
+}
+/* ホバー時 */
+.btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
+
+	}
 input.btn:before {
 	position: absolute;
 	top: 0;
@@ -214,6 +214,7 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 .btn-1 {
@@ -231,8 +232,13 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-
+	min-height: 100vh;
 }
+
+.registration table{
+	border-collapse: collapse;
+}
+
 
 .registration h1{
 	background-color: hotpink;
@@ -255,6 +261,23 @@ input.btn:hover:before {
 
 
 
+.registration table td {
+	border: double;
+}
+
+
+.registrationtitle  {
+	background-color: violet;
+}
 /*-------------------------------
-エラー
+カートコンテンツ
 -------------------------------*/
+.cartcontent {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}

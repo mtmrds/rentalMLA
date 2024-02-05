@@ -6,59 +6,66 @@
 <!-- 商品一覧画面 -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>レンタルサイト 商品一覧画面</title>
-	</head>
-	<body>
-		<div class="itemsearch">
-			<jsp:include page="header.jsp"/>
-				<main>
-					<form:form modelAttribute="itemModel">
-						<div >
-							検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
-						</div>
-						<div>
-							<label for="id"><strong>ID</strong></label>
-							<form:input path="itemNo"/>
-							<label for="name"><strong>タイトル</strong></label>
-							<form:input path="title"/>
-							<input type="submit" value="検索する" class="btn">
-						</div>
-						<div>
-							<c:out value="${message}"/>
-						</div>
-					</form:form>
-					<c:if test="${!empty itemList}">
-					<table>
-					<tr>
-						<th>ID</th>
-						<th>タイトル</th>
-						<th>タイプ</th>
-						<th>カテゴリー</th>
-						<th>在庫</th>
-						<th>カート</th>
-					</tr>
-					<c:forEach var="items" items="${itemList}">
-						<tr>
-							<td><c:out value="${items.itemNo}"/></td>
-							<td><c:out value="${items.title}"/></td>
-							<td><c:out value="${items.type}"/></td>
-							<td><c:out value="${items.category}"/></td>
-							<td><c:out value="${items.quantity}"/></td>
-							<td>
-  								<form:form modelAttribute="itemModel">
-									<form:hidden path="itemNo" value="${items.itemNo }" />
-									<form:hidden path="title" value="pick"/>
-									<input type="submit" value="カートに入れる"/>
-								</form:form>
-							</td>
-						</tr>
-					</c:forEach>
-					</table>
-					</c:if>
-				</main>
-			<jsp:include page="footer.jsp"/>
-		</div>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>レンタルサイト 商品一覧画面</title>
+</head>
+<body>
+    <div class="itemsearch">
+        <jsp:include page="header.jsp"/>
+        <main>
+            <form:form modelAttribute="itemModel">
+                <div>
+                    検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
+                </div>
+                <div>
+                    <label for="id"><strong>ID</strong></label>
+                    <form:input path="itemNo"/>
+                    <label for="name"><strong>タイトル</strong></label>
+                    <form:input path="title"/>
+                    <input type="submit" value="検索する" class="btn">
+                </div>
+                <div>
+                    <c:out value="${message}"/>
+                </div>
+            </form:form>
+            <c:if test="${!empty itemList}">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>タイトル</th>
+                        <th>タイプ</th>
+                        <th>カテゴリー</th>
+                        <th>在庫</th>
+                        <th>カート</th>
+                    </tr>
+                    <c:forEach var="items" items="${itemList}">
+                        <tr>
+                            <td><c:out value="${items.itemNo}"/></td>
+                            <td><c:out value="${items.title}"/></td>
+                            <td><c:out value="${items.type}"/></td>
+                            <td><c:out value="${items.category}"/></td>
+                            <td><c:out value="${items.quantity}"/></td>
+                            <td>
+                                <form:form modelAttribute="itemModel">
+                                    <form:hidden path="itemNo" value="${items.itemNo }" />
+                                    <form:hidden path="title" value="pick"/>
+                                    <c:choose>
+                                        <c:when test="${items.quantity > 0}">
+                                            <input type="submit" value="カートに入れる"/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <input type="button" value="在庫切れ" disabled="disabled"/>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </form:form>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </c:if>
+        </main>
+        <jsp:include page="footer.jsp"/>
+    </div>
+</body>
 </html>
