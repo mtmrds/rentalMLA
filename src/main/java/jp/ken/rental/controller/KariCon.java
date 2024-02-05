@@ -3,8 +3,6 @@ package jp.ken.rental.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -46,15 +44,12 @@ public class KariCon {
 	        membersDao.clearCart(model);
 	        return "paymentComp";
 	    }
-
-	    @RequestMapping(method = RequestMethod.POST)
-	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
-	        	if (bindingResult.hasErrors()) {
-	            model.addAttribute("error", "商品がチェックされていません");
-	            return viewCart(model);
-	        }
-	        membersDao.remove(itemModel.getItemNo());
-	        return "redirect:/cartcontent";
+	    @RequestMapping(method = RequestMethod.POST, params = "delete")
+	    String viewCart4(Model model) {
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        membersDao.remove(model);
+	        return "cartcontent";
 	    }
+
 }
 
