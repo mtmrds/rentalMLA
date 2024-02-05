@@ -100,7 +100,7 @@ public class SearchController {
 
         if (!addToCartSuccess) {
             model.addAttribute("message", "在庫が不足しています。");
-            return "top";
+            return "outOfStock";
         }
 
 
