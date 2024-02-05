@@ -29,7 +29,7 @@
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
 						<td>
-							<input type="submit" value="削除">
+							<input type="submit" name = "delete" value="削除">
 						</td>
 					</tr>
 				</c:forEach>
