@@ -8,6 +8,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Music Life Agency</title>
+
 	</head>
 	<body>
 		<div class="loginpage">
@@ -41,8 +42,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="btn-2" colspan="4">
-						<input type="submit" value="ログイン">
+					<td class="btn-5"colspan="4">
+						<input type="submit" value="ログイン" class="btn-2">
 					</td>
 				</tr>
 			</table>
