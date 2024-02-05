@@ -43,6 +43,7 @@ public class KariCon {
 	    @RequestMapping(method = RequestMethod.POST, params = "end")
 	    String viewCart3(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
+	        membersDao.clearCart(model);
 	        return "paymentComp";
 	    }
 
