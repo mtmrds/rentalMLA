@@ -69,7 +69,7 @@ public class TopController {
             model.addAttribute("loginModel", lgModel);
             model.addAttribute("itemModel", itemModel);
             if(lgModel.getMail().equals("tencho@ken.com") && lgModel.getPassword().equals("tencho00")) {
-            	return "tenchoEmp";
+            	return "redirect:/master";
             } else {
             	return "redirect:/top";
             	}

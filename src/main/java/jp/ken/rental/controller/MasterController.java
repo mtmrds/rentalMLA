@@ -17,28 +17,34 @@ import jp.ken.rental.model.ItemModel;
 
 @Controller
 @SessionAttributes({"loginModel","itemModel", "cartList"})
-public class SearchController {
+public class MasterController {
 	private String mId;
 
 	@Autowired
-	private MembersDao membersDao ;
+	private MembersDao membersDao;
 
-	//TopControllerでredirectをかますことでここに飛ぶ
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public String toItemSearch(Model model) {
+	@RequestMapping(value = "/master", method = RequestMethod.GET)
+	public String masterSearchGet(Model model) {
 		model.addAttribute("itemModel", new ItemModel());
 		model.addAttribute("headline", "商品検索");
-		return "itemSearch";
+        return "tenchoEmp";
 	}
-	@RequestMapping(value = "/search", method = RequestMethod.POST)
-	public String searchItem(@ModelAttribute ItemModel itemModel, Model model) {
+	@RequestMapping(value = "/master", method = RequestMethod.POST)
+	public String masterSearchPost(@ModelAttribute ItemModel itemModel, Model model) {
+
+
+
 		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
 		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
 
+
+
 		if(itemModel.getTitle().equals("pick")) {
 			mId = itemModel.getItemNo();
-		    return "redirect:/setCartAdd";
+		    return "redirect:/masterCart";
 		}
+
+
 		if(itemNoIsEmpty && titleIsEmpty) {
 			//全件検索
 			List<Members> itemList = membersDao.getItemList();
@@ -72,18 +78,21 @@ public class SearchController {
 			model.addAttribute("message", "IDまたはタイトルのいずれかを入力してください");
 		}
 		model.addAttribute("headline", "商品検索");
-		return "itemSearch";
+
+
+        return "tenchoEmp";
 	}
-	@RequestMapping(value = "/setCartAdd", method = RequestMethod.GET)
-	public String toCartConfirm(Model model) {
+
+	@RequestMapping(value = "/masterCart", method = RequestMethod.GET)
+	public String masterCartGet(Model model) {
         model.addAttribute("itemModel", new ItemModel());
         Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
         model.addAttribute("pickItem", pickItem);
         //model.addAttribute("headline", "カートイン");
-        return "cartAdd";
+        return "masterCart";
 	}
-	@RequestMapping(value = "/setCartAdd", method = RequestMethod.POST)
-	public String toCartRegist(@ModelAttribute ItemModel itemModel, Model model) {
+	@RequestMapping(value = "/masterCart", method = RequestMethod.POST)
+	public String masterCartPost(@ModelAttribute ItemModel itemModel, Model model) {
 		//historyに入る
 		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
 		model.addAttribute("pickItem", pickItem);
@@ -97,61 +106,8 @@ public class SearchController {
 	    if (numberOfRow == 0) {
 	    	//下記は必要に応じて使うか検討する
 	        //model.addAttribute("message", "登録に失敗しました。");
-	        return "top";
+	        return "tenchoEmp";
 	    }
-	    return "cartAddComp";
+	    return "masterCartComp";
 	}
 }
-
-
-
-/* KariConコントローラーがあるので、「itemSearch.jsp」に「cartcontent.jso」へ飛ばす内容を以下で設定。
-	---------------------------------------------------------------------
-   <form:form modelAttribute="itemModel" action="cart" method="GET" >
-   		<form:hidden path="itemNo" value="${members.itemNo}"/>
-   		<input type="submit" value="カート入れる"/>
-   </form:form>
-	---------------------------------------------------------------------
-	以下は使わない可能性があるため、一旦コメントアウトして保持　
-	上記対応は暫定対応なので、見直して変えるかも
-																	/元村
-
-
-
-	//cartに追加する処理
-
-
-	@RequestMapping(value = "/addCart", method = RequestMethod.GET)
-	public String toAdd() {
-        return "cartcontent";
-	}
-	@RequestMapping(value = "/addCart", method = RequestMethod.POST)
-	public String toAddCart(@ModelAttribute ItemModel itemModel, Model model) {
-		return "cartcontent";
-	}
-
-
-		if (result.hasErrors()) {
-	        return "";  //わからん😢
-	    }
-
-	    Members members = new Members();
-
-	    members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
-	    members.setTitle(itemModel.getTitle());
-
-	    int numberOfRow = membersDao.insertCart(members);
-
-	    	if (numberOfRow == 0) {
-	    		//ここが怪しい
-	    		//model.addAttribute("message", "登録に失敗しました。");
-
-	    		return "cartcontent";  //わからん😢
-	    	}
-	    //使う？不明なのでコメントアウト
-	    //バリデーションエラーがない場合にはここでmodelにmemberModelを追加
-	    //model.addAttribute("memberModel", memberModel);
-	    return "redirect:/cart";
-	    }
-*/
-

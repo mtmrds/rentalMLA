@@ -18,13 +18,10 @@ body{
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
-	<h1>カートに商品を入れました</h1>
-
-
-
-	<p><a href="<c:url value='cart' />">カート確認</a></p>
-	<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
-	<p><a href="<c:url value='top' />">トップに戻る</a></p>
+		<h1>カートに商品を入れました</h1>
+		<p><a href="<c:url value='cart' />">カート確認</a></p>
+		<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
+		<p><a href="<c:url value='top' />">トップに戻る</a></p>
 	<jsp:include page="footer.jsp"/>
 </body>
 </html>

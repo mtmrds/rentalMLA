@@ -28,32 +28,30 @@ public class MembersDao {
 		public List<Members> getList(){
 		String sql = "SELECT * FROM members";
 		List<Members> membersList = jdbcTemplate.query(sql, membersMapper);
-
 		return membersList;
 	}
 	public List<Members> getListByName(String name){
 		String sql = "SELECT * FROM members WHERE name LIKE ?";
 		name = name.replace("%", "\\%").replace("_", "\\_");
 		name = "%" + name + "%";
-		Object[] parameters = {name};
+		Object[] parameters = { name };
 		List<Members> membersList = jdbcTemplate.query(sql, parameters , membersMapper);
-
 		return membersList;
 	}
 	public Members getMembersById(String string) {
 		String sql = "SELECT * FROM members WHERE id=?";
-		Object[] parameters = {string};
+		Object[] parameters = { string };
 		try {
 			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 			return members;
-		}catch(EmptyResultDataAccessException e){
+		} catch(EmptyResultDataAccessException e){
 			e.printStackTrace();
 			return null;
 		}
 	}
 	public Members getMembersByPassword(String string) {
 			String sql = "SELECT * FROM members WHERE password=?";
-			Object[] parameters = {string};
+			Object[] parameters = { string };
 			try {
 				Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 				return members;
@@ -131,7 +129,7 @@ public class MembersDao {
 		String sql = "SELECT * FROM movitem WHERE title LIKE ?";
 		title = title.replace("%", "\\%").replace("_", "\\_");
 		title = "%" + title + "%";
-		Object[] parameters = {title};
+		Object[] parameters = { title };
 		List<Members> itemList = jdbcTemplate.query(sql, parameters , membersMapper);
 
 		return itemList;
@@ -143,7 +141,7 @@ public class MembersDao {
 		try {
 			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
 			return members;
-		}catch(EmptyResultDataAccessException e){
+		} catch(EmptyResultDataAccessException e){
 			e.printStackTrace();
 			return null;
 		}
@@ -199,7 +197,6 @@ public class MembersDao {
 	public List<Members> getCartList(){
 		String sql = "SELECT * FROM history";
 		List<Members> cartList = jdbcTemplate.query(sql, membersMapper);
-
 		return cartList;
 	}
 	//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定できるようにした
@@ -235,15 +232,14 @@ public class MembersDao {
 			return members;
 		} catch(EmptyResultDataAccessException e){
 			e.printStackTrace();
-		}catch (Exception e) {
+		} catch(Exception e) {
 			System.out.println("籠が空です");
 		}
 		return null;
 	}
 	public int remove(String string) {
-
 		String sql = "DELETE FROM history WHERE item_no=?";
-	    Object[] parameters = {string};
+	    Object[] parameters = { string };
 	    return jdbcTemplate.update(sql, parameters);
 	}
 }
