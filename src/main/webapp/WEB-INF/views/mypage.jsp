@@ -21,7 +21,7 @@ body{
 	border: 1px solid #000;
 }
 table tr{
-  background-image: linear-gradient(40deg, #fce043 0%, #fb7ba2 74%);
+  background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
   }
 </style>
 </head>
