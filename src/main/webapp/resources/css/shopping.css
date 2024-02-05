@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*--------------------------------
 ヘッダー
 --------------------------------*/
@@ -50,6 +51,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 .loginpage h2 {
@@ -83,6 +85,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 .toppage a {
@@ -100,6 +103,9 @@
 	text-align: center;
 }
 
+.body {
+	height: 100px;
+}
 /*ボタン(後で装飾)*/
 
 input.btn{
@@ -148,6 +154,7 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 .btn-1 {
@@ -165,6 +172,7 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }
 
 
@@ -178,4 +186,5 @@ input.btn:hover:before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	min-height: 100vh;
 }

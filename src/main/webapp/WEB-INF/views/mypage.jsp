@@ -48,7 +48,7 @@ table tr{
 					<td><!-- 住所 --></td>
 				</tr>
 				<tr>
-					<td><strong>電話番号（ハイフンなし・半角数字）</strong></td>
+					<td><strong>電話番号</strong></td>
 					<td><!-- 電話番号（ハイフンなし・半角数字） -->
 				</tr>
 				<tr>
