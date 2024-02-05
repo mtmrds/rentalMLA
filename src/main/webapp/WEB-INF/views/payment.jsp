@@ -15,12 +15,7 @@ body{
 table {
 	text-align: center;
 }
-h1{
-	background-color: hotpink;
-	opacity: 0.4;
-	padding: 30px;
-	border-radius: 20px;
-}
+
 </style>
 </head>
 
@@ -28,7 +23,9 @@ h1{
 	<!-- カート内の最終確認 -->
 	<jsp:include page="header.jsp"/>
 		<main>
+		<div class="payment">
 		<h1>決済確認画面</h1>
+		</div>
 	<form:form modelAttribute="itemModel">
 	<table border="1">
 		<!-- タイトルと商品画像 -->
