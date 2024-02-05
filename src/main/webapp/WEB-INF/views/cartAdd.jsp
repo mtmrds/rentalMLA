@@ -15,7 +15,7 @@ body{
 	background-image:url(resources/image/pink.jpg);
 	font-family: 'Yomogi', cursive;
 }
-
+  
 *,
 *:before,
 *:after {
@@ -91,18 +91,30 @@ a.btn-tag i {
   text-align: center;
   letter-spacing: 0;
 }
+table {
+	font-size: 20px;
+	text-align:center;
+}
+
 </style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 	<h1>カートに商品を入れますか？</h1>
 	<form:form modelAttribute="itemModel">
-    			<table>
+    			<table border="1">
+    			<!-- タイトルと商品画像 -->
+					<tr>
+						<th>ID</th>
+						<th>画像</th>
+						<th>タイトル</th>
+						<th>タイプ</th>
+					</tr>
         			<tr>
         				<td>${pickItem.itemNo }</td>
+        				<td><!-- 画像を表示させる --></td>
          				<td>${pickItem.title }</td>
          				<td>${pickItem.type }</td>
-         				<td>${pickItem.category }</td>
         			</tr>
         		</table>
         		<p><input type="submit" value="カートIN"  class="btn btn-tag" ></p>
