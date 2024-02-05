@@ -1,5 +1,13 @@
 @charset "UTF-8";
+/*--------------------------------
+項目
+①ヘッダー
+②フッダー
+③トップページ
+④ログインページ
 
+
+-------------------------------*/
 
 /*--------------------------------
 全ページ共通
@@ -44,67 +52,6 @@
 .footer p {
 	font-family: 'Yomogi',cursive;
 	text-align: right;
-}
-
-
-/*-------------------------------
-ログインページ
--------------------------------*/
-.loginpage {
-	font-family: 'Yomogi',cursive;
-	color: grey;
-	background-image: url(../image/pink.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh;
-}
-
-.loginpage h2 {
-	color: grey;
-	background: linear-gradient(transparent 70%, orchid 90%);
-	font-size:30px;
-}
-
-.loginpage table {
-    margin: 150px auto;
-    background-color: violet;
-    background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
-    color: white;
-    padding: 2em;
-    border-radius: 30px;
-    opacity: 0.8;
-
-}
-
-
-
-.btn-2 {
-	font-family: 'Yomogi',cursive;
-	display       : inline-block;
-	border-radius : 50%;          /* 角丸       */
-	font-size     : 15pt;        /* 文字サイズ */
-	text-align    : center;      /* 文字位置   */
-	cursor        : pointer;     /* カーソル   */
-	padding       : 14px 26px;   /* 余白       */
-	background    : lightblue;     /* 背景色     */
-	color         : white;     /* 文字色     */
-	line-height   : 1em;         /* 1行の高さ  */
-	transition    : .3s;         /* なめらか変化 */
-	box-shadow    : 7px 7px 8px #666666;  /* 影の設定 */
-	border        : 2px solid lightblue;    /* 枠の指定 */
-	input　margin : 50　auto ;
-	opacity: 0.8;
-	font-weight: bold;
-
-}
-.btn-5{
-	text-align    : center;
-}
-.btn-2:hover {
-  box-shadow    : none;        /* カーソル時の影消去 */
-  color         : white;     /* 背景色     */
-  background-color: steelblue;     /* 文字色     */
 }
 
 
@@ -174,6 +121,88 @@ input.btn:hover:before {
 	transform: translateX(460%) translateY(.5rem);
 	color: #fff;
 	border-radius: 50%;
+}
+
+
+/*-------------------------------
+ログインページ
+-------------------------------*/
+.loginpage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.loginpage h2 {
+	color: grey;
+	background: linear-gradient(transparent 70%, orchid 90%);
+	font-size:30px;
+}
+
+.loginpage table {
+    margin: 150px auto;
+    background-color: violet;
+    background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    opacity: 0.8;
+
+}
+
+
+
+.btn-2 {
+	font-family: 'Yomogi',cursive;
+	display       : inline-block;
+	border-radius : 50%;          /* 角丸       */
+	font-size     : 15pt;        /* 文字サイズ */
+	text-align    : center;      /* 文字位置   */
+	cursor        : pointer;     /* カーソル   */
+	padding       : 14px 26px;   /* 余白       */
+	background    : lightblue;     /* 背景色     */
+	color         : white;     /* 文字色     */
+	line-height   : 1em;         /* 1行の高さ  */
+	transition    : .3s;         /* なめらか変化 */
+	box-shadow    : 7px 7px 8px #666666;  /* 影の設定 */
+	border        : 2px solid lightblue;    /* 枠の指定 */
+	input　margin : 50　auto ;
+	opacity: 0.8;
+	font-weight: bold;
+
+}
+.btn-5{
+	text-align    : center;
+}
+.btn-2:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : white;     /* 背景色     */
+  background-color: steelblue;     /* 文字色     */
+}
+
+
+/*-------------------------------
+マイページ
+-------------------------------*/
+.mypage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.mypage table tr {
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+}
+.mypagetitle {
+	text-align: left;
 }
 
 
