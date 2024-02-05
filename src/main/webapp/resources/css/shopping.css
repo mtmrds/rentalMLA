@@ -140,15 +140,27 @@
 	height: 100px;
 }
 /*ボタン(後で装飾)*/
-
 input.btn{
-	border: 2px solid #000;
-	border-radius: 0;
-	background: #fff;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+	 display: inline-block;
+  padding: 0.8em 3em;
+  background-color: #e3364a; /* 背景色 */
+  box-shadow: 0 5px 0 #ca1c30; /* 影の太さ・色 */
+  border-radius: 60px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none; /* 文字の下線を消す */
+/* 青色 */
+background-color: #61b0e2;
+box-shadow: 0 5px 0 #369ada;
+}
+/* ホバー時 */
+.btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
+
+	}
 input.btn:before {
 	position: absolute;
 	top: 0;
