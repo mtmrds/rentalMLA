@@ -17,12 +17,10 @@ public class Members implements Serializable{
 	private String plan;
 	//itemEntity
 	private String itemNo;
-
 	private String title;
 	private String type;
 	private String category;
 	private Integer quantity;
-
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
@@ -160,5 +158,4 @@ public class Members implements Serializable{
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
-
 }

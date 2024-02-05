@@ -35,16 +35,11 @@ body{
         			</c:forEach>
         		</table>
 			<tr>
-				<td>カートに商品がありません。</td>
+				<!-- <td>カートに商品がありません。</td> -->
 	</form:form>
-
-
-
 		<form:form modelAttribute="loginModel">
-            		<input type="submit"  name = "index" value="決済">
+			<input type="submit"  name = "index" value="決済">
         </form:form>
-
-
 
 				<a href="top">トップに戻る</a>
 

@@ -26,16 +26,26 @@ public class KariCon {
 	    ItemModel itemModel() {
 	        return new ItemModel();
 	    }
+	    //カートに入れるボタンを押下した後、cartcontent.jsp上で表示したい
+	    //よって、以下内容で、追加された商品情報を表示します（cartListを利用する）
 	    @RequestMapping(method = RequestMethod.GET)
 	    String viewCart(Model model) {
-	        model.addAttribute("membersList", membersDao.getCartList());
+	        model.addAttribute("cartList", membersDao.getCartList());
 	        return "cartcontent";
 	    }
+
 	    @RequestMapping(method = RequestMethod.POST, params = "index")
 	    String viewCart2(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
 	        return "payment";
 	    }
+
+	    @RequestMapping(method = RequestMethod.POST, params = "end")
+	    String viewCart3(Model model) {
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        return "paymentComp";
+	    }
+
 	    @RequestMapping(method = RequestMethod.POST)
 	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
 	        	if (bindingResult.hasErrors()) {

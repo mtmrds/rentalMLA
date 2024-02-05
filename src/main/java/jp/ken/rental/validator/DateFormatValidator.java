@@ -13,7 +13,6 @@ import jp.ken.rental.annotation.DateFormat;
 
 public class DateFormatValidator implements ConstraintValidator<DateFormat, String> {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-
 	@Override
 	public void initialize(DateFormat constrationAnnotation) {}
 
@@ -23,7 +22,7 @@ public class DateFormatValidator implements ConstraintValidator<DateFormat, Stri
 			Date date = dateFormat.parse(value);
 			String dateString = dateFormat.format(date);
 			return dateString.equals(value);
-		}catch(ParseException e){
+		} catch(ParseException e){
 			return false;
 		}
 	}
