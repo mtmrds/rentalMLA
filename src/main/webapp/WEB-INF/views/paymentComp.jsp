@@ -16,11 +16,15 @@ body{
 	font-family: 'Yomogi', cursive;
 
 }
+
+
 </style>
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
+	<div class="paymentcomp">
 	<h1>レンタル完了画面</h1>
+	</div>
 
 	<a>レンタルありがとうございました(^_-)-☆</a>
 
