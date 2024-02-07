@@ -76,7 +76,8 @@
 
 h2 {
   position: relative;
-  padding: 1.5rem 1rem;
+  font-size: 2em;
+  color:#66CCFF;
   text-align: center;
 }
 
@@ -93,7 +94,16 @@ h2:after {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
+/*ふわふわした囲み枠*/
+.box3-2 {
+	margin: 2em;
+	padding:2em;/*内側余白*/
+	background-color:#fff;/*背景色*/
+	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
+	border-radius: 30px;
+	  height: 300px;
+	  width: 500px;
+}
 
 </style>
 	</head>
@@ -126,7 +136,7 @@ h2:after {
         <p class="loop03__item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</p>
     </div>
 
-<div class="box">
+<div class="box3-2">
 <div class="box-title"><h2>NEWS</h2></div>
   <ul>
   <li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
