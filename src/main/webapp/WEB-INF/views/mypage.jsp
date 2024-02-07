@@ -21,7 +21,7 @@
 						<tr>
 							<td><strong>会員No</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.id }">
+								<c:if test="${!empty memberModel.id }">
 									<p>${memberModel.id}</p>
 								</c:if>
 							</td>
@@ -29,7 +29,7 @@
 						<tr>
 							<td><strong>氏名</strong></td>
 							<td>
-								<c:if test="${not empty membeModel.name }">
+								<c:if test="${!empty memberModel.name }">
 									<p>${memberModel.name}</p>
 								</c:if>
 							</td>
@@ -37,7 +37,7 @@
 						<tr>
 							<td><strong>郵便番号</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.zip }">
+								<c:if test="${!empty memberModel.zip }">
 									<p>${memberModel.zip}</p>
 								</c:if>
 							</td>
@@ -45,7 +45,7 @@
 						<tr>
 							<td><strong>住所</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.address }">
+								<c:if test="${!empty memberModel.address }">
 									<p>${memberModel.address}</p>
 								</c:if>
 							</td>
@@ -53,7 +53,7 @@
 						<tr>
 							<td><strong>電話番号</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.phone }">
+								<c:if test="${!empty memberModel.phone }">
 									<p>${memberModel.phone}</p>
 								</c:if>
 							</td>
@@ -61,7 +61,7 @@
 						<tr>
 							<td><strong>メールアドレス</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.mail }">
+								<c:if test="${!empty memberModel.mail }">
 									<p>${memberModel.mail}</p>
 								</c:if>
 							</td>
@@ -69,14 +69,14 @@
 						<tr>
 							<td><strong>生年月日</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.birthday }">
+								<c:if test="${!empty memberModel.birthday }">
 									<p>${memberModel.birthday}</p>								</c:if>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>クレジットカード</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.card }">
+								<c:if test="${!empty memberModel.card }">
 									<p>${memberModel.card}</p>
 								</c:if>
 							</td>
@@ -84,7 +84,7 @@
 						<tr>
 							<td><strong>パスワード</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.password }">
+								<c:if test="${!empty memberModel.password }">
 									<p>${memberModel.password}</p>
 								</c:if>
 							</td>
