@@ -58,7 +58,6 @@
 						</c:forEach>
 					</table>
 					</c:if>
-
 				</main>
 			<jsp:include page="footer.jsp"/>
 		<!-- </div> -->
