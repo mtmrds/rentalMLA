@@ -189,9 +189,11 @@ input.btn {
 }
 
 .registrationtitle  {
-	background-color: violet;
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
 }
-
 
 /*-------------------------------
 ⑥マイページ
@@ -250,7 +252,7 @@ input.btn {
 	padding: 20px;
 	border-radius: 20px;
 }
-　
+
 
 
 /*-------------------------------
