@@ -40,10 +40,12 @@
 		 </div>
 
 		<!-- ログイン後だけ表示できる -->
+		<!-- 上記より、ログイン前提のためログアウトのみ表示 -->
 		<div class="loginname">
 			<p>
 				<c:if test="${not empty loginModel.name}">
 					<p>お疲れ様です、㊓${loginModel.name}さん</p>
+					<p><a href="logout">ログアウト</a></p>
 				</c:if>
 			</p>
 		</div>
