@@ -70,8 +70,7 @@
 							<td><strong>生年月日</strong></td>
 							<td>
 								<c:if test="${not empty memberModel.birthday }">
-									<p>${memberModel.birthday}</p>
-								</c:if>
+									<p>${memberModel.birthday}</p>								</c:if>
 							</td>
 						</tr>
 						<tr>
@@ -101,4 +100,5 @@
 			<jsp:include page="footer.jsp"/>
 		</form:form>
 	</body>
+
 </html>
