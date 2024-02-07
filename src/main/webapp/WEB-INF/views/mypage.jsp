@@ -30,8 +30,8 @@
 						<tr>
 							<td><strong>氏名</strong></td>
 							<td>
-								<c:if test="${not empty memberModel.name }">
-									<p>${memberModel.name}</p>
+								<c:if test="${not empty loginModel.name }">
+									<p>${loginModel.name}</p>
 								</c:if>
 							</td>
 						</tr>
