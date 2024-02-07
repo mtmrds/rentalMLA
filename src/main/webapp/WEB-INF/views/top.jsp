@@ -55,6 +55,46 @@
         transform: translateX(-200%);
     }
 }
+.box5-1{
+	margin: 0em auto; /* ボックスの余白 */
+	background-color: #fff; /* ボックス背景色 */
+	padding: 5em 2em 2em; /* ボックス内側余白 */
+	position:relative; /*配置(ここを基準に)*/
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);/*ボックス影*/
+}
+.box5-1 .box-title {
+	background-color: #A7B4AF; /* タイトル背景色 */
+	font-size: 1em;/* タイトル文字の大きさ */
+	color: #fff; /* タイトル文字色 */
+	padding:10px;/*タイトル余白*/
+	text-align: center;	/* タイトル中央寄せ */
+	position:absolute;	/* 配置(ここを動かす) */
+	top:0;	/*上から(0px)に配置 */
+	left:0; /*左から(0px)に配置 */
+	width:100%;/*横幅最大幅 */
+}
+
+h2 {
+  position: relative;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
 </style>
 	</head>
 	<body>
@@ -79,8 +119,9 @@
         <p class="loop03__item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</p>
         <p class="loop03__item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</p>
     </div>
-     <div id="topInfo">
-  <h2>お知らせ</h2>
+
+<div class="box">
+<div class="box-title"><h2>NEWS</h2></div>
   <ul>
   <li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
   <li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
