@@ -187,7 +187,7 @@ input.btn {
 	border: double;
 }
 
-.registrationtitle  {
+.registrationtitle h1 {
 	background-color: hotpink;
 	opacity: 0.4;
 	padding: 20px;
