@@ -5,9 +5,10 @@
 ②フッダー
 ③トップページ
 ④ログインページ
-⑤会員登録ページ
-⑥マイページ
-⑦アイテム一覧ページ
+⑤ログインエラー
+⑥会員登録ページ
+⑦マイページ
+⑧アイテム一覧ページ
 
 -------------------------------*/
 
@@ -73,7 +74,7 @@ input.btn {
 
 
 /*-------------------------------
-③トップページ
+トップページ
 -------------------------------*/
 .toppage {
 	font-family: 'Yomogi',cursive;
@@ -106,7 +107,7 @@ input.btn {
 
 
 /*-------------------------------
-④ログインページ
+ログインページ
 -------------------------------*/
 .loginpage {
 	font-family: 'Yomogi',cursive;
@@ -167,7 +168,19 @@ input.btn {
 
 
 /*-------------------------------
-⑤会員登録ページ
+ログインエラーページ
+-------------------------------*/
+.loginpage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+/*-------------------------------
+会員登録ページ
 -------------------------------*/
 .registration {
 	font-family: 'Yomogi',cursive;
@@ -193,7 +206,7 @@ input.btn {
 
 
 /*-------------------------------
-⑥マイページ
+マイページ
 -------------------------------*/
 .mypage {
 	font-family: 'Yomogi',cursive;
@@ -219,7 +232,7 @@ input.btn {
 
 
 /*-------------------------------
-⑦アイテム一覧ページ
+アイテム一覧ページ
 -------------------------------*/
 .itemsearch {
 	font-family: 'Yomogi',cursive;
