@@ -16,16 +16,6 @@
 		font-weight: bold;
 
 }
-/* エラーメッセージ背景色と文字色 */
-.FS2_assist_message {
-background-color: #009933;
-color: #fff;
-}
-
-/* エラーの出ているテキストボックス背景色 */
-.FS2_assist_error {
-background: #FFCC33;
-}
 
 </style>
 	</head>
