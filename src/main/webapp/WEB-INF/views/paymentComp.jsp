@@ -17,16 +17,28 @@ body{
 
 }
 
+/*　cssに書いたら反映されないのでこっちにかいてます */
+
+.paymentcomp h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+}
 
 </style>
+
+
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
 	<div class="paymentcomp">
 	<h1>レンタル完了画面</h1>
 	</div>
+	<div class="fade-in-text">レンタルありがとうございました(^_-)-☆
+	<img src="resources/image/お辞儀.png"/>
+	</div>
 
-	<a>レンタルありがとうございました(^_-)-☆</a>
 
 	<p><a href="<c:url value='top' />">トップに戻る</a></p>
 	<jsp:include page="footer.jsp"/>
