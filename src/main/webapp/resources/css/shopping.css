@@ -325,6 +325,41 @@ input.btn{
 	text-align:center;
 }
 
+
+/*-------------------------------
+会員登録ページ
+-------------------------------*/
+.registration {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+
+.registration table{
+	border-collapse: collapse;
+}
+
+
+.registration h1{
+
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
 /*-------------------------------
 決済確認画面
 -------------------------------*/
