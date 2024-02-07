@@ -53,7 +53,7 @@ from {
     <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/masausa.jpg" /></li>
   </ul>
   <ul class="scroll-infinity__list scroll-infinity__list--left">
     <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
