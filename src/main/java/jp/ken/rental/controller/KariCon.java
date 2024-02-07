@@ -3,11 +3,10 @@ package jp.ken.rental.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
@@ -46,15 +45,31 @@ public class KariCon {
 	        membersDao.clearCart(model);
 	        return "paymentComp";
 	    }
-
-	    @RequestMapping(method = RequestMethod.POST)
-	    String removeFromCart(@Validated ItemModel itemModel , BindingResult bindingResult, Model model) {
-	        	if (bindingResult.hasErrors()) {
-	            model.addAttribute("error", "商品がチェックされていません");
-	            return viewCart(model);
+	    @RequestMapping(method = RequestMethod.POST, params = "delete")
+	    String viewCart4(@RequestParam("delete") String delete, @RequestParam("cNo") int cNo, Model model) {
+	        if (delete != null && delete.equals("削除")) {
+	            // ボタンが押された場合の処理
+	            membersDao.remove(cNo);
 	        }
-	        membersDao.remove(itemModel.getItemNo());
-	        return "redirect:/cartcontent";
+
+	        model.addAttribute("cartList", membersDao.getCartList());
+	        return "cartcontent";
 	    }
+
+	    /*
+
+	    @RequestMapping(method = RequestMethod.POST, params = "delete")
+	    String viewCart4(@RequestParam("cNo") int cNo, Model model) {
+	    	    model.addAttribute("membersList", membersDao.getCartList());
+	    	    membersDao.remove(cNo);
+	    	    return "cartcontent";
+	    	}
+
+	    	/*
+	        model.addAttribute("membersList", membersDao.getCartList());
+	        membersDao.remove();
+	        return "cartcontent";
+	        */
+
 }
 
