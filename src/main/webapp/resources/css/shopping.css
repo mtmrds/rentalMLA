@@ -5,18 +5,56 @@
 ②フッダー
 ③トップページ
 ④ログインページ
-
+⑤会員登録ページ
+⑥マイページ
 
 -------------------------------*/
 
 /*--------------------------------
 全ページ共通
 -------------------------------*/
+/* 青色 */
+background-color: #61b0e2;
+box-shadow: 0 5px 0 #369ada;
+}
+/* ホバー時 */
+.btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
 
+
+	}
+input.btn:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15px;
+	height: 100%;
+	content: '';
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	-webkit-transform: translateX(0) translateY(0);
+	transform: translateX(0) translateY(0);
+	border-radius: 0 50% 50% 0;
+	background: #000;
+}
+
+input.btn:hover:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: bold;
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	content: '\f061';-webkit-transform: translateX(460%) translateY(.5rem);
+	transform: translateX(460%) translateY(.5rem);
+	color: #fff;
+	border-radius: 50%;
+}
 
 
 /*--------------------------------
-ヘッダー
+①ヘッダー
 --------------------------------*/
 .logo a {
 	display: flex;
@@ -47,7 +85,7 @@
 
 
 /*-------------------------------
-フッター
+②フッター
 -------------------------------*/
 .footer p {
 	font-family: 'Yomogi',cursive;
@@ -56,7 +94,7 @@
 
 
 /*-------------------------------
-トップページ
+③トップページ
 -------------------------------*/
 .toppage {
 	font-family: 'Yomogi',cursive;
@@ -125,7 +163,7 @@ input.btn:hover:before {
 
 
 /*-------------------------------
-ログインページ
+④ログインページ
 -------------------------------*/
 .loginpage {
 	font-family: 'Yomogi',cursive;
@@ -201,7 +239,42 @@ input.btn:hover:before {
 
 
 /*-------------------------------
-マイページ
+⑤会員登録ページ
+-------------------------------*/
+.registration {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.registration table{
+	border-collapse: collapse;
+}
+
+
+.registration h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.registration table td {
+	border: double;
+}
+
+
+.registrationtitle  {
+	background-color: violet;
+}
+
+
+/*-------------------------------
+⑥マイページ
 -------------------------------*/
 .mypage {
 	font-family: 'Yomogi',cursive;
@@ -232,43 +305,6 @@ input.btn{
   color: #fff;
   cursor: pointer;
   text-decoration: none; /* 文字の下線を消す */
-/* 青色 */
-background-color: #61b0e2;
-box-shadow: 0 5px 0 #369ada;
-}
-/* ホバー時 */
-.btn:hover {
-  box-shadow: none;
-  transform: translateY(5px);
-}
-
-
-	}
-input.btn:before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 15px;
-	height: 100%;
-	content: '';
-	-webkit-transition: all .3s;
-	transition: all .3s;
-	-webkit-transform: translateX(0) translateY(0);
-	transform: translateX(0) translateY(0);
-	border-radius: 0 50% 50% 0;
-	background: #000;
-}
-
-input.btn:hover:before {
-	font-family: 'Font Awesome 5 Free';
-	font-weight: bold;
-	line-height: 30px;
-	width: 30px;
-	height: 30px;
-	content: '\f061';-webkit-transform: translateX(460%) translateY(.5rem);
-	transform: translateX(460%) translateY(.5rem);
-	color: #fff;
-	border-radius: 50%;
 }
 
 
@@ -289,38 +325,6 @@ input.btn:hover:before {
 	text-align:center;
 }
 
-
-/*-------------------------------
-会員登録ページ
--------------------------------*/
-.registration {
-	font-family: 'Yomogi',cursive;
-	color: grey;
-	background-image: url(../image/pink.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh;
-}
-
-
-.registration table{
-	border-collapse: collapse;
-}
-
-
-.registration h1{
-
-	opacity: 0.4;
-	padding: 20px;
-	border-radius: 20px;
-}
-
-
-
-
-
-
 /*-------------------------------
 決済確認画面
 -------------------------------*/
@@ -331,17 +335,8 @@ input.btn:hover:before {
 	padding: 20px;
 	border-radius: 20px;
 }
+　
 
-
-
-.registration table td {
-	border: double;
-}
-
-
-.registrationtitle  {
-	background-color: violet;
-}
 /*-------------------------------
 カートコンテンツ
 -------------------------------*/

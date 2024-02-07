@@ -8,6 +8,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 import jp.ken.rental.groups.Group1;
 
 public class MemberModel {
+
+	private String id;
+
 	@NotEmpty(message = "氏名が未入力です")
 	private String name;
 
@@ -40,6 +43,14 @@ public class MemberModel {
 	private String password;
 
 	private String plan;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

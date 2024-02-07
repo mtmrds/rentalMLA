@@ -11,7 +11,6 @@
 	</head>
 	<body>
 		<form:form modelAttribute="memberModel">
-		<form:form modelAttribute="loginModel">
 			<div class="mypage">
 				<jsp:include page="header.jsp"/>
 				<div>
@@ -99,7 +98,6 @@
 					<button type="button">退会</button>
 				</div>
 			<jsp:include page="footer.jsp"/>
-		</form:form>
 		</form:form>
 	</body>
 
