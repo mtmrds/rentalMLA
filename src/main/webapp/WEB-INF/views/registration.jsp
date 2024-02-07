@@ -8,13 +8,26 @@
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
-		<style>
-			.errors{
-			font-family: 'Yomogi',cursive;
-			color: red;
-			font-weight: bold;
-		}
-		</style>
+
+<style>
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+
+}
+/* エラーメッセージ背景色と文字色 */
+.FS2_assist_message {
+background-color: #009933;
+color: #fff;
+}
+
+/* エラーの出ているテキストボックス背景色 */
+.FS2_assist_error {
+background: #FFCC33;
+}
+
+</style>
 	</head>
 	<body>
 		<div class="registration">
