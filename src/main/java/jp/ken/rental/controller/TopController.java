@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import jp.ken.rental.dao.MembersDao;
 import jp.ken.rental.entity.Members;
@@ -70,6 +71,7 @@ public class TopController {
                 	lgModel.setName(admin.getName());
                     model.addAttribute("loginModel", lgModel);
                     model.addAttribute("itemModel", itemModel);
+
                     // マスターページにリダイレクト
                     return 	"redirect:/master";
                 } else {
@@ -83,5 +85,12 @@ public class TopController {
             }
         }
         return "login";
+    }
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(SessionStatus sessionStatus) {
+        // セッションを破棄
+        sessionStatus.setComplete();
+        // ログアウト後のリダイレクト先を指定（トップページなど）
+        return "redirect:/top";
     }
 }

@@ -12,7 +12,7 @@
 	</head>
 	<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
 	<body style="background-color: gray;">
-		<div class="itemsearch">
+		<!--  <div class="itemsearch"> -->
 			<jsp:include page="headeremp.jsp"/>
 				<main>
 					<form:form modelAttribute="itemModel">
@@ -58,8 +58,9 @@
 						</c:forEach>
 					</table>
 					</c:if>
+
 				</main>
 			<jsp:include page="footer.jsp"/>
-		</div>
+		<!-- </div> -->
 	</body>
 </html>
