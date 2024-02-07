@@ -312,4 +312,15 @@ public class MembersDao {
 	        return null;
 	    }
 	}
+	public Members getMembersByMail(String mail) {
+		String sql = "SELECT * FROM members WHERE mail =?";
+		Object [] parameters = { mail };
+		try {
+			Members member = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return member;
+		} catch (EmptyResultDataAccessException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 }
