@@ -8,6 +8,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<title>マイページ</title>
+
 	</head>
 	<body>
 		<form:form modelAttribute="memberModel">

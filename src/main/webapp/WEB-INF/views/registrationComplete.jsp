@@ -19,9 +19,12 @@ body{
 </head>
 <body>
 	<jsp:include page="header.jsp"/>
+	<div class="registrationcomplete">
 	<h1>登録完了画面</h1>
-
-	<a>ご登録ありがとうございました(^_-)-☆</a>
+	</div>
+	<div class="fade-in-text">ご登録ありがとうございました(^_-)-☆
+	<img src="resources/image/お辞儀（男）.png"/>
+	</div>
 
 	<p><a href="<c:url value='top' />">トップに戻る</a></p>
 	<jsp:include page="footer.jsp"/>
