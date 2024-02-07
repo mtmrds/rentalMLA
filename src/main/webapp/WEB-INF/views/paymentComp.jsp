@@ -15,7 +15,10 @@
 				<div class="paymentcomptitle">
 					<h1>レンタル完了画面</h1>
 				</div>
-				<a>レンタルありがとうございました(^_-)-☆</a>
+				<div class="fade-in-text">
+					<p>レンタルありがとうございました(^_-)-☆</p>
+					<img src="resources/image/お辞儀.png"/>
+				</div>
 				<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>
