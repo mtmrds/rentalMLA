@@ -205,10 +205,13 @@ input.btn {
 	opacity: 0.4;
 	padding: 20px;
 	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color:black;
 }
 
 /*-------------------------------
-マイページ
+⑦マイページ
 -------------------------------*/
 .mypage {
 	font-family: 'Yomogi',cursive;
@@ -231,6 +234,17 @@ input.btn {
 .body {
 	height: 100px;
 }
+
+.mypagetitle {
+	background-color: hotpink;
+	opacity: 0.5;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color:black;
+}
+
 
 
 /*-------------------------------
