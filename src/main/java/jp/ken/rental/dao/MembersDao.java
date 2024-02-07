@@ -297,10 +297,19 @@ public class MembersDao {
 	    return jdbcTemplate.update(sql, parameters);
 	}
 
-
-
+	//adminテーブルに登録されている従業員情報を取得する
 	public int clearCart(Model model) {
 		String sql = "DELETE FROM history";
 		 return jdbcTemplate.update(sql);
+	}
+	public Members getAdminByUserPass(String mail, String password) {
+	    String sql = "SELECT * FROM admin WHERE mail = ? AND password = ?";
+	    Object[] parameters = { mail, password };
+	    try {
+	        Members admin = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+	        return admin;
+	    } catch (EmptyResultDataAccessException e) {
+	        return null;
+	    }
 	}
 }

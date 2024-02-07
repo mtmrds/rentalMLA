@@ -86,7 +86,7 @@ public class SearchController {
 	public String toCartRegist(@ModelAttribute ItemModel itemModel, Model model) {
 
 		// 商品の在庫を減らし、カートに追加する
-        boolean addToCartSuccess = membersDao.addToCartAndUpdateStock(Integer.parseInt(mId));
+        membersDao.addToCartAndUpdateStock(Integer.parseInt(mId));
         //historyに入る
       	Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
       	model.addAttribute("pickItem", pickItem);
@@ -95,13 +95,6 @@ public class SearchController {
         model.addAttribute("cartList", cartList);
 
         int numberOfRow = membersDao.insertCart(pickItem);
-
-
-
-        if (!addToCartSuccess) {
-            model.addAttribute("message", "在庫が不足しています。");
-            return "outOfStock";
-        }
 
 
         if (numberOfRow == 0) {
