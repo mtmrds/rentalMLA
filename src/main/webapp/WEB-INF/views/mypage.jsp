@@ -29,8 +29,8 @@
 						<tr>
 							<td><strong>氏名</strong></td>
 							<td>
-								<c:if test="${not empty loginModel.name }">
-									<p>${loginModel.name}</p>
+								<c:if test="${not empty membeModel.name }">
+									<p>${memberModel.name}</p>
 								</c:if>
 							</td>
 						</tr>
@@ -97,7 +97,8 @@
 				<div>
 					<button type="button">退会</button>
 				</div>
-			<jsp:include page="footer.jsp"/>
+				<jsp:include page="footer.jsp"/>
+			</div>
 		</form:form>
 	</body>
 
