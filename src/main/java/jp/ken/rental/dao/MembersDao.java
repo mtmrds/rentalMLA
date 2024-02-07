@@ -302,7 +302,7 @@ public class MembersDao {
 		String sql = "DELETE FROM history";
 		 return jdbcTemplate.update(sql);
 	}
-	public Members getAdminByUserPass(String mail, String password) {
+	public Members getAdminByUser(String mail, String password) {
 	    String sql = "SELECT * FROM admin WHERE mail = ? AND password = ?";
 	    Object[] parameters = { mail, password };
 	    try {
