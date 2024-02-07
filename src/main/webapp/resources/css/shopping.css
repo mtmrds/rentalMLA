@@ -271,8 +271,42 @@ input.btn {
 	opacity: 0.4;
 	padding: 20px;
 	border-radius: 20px;
+
 }
 
+.fade-in-text{
+  position: relative;
+  font-size: 30px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  text-align: center;
+
+}
+
+.fade-in-text img{
+	vertical-align:middle;
+}
+
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+
+  }
+}
+
+.disp-img{
+    background-image:url(resources/image/お辞儀.png);             /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */
+    width:auto;                                   /* 横幅のサイズを指定    */
+    height:400pX;								  /* 縦幅のサイズを指定    */
+
+}
+.mako {
+	text-align: center;
+}
 
 /*-------------------------------
 カートコンテンツ
@@ -286,3 +320,58 @@ input.btn {
 	background-position: center;
 	min-height: 100vh;
 }
+
+/*-------------------------------
+登録完了画面
+-------------------------------*/
+.registrationcomplete h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+
+}
+
+
+.fade-in-text{
+  position: relative;
+  font-size: 30px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  text-align: center;
+
+}
+
+.fade-in-text img{
+	vertical-align:middle;
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+
+  }
+}
+
+.disp-img{
+    background-image:url(resources/image/お辞儀.png);             /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */
+    width:auto;                                   /* 横幅のサイズを指定    */
+    height:400pX;								  /* 縦幅のサイズを指定    */
+
+}
+.mako {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
