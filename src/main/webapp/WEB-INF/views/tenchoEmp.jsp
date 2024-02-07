@@ -10,7 +10,8 @@
 		<meta charset="UTF-8">
 		<title>レンタルサイト 商品一覧画面</title>
 	</head>
-	<body>
+	<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
+	<body style="background-color: gray;">
 		<div class="itemsearch">
 			<jsp:include page="headeremp.jsp"/>
 				<main>
@@ -31,30 +32,30 @@
 					</form:form>
 					<c:if test="${!empty itemList}">
 					<table>
-					<tr>
-						<th>ID</th>
-						<th>タイトル</th>
-						<th>タイプ</th>
-						<th>カテゴリー</th>
-						<th>在庫</th>
-						<th>カート</th>
-					</tr>
-					<c:forEach var="items" items="${itemList}">
 						<tr>
-							<td><c:out value="${items.itemNo}"/></td>
-							<td><c:out value="${items.title}"/></td>
-							<td><c:out value="${items.type}"/></td>
-							<td><c:out value="${items.category}"/></td>
-							<td><c:out value="${items.quantity}"/></td>
-							<td>
-  								<form:form modelAttribute="itemModel">
-									<form:hidden path="itemNo" value="${items.itemNo }" />
-									<form:hidden path="title" value="pick"/>
-									<input type="submit" value="カートに入れる"/>
-								</form:form>
-							</td>
+							<th>ID</th>
+							<th>タイトル</th>
+							<th>タイプ</th>
+							<th>カテゴリー</th>
+							<th>在庫</th>
+							<th>カート</th>
 						</tr>
-					</c:forEach>
+						<c:forEach var="items" items="${itemList}">
+							<tr>
+								<td><c:out value="${items.itemNo}"/></td>
+								<td><c:out value="${items.title}"/></td>
+								<td><c:out value="${items.type}"/></td>
+								<td><c:out value="${items.category}"/></td>
+								<td><c:out value="${items.quantity}"/></td>
+								<td>
+  									<form:form modelAttribute="itemModel">
+										<form:hidden path="itemNo" value="${items.itemNo }" />
+										<form:hidden path="title" value="pick"/>
+										<input type="submit" value="カートに入れる"/>
+									</form:form>
+								</td>
+							</tr>
+						</c:forEach>
 					</table>
 					</c:if>
 				</main>
