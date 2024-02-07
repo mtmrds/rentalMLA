@@ -34,8 +34,8 @@
 		 <div class="linkpage">
 
 		 	<!-- <a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>|<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　 -->
-		 	<a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>　</br>
-		 	<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　
+
+		 	<a href="tenzai">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　
 
 		 </div>
 
