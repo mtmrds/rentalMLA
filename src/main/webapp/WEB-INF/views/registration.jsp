@@ -8,13 +8,16 @@
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
-		<style>
-			.errors{
-			font-family: 'Yomogi',cursive;
-			color: red;
-			font-weight: bold;
-		}
-		</style>
+
+<style>
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+
+}
+
+</style>
 	</head>
 	<body>
 		<div class="registration">

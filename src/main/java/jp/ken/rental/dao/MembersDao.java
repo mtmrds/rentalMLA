@@ -302,7 +302,7 @@ public class MembersDao {
 		String sql = "DELETE FROM history";
 		 return jdbcTemplate.update(sql);
 	}
-	public Members getAdminByUserPass(String mail, String password) {
+	public Members getAdminByUser(String mail, String password) {
 	    String sql = "SELECT * FROM admin WHERE mail = ? AND password = ?";
 	    Object[] parameters = { mail, password };
 	    try {
@@ -311,5 +311,16 @@ public class MembersDao {
 	    } catch (EmptyResultDataAccessException e) {
 	        return null;
 	    }
+	}
+	public Members getMembersByMail(String mail) {
+		String sql = "SELECT * FROM members WHERE mail =?";
+		Object [] parameters = { mail };
+		try {
+			Members member = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return member;
+		} catch (EmptyResultDataAccessException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

@@ -5,9 +5,10 @@
 ②フッダー
 ③トップページ
 ④ログインページ
-⑤会員登録ページ
-⑥マイページ
-⑦アイテム一覧ページ
+⑤ログインエラー
+⑥会員登録ページ
+⑦マイページ
+⑧アイテム一覧ページ
 
 -------------------------------*/
 
@@ -24,6 +25,7 @@ input.btn {
 	cursor: pointer;
 	text-decoration: none; /* 文字の下線を消す */
 }
+
 /* ホバー時 */
 .btn:hover {
 	box-shadow: none;
@@ -72,7 +74,7 @@ input.btn {
 
 
 /*-------------------------------
-③トップページ
+トップページ
 -------------------------------*/
 .toppage {
 	font-family: 'Yomogi',cursive;
@@ -105,7 +107,7 @@ input.btn {
 
 
 /*-------------------------------
-④ログインページ
+ログインページ
 -------------------------------*/
 .loginpage {
 	font-family: 'Yomogi',cursive;
@@ -115,7 +117,6 @@ input.btn {
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 100vh;
-
 }
 
 .loginpage h2 {
@@ -127,14 +128,13 @@ input.btn {
 }
 
 .loginpage table {
-    margin: 150px auto;
-    background-color: violet;
-    background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
-    color: white;
-    padding: 2em;
-    border-radius: 30px;
-    opacity: 0.8;
-
+	margin: 150px auto;
+	background-color: violet;
+	background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
+	color: white;
+	padding: 2em;
+	border-radius: 30px;
+	opacity: 0.8;
 }
 
 .btn-2 {
@@ -161,14 +161,26 @@ input.btn {
 }
 
 .btn-2:hover {
-  box-shadow    : none;        /* カーソル時の影消去 */
-  color         : white;     /* 背景色     */
-  background-color: steelblue;     /* 文字色     */
+	box-shadow    : none;        /* カーソル時の影消去 */
+	color         : white;     /* 背景色     */
+	background-color: steelblue;     /* 文字色     */
 }
 
 
 /*-------------------------------
-⑤会員登録ページ
+ログインエラーページ
+-------------------------------*/
+.loginpage {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+/*-------------------------------
+会員登録ページ
 -------------------------------*/
 .registration {
 	font-family: 'Yomogi',cursive;
@@ -188,13 +200,15 @@ input.btn {
 	border: double;
 }
 
-.registrationtitle  {
-	background-color: violet;
+.registrationtitle h1 {
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
 }
 
-
 /*-------------------------------
-⑥マイページ
+マイページ
 -------------------------------*/
 .mypage {
 	font-family: 'Yomogi',cursive;
@@ -220,7 +234,7 @@ input.btn {
 
 
 /*-------------------------------
-⑦アイテム一覧ページ
+アイテム一覧ページ
 -------------------------------*/
 .itemsearch {
 	font-family: 'Yomogi',cursive;
@@ -237,9 +251,6 @@ input.btn {
 }
 
 
-
-
-
 /*-------------------------------
 決済確認画面
 -------------------------------*/
@@ -250,7 +261,6 @@ input.btn {
 	padding: 20px;
 	border-radius: 20px;
 }
-　
 
 
 /*-------------------------------
@@ -278,6 +288,7 @@ input.btn {
 	vertical-align:middle;
 }
 
+
 @keyframes fadeInFromBottom {
   to {
     opacity: 1; /* アニメーション終了時に完全に表示 */
@@ -296,6 +307,7 @@ input.btn {
 .mako {
 	text-align: center;
 }
+
 /*-------------------------------
 カートコンテンツ
 -------------------------------*/

@@ -46,35 +46,42 @@ public class TopController {
 		return "login";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String toConfirm(@ModelAttribute LoginModel lgModel, Model model,@ModelAttribute ItemModel itemModel ) {
+    public String toConfirm(@ModelAttribute LoginModel lgModel, Model model, @ModelAttribute ItemModel itemModel) {
 
-		boolean mailIsEmpty = lgModel.getMail().isEmpty();
-		boolean passIsEmpty = lgModel.getPassword().isEmpty();
+        boolean mailIsEmpty = lgModel.getMail().isEmpty();
+        boolean passIsEmpty = lgModel.getPassword().isEmpty();
 
-		if(mailIsEmpty && passIsEmpty) {
-			//バリデ。errorMessageで各内容を指定
-			model.addAttribute("errorMessage", "メールアドレスとパスワードは入力必須項目です");
-		} else if(mailIsEmpty || passIsEmpty) {
-			model.addAttribute("errorMessage", "メールアドレス、パスワードは共に入力必須項目です");
-		} else if(!mailIsEmpty && !passIsEmpty) {
-			String mail = new String(lgModel.getMail());
-			String password = new String(lgModel.getPassword());
-			Members user = membersDao.getMembersByUserPass(mail, password);
-        if(user == null) {
-        	model.addAttribute("errorMessage", "メールアドレスもしくはパスワードが間違っています");
-        	return "login";
-        } else {
-        	//ログイン後にSQLで引っ張ってきた名前を表示する
-        	lgModel.setName(user.getName());
-            model.addAttribute("loginModel", lgModel);
-            model.addAttribute("itemModel", itemModel);
-            if(lgModel.getMail().equals("tencho@ken.com") && lgModel.getPassword().equals("tencho00")) {
-            	return "redirect:/master";
+        if (mailIsEmpty && passIsEmpty) {
+            // バリデ。errorMessageで各内容を指定
+            model.addAttribute("errorMessage", "メールアドレスとパスワードは入力必須項目です");
+        } else if (mailIsEmpty || passIsEmpty) {
+            model.addAttribute("errorMessage", "メールアドレス、パスワードは共に入力必須項目です");
+        } else if (!mailIsEmpty && !passIsEmpty) {
+            String mail = new String(lgModel.getMail());
+            String password = new String(lgModel.getPassword());
+            Members user = membersDao.getMembersByUserPass(mail, password);
+            Members admin = membersDao.getAdminByUser(mail, password);
+
+            if (user == null && admin == null) {
+                model.addAttribute("errorMessage", "メールアドレスもしくはパスワードが間違っています");
+                return "login";
             } else {
-            	return "redirect:/top";
-            	}
-        	}
+                if (admin != null) {
+                	lgModel.setName(admin.getName());
+                    model.addAttribute("loginModel", lgModel);
+                    model.addAttribute("itemModel", itemModel);
+                    // マスターページにリダイレクト
+                    return 	"redirect:/master";
+                } else {
+                    // 一般ユーザーの処理
+                    // ログイン後にSQLで引っ張ってきた名前を表示する
+                    lgModel.setName(user.getName());
+                    model.addAttribute("loginModel", lgModel);
+                    model.addAttribute("itemModel", itemModel);
+                    return "redirect:/top";
+                }
+            }
         }
-		return "login";
-	}
+        return "login";
+    }
 }

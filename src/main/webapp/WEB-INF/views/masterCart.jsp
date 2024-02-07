@@ -9,7 +9,7 @@
 <title>店長用カート（在庫管理）</title>
 </head>
 <body>
-	<h1>カートに商品を入れますか？（表現変えるかも）</h1>
+	<h1>発注しますか？（表現変えるかも）</h1>
 		<form:form modelAttribute="itemModel">
 			<table>
 				<tr>
@@ -19,7 +19,7 @@
          			<td>${pickItem.category }</td>
         		</tr>
         	</table>
-        	<p><input type="submit" value="カートIN" ></p>
+        	<p><input type="submit" value="発注" ></p>
     	</form:form>
 		<p><a href="<c:url value='master' />">検索画面に戻る（マスター管理へ戻す。表現変えるかも）</a></p>
 		<p><a href="<c:url value='master' />">tenchoEmp.jspに戻る(仮です。表現変えるかも)</a></p>
