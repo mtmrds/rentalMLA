@@ -14,7 +14,6 @@
 		font-family: 'Yomogi',cursive;
 		color: red;
 		font-weight: bold;
-
 }
 
 </style>
@@ -101,28 +100,28 @@
 						</tr>
 						<tr>
 							<td><strong>プラン</strong></td>
-							<td style="border-right: none;">
+							<td>
 							<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
-							<br>
+							<br><br>
 							初月限定！<br>
 							月額324円<br>
 							2枚/月
 							</td>
-							<td style="border-right: none;">
+							<td>
 							<form:radiobutton path="plan" label="Bronzeプラン" value="Bronzeプラン" />
-							<br>
+							<br><br>
 							月額1080円<br>
 							6枚/月
 							</td>
-							<td style="border-right: none;">
+							<td>
 							<form:radiobutton path="plan" label="Silverプラン" value="Silverプラン" />
-							<br>
+							<br><br>
 							月額2160円<br>
 							6枚/月
 							</td>
 							<td>
 							<form:radiobutton path="plan" label="Goldプラン" value="Goldプラン" />
-							<br>
+							<br><br>
 							月額5400円<br>
 							無制限<br>
 							</td>
