@@ -4,7 +4,6 @@
 
 <!-- マイページ -->
 <!DOCTYPE html>
-<!-- 昨日は第二工程で実施。他タスクを優先します。 手島 -->
 <html>
 <head>
 <meta charset="UTF-8">
