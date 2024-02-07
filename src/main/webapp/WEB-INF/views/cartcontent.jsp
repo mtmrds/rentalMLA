@@ -30,7 +30,6 @@
 						<td><c:out value="${listCart.type}"/></td>
 						<td>
 							<form:hidden path="cNo" value="${listCart.cNo}" />
-
 							<input type="submit" name="delete" value="削除">
 						</td>
 					</tr>
