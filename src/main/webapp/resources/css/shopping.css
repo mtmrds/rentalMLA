@@ -235,17 +235,22 @@ input.btn:hover:before {
 	min-height: 100vh;
 }
 
+
 .registration table{
 	border-collapse: collapse;
 }
 
 
 .registration h1{
-	background-color: hotpink;
+
 	opacity: 0.4;
 	padding: 20px;
 	border-radius: 20px;
 }
+
+
+
+
 
 
 /*-------------------------------
