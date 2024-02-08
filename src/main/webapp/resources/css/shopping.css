@@ -1,4 +1,4 @@
-@charset "UTF-8";
+-@charset "UTF-8";
 /*--------------------------------
 項目
 ①ヘッダー
@@ -93,6 +93,22 @@ input.btn {
   width: 50px;
   height: auto;
 }
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/*スクロールバーのツマミの部分*/
+::-webkit-scrollbar-thumb {
+  background: #ff8095;
+  border-radius: 5px;
+}
+
+/*スクロールバーにグラデーションを反映*/
+::-webkit-scrollbar-track {
+   background: linear-gradient(pink,orchid);
+}
+
 /*-------------------------------
 ②フッター
 -------------------------------*/
