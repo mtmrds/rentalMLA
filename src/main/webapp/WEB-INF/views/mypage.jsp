@@ -5,86 +5,72 @@
 <!-- マイページ -->
 <!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="UTF-8">
-	<title>マイページ</title>
+<head>
+    <meta charset="UTF-8">
+    <title>マイページ</title>
+</head>
+<body>
+    <div class="mypage">
+        <jsp:include page="header.jsp"/>
+        <div>
+            <p class="mypagetitle">☆マイページ☆</p>
+            <p><a href="logout">ログアウト</a></p>
+        </div>
+        <c:if test="${not empty successMessage}">
+    			<p>${successMessage}</p>
+			</c:if>
+        <div>
+            <!-- 編集フォームの追加 -->
+            <form:form modelAttribute="memberModel" action="editAccount" method="post">
+    <table border="1">
+        <!-- 会員IDはシステム側で使うため一旦コメントアウト
+        <tr>
+            <td><strong>会員No</strong></td>
+            <td><p>${memberId}</p></td>
+        </tr>
+        -->
+        <tr>
+            <td><strong>氏名</strong></td>
+            <td><form:input path="name" /></td>
+        </tr>
+        <tr>
+            <td><strong>郵便番号</strong></td>
+            <td><form:input path="zip" /></td>
+        </tr>
+        <tr>
+            <td><strong>住所</strong></td>
+            <td><form:input path="address" /></td>
+        </tr>
+        <tr>
+            <td><strong>電話番号</strong></td>
+            <td><form:input path="phone" /></td>
+        </tr>
+        <tr>
+            <td><strong>メールアドレス</strong></td>
+            <td><form:input path="mail" /></td>
+        </tr>
+        <tr>
+            <td><strong>生年月日</strong></td>
+            <td><form:input path="birthday" /></td>
+        </tr>
+        <tr>
+            <td><strong>クレジットカード</strong></td>
+            <td><form:input path="card" /></td>
+        </tr>
+        <tr>
+            <td><strong>新しいパスワード</strong></td>
+            <td><form:input path="newPassword" /></td>
+        </tr>
+        <tr>
+            <td><strong>新しいパスワード（確認用）</strong></td>
+            <td><form:input path="confirmPassword" /></td>
+        </tr>
+    </table>
+    <!-- 更新ボタン  -->
+    <button type="submit">更新</button>
+</form:form>
 
-	</head>
-	<body>
-		<form:form modelAttribute="memberModel">
-			<div class="mypage">
-				<jsp:include page="header.jsp"/>
-				<div>
-					<p class="mypagetitle">☆マイページ☆</p>
-					<p><a href="logout">ログアウト</a></p>
-				</div>
-				<div>
-					<table border="1">
-						<tr>
-							<td><strong>会員No</strong></td>
-							<td>
-
-									<p>${memberId}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>氏名</strong></td>
-							<td>
-									<p>${memberName}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>郵便番号</strong></td>
-							<td>
-									<p>${memberZip}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>住所</strong></td>
-							<td>
-									<p>${memberAddress}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>電話番号</strong></td>
-							<td>
-									<p>${memberPhone}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>メールアドレス</strong></td>
-							<td>
-									<p>${memberMail}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>生年月日</strong></td>
-							<td>
-									<p>${memberBirthday}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>クレジットカード</strong></td>
-							<td>
-									<p>${memberCard}</p>
-							</td>
-						</tr>
-						<tr>
-							<td><strong>パスワード</strong></td>
-							<td>
-									<p>${memberPassword}</p>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div>
-					<button type="button">編集</button>
-				</div>
-				<div>
-					<button type="button">退会</button>
-				</div>
-				<jsp:include page="footer.jsp"/>
-			</div>
-		</form:form>
-	</body>
+        <jsp:include page="footer.jsp"/>
+    </div>
+</body>
 </html>

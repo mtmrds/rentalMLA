@@ -323,4 +323,36 @@ public class MembersDao {
 			return null;
 		}
 	}
+	//マイページ上で会員情報を削除する
+	public int removeMember(String mail) {
+	    String sql = "DELETE FROM members WHERE mail=?";
+	    Object[] parameters = { mail };
+	    return jdbcTemplate.update(sql, parameters);
+	}
+	//マイページ上で会員情報を編集する
+	public int updateMember(Members member) {
+		String sql = "UPDATE members SET name=?, birthday=?, zip=?, address=?, phone=?, mail=?, password=?, card=? WHERE mail=?";
+	    Object[] parameters = { member.getName(), member.getBirthday(), member.getZip(), member.getAddress(),
+                				member.getPhone(), member.getMail(), member.getPassword(), member.getCard(), member.getMail() };
+
+	    TransactionStatus transactionStatus = null;
+	    DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+	    int numberOfRow = 0;
+
+	    try {
+	        transactionStatus = transactionManager.getTransaction(transactionDefinition);
+	        numberOfRow = jdbcTemplate.update(sql, parameters);
+	        transactionManager.commit(transactionStatus);
+	    } catch(DataAccessException e){
+	        e.printStackTrace();
+	        transactionManager.rollback(transactionStatus);
+	    } catch(TransactionException e) {
+	        e.printStackTrace();
+	        if(transactionStatus != null) {
+	            transactionManager.rollback(transactionStatus);
+	        }
+	    }
+	    return numberOfRow;
+	}
 }

@@ -31,14 +31,12 @@ public class tenzaiCon {
         model.addAttribute("cartList", membersDao.getCartList());
         return "tencho_order";
     }
-
     @RequestMapping(method = RequestMethod.POST, params = "index")
     String viewCart2(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
-        membersDao.addToUpdateStock(0);
+        //membersDao.addToUpdateStock(0);
         return "tenkaku";
     }
-
     @RequestMapping(method = RequestMethod.POST, params = "end")
     String viewCart3(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
@@ -51,7 +49,6 @@ public class tenzaiCon {
             // ボタンが押された場合の処理
             membersDao.remove(cNo);
         }
-
         model.addAttribute("cartList", membersDao.getCartList());
         return "tencho_order";
     }
