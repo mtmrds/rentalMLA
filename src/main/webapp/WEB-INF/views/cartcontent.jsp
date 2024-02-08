@@ -36,9 +36,11 @@
 				</c:forEach>
 			</table>
 		</form:form>
+		<br>
 		<form:form modelAttribute="loginModel">
-			<input type="submit"  name = "index" value="決済">
+			<input type="submit"  name = "index" value="決済" class="btn">
 		</form:form>
+		<br>
 		<a href="top">トップに戻る</a>
 		<jsp:include page="footer.jsp"/>
 		</div>

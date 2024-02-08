@@ -1,16 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<%-- 従業員用商品登録画面 --%>
-
+<!-- 従業員用商品登録画面 -->
 <!DOCTYPE html>
 <html>
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>在庫管理画面</title>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>在庫管理画面</title>
 
 <!-- 文字フォント -->
 <style>

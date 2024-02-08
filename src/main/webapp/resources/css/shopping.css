@@ -1,24 +1,28 @@
-@charset "UTF-8";
+-@charset "UTF-8";
 /*--------------------------------
 項目
-①ヘッダー
-②フッダー
+①全ページ共有
+②ヘッダー、フッダー
 ③トップページ
+④アイテム一覧ページ
+
+
+
 ④ログインページ
 ⑤ログインエラー
 ⑥会員登録ページ
 ⑦マイページ
-⑧アイテム一覧ページ
 
+⑨
 -------------------------------*/
 
 /*--------------------------------
-全ページ共通
+①全ページ共通
 -------------------------------*/
-input.btn {
+input .btn {
 	display: inline-block;
 	padding: 0.8em 3em;
-	background-color: #61b0e2; /* 背景色 */
+	background-color: #fff; /* 背景色 */
 	box-shadow: 0 5px 0 #369ada; /* 影の太さ・色 */
 	border-radius: 60px;
 	color: #fff;
@@ -34,7 +38,7 @@ input.btn {
 
 
 /*--------------------------------
-①ヘッダー
+②ヘッダー
 --------------------------------*/
 .logo a {
 	display: flex;
@@ -66,41 +70,37 @@ input.btn {
 /* カート */
 /* 基本設定 */
 
-.btn-img{
-  border-style: none;
-}
-
 /* マウスを乗せたときの動き */
 .btn-img:hover{
   opacity: 0.6;
   transition: 0.8s;
 }
 
-/* 画像のサイズ指定*/
 .btn-img img{
-  width: 60px;
-  height: auto;
+	vertical-align:middle;
 }
 
 
 
-/* ログインボタン（人間アイコン） */
-.btn-img1{
-  border-style: none;
-
 }
-/* マウスを乗せたときの動き*/
-.btn-img1:hover{
-  opacity: 0.6;
-  transition: 0.8s;
+/* スクロールバー */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-/* 画像のサイズ指定 */
-.btn-img1{
-    width: 1px;
-  	height: auto;
-
+/*スクロールバーのツマミの部分*/
+::-webkit-scrollbar-thumb {
+  background: #ff8095;
+  border-radius: 5px;
 }
+
+/*スクロールバーにグラデーションを反映*/
+::-webkit-scrollbar-track {
+   background: linear-gradient(pink,orchid);
+}
+
+
 /*-------------------------------
 ②フッター
 -------------------------------*/
@@ -111,7 +111,7 @@ input.btn {
 
 
 /*-------------------------------
-トップページ
+③トップページ
 -------------------------------*/
 .toppage {
 	font-family: 'Yomogi',cursive;
@@ -140,6 +140,45 @@ input.btn {
 
 .body {
 	height: 100px;
+}
+
+.news {
+	margin: 2em;
+	padding:2em;/*内側余白*/
+	background-color:#fff;/*背景色*/
+	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
+	border-radius: 30px;
+	height: 300px;
+	width: 500px;
+}
+
+.newstitle {
+    position: relative;
+    font-size: 2em;
+    border-color:grey;
+    padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    border-bottom: 5px solid;
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+
+/*-------------------------------
+アイテム一覧ページ
+-------------------------------*/
+.itemsearch {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.btn-1 {
+	text-align:center;
 }
 
 
@@ -188,7 +227,7 @@ input.btn {
 	transition    : .3s;         /* なめらか変化 */
 	box-shadow    : 7px 7px 8px #666666;  /* 影の設定 */
 	border        : 2px solid lightblue;    /* 枠の指定 */
-	input　margin : 50　auto ;
+	input-margin : 50 auto ;
 	opacity: 0.8;
 	font-weight: bold;
 }
@@ -207,7 +246,7 @@ input.btn {
 /*-------------------------------
 ログインエラーページ
 -------------------------------*/
-.loginpage {
+.loginerror {
 	font-family: 'Yomogi',cursive;
 	color: grey;
 	background-image: url(../image/pink.jpg);
@@ -287,23 +326,6 @@ input.btn {
 }
 
 
-
-/*-------------------------------
-アイテム一覧ページ
--------------------------------*/
-.itemsearch {
-	font-family: 'Yomogi',cursive;
-	color: grey;
-	background-image: url(../image/pink.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh;
-}
-
-.btn-1 {
-	text-align:center;
-}
 
 
 /*-------------------------------

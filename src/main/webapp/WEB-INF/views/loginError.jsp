@@ -9,24 +9,13 @@
 		<meta charset="UTF-8">
 		<title>エラー画面</title>
 		<style>
-h2{
-	color: 	#ED1A3D;
-}
-
-<!-- 文字フォント -->
-h1,h2,p{
-	font-family: 'Yomogi', cursive;
-
-}
-<!-- 背景画像 -->
-body{
-	background-image:url(resources/image/pink.jpg);
-}
-
+			h2{
+				color: 	#ED1A3D;
+			}
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class="loginerror">
 			<jsp:include page="header.jsp"/>
 			<h1>ログインエラー</h1>
 				<main>
