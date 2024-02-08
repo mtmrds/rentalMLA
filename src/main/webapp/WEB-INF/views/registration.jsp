@@ -16,19 +16,20 @@
 		font-weight: bold;
 }
 
+
 </style>
 	</head>
 	<body>
 		<div class="registration">
 			<jsp:include page="header.jsp"/>
 			<div class="registrationtitle">
-				<h1>☆会員登録画面☆</h1>
+				<h1>会員登録画面</h1>
 			</div>
 			<main>
 				<form:form modelAttribute="memberModel">
 					<table border="1">
 						<tr>
-							<td><strong>氏名</strong></td>
+							<td align="center"><strong>氏名</strong></td>
 							<td colspan="4">
 							<form:input path="name" size="50"/><br>
 							例）山田 太郎
@@ -37,16 +38,16 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>郵便番号</strong></td><!-- ハイフンありなしは検討します  元村 -->
+							<td align="center"><strong>郵便番号</strong></td><!-- ハイフンありなしは検討します  元村 -->
 							<td colspan="4">
 							<form:input path="zip" size="50" /><br>
-							例）1230000
+							例）1020074
 							<br>
 							<form:errors path="zip" element="div" cssClass="errors" />
 							</td>
 						</tr>
 						<tr>
-							<td><strong>住所</strong></td>
+							<td align="center"><strong>住所</strong></td>
 							<td colspan="4">
 							<form:input path="address" size="50"/><br>
 							例）東京都千代田区九段南1-1-1
@@ -55,7 +56,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>電話番号</strong></td>
+							<td align="center"><strong>電話番号</strong></td>
 							<td colspan="4">
 							<form:input path="phone" size="50"/><br>
 							例）08012345678 (ハイフンなし・半角数字)
@@ -64,7 +65,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>メールアドレス</strong></td>
+							<td align="center"><strong>メールアドレス</strong></td>
 							<td colspan="4">
 							<form:input path="mail" size="50"/><br>
 							例）tarou@gamail.com
@@ -73,7 +74,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>生年月日</strong></td>
+							<td align="center"><strong>生年月日</strong></td>
 							<td colspan="4">
 							<form:input path="birthday" size="50" /><br>
 							例）2024/02/01
@@ -82,7 +83,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>クレジットカード</strong></td>
+							<td align="center"><strong>クレジットカード</strong></td>
 							<td colspan="4">
 							<form:input path="card" size="50"/>
 							<br>
@@ -90,7 +91,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>パスワード</strong></td>
+							<td align="center"><strong>パスワード</strong></td>
 							<td colspan="4">
 							<form:input path="password" size="50"/><br>
 							※英数字含む８文字以上
@@ -99,8 +100,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td><strong>プラン</strong></td>
-							<td>
+							<td align="center"><strong>プラン</strong></td>
+							<td class="plantable">
 							<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
 							<br><br>
 							初月限定！<br>
@@ -126,12 +127,11 @@
 							無制限<br>
 							</td>
 						</tr>
-						<tr>
-							<td class="btn-1" colspan="5">
+					</table>
+							<td class="btn-1">
 								<input type="submit"  value="登録する" class="btn">
 							</td>
-						</tr>
-					</table>
+
 				</form:form>
 			</main>
 				<jsp:include page="footer.jsp" />
