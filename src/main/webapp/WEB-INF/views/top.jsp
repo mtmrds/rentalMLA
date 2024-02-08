@@ -10,7 +10,6 @@
 		<meta charset=UTF-8>
 		<title>Music Life Agency</title>
 
-
 <style>
 .loop03 {
     padding-top: 30px;
@@ -101,6 +100,17 @@ h2 {
 	  height: 300px;
 	  width: 500px;
 }
+.box3-3 {
+	margin: 2em;
+	padding:2em;/*内側余白*/
+	background-color:#fff;/*背景色*/
+	background-color:rgba(255,255,255,0.8);
+	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
+	border-radius: 30px;
+	  height: 300px;
+	  width: 500px;
+}
+
 .contents {
     position: relative;
     display: grid;
@@ -219,6 +229,13 @@ h2 {
   <ul>
   <li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
   <li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
+  </ul>
+  </div>
+  <div class="box3-3">
+<div class="box-title"><h2>トピックス</h2></div>
+  <ul>
+  <li><span class="date">2024年2月8日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>店長川上の1日</a>
+  <li><span class="date">2024年1月10日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>今週のおすすめ</a>
   </ul>
   </div>
 </section>
