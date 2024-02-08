@@ -1,19 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
+<!-- プラン変更 -->
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>プラン変更</title>
-</head>
-<style>
-body{
+	<head>
+		<meta charset="UTF-8">
+		<title>プラン変更</title>
+	</head>
+	<style>
+	body{
 		background-image:url(resources/image/pink.jpg);
 		font-family: 'Kaisei Decol', serif;
 		font-family: 'Monomaniac One', sans-serif;
-}
-</style>
+	}
+	</style>
 <body>
 	<jsp:include page="header.jsp"/>
 	<h1>☆プラン変更画面☆</h1>
