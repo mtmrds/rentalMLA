@@ -34,7 +34,9 @@
 				</table>
 				<table>
 					<tr>
-						<td colspan="4"><input type="submit" name = "end" value="決済確定" /></td>
+						<td colspan="4">
+						<input type="submit" name = "end" value="決済確定"  class="btn"/>
+						</td>
 					</tr>
 				</table>
 				</form:form>

@@ -128,6 +128,7 @@
 							</td>
 						</tr>
 					</table>
+							<br>
 							<td class="btn-1">
 								<input type="submit"  value="登録する" class="btn">
 							</td>
