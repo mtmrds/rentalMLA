@@ -83,12 +83,14 @@ input .btn {
 
 
 }
+div {
+overflow: scroll;
+}
 /* スクロールバー */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 /*スクロールバーのツマミの部分*/
 ::-webkit-scrollbar-thumb {
   background: #ff8095;
@@ -99,7 +101,6 @@ input .btn {
 ::-webkit-scrollbar-track {
    background: linear-gradient(pink,orchid);
 }
-
 
 /*-------------------------------
 ②フッター
