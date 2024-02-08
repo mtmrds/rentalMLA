@@ -16,78 +16,63 @@
 				<jsp:include page="header.jsp"/>
 				<div>
 					<p class="mypagetitle">☆マイページ☆</p>
+					<p><a href="logout">ログアウト</a></p>
 				</div>
 				<div>
 					<table border="1">
 						<tr>
 							<td><strong>会員No</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.id }">
-									<p>${memberModel.id}</p>
-								</c:if>
+
+									<p>${memberId}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>氏名</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.name }">
-									<p>${memberModel.name}</p>
-								</c:if>
+									<p>${memberName}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>郵便番号</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.zip }">
-									<p>${memberModel.zip}</p>
-								</c:if>
+									<p>${memberZip}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>住所</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.address }">
-									<p>${memberModel.address}</p>
-								</c:if>
+									<p>${memberAddress}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>電話番号</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.phone }">
-									<p>${memberModel.phone}</p>
-								</c:if>
+									<p>${memberPhone}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>メールアドレス</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.mail }">
-									<p>${memberModel.mail}</p>
-								</c:if>
+									<p>${memberMail}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>生年月日</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.birthday }">
-									<p>${memberModel.birthday}</p>								</c:if>
+									<p>${memberBirthday}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>クレジットカード</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.card }">
-									<p>${memberModel.card}</p>
-								</c:if>
+									<p>${memberCard}</p>
 							</td>
 						</tr>
 						<tr>
 							<td><strong>パスワード</strong></td>
 							<td>
-								<c:if test="${!empty memberModel.password }">
-									<p>${memberModel.password}</p>
-								</c:if>
+									<p>${memberPassword}</p>
 							</td>
 						</tr>
 					</table>
