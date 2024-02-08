@@ -8,112 +8,150 @@
 	<head>
 		<meta charset=UTF-8>
 		<title>Music Life Agency</title>
-	<style>
-	@keyframes loopplan {
-		from {
-			transform: translateX(0);
-		}
-			to {
-			transform: translateX(-100%);
+		<style>
+			@keyframes loopplan {
+				from {
+					transform: translateX(0);
+				}
+				to {
+				transform: translateX(-100%);
+				}
 			}
-	}
 
-  .loopplan_box {
-		display: flex;
-		overflow: hidden;
-	}
+			.loopplan_box {
+				display: flex;
+				overflow: hidden;
+			}
 
-	.loopplan_list {
-		display: flex;
-		list-style: none;++
-		padding: 0
-	}
+			.loopplan_list {
+				display: flex;
+				list-style: none;
+				padding: 0
+			}
 
-	.loopplan_list--left {
-		animation: loopplan 50s infinite linear 0.5s both;
-	}
+			.loopplan_list--left {
+				animation: loopplan 50s infinite linear 0.5s both;
+			}
 
-	.loopplan_list_item {
-		font-family: Yomogi',cursive;
-		color: grey;
-		width: calc(900vw / 3);
-		font-size: 50px;
-		}
+			.loopplan_list_item {
+				font-family: Yomogi',cursive;
+				color: grey;
+				width: calc(900vw / 3);
+				font-size: 50px;
+			}
 
-  .contents {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: #fff;
-    overflow: hidden;
-    }
+			.topcontents  {
+				display: flex;
+			}
 
-.loading-area {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    }
+			.news {
+				margin: 2em;
+				padding:2em;/*内側余白*/
+				background-color:#fff;/*背景色*/
+				background-color:rgba(255,255,255,0.8);
+				box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
+				border-radius: 30px;
+				height: 300px;
+				width: 500px;
+			}
 
-.loading-area span {
-	color:#61b0e2;
-    font-size: 6.5rem;
-    font-weight: bold;
-    animation: rotate 2s infinite linear;
-    text-transform: uppercase;
-    }
+			.topic {
+				margin: 2em;
+				padding:2em;/*内側余白*/
+				background-color:#fff;/*背景色*/
+				background-color:rgba(255,255,255,0.8);
+				box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
+				border-radius: 30px;
+				height: 300px;
+				width: 500px;
+			}
 
-    letter-spacing:-50px;
-    padding-top: 60px;
-    padding-bottom: 80px;
-}
+			.topcontent h2 {
+				position: relative;
+				font-size: 2em;
+				border-color:black;
+				position: relative;
+				padding: 0.5rem 0;
+				margin-bottom: 0.2rem;
+				border-bottom: 5px solid;
+				font-weight: bold;
+				font-size: 26px;
+			}
 
-.loading-area span:nth-child(2) {
-    animation-delay: 0.1s;
-    }
+			.contents {
+				position: relative;
+				display: grid;
+				place-items: center;
+				width: 100vw;
+				height: 100vh;
+				box-sizing: border-box;
+				background-color: #fff;
+				overflow: hidden;
+			}
 
-.loading-area span:nth-child(3) {
-    animation-delay: 0.2s;
-    }
+			.loading-area {
+				display: flex;
+				justify-content: center;
+				gap: 100px;
+			}
 
-.loading-area span:nth-child(4) {
-    animation-delay: 0.3s;
-    }
+			.loading-area span {
+				color:#61b0e2;
+				font-size: 6.5rem;
+				font-weight: bold;
+				animation: rotate 2s infinite linear;
+				text-transform: uppercase;
+			}
 
-.loading-area span:nth-child(5) {
-    animation-delay: 0.4s;
-    }
+			letter-spacing:-50px;
+			padding-top: 60px;
+			padding-bottom: 80px;
+			}
 
-.loading-area span:nth-child(6) {
-    animation-delay: 0.5s;
-    }
+			.loading-area span:nth-child(2) {
+				animation-delay: 0.1s;
+			}
 
-.loading-area span:nth-child(7) {
-    animation-delay: 0.6s;
-    }
+			.loading-area span:nth-child(3) {
+				animation-delay: 0.2s;
+			}
 
-.loading-area span:nth-child(8) {
-    animation-delay: 0.7s;
-    }
+			.loading-area span:nth-child(4) {
+				animation-delay: 0.3s;
+			}
 
-.loading-area span:nth-child(9) {
-    animation-delay: 0.8s;
-}
+			.loading-area span:nth-child(5) {
+				animation-delay: 0.4s;
+			}
 
-.loading-area span:nth-child(10) {
-    animation-delay: 0.9s;
-    }
+			.loading-area span:nth-child(6) {
+				animation-delay: 0.5s;
+			}
 
-@keyframes rotate {
-    70% {
-        transform: rotateX(0deg);
-    }
-	100% {
-    transform: rotateX(360deg);
-	}
-}
+			.loading-area span:nth-child(7) {
+				animation-delay: 0.6s;
+			}
+
+			.loading-area span:nth-child(8) {
+				animation-delay: 0.7s;
+			}
+
+			.loading-area span:nth-child(9) {
+				animation-delay: 0.8s;
+			}
+
+			.loading-area span:nth-child(10) {
+				animation-delay: 0.9s;
+			}
+
+			@keyframes rotate {
+    			70% {
+        		transform: rotateX(0deg);
+    			}
+				100% {
+    			transform: rotateX(360deg);
+    			}
+    		}
     </style>
 	</head>
 	<body>
@@ -149,20 +187,35 @@
 					<div class="loopplan">
 						<div class="loopplan_box">
 							<ul class="loopplan_list loopplan_list--left">
-								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月　★Bronzeプラン:1080円 6枚/月　★Silverプラン:2160円 12枚/月　★Goldプラン:5400円 無制限/月　</li>
+								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
 							</ul>
 						</div>
 					</div>
-					<div class="news">
-						<div class="newstitle">
+					<div class="topcontents">
+						<div class="news">
 							<h2>NEWS</h2>
+						
 						</div>
+
  							<ul>
  								<li><span class="date">2024年2月7日</span><a href="https://www.instagram.com/movmov2024/"><span class="list"> </span><br>インスタグラム開設しました</a>
  								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
  								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
  							</ul>
  					</div>
+
+						<div class="topic">
+							<h2>トピックス</h2>
+							<ul>
+								<li><span class="date">2024年2月8日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>店長川上の1日</a></li>
+								<li><span class="date">2024年1月10日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>今週のおすすめ</a></li>
+							</ul>
+						</div>
+					</div>
+
 			</form:form>
 			<jsp:include page="footer.jsp" />
 		</div>
