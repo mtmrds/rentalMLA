@@ -35,7 +35,8 @@ public class tenzaiCon {
     @RequestMapping(method = RequestMethod.POST, params = "index")
     String viewCart2(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
-        return "payment";
+        membersDao.addToUpdateStock(0);
+        return "tenkaku";
     }
 
     @RequestMapping(method = RequestMethod.POST, params = "end")
