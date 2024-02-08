@@ -197,11 +197,16 @@
 					<div class="topcontents">
 						<div class="news">
 							<h2>NEWS</h2>
-							<ul>
-								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a></li>
-								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a></li>
-							</ul>
+						
 						</div>
+
+ 							<ul>
+ 								<li><span class="date">2024年2月7日</span><a href="https://www.instagram.com/movmov2024/"><span class="list"> </span><br>インスタグラム開設しました</a>
+ 								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
+ 								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
+ 							</ul>
+ 					</div>
+
 						<div class="topic">
 							<h2>トピックス</h2>
 							<ul>
@@ -210,6 +215,7 @@
 							</ul>
 						</div>
 					</div>
+
 			</form:form>
 			<jsp:include page="footer.jsp" />
 		</div>
