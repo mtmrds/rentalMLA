@@ -36,7 +36,8 @@
 
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
-				<a href="mypage" alt="マイページ" class="btn-img1"><img src="resources/image/人アイコン.JPG"></a>｜<a href="cart" class="btn-img"><img src="resources/image/カート.png"></a>｜<a href="b">履歴管理</a>　
+				<a href="mypage" alt="マイページ" class="btn-img1"><img src="resources/image/人間アイコン.png" width= "60"
+  	height= "auto"></a>｜<a href="cart" class="btn-img"><img src="resources/image/カート.png"></a>｜<a href="b">履歴管理</a>　
 	 		</div>
 
 			 <!--ログイン後だけ表示できる-->
