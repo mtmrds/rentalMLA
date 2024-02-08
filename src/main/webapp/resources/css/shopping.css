@@ -65,33 +65,41 @@ input.btn {
 
 /* カート */
 /* 基本設定 */
+
 .btn-img{
   border-style: none;
 }
+
 /* マウスを乗せたときの動き */
 .btn-img:hover{
   opacity: 0.6;
   transition: 0.8s;
 }
-/* 画像のサイズ指定 */
+
+/* 画像のサイズ指定*/
 .btn-img img{
   width: 60px;
   height: auto;
 }
 
+
+
 /* ログインボタン（人間アイコン） */
 .btn-img1{
   border-style: none;
+
 }
-/* マウスを乗せたときの動き */
+/* マウスを乗せたときの動き*/
 .btn-img1:hover{
   opacity: 0.6;
   transition: 0.8s;
 }
+
 /* 画像のサイズ指定 */
-.btn-img img1{
-  width: 50px;
-  height: auto;
+.btn-img1{
+    width: 1px;
+  	height: auto;
+
 }
 /*-------------------------------
 ②フッター
