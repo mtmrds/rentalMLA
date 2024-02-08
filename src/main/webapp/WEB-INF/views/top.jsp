@@ -158,6 +158,7 @@
 							<h2>NEWS</h2>
 						</div>
  							<ul>
+ 								<li><span class="date">2024年2月7日</span><a href="https://www.instagram.com/movmov2024/"><span class="list"> </span><br>インスタグラム開設しました</a>
  								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
  								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
  							</ul>
