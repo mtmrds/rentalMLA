@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
@@ -18,6 +17,7 @@
 			transform: translateX(-100%);
 			}
 	}
+
   .loopplan_box {
 		display: flex;
 		overflow: hidden;
@@ -28,6 +28,7 @@
 		list-style: none;++
 		padding: 0
 	}
+
 	.loopplan_list--left {
 		animation: loopplan 50s infinite linear 0.5s both;
 	}
@@ -37,8 +38,8 @@
 		color: grey;
 		width: calc(900vw / 3);
 		font-size: 50px;
-  }
-    
+		}
+
   .contents {
     position: relative;
     display: grid;
@@ -48,13 +49,13 @@
     box-sizing: border-box;
     background-color: #fff;
     overflow: hidden;
-  }
+    }
 
 .loading-area {
     display: flex;
     justify-content: center;
     gap: 100px;
-}
+    }
 
 .loading-area span {
 	color:#61b0e2;
@@ -62,6 +63,8 @@
     font-weight: bold;
     animation: rotate 2s infinite linear;
     text-transform: uppercase;
+    }
+
     letter-spacing:-50px;
     padding-top: 60px;
     padding-bottom: 80px;
@@ -69,31 +72,31 @@
 
 .loading-area span:nth-child(2) {
     animation-delay: 0.1s;
-}
+    }
 
 .loading-area span:nth-child(3) {
     animation-delay: 0.2s;
-}
+    }
 
 .loading-area span:nth-child(4) {
     animation-delay: 0.3s;
-}
+    }
 
 .loading-area span:nth-child(5) {
     animation-delay: 0.4s;
-}
+    }
 
 .loading-area span:nth-child(6) {
     animation-delay: 0.5s;
-}
+    }
 
 .loading-area span:nth-child(7) {
     animation-delay: 0.6s;
-}
+    }
 
 .loading-area span:nth-child(8) {
     animation-delay: 0.7s;
-}
+    }
 
 .loading-area span:nth-child(9) {
     animation-delay: 0.8s;
@@ -101,41 +104,37 @@
 
 .loading-area span:nth-child(10) {
     animation-delay: 0.9s;
-}
+    }
 
 @keyframes rotate {
     70% {
         transform: rotateX(0deg);
     }
-
-100% {
+	100% {
     transform: rotateX(360deg);
+	}
 }
-
-}
-
     </style>
 	</head>
 	<body>
 		<div class="toppage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel">
-<div class="loading-area">
-    <span>R</span>
-    <span>E</span>
-    <span>N</span>
-    <span>T</span>
-    <span>A</span>
-    <span>L</span>
-    <span>S</span>
-    <span>I</span>
-    <span>T</span>
-    <span>E</span>
-</div>
-
+				<div class="loading-area">
+					<span>R</span>
+					<span>E</span>
+					<span>N</span>
+					<span>T</span>
+					<span>A</span>
+					<span>L</span>
+					<span>S</span>
+					<span>I</span>
+					<span>T</span>
+					<span>E</span>
+				</div>
 					<div class="topselect">
 						<form:form modelAttribute="itemModel">
-							<input type="submit" value="商品一覧検索" class="btn">
+							<input type="submit" value="商品一覧検索">
 						</form:form>
 						<br>
 						<a href="setRegist">会員登録</a>
