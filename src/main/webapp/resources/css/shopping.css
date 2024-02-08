@@ -400,10 +400,10 @@ input .btn {
 }
 
 .disp-img{
-    background-image:url(resources/image/お辞儀.png);             /* 画像のURLを指定       */
-    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */
-    width:auto;                                   /* 横幅のサイズを指定    */
-    height:400pX;								  /* 縦幅のサイズを指定    */
+    background-image:url(resources/image/お辞儀.png);  /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                	   /* 画像の繰り返しを指定  */
+    width:auto;                                        /* 横幅のサイズを指定    */
+    height:400px;								       /* 縦幅のサイズを指定    */
 
 }
 .mako {
@@ -500,10 +500,10 @@ input .btn {
 }
 
 .disp-img{
-    background-image:url(resources/image/お辞儀.png);             /* 画像のURLを指定       */
-    background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */
-    width:auto;                                   /* 横幅のサイズを指定    */
-    height:400pX;								  /* 縦幅のサイズを指定    */
+    background-image:url(resources/image/お辞儀.png);   /* 画像のURLを指定       */
+    background-repeat:  no-repeat;                      /* 画像の繰り返しを指定  */
+    width:auto;                                         /* 横幅のサイズを指定    */
+    height:400px;								        /* 縦幅のサイズを指定    */
 
 }
 .mako {
