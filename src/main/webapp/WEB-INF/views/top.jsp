@@ -120,10 +120,13 @@ h2 {
 
 .loading-area span {
 	color:#61b0e2;
-    font-size: 5rem;
+    font-size: 6.5rem;
     font-weight: bold;
     animation: rotate 2s infinite linear;
     text-transform: uppercase;
+    letter-spacing:-50px;
+    padding-top: 60px;
+    padding-bottom: 80px;
 }
 
 .loading-area span:nth-child(2) {
