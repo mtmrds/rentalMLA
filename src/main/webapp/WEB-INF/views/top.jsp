@@ -77,33 +77,28 @@
 h2 {
   position: relative;
   font-size: 2em;
-  color:#66CCFF;
-  text-align: center;
+
+  border-color:black;
+    position: relative;
+    padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    border-bottom: 5px solid;
+    font-weight: bold;
+    font-size: 26px;
 }
 
-h2:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  content: '';
-  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
-  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
-  background-size: 7px 7px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+
+
 /*ふわふわした囲み枠*/
 .box3-2 {
 	margin: 2em;
 	padding:2em;/*内側余白*/
 	background-color:#fff;/*背景色*/
+	background-color:rgba(255,255,255,0.8);
 	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
 	border-radius: 30px;
 	  height: 300px;
 	  width: 500px;
-}
 
 </style>
 	</head>
