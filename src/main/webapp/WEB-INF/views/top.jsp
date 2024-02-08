@@ -9,6 +9,8 @@
 	<head>
 		<meta charset=UTF-8>
 		<title>Music Life Agency</title>
+
+
 <style>
 .loop03 {
     padding-top: 30px;
@@ -74,6 +76,7 @@
 	width:100%;/*横幅最大幅 */
 }
 
+
 h2 {
   position: relative;
   font-size: 2em;
@@ -87,8 +90,6 @@ h2 {
     font-size: 26px;
 }
 
-
-
 /*ふわふわした囲み枠*/
 .box3-2 {
 	margin: 2em;
@@ -99,6 +100,78 @@ h2 {
 	border-radius: 30px;
 	  height: 300px;
 	  width: 500px;
+}
+.contents {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.loading-area {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.loading-area span {
+	color:#61b0e2;
+    font-size: 5rem;
+    font-weight: bold;
+    animation: rotate 2s infinite linear;
+    text-transform: uppercase;
+}
+
+.loading-area span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loading-area span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loading-area span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.loading-area span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.loading-area span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.loading-area span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.loading-area span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.loading-area span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.loading-area span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes rotate {
+    70% {
+        transform: rotateX(0deg);
+    }
+
+100% {
+    transform: rotateX(360deg);
+}
+
+}
 
 </style>
 	</head>
@@ -106,9 +179,19 @@ h2 {
 		<div class="toppage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel">
-				<div class="title">
-					<h1>レンタルサイト</h1>
-				</div>
+<div class="loading-area">
+    <span>R</span>
+    <span>E</span>
+    <span>N</span>
+    <span>T</span>
+    <span>A</span>
+    <span>L</span>
+    <span>S</span>
+    <span>I</span>
+    <span>T</span>
+    <span>E</span>
+</div>
+
 					<div class="topselect">
 						<form:form modelAttribute="itemModel">
 							<input type="submit" value="商品一覧検索" class="btn">
