@@ -33,9 +33,6 @@
 
 							<input type="submit" name="delete" value="削除">
 
-							<form:hidden path="quantity" value="${listCart.quantity}" />
-
-							<input type="submit" name="order" value="発注">
 						</td>
 					</tr>
 				</c:forEach>
