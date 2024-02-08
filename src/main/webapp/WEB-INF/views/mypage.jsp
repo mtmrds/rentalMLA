@@ -92,12 +92,9 @@
 						</tr>
 					</table>
 				</div>
-				<div>
-					<button type="button">編集</button>
-				</div>
-				<div>
-					<button type="button">退会</button>
-				</div>
+						<input type="submit"  value="編集" class="btn">
+						<input type="submit"  value="退会" class="btn">
+
 				<jsp:include page="footer.jsp"/>
 			</div>
 		</form:form>
