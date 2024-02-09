@@ -1,4 +1,4 @@
--@charset "UTF-8";
+@charset "UTF-8";
 /*--------------------------------
 項目
 ①全ページ共有
@@ -19,10 +19,10 @@
 /*--------------------------------
 ①全ページ共通
 -------------------------------*/
-input .btn {
+.btn {
 	display: inline-block;
 	padding: 0.8em 3em;
-	background-color: #fff; /* 背景色 */
+	background-color: #369ada; /* 背景色 */
 	box-shadow: 0 5px 0 #369ada; /* 影の太さ・色 */
 	border-radius: 60px;
 	color: #fff;
@@ -35,6 +35,7 @@ input .btn {
 	box-shadow: none;
 	transform: translateY(5px);
 }
+
 
 
 /*--------------------------------
@@ -59,6 +60,7 @@ input .btn {
 	font-size: 45px;
 	margin: 10px;
 	padding: 10px;
+	color: gray;
 }
 
 .linkpage ,p {
@@ -81,20 +83,20 @@ input .btn {
 }
 
 
-
+/*ここからがスクロールバー設定(縦・横に反映）*/
+body {
+	overflow: scroll;
 }
-/* スクロールバー */
+/* スクロールバー*/
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 /*スクロールバーのツマミの部分*/
 ::-webkit-scrollbar-thumb {
   background: #ff8095;
   border-radius: 5px;
 }
-
 /*スクロールバーにグラデーションを反映*/
 ::-webkit-scrollbar-track {
    background: linear-gradient(pink,orchid);
@@ -163,6 +165,15 @@ input .btn {
     font-size: 26px;
   }
 
+.insta p{
+	text-align: center;
+
+}
+.insta img{
+	vertical-align:middle;
+
+
+}
 
 /*-------------------------------
 アイテム一覧ページ
@@ -193,54 +204,24 @@ input .btn {
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 100vh;
+
+			}
+
 }
 
-.loginpage h2 {
-	color: grey;
-	background: ;
-	font-size:30px;
-	border-bottom: solid 5px lightblue;
-	border-radius:  5px;
+.loginpage table{
+	border-collapse: collapse;
+
 }
 
-.loginpage table {
-	margin: 150px auto;
-	background-color: violet;
-	background-image: linear-gradient(315deg, #f09199 10%, #f6bfbc 70%);
-	color: white;
-	padding: 2em;
-	border-radius: 30px;
-	opacity: 0.8;
+.loginpage table tr {
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+}
+.loginpage table td {
+	border: double;
 }
 
-.btn-2 {
-	font-family: 'Yomogi',cursive;
-	display       : inline-block;
-	border-radius : 50%;          /* 角丸       */
-	font-size     : 15pt;        /* 文字サイズ */
-	text-align    : center;      /* 文字位置   */
-	cursor        : pointer;     /* カーソル   */
-	padding       : 14px 26px;   /* 余白       */
-	background    : lightblue;     /* 背景色     */
-	color         : white;     /* 文字色     */
-	line-height   : 1em;         /* 1行の高さ  */
-	transition    : .3s;         /* なめらか変化 */
-	box-shadow    : 7px 7px 8px #666666;  /* 影の設定 */
-	border        : 2px solid lightblue;    /* 枠の指定 */
-	input-margin : 50 auto ;
-	opacity: 0.8;
-	font-weight: bold;
-}
 
-.btn-5{
-	text-align    : center;
-}
-
-.btn-2:hover {
-	box-shadow    : none;        /* カーソル時の影消去 */
-	color         : white;     /* 背景色     */
-	background-color: steelblue;     /* 文字色     */
-}
 
 
 /*-------------------------------

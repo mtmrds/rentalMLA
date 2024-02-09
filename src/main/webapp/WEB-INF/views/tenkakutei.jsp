@@ -7,21 +7,19 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>レンタル完了画面</title>
+		<title>発注完了画面</title>
 	</head>
-	<body>
+	<body style="background-color: gray;">
 		<div class="paymentcomp">
-			<jsp:include page="header.jsp"/>
+			<jsp:include page="headeremp.jsp"/>
 				<div class="paymentcomptitle">
-					<h1>レンタル完了画面</h1>
+					<h1>発注完了画面</h1>
 				</div>
 				<div class="fade-in-text">
-					<p>レンタルありがとうございました(^_-)-☆</p>
+					<p>店長ありがとうございました(^_-)-☆</p>
 					<img src="resources/image/お辞儀.png"/>
 				</div>
-
-				<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
-			<p><a href="<c:url value='top' />">トップに戻る</a></p>
+				<p><a href="<c:url value='master' />">戻る(仮)</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>

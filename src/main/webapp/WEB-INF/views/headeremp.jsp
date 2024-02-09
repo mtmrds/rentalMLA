@@ -28,6 +28,7 @@
 				<img src="resources/image/logo.png">
 				<h1>Music Life Agency</h1>
 			</a>
+			<a href="master">従業員画面作業へ（仮）</a>
 		</div>
 
 		 <!-- 各種ページのリンク -->

@@ -16,11 +16,9 @@ import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.ItemModel;
 
 @Controller
-@RequestMapping("tenzai")
 @SessionAttributes({"loginModel","itemModel", "cartList"})
 public class tenzaiCon {
-	private String mId;
-
+    private String mId;
 
     @Autowired
     private MembersDao membersDao ;
@@ -29,70 +27,78 @@ public class tenzaiCon {
     ItemModel itemModel() {
         return new ItemModel();
     }
-    //カートに入れるボタンを押下した後、cartcontent.jsp上で表示したい
-    //よって、以下内容で、追加された商品情報を表示します（cartListを利用する）
-    @RequestMapping(method = RequestMethod.GET)
-    String viewCart(Model model) {
-        model.addAttribute("cartList", membersDao.getCartList());
+
+    @RequestMapping(value = "/tenzai", method = RequestMethod.GET)
+    String viewTenCart(Model model) {
+        model.addAttribute("tenCartList", membersDao.getTenCartList());
         return "tencho_order";
     }
 
-
-@RequestMapping(method = RequestMethod.POST, params = "index")
-    String viewCart2(ItemModel itemModel,Model model) {
-    	try {
-    	    // 数値に変換できるかチェック
-    	    String mId = itemModel.getItemNo();
-    	    Integer itemNo = Integer.valueOf(mId);
-    	    // itemNoがnullでないかチェック
-    	    if (itemNo == null) {
-    	        throw new NumberFormatException("商品番号が数値ではありません。");
-    	    }
-    	    // 以下の処理は変更なし
-    	    Members pickItem = membersDao.pickItemById(itemNo);
-    	    // nullでないかチェック
-    	    if (pickItem != null) {
-    	        model.addAttribute("pickItem", pickItem);
-    	        List<Members> cartList = membersDao.getCartList();
-    	        model.addAttribute("cartList", cartList);
-    	        int numberOfRow = membersDao.insertCart(pickItem);
-    	        //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
-    	        if (numberOfRow == 0) {
-    	            //下記は必要に応じて使うか検討する
-    	            //model.addAttribute("message", "登録に失敗しました。");
-    	            return "tenchoEmp";
-    	        }
-    	        return "tenkaku";
-    	    } else {
-    	        // pickItemがnullの場合の処理
-    	        // 例えば、エラーメッセージをモデルに追加する
-    	        model.addAttribute("message", "商品が見つかりませんでした。");
-    	        return "tenchoEmp";
-    	    }
-    	} catch (NumberFormatException e) {
-    	    // 数値に変換できなかった場合の処理
-    	    // 例えば、エラーメッセージとスタックトレースをログに出力する
-    	    System.out.println("商品番号が不正です。");
-    	    e.printStackTrace();
-    	    return "tenchoEmp";
-    	}
-
-    }
-
-    @RequestMapping(method = RequestMethod.POST, params = "end")
-    String viewCart3(Model model) {
-        model.addAttribute("membersList", membersDao.getCartList());
-        membersDao.clearCart(model);
-        return "paymentComp";
-    }
-    @RequestMapping(method = RequestMethod.POST, params = "delete")
-    String viewCart4(@RequestParam("delete") String delete, @RequestParam("cNo") int cNo, Model model) {
-        if (delete != null && delete.equals("削除")) {
-            // ボタンが押された場合の処理
-            membersDao.remove(cNo);
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "index")
+    String viewTenCart2(ItemModel itemModel, Model model) {
+        try {
+            mId = itemModel.getItemNo();
+            Integer itemNo = Integer.valueOf(mId);
+            if (itemNo == null) {
+                throw new NumberFormatException("商品番号が数値ではありません。");
+            }
+            Members pickItem = membersDao.pickItemById(itemNo);
+            if (pickItem != null) {
+                model.addAttribute("pickItem", pickItem);
+                List<Members> tenCartList = membersDao.getTenCartList();
+                model.addAttribute("tencartList", tenCartList);
+                int numberOfRow = membersDao.insertTenCart(pickItem);
+                if (numberOfRow == 0) {
+                    return "tenchoEmp";
+                }
+                return "tenkaku";
+            } else {
+                model.addAttribute("message", "商品が見つかりませんでした。");
+                return "tenchoEmp";
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("商品番号が不正です。");
+            e.printStackTrace();
+            return "tenkaku";
         }
+    }
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "end")
+    String viewCart3(@RequestParam(required = false) Integer itemNo, @RequestParam(required = false) Integer additionalQuantity, Model model) {
+        if (itemNo != null && additionalQuantity != null) {
+            model.addAttribute("membersList", membersDao.getTenCartList());
+            membersDao.clearTenCart(model);
+            membersDao.updateQuantity(itemNo, additionalQuantity);
+            return "tenkakutei";
+        } else {
+            // itemNo または additionalQuantity のいずれかが提供されていない場合の処理
+            return "errorPage"; // エラーページにリダイレクトするなど
+        }
+    }
 
-        model.addAttribute("cartList", membersDao.getCartList());
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "delete")
+    String viewCart4(@RequestParam("delete") String delete, @RequestParam("tNo") int tNo, Model model) {
+        if (delete != null && delete.equals("削除")) {
+            membersDao.removeTen(tNo);
+        }
+        model.addAttribute("cartList", membersDao.getTenCartList());
         return "tencho_order";
+    }
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST)
+    String handleTenZaiPost(Model model, @RequestParam("itemNo") Integer itemNo, @RequestParam("additionalQuantity") Integer additionalQuantity) {
+        // itemNo と additionalQuantity が null でないことをチェック
+        if (itemNo != null && additionalQuantity != null) {
+            // updateQuantity メソッドを呼び出して数量を更新
+            int updatedRows = membersDao.updateQuantity(itemNo, additionalQuantity);
+            if (updatedRows > 0) {
+                // 更新が成功した場合はtenkakuteiにリダイレクト
+                return "tenkakutei";
+            } else {
+                // 更新に失敗した場合はリダイレクト
+                return "tencho_order";
+            }
+        } else {
+            // itemNo または additionalQuantity が提供されていない場合はリダイレクト
+            return "tencho_order";
+        }
     }
 }

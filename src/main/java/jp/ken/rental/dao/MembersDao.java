@@ -323,6 +323,7 @@ public class MembersDao {
 			return null;
 		}
 	}
+<<<<<<< HEAD
 	public boolean addToUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
         String updateStockSql = "UPDATE movitem SET quantity = quantity + 1 WHERE item_no = ?";
@@ -372,10 +373,67 @@ public class MembersDao {
             }
             return false;
         }
+=======
+	//マイページ上で会員情報を削除する
+	public int removeMember(String mail) {
+	    String sql = "DELETE FROM members WHERE mail=?";
+	    Object[] parameters = { mail };
+	    return jdbcTemplate.update(sql, parameters);
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 	}
-	public int inserttencho(Members members) {
-		String sql = "INSERT INTO movitem(quantity) VALUES(?)";
-		Object[] parameters = { members.getQuantity()};
+	//マイページ上で会員情報を編集する
+	public int updateMember(Members member) {
+	    String sql = "UPDATE members SET name=?, birthday=?, zip=?, address=?, phone=?, password=?, plan=?, card=? WHERE mail=?";
+	    Object[] parameters = { member.getName(), member.getBirthday(), member.getZip(), member.getAddress(),
+	                            member.getPhone(), member.getPassword(), member.getPlan(), member.getCard(), member.getMail() };
+
+	    TransactionStatus transactionStatus = null;
+	    DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+	    int numberOfRow = 0;
+
+	    try {
+	        transactionStatus = transactionManager.getTransaction(transactionDefinition);
+	        numberOfRow = jdbcTemplate.update(sql, parameters);
+	        transactionManager.commit(transactionStatus);
+	    } catch(DataAccessException e){
+	        e.printStackTrace();
+	        transactionManager.rollback(transactionStatus);
+	    } catch(TransactionException e) {
+	        e.printStackTrace();
+	        if(transactionStatus != null) {
+	            transactionManager.rollback(transactionStatus);
+	        }
+	    }
+	    return numberOfRow;
+	}
+
+
+	//takahiro力作！！！
+
+
+	//店員用カート
+	public List<Members> getTenCartList(){
+		String sql = "SELECT * FROM tencart";
+		List<Members> tenCartList = jdbcTemplate.query(sql, membersMapper);
+		return tenCartList;
+	}
+	//いるかも？？
+	public Members pickTenItemById(Integer itemNo) {
+		String sql = "SELECT * FROM movitem WHERE item_no=?";
+		Object[] parameters = { itemNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public int insertTenCart(Members members) {
+		String sql = "INSERT INTO tencart(title, type,item_no) VALUES(?, ?, ?)";
+		Object[] parameters = { members.getTitle(), members.getType(),members.getItemNo() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -397,5 +455,26 @@ public class MembersDao {
 		}
 		return numberOfRow;
 
+	}
+	public int removeTen(int tNo) {
+	    String sql = "DELETE FROM tencart WHERE tNo=?";
+	    Object[] parameters = { tNo };
+	    return jdbcTemplate.update(sql, parameters);
+	}
+	public int clearTenCart(Model model) {
+		String sql = "DELETE FROM tencart";
+		 return jdbcTemplate.update(sql);
+	}
+	//発注確定押したらここで増やす。item_noで指定
+	public int updateQuantity(int itemNo, int additionalQuantity) {
+	    String sql = "UPDATE movitem SET quantity = quantity + ? WHERE item_no = ?";
+	    Object[] parameters = { additionalQuantity, itemNo };
+
+	    try {
+	        return jdbcTemplate.update(sql, parameters);
+	    } catch (DataAccessException e) {
+	        e.printStackTrace();
+	        return 0; // エラー時は0を返すか、適切なエラーハンドリングを行う
+	    }
 	}
 }

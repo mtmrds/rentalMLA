@@ -40,6 +40,9 @@
 					</tr>
 				</table>
 				</form:form>
+			<p><a href="<c:url value='cart' />">カート確認</a></p>
+			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
+			<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			</main>
 			<jsp:include page="footer.jsp"/>
 		</div>

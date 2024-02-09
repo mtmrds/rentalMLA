@@ -16,7 +16,7 @@ import jp.ken.rental.entity.Members;
 
 @Controller
 @SessionAttributes({"loginModel", "memberModel", "cartList"})
-public class IkeCon {
+public class IkeCartCon {
 	@Autowired
 	private MembersDao membersDao;
 

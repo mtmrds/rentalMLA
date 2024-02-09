@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
 <!-- レンタルサイトの表紙として、各ページ遷移等-->
 <!DOCTYPE html>
 <html>
@@ -9,6 +8,7 @@
 		<meta charset=UTF-8>
 		<title>Music Life Agency</title>
 		<style>
+			/*流れるプランの設定*/
 			@keyframes loopplan {
 				from {
 					transform: translateX(0);
@@ -26,11 +26,11 @@
 			.loopplan_list {
 				display: flex;
 				list-style: none;
-				padding: 0
+				padding: 0;
 			}
 
 			.loopplan_list--left {
-				animation: loopplan 50s infinite linear 0.5s both;
+				animation: loopplan 100s infinite linear 0.5s both;
 			}
 
 			.loopplan_list_item {
@@ -40,8 +40,11 @@
 				font-size: 50px;
 			}
 
+			/*NEWS・トピックス設定*/
 			.topcontents  {
-				display: flex;
+				display: flex;	/*横並び*/
+				justify-content: center; /*左右中央寄せ*/
+    			align-items: center;		/*上下中央寄せ*/
 			}
 
 			.news {
@@ -78,7 +81,7 @@
 				font-size: 26px;
 			}
 
-			.contents {
+			.contents { /*これ何の設定かわかりますか？今ある？いらんなら消すよ。高島*/
 				position: relative;
 				display: grid;
 				place-items: center;
@@ -89,6 +92,7 @@
 				overflow: hidden;
 			}
 
+			/*タイトル 装飾*/
 			.loading-area {
 				display: flex;
 				justify-content: center;
@@ -170,19 +174,16 @@
 					<span>T</span>
 					<span>E</span>
 				</div>
+				<br>
 					<div class="topselect">
 						<form:form modelAttribute="itemModel">
-							<input type="submit" value="商品一覧検索">
+
+							<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
+							<a href="search">商品一覧検索</a>
 						</form:form>
-						<br>
+
 						<a href="setRegist">会員登録</a>
-						<c:if test="${empty loginModel.name}">
-    						<a href="login">ログイン</a>
-						</c:if>
-						<c:if test="${loginModel.name != null}">
-							<!-- ログインしている場合のみログアウトリンクを表示 -->
-							<a href="logout">ログアウト</a>
-						</c:if>
+
 					</div>
 					<div class="loopplan">
 						<div class="loopplan_box">
@@ -197,18 +198,29 @@
 					<div class="topcontents">
 						<div class="news">
 							<h2>NEWS</h2>
-							<ul>
-								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a></li>
-								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a></li>
-							</ul>
-						</div>
+
+ 							<ul>
+ 								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>新作レンタル作品更新のお知らせ</a>
+ 								<li><span class="date">2024年2月1日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>メンテナンスのお知らせ</a>
+ 							</ul>
+ 					</div>
+
 						<div class="topic">
 							<h2>トピックス</h2>
 							<ul>
-								<li><span class="date">2024年2月8日</span><a href="http://localhost:8080/rental/search"><span class="list"> </span><br>店長川上の1日</a></li>
-								<li><span class="date">2024年1月10日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>今週のおすすめ</a></li>
+								<li><span class="date">2024年2月7日</span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>今週のおすすめ</a>
+								<li><span class="date">2024年2月1日</span><a href="http://localhost:8080/rental/NewFile"><span class="list"> </span><br>店長川上の1日</a>
 							</ul>
 						</div>
+					</div>
+					<div class="insta">
+						<p>
+							<a href="https://www.instagram.com/movmov2024/" >
+							<img src="resources/image/Instagram_Glyph_Black.png" width="50" height="auto">
+							インスタグラム開設しました
+							</a>
+						</p>
+
 					</div>
 			</form:form>
 			<jsp:include page="footer.jsp" />
