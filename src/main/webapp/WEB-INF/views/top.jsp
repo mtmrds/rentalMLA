@@ -176,15 +176,15 @@
 				</div>
 				<br>
 					<div class="topselect">
-						<form:form modelAttribute="itemModel">
-
-							<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
-							<a href="search">商品一覧検索</a>
-						</form:form>
-
-						<a href="setRegist">会員登録</a>
+						<!--<form:form modelAttribute="itemModel">
+						<a href="search">商品一覧検索</a>
+							見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">
+						</form:form>-->
+						<a href="search">商品一覧検索</a>
+						<a href="setRegist">新規会員登録</a>
 
 					</div>
+					<br>
 					<div class="loopplan">
 						<div class="loopplan_box">
 							<ul class="loopplan_list loopplan_list--left">
@@ -212,10 +212,11 @@
 								<li><span class="date">2024年1月10日 </span><a href="http://localhost:8080/rental/search"><span class="list"></span> <br>今週のおすすめ</a></li>
 							</ul>
 						</div>
+
 					</div>
 					<div class="insta">
 						<p>
-							<a href="https://www.instagram.com/movmov2024/" >
+							<a href="https://www.instagram.com/p/C3E2ELZyJZ1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" >
 							<img src="resources/image/Instagram_Glyph_Black.png" width="50" height="auto">
 							インスタグラム開設しました
 							</a>
