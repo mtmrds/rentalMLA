@@ -174,11 +174,12 @@
 					<span>T</span>
 					<span>E</span>
 				</div>
+				<br>
 					<div class="topselect">
 						<form:form modelAttribute="itemModel">
-							<input type="submit" value="商品一覧検索">
+							<input type="submit" value="商品一覧検索" class="btn">
 						</form:form>
-						<br>
+
 						<a href="setRegist">会員登録</a>
 
 					</div>

@@ -19,10 +19,10 @@
 /*--------------------------------
 ①全ページ共通
 -------------------------------*/
-input .btn {
+.btn {
 	display: inline-block;
 	padding: 0.8em 3em;
-	background-color: #fff; /* 背景色 */
+	background-color: #369ada; /* 背景色 */
 	box-shadow: 0 5px 0 #369ada; /* 影の太さ・色 */
 	border-radius: 60px;
 	color: #fff;
