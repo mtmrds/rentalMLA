@@ -2,24 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<!-- レンタル完了画面 -->
+<!-- カート確認 -->
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>発注完了画面</title>
+		<title>カートにセット</title>
 	</head>
 	<body style="background-color: gray;">
-		<div class="paymentcomp">
+		<div class="cartaddcomp">
 			<jsp:include page="headeremp.jsp"/>
-				<div class="paymentcomptitle">
-					<h1>発注完了画面</h1>
-				</div>
-				<div class="fade-in-text">
-					<p>店長ありがとうございました(^_-)-☆</p>
-					<img src="resources/image/お辞儀.png"/>
-				</div>
-				<p><a href="<c:url value='master' />">戻る(仮)</a></p>
+				<h1>カートに商品を入れました</h1>
+				<p><a href="<c:url value='adminCart' />">発注カート確認</a></p>
+				<p><a href="<c:url value='master' />">店員トップ</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>

@@ -8,6 +8,7 @@ public class ItemModel {
 	  private String category;
 	  private Integer quantity;
 	  private int cNo;
+	  private int tNo;
 
 	public String getItemNo() {
 		return itemNo;
@@ -27,6 +28,9 @@ public class ItemModel {
 	public int getcNo() {
 		return cNo;
 	}
+	public int gettNo() {
+		return tNo;
+	}
 	public void setItemNo(String itemNo) {
 		this.itemNo = itemNo;
 	}
@@ -44,5 +48,8 @@ public class ItemModel {
 	}
 	public void setcNo(int cNo) {
 		this.cNo = cNo;
+	}
+	public void settNo(int tNo) {
+		this.tNo = tNo;
 	}
  }

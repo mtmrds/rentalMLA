@@ -22,6 +22,7 @@ public class Members implements Serializable{
 	private String category;
 	private Integer quantity;
 	private int cNo;
+	private int tNo;
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
@@ -100,6 +101,10 @@ public class Members implements Serializable{
 		return cNo;
 	}
 
+	public int gettNo() {
+		return tNo;
+	}
+
 	public static SimpleDateFormat getDateformat() {
 		return dateFormat;
 	}
@@ -166,5 +171,9 @@ public class Members implements Serializable{
 
 	public void setcNo(int cNo) {
 		this.cNo = cNo;
+	}
+
+	public void settNo(int tNo) {
+		this.tNo = tNo;
 	}
 }
