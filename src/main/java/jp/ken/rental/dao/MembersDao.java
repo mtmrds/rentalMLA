@@ -325,7 +325,7 @@ public class MembersDao {
 	}
 	public boolean addToUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
-        String updateStockSql = "UPDATE movitem SET quantity = ? WHERE item_no = ?";
+        String updateStockSql = "UPDATE movitem SET quantity = quantity + 1 WHERE item_no = ?";
         //String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
 
         TransactionStatus transactionStatus = null;
