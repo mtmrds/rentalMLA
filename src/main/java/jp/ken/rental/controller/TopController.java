@@ -30,7 +30,7 @@ public class TopController {
 	public String toTop() {
 		return "top";
 	}
-	
+
 	//Top.jspの「<input type="submit" value="検索する" class="btn">」がPOST通信のため、リクマを追加。
 	//redirectを利用して、SearchControllerに飛ばす(GET通信)。
 	//redirectにしない場合はエラーになる→「JSP ファイル [/WEB-INF/views/search.jsp] が見つかりません」
@@ -42,6 +42,10 @@ public class TopController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String memLogin() {
 		return "login";
+	}
+@RequestMapping(value = "/NewFile", method = RequestMethod.GET)
+	public String toNewFile() {
+		return "NewFile";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
     public String toConfirm(@ModelAttribute LoginModel lgModel, Model model, @ModelAttribute ItemModel itemModel) {
