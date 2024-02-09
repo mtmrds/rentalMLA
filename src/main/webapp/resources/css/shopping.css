@@ -37,6 +37,7 @@ input .btn {
 }
 
 
+
 /*--------------------------------
 ②ヘッダー
 --------------------------------*/
@@ -59,6 +60,7 @@ input .btn {
 	font-size: 45px;
 	margin: 10px;
 	padding: 10px;
+	color: gray;
 }
 
 .linkpage ,p {
