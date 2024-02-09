@@ -436,6 +436,65 @@ public class MembersDao {
 
 	*/
 
+	//takahiro力作！！！
+
+
+	//店員用カート
+	public List<Members> getTenCartList(){
+		String sql = "SELECT * FROM tencart";
+		List<Members> tenCartList = jdbcTemplate.query(sql, membersMapper);
+		return tenCartList;
+	}
+	//いるかも？？
+	public Members pickTenItemById(Integer itemNo) {
+		String sql = "SELECT * FROM movitem WHERE item_no=?";
+		Object[] parameters = { itemNo };
+		try {
+			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
+			return members;
+		} catch(EmptyResultDataAccessException e){
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public int insertTenCart(Members members) {
+		String sql = "INSERT INTO tencart(title, type,item_no) VALUES(?, ?, ?)";
+		Object[] parameters = { members.getTitle(), members.getType(),members.getItemNo() };
+
+		TransactionStatus transactionStatus = null;
+		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+		int numberOfRow = 0;
+
+		try {
+			transactionStatus = transactionManager.getTransaction(transactionDefinition);
+			numberOfRow = jdbcTemplate.update(sql,parameters);
+			transactionManager.commit(transactionStatus);
+		} catch(DataAccessException e){
+			e.printStackTrace();
+			transactionManager.rollback(transactionStatus);
+		} catch(TransactionException e) {
+			e.printStackTrace();
+			if(transactionStatus != null) {
+				transactionManager.rollback(transactionStatus);
+			}
+		}
+		return numberOfRow;
+
+	}
+	public int removeTen(int cNo) {
+	    String sql = "DELETE FROM history WHERE cNo=?";
+	    Object[] parameters = { cNo };
+	    return jdbcTemplate.update(sql, parameters);
+	}
+
+
+	public int clearTenCart(Model model) {
+		String sql = "DELETE FROM history";
+		 return jdbcTemplate.update(sql);
+	}
+
 
 
 	//発注確定押したらここで増やす。item_noで指定
@@ -450,4 +509,5 @@ public class MembersDao {
 	        return 0; // エラー時は0を返すか、適切なエラーハンドリングを行う
 	    }
 	}
+
 }
