@@ -177,7 +177,9 @@
 				<br>
 					<div class="topselect">
 						<form:form modelAttribute="itemModel">
-							<input type="submit" value="商品一覧検索" class="btn">
+
+							<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
+							<a href="search">商品一覧検索</a>
 						</form:form>
 
 						<a href="setRegist">会員登録</a>
