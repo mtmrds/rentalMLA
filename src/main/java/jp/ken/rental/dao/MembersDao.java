@@ -355,86 +355,7 @@ public class MembersDao {
 	    }
 	    return numberOfRow;
 	}
-	/*
-	public boolean addToUpdateStock(int itemNo) {
-        String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
-        String updateStockSql = "UPDATE movitem SET quantity = ? WHERE item_no = ?";
-        //String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
 
-        TransactionStatus transactionStatus = null;
-        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
-
-        try {
-            // トランザクション開始
-            transactionStatus = transactionManager.getTransaction(transactionDefinition);
-
-            // 商品の在庫を取得
-            int currentStock = jdbcTemplate.queryForObject(getStockSql, new Object[]{itemNo}, Integer.class);
-
-            // 在庫が1つ以上ある場合
-            if (currentStock > 0) {
-                // 在庫を減らす
-                jdbcTemplate.update(updateStockSql, currentStock + 1, itemNo);
-
-                // カートに商品を追加
-                //jdbcTemplate.update(insertCartSql, itemNo, "type"); // "type"は仮の値で適宜変更
-
-
-                // トランザクションコミット
-                transactionManager.commit(transactionStatus);
-
-                return true;
-            } else {
-            	// 在庫がない場合はエラーメッセージを表示してfalseを返す
-            	//バック側の確認用
-                System.out.println("在庫が不足しています。");
-                return false;
-            }
-        } catch (EmptyResultDataAccessException e) {
-            e.printStackTrace();
-            // トランザクションロールバック
-            if (transactionStatus != null) {
-                transactionManager.rollback(transactionStatus);
-            }
-            return false;
-        } catch (Exception e) {
-            e.printStackTrace();
-            // トランザクションロールバック
-            if (transactionStatus != null) {
-                transactionManager.rollback(transactionStatus);
-            }
-            return false;
-        }
-	}
-	*/
-	/*
-		public int inserttencho(Members members) {
-		String sql = "INSERT INTO movitem(quantity) VALUES(?)";
-		Object[] parameters = { members.getQuantity()};
-
-		TransactionStatus transactionStatus = null;
-		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
-
-		int numberOfRow = 0;
-
-		try {
-			transactionStatus = transactionManager.getTransaction(transactionDefinition);
-			numberOfRow = jdbcTemplate.update(sql,parameters);
-			transactionManager.commit(transactionStatus);
-		} catch(DataAccessException e){
-			e.printStackTrace();
-			transactionManager.rollback(transactionStatus);
-		} catch(TransactionException e) {
-			e.printStackTrace();
-			if(transactionStatus != null) {
-				transactionManager.rollback(transactionStatus);
-			}
-		}
-		return numberOfRow;
-
-	}
-
-	*/
 
 	//takahiro力作！！！
 
@@ -483,20 +404,15 @@ public class MembersDao {
 		return numberOfRow;
 
 	}
-	public int removeTen(int cNo) {
-	    String sql = "DELETE FROM history WHERE cNo=?";
-	    Object[] parameters = { cNo };
+	public int removeTen(int tNo) {
+	    String sql = "DELETE FROM tencart WHERE tNo=?";
+	    Object[] parameters = { tNo };
 	    return jdbcTemplate.update(sql, parameters);
 	}
-
-
 	public int clearTenCart(Model model) {
-		String sql = "DELETE FROM history";
+		String sql = "DELETE FROM tencart";
 		 return jdbcTemplate.update(sql);
 	}
-
-
-
 	//発注確定押したらここで増やす。item_noで指定
 	public int updateQuantity(int itemNo, int additionalQuantity) {
 	    String sql = "UPDATE movitem SET quantity = quantity + ? WHERE item_no = ?";
@@ -509,5 +425,4 @@ public class MembersDao {
 	        return 0; // エラー時は0を返すか、適切なエラーハンドリングを行う
 	    }
 	}
-
 }

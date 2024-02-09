@@ -180,15 +180,7 @@
 						</form:form>
 						<br>
 						<a href="setRegist">会員登録</a>
-						<!--
-						<c:if test="${empty loginModel.name}">
-    						<a href="login">ログイン</a>
-						</c:if>
-						<c:if test="${loginModel.name != null}">
-							<!-- ログインしている場合のみログアウトリンクを表示
-							<a href="logout">ログアウト</a>
-						</c:if>
-						-->
+
 					</div>
 					<div class="loopplan">
 						<div class="loopplan_box">

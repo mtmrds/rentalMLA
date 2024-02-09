@@ -64,9 +64,9 @@ public class tenzaiCon {
     }
 
 
-    @RequestMapping(value = "/adminCart", method = RequestMethod.POST, params = "end")
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "end")
     String viewCart3(Model model) {
-        model.addAttribute("membersList", membersDao.getCartList());
+        model.addAttribute("membersList", membersDao.getTenCartList());
         membersDao.clearTenCart(model);
         int itemNo = 1; // 商品番号
         int additionalQuantity = 1; // 追加する数量
@@ -79,7 +79,7 @@ public class tenzaiCon {
         if (delete != null && delete.equals("削除")) {
             membersDao.removeTen(tNo);
         }
-        model.addAttribute("cartList", membersDao.getCartList());
+        model.addAttribute("cartList", membersDao.getTenCartList());
         return "tencho_order";
     }
 }
