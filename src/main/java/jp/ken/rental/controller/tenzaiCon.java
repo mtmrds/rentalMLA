@@ -29,15 +29,15 @@ public class tenzaiCon {
     }
 
     @RequestMapping(value = "/tenzai", method = RequestMethod.GET)
-    String viewCart(Model model) {
-        model.addAttribute("cartList", membersDao.getCartList());
+    String viewTenCart(Model model) {
+        model.addAttribute("tenCartList", membersDao.getTenCartList());
         return "tencho_order";
     }
 
     @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "index")
-    String viewCart2(ItemModel itemModel, Model model) {
+    String viewTenCart2(ItemModel itemModel, Model model) {
         try {
-            String mId = itemModel.getItemNo();
+            mId = itemModel.getItemNo();
             Integer itemNo = Integer.valueOf(mId);
             if (itemNo == null) {
                 throw new NumberFormatException("商品番号が数値ではありません。");
@@ -45,9 +45,9 @@ public class tenzaiCon {
             Members pickItem = membersDao.pickItemById(itemNo);
             if (pickItem != null) {
                 model.addAttribute("pickItem", pickItem);
-                List<Members> cartList = membersDao.getCartList();
-                model.addAttribute("cartList", cartList);
-                int numberOfRow = membersDao.insertCart(pickItem);
+                List<Members> tenCartList = membersDao.getTenCartList();
+                model.addAttribute("tencartList", tenCartList);
+                int numberOfRow = membersDao.insertTenCart(pickItem);
                 if (numberOfRow == 0) {
                     return "tenchoEmp";
                 }
@@ -67,7 +67,7 @@ public class tenzaiCon {
     @RequestMapping(value = "/adminCart", method = RequestMethod.POST, params = "end")
     String viewCart3(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
-        membersDao.clearCart(model);
+        membersDao.clearTenCart(model);
         int itemNo = 1; // 商品番号
         int additionalQuantity = 1; // 追加する数量
         membersDao.updateQuantity(itemNo, additionalQuantity);
@@ -75,9 +75,9 @@ public class tenzaiCon {
     }
 
     @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "delete")
-    String viewCart4(@RequestParam("delete") String delete, @RequestParam("cNo") int cNo, Model model) {
+    String viewCart4(@RequestParam("delete") String delete, @RequestParam("tNo") int tNo, Model model) {
         if (delete != null && delete.equals("削除")) {
-            membersDao.remove(cNo);
+            membersDao.removeTen(tNo);
         }
         model.addAttribute("cartList", membersDao.getCartList());
         return "tencho_order";
