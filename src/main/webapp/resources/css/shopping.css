@@ -1,4 +1,4 @@
--@charset "UTF-8";
+@charset "UTF-8";
 /*--------------------------------
 項目
 ①全ページ共有
@@ -79,6 +79,7 @@ input .btn {
 .btn-img img{
 	vertical-align:middle;
 }
+
 
 /*ここからがスクロールバー設定(縦・横に反映）*/
 body {
@@ -162,8 +163,13 @@ body {
     font-size: 26px;
   }
 
+.insta p{
+	text-align: center;
+
+}
 .insta img{
 	vertical-align:middle;
+
 
 }
 
