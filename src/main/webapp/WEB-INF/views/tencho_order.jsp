@@ -34,16 +34,17 @@
                 </tr>
             </c:forEach>
         </table>
-    </form:form>
 
     <!-- プルダウンメニューを追加 -->
-    <form:form modelAttribute="itemModel">
-        <select name="quantity">
-            <option value="1">1個</option>
-            <option value="2">2個</option>
-            <!-- 必要な個数の範囲を選択肢として追加してください -->
-        </select>
-        <input type="submit" name="end" value="発注確定">
+    <form action="/tenzai" method="post">
+    	<label for="itemNo">商品番号:</label>
+    	<input type="text" id="itemNo" name="itemNo"><br><br>
+
+   		<label for="additionalQuantity">数量:</label>
+    	<input type="text" id="additionalQuantity" name="additionalQuantity"><br><br>
+
+    	<input type="submit" value="発注確定">
+	</form>
     </form:form>
 
     <a href="master">従業員画面作業へ（仮）</a>
