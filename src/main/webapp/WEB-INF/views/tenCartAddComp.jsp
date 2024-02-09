@@ -13,7 +13,7 @@
 		<div class="cartaddcomp">
 			<jsp:include page="headeremp.jsp"/>
 				<h1>カートに商品を入れました</h1>
-				<p><a href="<c:url value='adminCart' />">発注カート確認</a></p>
+				<p><a href="<c:url value='tenzai' />">発注カート確認</a></p>
 				<p><a href="<c:url value='master' />">店員トップ</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>

@@ -21,14 +21,14 @@
                 <th>タイプ</th>
                 <th>&nbsp;</th>
             </tr>
-            <c:forEach var="listCart" items="${cartList}">
+            <c:forEach var="listTenCart" items="${tenCartList}">
                 <tr>
-                    <td>${listCart.itemNo }</td>
+                    <td>${listTenCart.itemNo }</td>
                     <td>&nbsp;</td>
-                    <td><c:out value="${listCart.title}"/></td>
-                    <td><c:out value="${listCart.type}"/></td>
+                    <td><c:out value="${listTenCart.title}"/></td>
+                    <td><c:out value="${listTenCart.type}"/></td>
                     <td>
-                        <form:hidden path="cNo" value="${listCart.cNo}" />
+                        <form:hidden path="tNo" value="${listTenCart.tNo}" />
                         <input type="submit" name="delete" value="削除">
                     </td>
                 </tr>
