@@ -323,6 +323,39 @@ public class MembersDao {
 			return null;
 		}
 	}
+	//マイページ上で会員情報を削除する
+	public int removeMember(String mail) {
+	    String sql = "DELETE FROM members WHERE mail=?";
+	    Object[] parameters = { mail };
+	    return jdbcTemplate.update(sql, parameters);
+	}
+	//マイページ上で会員情報を編集する
+	public int updateMember(Members member) {
+	    String sql = "UPDATE members SET name=?, birthday=?, zip=?, address=?, phone=?, password=?, plan=?, card=? WHERE mail=?";
+	    Object[] parameters = { member.getName(), member.getBirthday(), member.getZip(), member.getAddress(),
+	                            member.getPhone(), member.getPassword(), member.getPlan(), member.getCard(), member.getMail() };
+
+	    TransactionStatus transactionStatus = null;
+	    DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+	    int numberOfRow = 0;
+
+	    try {
+	        transactionStatus = transactionManager.getTransaction(transactionDefinition);
+	        numberOfRow = jdbcTemplate.update(sql, parameters);
+	        transactionManager.commit(transactionStatus);
+	    } catch(DataAccessException e){
+	        e.printStackTrace();
+	        transactionManager.rollback(transactionStatus);
+	    } catch(TransactionException e) {
+	        e.printStackTrace();
+	        if(transactionStatus != null) {
+	            transactionManager.rollback(transactionStatus);
+	        }
+	    }
+	    return numberOfRow;
+	}
+	/*
 	public boolean addToUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
         String updateStockSql = "UPDATE movitem SET quantity = ? WHERE item_no = ?";
@@ -373,7 +406,9 @@ public class MembersDao {
             return false;
         }
 	}
-	public int inserttencho(Members members) {
+	*/
+	/*
+		public int inserttencho(Members members) {
 		String sql = "INSERT INTO movitem(quantity) VALUES(?)";
 		Object[] parameters = { members.getQuantity()};
 
@@ -397,5 +432,22 @@ public class MembersDao {
 		}
 		return numberOfRow;
 
+	}
+
+	*/
+
+
+
+	//発注確定押したらここで増やす。item_noで指定
+	public int updateQuantity(int itemNo, int additionalQuantity) {
+	    String sql = "UPDATE movitem SET quantity = quantity + ? WHERE item_no = ?";
+	    Object[] parameters = { additionalQuantity, itemNo };
+
+	    try {
+	        return jdbcTemplate.update(sql, parameters);
+	    } catch (DataAccessException e) {
+	        e.printStackTrace();
+	        return 0; // エラー時は0を返すか、適切なエラーハンドリングを行う
+	    }
 	}
 }
