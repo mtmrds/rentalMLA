@@ -176,6 +176,18 @@ body {
 
 }
 
+/* マウスを乗せたときの動き */
+.btn-img:hover{
+  opacity: 0.6;
+  transition: 0.8s;
+}
+
+.btn-img{
+	vertical-align:middle;
+}
+
+
+
 /*-------------------------------
 アイテム一覧ページ
 -------------------------------*/
@@ -220,6 +232,7 @@ body {
 }
 .loginpage table td {
 	border: double;
+
 }
 
 
