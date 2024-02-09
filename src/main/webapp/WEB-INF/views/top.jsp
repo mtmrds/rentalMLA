@@ -190,8 +190,6 @@
 						<a href="search">商品一覧検索</a>
 							見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">
 						</form:form>-->
-						<a href="search">商品一覧検索</a>
-						<a href="setRegist">新規会員登録</a>
 
 
 					</div>
