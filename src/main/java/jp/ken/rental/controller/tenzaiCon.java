@@ -62,16 +62,17 @@ public class tenzaiCon {
             return "tenkaku";
         }
     }
-
-
     @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "end")
-    String viewCart3(Model model) {
-        model.addAttribute("membersList", membersDao.getTenCartList());
-        membersDao.clearTenCart(model);
-        int itemNo = 1; // 商品番号
-        int additionalQuantity = 1; // 追加する数量
-        membersDao.updateQuantity(itemNo, additionalQuantity);
-        return "tenkakutei";
+    String viewCart3(@RequestParam(required = false) Integer itemNo, @RequestParam(required = false) Integer additionalQuantity, Model model) {
+        if (itemNo != null && additionalQuantity != null) {
+            model.addAttribute("membersList", membersDao.getTenCartList());
+            membersDao.clearTenCart(model);
+            membersDao.updateQuantity(itemNo, additionalQuantity);
+            return "tenkakutei";
+        } else {
+            // itemNo または additionalQuantity のいずれかが提供されていない場合の処理
+            return "errorPage"; // エラーページにリダイレクトするなど
+        }
     }
 
     @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "delete")
@@ -81,5 +82,23 @@ public class tenzaiCon {
         }
         model.addAttribute("cartList", membersDao.getTenCartList());
         return "tencho_order";
+    }
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST)
+    String handleTenZaiPost(Model model, @RequestParam("itemNo") Integer itemNo, @RequestParam("additionalQuantity") Integer additionalQuantity) {
+        // itemNo と additionalQuantity が null でないことをチェック
+        if (itemNo != null && additionalQuantity != null) {
+            // updateQuantity メソッドを呼び出して数量を更新
+            int updatedRows = membersDao.updateQuantity(itemNo, additionalQuantity);
+            if (updatedRows > 0) {
+                // 更新が成功した場合はtenkakuteiにリダイレクト
+                return "tenkakutei";
+            } else {
+                // 更新に失敗した場合はリダイレクト
+                return "tencho_order";
+            }
+        } else {
+            // itemNo または additionalQuantity が提供されていない場合はリダイレクト
+            return "tencho_order";
+        }
     }
 }
