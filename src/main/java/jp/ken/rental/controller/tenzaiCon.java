@@ -63,14 +63,15 @@ public class tenzaiCon {
         }
     }
 
-    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "end")
+
+    @RequestMapping(value = "/adminCart", method = RequestMethod.POST, params = "end")
     String viewCart3(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
         membersDao.clearCart(model);
         int itemNo = 1; // 商品番号
         int additionalQuantity = 1; // 追加する数量
         membersDao.updateQuantity(itemNo, additionalQuantity);
-        return "tenkaku";
+        return "tenkakutei";
     }
 
     @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "delete")
