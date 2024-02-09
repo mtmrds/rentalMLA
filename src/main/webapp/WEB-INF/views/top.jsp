@@ -40,7 +40,10 @@
 			}
 
 			.topcontents  {
-				display: flex;
+				display: flex;	/*横並び*/
+				justify-content: center; /*左右中央寄せ*/
+    			align-items: center;		/*上下中央寄せ*/
+
 			}
 
 			.news {
