@@ -15,6 +15,7 @@
 		}
 		 ul{
     list-style :見栄えの指定;
+    background-color: gray;
 }
 
 		</style>
