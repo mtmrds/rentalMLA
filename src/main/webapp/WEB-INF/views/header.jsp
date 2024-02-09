@@ -26,6 +26,7 @@
 
 	<!-- ログイン後は名前を表示 -->
 	<header>
+	<audio src="resources/music/08-Nerd-Strut-_Instrumental_.mp3" type="audio/mp3"></audio>
 		<form:form modelAttribute="memberModel">
 			<div class="logo">
 				<a href="top"  alt="トップページに戻る">
