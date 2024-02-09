@@ -75,12 +75,13 @@
 						</tr>
 						<tr>
 							<td align="center"><strong>生年月日</strong></td>
-							<td colspan="4">
-							<form:input path="birthday" size="50" /><br>
-							例）2024/02/01
-							<br>
-							<form:errors path="birthday" element="span" cssClass="errors" />
-							</td>
+    						<td colspan="4">
+        					<form:input path="birthday"/>
+        					<br>
+       						例）2024/02/01
+        					<br>
+        					<form:errors path="birthday" element="span" cssClass="errors" />
+    					</td>
 						</tr>
 						<tr>
 							<td align="center"><strong>クレジットカード</strong></td>

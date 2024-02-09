@@ -22,6 +22,6 @@
         	<p><input type="submit" value="発注" ></p>
     	</form:form>
 		<p><a href="<c:url value='master' />">検索画面に戻る（マスター管理へ戻す。表現変えるかも）</a></p>
-		<p><a href="<c:url value='master' />">tenchoEmp.jspに戻る(仮です。表現変えるかも)</a></p>
+		<p><a href="<c:url value='tenkaku.jsp' />">tenchoEmp.jspに戻る(仮です。表現変えるかも)</a></p>
 </body>
 </html>

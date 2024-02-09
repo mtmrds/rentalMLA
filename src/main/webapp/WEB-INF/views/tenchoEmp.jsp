@@ -24,7 +24,7 @@
 							<form:input path="itemNo"/>
 							<label for="name"><strong>タイトル</strong></label>
 							<form:input path="title"/>
-							<input type="submit" value="検索する" class="btn">
+							<input type="submit" value="在庫一覧（仮）" class="btn">
 						</div>
 						<div>
 							<c:out value="${message}"/>
@@ -48,10 +48,10 @@
 								<td><c:out value="${items.category}"/></td>
 								<td><c:out value="${items.quantity}"/></td>
 								<td>
-  									<form:form modelAttribute="itemModel">
+  									<form:form modelAttribute="itemModel" method="post">
 										<form:hidden path="itemNo" value="${items.itemNo }" />
 										<form:hidden path="title" value="pick"/>
-										<input type="submit" value="カートに入れる"/>
+										<input type="submit" value="カートに入れる(従業員用 仮)"/>
 									</form:form>
 								</td>
 							</tr>
