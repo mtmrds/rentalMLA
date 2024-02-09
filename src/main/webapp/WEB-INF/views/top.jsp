@@ -179,10 +179,12 @@
 						<form:form modelAttribute="itemModel">
 
 							<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
-							<a href="search">商品一覧検索</a>
+							<a href="search" class ="btn-img">
+							<img src="resources/image/虫眼鏡.png" width= "60"height= "auto">商品一覧検索</a>
 						</form:form>
 
-						<a href="setRegist">会員登録</a>
+						<a href="setRegist" class ="btn-img">
+						<img src="resources/image/会員登録画像.png" width= "60"height= "auto">会員登録</a>
 
 					</div>
 					<div class="loopplan">
