@@ -213,7 +213,15 @@
 							</ul>
 						</div>
 					</div>
+					<div class="insta">
+						<p>
+							<a href="https://www.instagram.com/movmov2024/" >
+							<img src="resources/image/Instagram_Glyph_Black.png" width="50" height="auto">
+							インスタグラム開設しました
+							</a>
+						</p>
 
+					</div>
 			</form:form>
 			<jsp:include page="footer.jsp" />
 		</div>
