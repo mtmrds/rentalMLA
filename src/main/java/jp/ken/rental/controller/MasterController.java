@@ -78,7 +78,7 @@ public class MasterController {
         Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
         model.addAttribute("pickItem", pickItem);
         //model.addAttribute("headline", "カートイン");
-        return "tencho_order";
+        return "tenCartAdd";
 	}
 	@RequestMapping(value = "/adminCart", method = RequestMethod.POST)
 	public String masterCartPost(@ModelAttribute ItemModel itemModel, Model model) {
@@ -86,10 +86,10 @@ public class MasterController {
 		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
 		model.addAttribute("pickItem", pickItem);
 
-		List<Members> cartList = membersDao.getCartList();
-		model.addAttribute("cartList", cartList);
+		List<Members> tenCartList = membersDao.getTenCartList();
+		model.addAttribute("cartList", tenCartList);
 
-		int numberOfRow = membersDao.insertCart(pickItem);
+		int numberOfRow = membersDao.insertTenCart(pickItem);
 
 	    //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
 	    if (numberOfRow == 0) {
@@ -97,6 +97,6 @@ public class MasterController {
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "tenchoEmp";
 	    }
-	    return "tenkaku";
+	    return "tenCartAddComp";
 	}
 }

@@ -8,6 +8,7 @@
 		<meta charset=UTF-8>
 		<title>Music Life Agency</title>
 		<style>
+			/*流れるプランの設定*/
 			@keyframes loopplan {
 				from {
 					transform: translateX(0);
@@ -25,11 +26,11 @@
 			.loopplan_list {
 				display: flex;
 				list-style: none;
-				padding: 0
+				padding: 0;
 			}
 
 			.loopplan_list--left {
-				animation: loopplan 50s infinite linear 0.5s both;
+				animation: loopplan 100s infinite linear 0.5s both;
 			}
 
 			.loopplan_list_item {
@@ -39,8 +40,11 @@
 				font-size: 50px;
 			}
 
+			/*NEWS・トピックス設定*/
 			.topcontents  {
-				display: flex;
+				display: flex;	/*横並び*/
+				justify-content: center; /*左右中央寄せ*/
+    			align-items: center;		/*上下中央寄せ*/
 			}
 
 			.news {
@@ -77,7 +81,7 @@
 				font-size: 26px;
 			}
 
-			.contents {
+			.contents { /*これ何の設定かわかりますか？今ある？いらんなら消すよ。高島*/
 				position: relative;
 				display: grid;
 				place-items: center;
@@ -88,6 +92,7 @@
 				overflow: hidden;
 			}
 
+			/*タイトル 装飾*/
 			.loading-area {
 				display: flex;
 				justify-content: center;
@@ -213,7 +218,15 @@
 							</ul>
 						</div>
 					</div>
+					<div class="insta">
+						<p>
+							<a href="https://www.instagram.com/movmov2024/" >
+							<img src="resources/image/Instagram_Glyph_Black.png" width="50" height="auto">
+							インスタグラム開設しました
+							</a>
+						</p>
 
+					</div>
 			</form:form>
 			<jsp:include page="footer.jsp" />
 		</div>
