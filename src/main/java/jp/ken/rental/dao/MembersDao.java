@@ -323,11 +323,63 @@ public class MembersDao {
 			return null;
 		}
 	}
+<<<<<<< HEAD
+	public boolean addToUpdateStock(int itemNo) {
+        String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
+        String updateStockSql = "UPDATE movitem SET quantity = quantity + 1 WHERE item_no = ?";
+        //String insertCartSql = "INSERT INTO history(title, type) VALUES(?, ?)";
+
+        TransactionStatus transactionStatus = null;
+        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+        try {
+            // トランザクション開始
+            transactionStatus = transactionManager.getTransaction(transactionDefinition);
+
+            // 商品の在庫を取得
+            int currentStock = jdbcTemplate.queryForObject(getStockSql, new Object[]{itemNo}, Integer.class);
+
+            // 在庫が1つ以上ある場合
+            if (currentStock > 0) {
+                // 在庫を減らす
+                jdbcTemplate.update(updateStockSql, currentStock + 1, itemNo);
+
+                // カートに商品を追加
+                //jdbcTemplate.update(insertCartSql, itemNo, "type"); // "type"は仮の値で適宜変更
+
+
+                // トランザクションコミット
+                transactionManager.commit(transactionStatus);
+
+                return true;
+            } else {
+            	// 在庫がない場合はエラーメッセージを表示してfalseを返す
+            	//バック側の確認用
+                System.out.println("在庫が不足しています。");
+                return false;
+            }
+        } catch (EmptyResultDataAccessException e) {
+            e.printStackTrace();
+            // トランザクションロールバック
+            if (transactionStatus != null) {
+                transactionManager.rollback(transactionStatus);
+            }
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            // トランザクションロールバック
+            if (transactionStatus != null) {
+                transactionManager.rollback(transactionStatus);
+            }
+            return false;
+        }
+=======
 	//マイページ上で会員情報を削除する
 	public int removeMember(String mail) {
 	    String sql = "DELETE FROM members WHERE mail=?";
 	    Object[] parameters = { mail };
 	    return jdbcTemplate.update(sql, parameters);
+>>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 	}
 	//マイページ上で会員情報を編集する
 	public int updateMember(Members member) {
