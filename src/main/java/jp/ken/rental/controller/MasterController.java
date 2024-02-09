@@ -80,7 +80,7 @@ public class MasterController {
         //model.addAttribute("headline", "カートイン");
         return "tencho_order";
 	}
-	@RequestMapping(value = "/adminCart", method = RequestMethod.POST)
+	@RequestMapping(value = "/adminCart1", method = RequestMethod.POST)
 	public String masterCartPost(@ModelAttribute ItemModel itemModel, Model model) {
 		//historyに入る
 		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
@@ -97,6 +97,6 @@ public class MasterController {
 	        //model.addAttribute("message", "登録に失敗しました。");
 	        return "tenchoEmp";
 	    }
-	    return "tenkaku";
+	    return "tenkakutei";
 	}
 }
