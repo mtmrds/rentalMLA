@@ -323,7 +323,6 @@ public class MembersDao {
 			return null;
 		}
 	}
-<<<<<<< HEAD
 	public boolean addToUpdateStock(int itemNo) {
         String getStockSql = "SELECT quantity FROM movitem WHERE item_no = ?";
         String updateStockSql = "UPDATE movitem SET quantity = quantity + 1 WHERE item_no = ?";
@@ -373,13 +372,12 @@ public class MembersDao {
             }
             return false;
         }
-=======
+	}
 	//マイページ上で会員情報を削除する
 	public int removeMember(String mail) {
 	    String sql = "DELETE FROM members WHERE mail=?";
 	    Object[] parameters = { mail };
 	    return jdbcTemplate.update(sql, parameters);
->>>>>>> branch 'main' of git@github.com:mtmrds/rentalMLA.git
 	}
 	//マイページ上で会員情報を編集する
 	public int updateMember(Members member) {
