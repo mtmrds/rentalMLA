@@ -16,7 +16,7 @@ import jp.ken.rental.model.ItemModel;
 @RequestMapping("cart")
 @SessionAttributes({"loginModel", "memberModel", "cartList"})
 
-public class KariCon {
+public class CartCon {
 
 	    @Autowired
 	    private MembersDao membersDao ;
