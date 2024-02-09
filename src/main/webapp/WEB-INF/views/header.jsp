@@ -37,7 +37,7 @@
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
 				<a href="mypage" alt="マイページ" class="btn-img">
-				<img src="resources/image/人間アイコン3.png" width= "40"height= "auto">ログイン</a>
+				<img src="resources/image/人間アイコン3.png" width= "40"height= "auto">マイページ</a>
 
   				<a href="cart" class="btn-img">
   				<img src="resources/image/カート.png" width= "60"height= "auto">カート</a>
