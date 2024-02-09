@@ -81,10 +81,8 @@ input .btn {
 }
 
 
-
-}
 div {
-overflow: scroll;
+	overflow: scroll;
 }
 /* スクロールバー */
 ::-webkit-scrollbar {
