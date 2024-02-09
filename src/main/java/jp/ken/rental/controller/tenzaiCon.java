@@ -16,11 +16,9 @@ import jp.ken.rental.entity.Members;
 import jp.ken.rental.model.ItemModel;
 
 @Controller
-@RequestMapping("tenzai")
 @SessionAttributes({"loginModel","itemModel", "cartList"})
 public class tenzaiCon {
-	private String mId;
-
+    private String mId;
 
     @Autowired
     private MembersDao membersDao ;
@@ -29,72 +27,55 @@ public class tenzaiCon {
     ItemModel itemModel() {
         return new ItemModel();
     }
-    //カートに入れるボタンを押下した後、cartcontent.jsp上で表示したい
-    //よって、以下内容で、追加された商品情報を表示します（cartListを利用する）
-    @RequestMapping(method = RequestMethod.GET)
+
+    @RequestMapping(value = "/tenzai", method = RequestMethod.GET)
     String viewCart(Model model) {
         model.addAttribute("cartList", membersDao.getCartList());
         return "tencho_order";
     }
 
-    @RequestMapping(method = RequestMethod.POST, params = "index")
-    String viewCart2(Model model) {
-        model.addAttribute("membersList", membersDao.getCartList());
-        //membersDao.addToUpdateStock(0);
-        return "tenkaku";
-
-
-
-@RequestMapping(method = RequestMethod.POST, params = "index")
-    String viewCart2(ItemModel itemModel,Model model) {
-    	try {
-    	    // 数値に変換できるかチェック
-    	    String mId = itemModel.getItemNo();
-    	    Integer itemNo = Integer.valueOf(mId);
-    	    // itemNoがnullでないかチェック
-    	    if (itemNo == null) {
-    	        throw new NumberFormatException("商品番号が数値ではありません。");
-    	    }
-    	    // 以下の処理は変更なし
-    	    Members pickItem = membersDao.pickItemById(itemNo);
-    	    // nullでないかチェック
-    	    if (pickItem != null) {
-    	        model.addAttribute("pickItem", pickItem);
-    	        List<Members> cartList = membersDao.getCartList();
-    	        model.addAttribute("cartList", cartList);
-    	        int numberOfRow = membersDao.insertCart(pickItem);
-    	        //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
-    	        if (numberOfRow == 0) {
-    	            //下記は必要に応じて使うか検討する
-    	            //model.addAttribute("message", "登録に失敗しました。");
-    	            return "tenchoEmp";
-    	        }
-    	        return "tenkaku";
-    	    } else {
-    	        // pickItemがnullの場合の処理
-    	        // 例えば、エラーメッセージをモデルに追加する
-    	        model.addAttribute("message", "商品が見つかりませんでした。");
-    	        return "tenchoEmp";
-    	    }
-    	} catch (NumberFormatException e) {
-    	    // 数値に変換できなかった場合の処理
-    	    // 例えば、エラーメッセージとスタックトレースをログに出力する
-    	    System.out.println("商品番号が不正です。");
-    	    e.printStackTrace();
-    	    return "tenchoEmp";
-    	}
-
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "index")
+    String viewCart2(ItemModel itemModel, Model model) {
+        try {
+            String mId = itemModel.getItemNo();
+            Integer itemNo = Integer.valueOf(mId);
+            if (itemNo == null) {
+                throw new NumberFormatException("商品番号が数値ではありません。");
+            }
+            Members pickItem = membersDao.pickItemById(itemNo);
+            if (pickItem != null) {
+                model.addAttribute("pickItem", pickItem);
+                List<Members> cartList = membersDao.getCartList();
+                model.addAttribute("cartList", cartList);
+                int numberOfRow = membersDao.insertCart(pickItem);
+                if (numberOfRow == 0) {
+                    return "tenchoEmp";
+                }
+                return "tenkaku";
+            } else {
+                model.addAttribute("message", "商品が見つかりませんでした。");
+                return "tenchoEmp";
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("商品番号が不正です。");
+            e.printStackTrace();
+            return "tenkaku";
+        }
     }
-    @RequestMapping(method = RequestMethod.POST, params = "end")
+
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "end")
     String viewCart3(Model model) {
         model.addAttribute("membersList", membersDao.getCartList());
         membersDao.clearCart(model);
-        return "paymentComp";
+        int itemNo = 1; // 商品番号
+        int additionalQuantity = 1; // 追加する数量
+        membersDao.updateQuantity(itemNo, additionalQuantity);
+        return "tenkaku";
     }
-    @RequestMapping(method = RequestMethod.POST, params = "delete")
+
+    @RequestMapping(value = "/tenzai", method = RequestMethod.POST, params = "delete")
     String viewCart4(@RequestParam("delete") String delete, @RequestParam("cNo") int cNo, Model model) {
         if (delete != null && delete.equals("削除")) {
-            // ボタンが押された場合の処理
             membersDao.remove(cNo);
         }
         model.addAttribute("cartList", membersDao.getCartList());
