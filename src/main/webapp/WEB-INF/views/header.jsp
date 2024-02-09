@@ -35,6 +35,12 @@
 			</div>
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
+
+				<a href="mypage" alt="マイページ" class="btn-img">
+				<img src="resources/image/人間アイコン3.png" width= "40"height= "auto">マイページ</a>
+
+  				<a href="cart" class="btn-img">
+
 			 	<!-- ログインしていない場合はログインページへのリンクを表示 -->
 				<c:if test="${empty loginModel.name}">
     				<a href="login" alt="ログイン" class="btn-img">
@@ -48,6 +54,7 @@
     				</a>
 				</c:if>
  				<a href="cart" class="btn-img">
+
   				<img src="resources/image/カート.png" width= "60"height= "auto">カート</a>
 
   				<a href="b"class="btn-img">
