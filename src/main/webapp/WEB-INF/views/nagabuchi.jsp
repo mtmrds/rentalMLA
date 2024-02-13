@@ -268,6 +268,9 @@ from {
 
 <h1>知っている曲や気になる曲はありましたか？ありましたよね？？？
 素敵な長渕ライフを！！！！</h1>
+<a href="https://tsuyoshinagabuchi.com/fanclub/">ファンクラブはこちら</a>
+<a href="https://twitter.com/nagabuchi_staff">X(旧ツイッター)はこちら</a>
+<a href="https://www.instagram.com/tsuyoshi_nagabuchi/">インスタはこちら</a>
 <jsp:include page="footer.jsp" />
 </div>
 </body>
