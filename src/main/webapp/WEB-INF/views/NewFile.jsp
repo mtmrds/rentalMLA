@@ -10,6 +10,7 @@
 <style>
 span {
 
+
     background-color: #ffffc1;
 
 }
@@ -23,6 +24,16 @@ span {
     padding: 0 6rem;
     box-sizing: border-box;
     background-color: #fefefe;
+    background-color: #ffffc1;
+
+}
+.size_test {
+    font-size:  25px;    /* 文字サイズ指定 */
+}
+.errors {
+	font-family: 'Yomogi',cursive;
+	color: red;
+	font-weight: bold;
 }
 
 :root {
@@ -59,6 +70,9 @@ span {
 <body>
 <div class="newfile">
 <jsp:include page="header.jsp"/>
+
+    <div class="size_test">
+
  	<h1><span>店長川上の1日</span></h1>
 		おはようございます！店長の川上です。<br>
   		皆さんは普段どんな音楽を聴いてますか？<br>
@@ -83,6 +97,10 @@ span {
 	<br>
  	<h3><strong><span>TikTokの人気曲ランキング</span></strong></h3>
  	  <div class="box1-4">
+	</div>
+	<br>
+	    <div class="size_test">
+ 	<h3><strong><span>TikTokの人気曲ランキング</span></strong></h3>
 		<ul>
 		    <li> 唱 / Ado</li>
 		    <li> アイドル / YOASOBI</li>
@@ -98,6 +116,9 @@ span {
 </div>
 		知っている曲や気になる曲はありましたか？
 		素敵な音楽ライフを！
+		知っている曲や気になる曲はありましたか？
+		素敵な音楽ライフを！
+	</div>
 <jsp:include page="footer.jsp" />
 </div>
 </body>
