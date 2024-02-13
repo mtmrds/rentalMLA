@@ -86,6 +86,11 @@
 						<tr>
 							<td align="center"><strong>クレジットカード</strong></td>
 							<td colspan="4">
+							<img src="resources/cardbrand/visa.png" height="50px" width="70px"/>
+							<img src="resources/cardbrand/master.png" height="50px" width="70px" />
+							<img src="resources/cardbrand/jcb.png" height="50px" width="70px" />
+							<img src="resources/cardbrand/amex.png" height="50px" width="70px" />
+							<br>
 							<form:input path="card" size="50"/>
 							<br>
 							<form:errors path="card" element="span" cssClass="errors"/>
