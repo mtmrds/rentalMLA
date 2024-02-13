@@ -93,6 +93,10 @@
 							<br>
 							<form:input path="card" size="50"/>
 							<br>
+							有効期限:
+							<input rows="" cols="" size="1"/>
+							セキュリティーコード:
+							<input rows="" cols="" size="2"/>
 							<form:errors path="card" element="span" cssClass="errors"/>
 							</td>
 						</tr>
