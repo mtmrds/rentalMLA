@@ -185,9 +185,9 @@ from {
 }
 </style>
 </head>
-	<body><jsp:include page="header.jsp"/>
+	<body>
 <div class="toppage">
-
+<jsp:include page="header.jsp"/>
 				<div class="loading-area">
 					<span>N</span>
 					<span>A</span>
