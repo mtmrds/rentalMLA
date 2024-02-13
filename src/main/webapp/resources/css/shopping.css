@@ -317,7 +317,11 @@ body {
 .mypagetitle {
 	text-align: left;
 }
+.selectbtn{
+	display: flex;
+	padding-left:80px;
 
+}
 .body {
 	height: 100px;
 }
