@@ -35,6 +35,7 @@ from {
 }
 .scroll-infinity__item>img {
   width: 100%;
+  height: 300px;
 }
 
 </style>
@@ -60,7 +61,7 @@ from {
   	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/tami.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/tami.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
@@ -85,7 +86,7 @@ from {
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/tg19ldeDv_E?si=A-iQlMDhaVxVx2cD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	<br>
 	<strong><h3>プロフィール</h3></strong>
-	<img src="resources/image/tami.jpg" />
+	<img src="resources/itemimg/tami.jpg" width="200" height="300" />
 	長渕 剛Tsuyoshi Nagabuchi
 	1956年9月7日生まれ
 	鹿児島県出身<br>
