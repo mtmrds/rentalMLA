@@ -23,6 +23,7 @@ ul{
 </head>
 <body>
 <div class="newfile">
+<jsp:include page="header.jsp"/>
  	<h1>店長川上の1日</h1>
 		おはようございます！店長の川上です。<br>
   		皆さんは普段どんな音楽を聴いてますか？<br>

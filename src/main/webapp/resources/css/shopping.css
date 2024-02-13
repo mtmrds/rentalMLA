@@ -191,13 +191,11 @@ body {
 /*-------------------------------
 アイテム一覧ページ
 -------------------------------*/
-
 .newfile {
 	font-family: 'Yomogi',cursive;
-	background-color:pink;
+	background-image: url(../image/pink.jpg);
 
 }
-
 
 .itemsearch {
 	font-family: 'Yomogi',cursive;
