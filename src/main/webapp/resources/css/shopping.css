@@ -191,15 +191,14 @@ body {
 /*-------------------------------
 アイテム一覧ページ
 -------------------------------*/
-.NewFile {
+
+.newfile {
 	font-family: 'Yomogi',cursive;
-	color: grey;
-	background-image: url(../image/pink_gold_buble.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh;
+	background-color:pink;
+
 }
+
+
 .itemsearch {
 	font-family: 'Yomogi',cursive;
 	color: grey;
@@ -225,10 +224,7 @@ body {
 	background-position: center;
 	min-height: 100vh;
 
-
-			}
-
-
+}
 
 .loginpage table{
 	border-collapse: collapse;
