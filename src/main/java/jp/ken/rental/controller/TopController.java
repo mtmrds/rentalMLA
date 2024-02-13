@@ -51,6 +51,11 @@ public class TopController {
 public String toNewFile1() {
 	return "mente";
 }
+@RequestMapping(value = "/naga", method = RequestMethod.GET)
+public String toNewFile2() {
+	return "naga";
+}
+
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
     public String toConfirm(@ModelAttribute LoginModel lgModel, Model model, @ModelAttribute ItemModel itemModel) {
 
