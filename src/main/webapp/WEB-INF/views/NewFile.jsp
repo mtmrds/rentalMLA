@@ -8,12 +8,15 @@
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
 <style>
+.scroll-infinity__item{
+      float: right;
+    }
+
 span {
-
-
     background-color: #ffffc1;
-
 }
+
+
 
 .pic-container {
     display: flex;
@@ -70,8 +73,11 @@ span {
 <body>
 <div class="newfile">
 <jsp:include page="header.jsp"/>
-
-    <div class="size_test">
+  	<li class="scroll-infinity__item"><img src="resources/image/neko.gif" /></li>
+  	<li class="scroll-infinity__item"><img src="resources/image/kinoko-1.gif" /></li>
+  	<li class="scroll-infinity__item"><img src="resources/image/ebi.gif" /></li>
+ 	<li class="scroll-infinity__item"><img src="resources/image/toraianguru-1.gif" /></li>
+  	<li class="scroll-infinity__item"><img src="resources/image/再生おにぎり-1.gif" /></li>
 
  	<h1><span>店長川上の1日</span></h1>
 		おはようございます！店長の川上です。<br>
@@ -91,7 +97,7 @@ span {
 		    <li> I’m a mess / MY FIRST STORY</li>
 		    <li> 全方向美少女 / 乃紫</li>
 		    <li> 人マニア / 原口沙輔</li>
-		    <li> LEAP HIGH! ～明日へ、めいっぱい～</li>
+		    <li> LEAP HIGH! ～明日へ、めいっぱい～ /  PRODUCE 101 JAPAN THE GIRLS</li>
 		</ul>
 	</div>
 	<br>
@@ -103,11 +109,11 @@ span {
 		    <li> SPECIALZ  / King Gnu</li>
 		    <li> ランデヴー / シャイトープ</li>
 		    <li> 可愛くてごめん / Honey Works</li>
-		    <li> I’m a mess MY FIRST STORY</li>
+		    <li> I’m a mess / MY FIRST STORY</li>
 		    <li> ファジーネーブル / Conton Candy</li>
 		    <li> 勇者 / YOASOBI</li>
 		    <li> you are my curse / nyamura</li>
-		    <li> 最高到達点 SEKAI NO OWARI</li>
+		    <li> 最高到達点 / SEKAI NO OWARI</li>
 		</ul>
 </div>
 		知っている曲や気になる曲はありましたか？
