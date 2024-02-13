@@ -194,6 +194,10 @@ body {
 .newfile {
 	font-family: 'Yomogi',cursive;
 	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
 
 }
 
