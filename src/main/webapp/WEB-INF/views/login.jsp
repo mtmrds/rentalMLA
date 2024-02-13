@@ -20,7 +20,7 @@
 		<div class="loginpage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel" >
-			<table border="1" frame="box"rules="none" cellpadding="15">
+			<table border="1" frame="box" rules="none" cellpadding="15" align="center">
 				<tr>
 					<td colspan="2" align="center">
 						<h2>ログイン</h2>
