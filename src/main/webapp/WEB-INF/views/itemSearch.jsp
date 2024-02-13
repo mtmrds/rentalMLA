@@ -14,7 +14,7 @@
 from {
   transform: translateX(0);
 }
-  to {
+ to {
   transform: translateX(-100%);
 }
 }
@@ -35,6 +35,7 @@ from {
 }
 .scroll-infinity__item>img {
   width: 100%;
+  height: 300px;
 }
 
 </style>
