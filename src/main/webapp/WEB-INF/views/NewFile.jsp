@@ -7,17 +7,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
-		<style>
-			.errors {
-			font-family: 'Yomogi',cursive;
-			color: red;
-			font-weight: bold;
-		}
-		 ul{
+<style>
+.errors {
+	font-family: 'Yomogi',cursive;
+	color: red;
+	font-weight: bold;
+}
+ ul{
     list-style :見栄えの指定;
 }
-
-		</style>
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+}
+</style>
 </head>
 <body>
 	<div class="NewFile">

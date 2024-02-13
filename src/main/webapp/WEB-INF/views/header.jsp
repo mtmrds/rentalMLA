@@ -61,9 +61,11 @@
 			 <!--ログイン後だけ表示できる-->
 			<div class="loginname">
 				<p>
+
 					<c:if test="${not empty loginModel.name}">
 						<p>ようこそ、${loginModel.name}さん</p>
 						<p><a href="logout">ログアウト</a></p>
+						<p><a href="nagabuchi">今月の長渕剛</a></p>
 					</c:if>
 				</p>
 			</div>
