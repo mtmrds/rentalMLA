@@ -107,7 +107,7 @@
 						</tr>
 						<tr>
 							<td align="center"><strong>プラン</strong></td>
-							<td class="plantable">
+							<td>
 							<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
 							<br><br>
 							初月限定！<br>
