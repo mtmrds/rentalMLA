@@ -199,6 +199,7 @@ from {
 					<span>I</span></div>
 				<div class="loading-area">
 					<span>T</span>
+					<span>S</span>
 					<span>U</span>
 					<span>Y</span>
 					<span>O</span>
@@ -249,7 +250,7 @@ from {
 	種子島の諸君！！！<br>
 	俺の名前は長渕剛！歌手活動をしています！<br>
   	皆さんは普段どんな音楽を聴いてますか？<br>
-  	長渕ですか？？剛ですか？？それともNAGABUCHI TUTOSHIですか？？？<br>
+  	長渕ですか？？剛ですか？？それともNAGABUCHI TSUYOSHIですか？？？<br>
   	意外と俺の曲ばかりで、流行りの曲を知らない人も多いのでは？？？？<br>
 	そこで今回は2024年にいま長渕が個人的に流行っていると思う、<br>
 	そんなおすすめの最新曲をここでご紹介するぜ！！！！<br></h2>
@@ -285,6 +286,7 @@ from {
 <a href="https://tsuyoshinagabuchi.com/fanclub/">ファンクラブはこちら</a>
 <a href="https://twitter.com/nagabuchi_staff">X(旧ツイッター)はこちら</a>
 <a href="https://www.instagram.com/tsuyoshi_nagabuchi/">インスタはこちら</a>
+<a href="https://www.youtube.com/channel/UCsQc7RfiO8e08JXeCGmmjCA">youtubeはこちら</a>
 <jsp:include page="footer.jsp" />
 </div>
 </body>
