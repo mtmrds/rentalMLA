@@ -47,7 +47,7 @@
 	</form>
     </form:form>
 
-    <a href="master">従業員画面作業へ（仮）</a>
+
     <jsp:include page="footer.jsp"/>
 </body>
 </html>

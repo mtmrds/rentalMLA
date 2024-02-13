@@ -20,9 +20,9 @@
 		<div class="loginpage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel" >
-			<table>
+			<table border="1" frame="box" rules="none" cellpadding="15" align="center">
 				<tr>
-					<td colspan="2">
+					<td colspan="2" align="center">
 						<h2>ログイン</h2>
 					</td>
 				<tr>
@@ -44,11 +44,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="btn-5"colspan="4">
-						<input type="submit" value="ログイン" class="btn-2">
+				<br>
+					<td class="btn-5"colspan="2" align="center">
+						<input type="submit" value="ログイン" class="btn">
 					</td>
+				<br>
 				</tr>
-			</table>
+
+				</table>
+
 			</form:form>
 			<jsp:include page="footer.jsp"/>
 		</div>
