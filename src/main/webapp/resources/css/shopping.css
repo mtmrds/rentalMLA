@@ -191,6 +191,15 @@ body {
 /*-------------------------------
 アイテム一覧ページ
 -------------------------------*/
+.NewFile {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink_gold_buble.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+}
 .itemsearch {
 	font-family: 'Yomogi',cursive;
 	color: grey;
@@ -204,8 +213,6 @@ body {
 .btn-1 {
 	text-align:center;
 }
-
-
 /*-------------------------------
 ログインページ
 -------------------------------*/
