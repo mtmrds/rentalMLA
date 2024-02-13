@@ -38,4 +38,8 @@ public class IkeCartCon {
 	public String toNagabuchi(Model model) {
         return "nagabuchi";
 	}
+	@RequestMapping(value = "/tamibuchi",method = RequestMethod.GET)
+	public String toTamibuchi(Model model) {
+        return "tamibuchi";
+	}
 }
