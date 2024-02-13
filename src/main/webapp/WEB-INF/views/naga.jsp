@@ -61,7 +61,7 @@ from {
   	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tami.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/tamibuchi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
