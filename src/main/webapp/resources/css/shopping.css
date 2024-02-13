@@ -225,7 +225,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 100vh;
-
+	font-size:20px;
 
 			}
 .loginpage table{
@@ -295,6 +295,7 @@ body {
 	font-weight: bold;
 	color:black;
 }
+
 
 /*-------------------------------
 ⑦マイページ

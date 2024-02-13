@@ -35,6 +35,7 @@ from {
 }
 .scroll-infinity__item>img {
   width: 100%;
+  height: 300px;
 }
 
 </style>
@@ -60,7 +61,7 @@ from {
   	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
+    <a href="tamibuchi"><li class="scroll-infinity__item"><img src="resources/itemimg/tamibuchi.jpg" /></li></a>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
@@ -76,15 +77,16 @@ from {
   </ul>
 </div>
 </div>
-		<h1>今週のおすすめ</h1>
+		<h1>毎週のおすすめ</h1>
 
-	おはようございます！当店は今後全て長渕に変わります<br>
+	おはようございます！当店は長渕押しです<br>
   	皆さんは普段どんな音楽を聴いてますか？<br>
   	意外と流行りの曲を知らない人も多いのでは？？？？？<br>
 	そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/tg19ldeDv_E?si=A-iQlMDhaVxVx2cD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	<br>
 	<strong><h3>プロフィール</h3></strong>
-	<img src="resources/image/tami.jpg" />
+	<img src="resources/itemimg/tami.jpg" width="200" height="300" />
 	長渕 剛Tsuyoshi Nagabuchi
 	1956年9月7日生まれ
 	鹿児島県出身<br>
@@ -126,6 +128,7 @@ from {
 さらに芸術分野では、1998年に東京・銀座の「日動画廊」に於いて初の詩画展を開催。2000年の第2回、加えて鹿児島、福岡、とそれぞれ約2万人を動員。<br>2013年～2015年にも全国各地で詩画展を開催している。<br>
 
 音楽のみに限らず、芸術、絵画のジャンルなどでも様々な魅力を発揮する彼の真摯な姿勢が、若者たちを中心に多くの支持を集めている。
+<a href="https://tsuyoshinagabuchi.com/fanclub/">よろしく</a>
 </main>
         <jsp:include page="footer.jsp"/>
     </div>
