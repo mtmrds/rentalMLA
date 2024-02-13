@@ -196,6 +196,14 @@ from {
 					<span>U</span>
 					<span>C</span>
 					<span>H</span>
+					<span>I</span></div>
+				<div class="loading-area">
+					<span>T</span>
+					<span>U</span>
+					<span>Y</span>
+					<span>O</span>
+					<span>S</span>
+					<span>H</span>
 					<span>I</span>
 				</div>
 
@@ -275,3 +283,5 @@ from {
 </div>
 </body>
 </html>
+
+
