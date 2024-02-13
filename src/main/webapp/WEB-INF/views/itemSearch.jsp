@@ -110,23 +110,21 @@ from {
                             <td><c:out value="${items.category}"/></td>
                             <td><c:out value="${items.quantity}"/></td>
                             <td>
-
-                     <form:form modelAttribute="itemModel">
-                           <form:hidden path="itemNo" value="${items.itemNo }" />
-                           <form:hidden path="title" value="pick"/>
-
-                         <c:choose>
-                             <c:when test="${items.quantity > 0}">
-                             <input type="submit" value="カートに入れる"/>
-                             </c:when>
-                           <c:otherwise>
-                             <input type="button" value="在庫切れ" disabled="disabled"/>
-                           </c:otherwise>
-                         </c:choose>
-                     </form:form>
-                            </td>
-                        </tr>
-                    </c:forEach>
+								<form:form modelAttribute="itemModel">
+								<form:hidden path="itemNo" value="${items.itemNo }" />
+								<form:hidden path="title" value="pick"/>
+								<c:choose>
+								<c:when test="${items.quantity > 0}">
+								<input type="submit" value="カートに入れる"/>
+								</c:when>
+								<c:otherwise>
+								<input type="button" value="在庫切れ" disabled="disabled"/>
+								</c:otherwise>
+								</c:choose>
+								</form:form>
+							</td>
+						</tr>
+					</c:forEach>
                 </table>
             </c:if>
 </main>
