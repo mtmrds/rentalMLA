@@ -34,4 +34,8 @@ public class IkeCartCon {
 		model.addAttribute("cartList", cartList);
         return "cartcontent";
 	}
+	@RequestMapping(value = "/nagabuchi",method = RequestMethod.GET)
+	public String toNagabuchi(Model model) {
+        return "nagabuchi";
+	}
 }

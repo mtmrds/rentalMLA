@@ -48,7 +48,7 @@ from {
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
   <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
+  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg" /></li>
@@ -57,7 +57,7 @@ from {
     <li class="scroll-infinity__item"><img src="resources/itemimg/masausa.jpg" /></li>
   </ul>
   <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
+  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>
@@ -66,7 +66,7 @@ from {
     <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
   </ul>
   <ul class="scroll-infinity__list scroll-infinity__list--left">
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>

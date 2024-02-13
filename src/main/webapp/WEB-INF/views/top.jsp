@@ -169,51 +169,46 @@
     		}
     </style>
 	</head>
-	<body>
-		<div class="toppage">
-			<jsp:include page="header.jsp"/>
-			<form:form modelAttribute="loginModel">
-				<div class="loading-area">
-					<span>R</span>
-					<span>E</span>
-					<span>N</span>
-					<span>T</span>
-					<span>A</span>
-					<span>L</span>
-					<span>S</span>
-					<span>I</span>
-					<span>T</span>
-					<span>E</span>
-				</div>
+<body>
+	<div class="toppage">
+		<jsp:include page="header.jsp"/>
+		<form:form modelAttribute="loginModel">
+			<div class="loading-area">
+				<span>R</span>
+				<span>E</span>
+				<span>N</span>
+				<span>T</span>
+				<span>A</span>
+				<span>L</span>
+				<span>S</span>
+				<span>I</span>
+				<span>T</span>
+				<span>E</span>
+			</div>
 				<br>
-					<div class="topselect">
-						<form:form modelAttribute="itemModel">
-
-							<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
-							<a href="search" class ="btn-img">
-							<img src="resources/image/虫眼鏡.png" width= "60"height= "auto">商品一覧検索</a>
-						</form:form>
+				<div class="topselect">
+					<form:form modelAttribute="itemModel">
+					<!--見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">-->
+						<a href="search" class ="btn-img">
+						<img src="resources/image/虫眼鏡.png" width= "60"height= "auto">商品一覧検索</a>
+					</form:form>
 
 						<a href="setRegist" class ="btn-img">
 						<img src="resources/image/会員登録画像.png" width= "60"height= "auto">新規会員登録</a>
-
 						<!--<form:form modelAttribute="itemModel">
 						<a href="search">商品一覧検索</a>
 							見た目悪かったからa hrefタグに変更しました 高島  <input type="submit" value="商品一覧検索" class="btn">
 						</form:form>-->
-
-
-					</div>
-					<br>
-					<div class="loopplan">
-						<div class="loopplan_box">
-							<ul class="loopplan_list loopplan_list--left">
-								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
-								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
-								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
-								<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
-							</ul>
-						</div>
+				</div>
+				<br>
+				<div class="loopplan">
+					<div class="loopplan_box">
+						<ul class="loopplan_list loopplan_list--left">
+							<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+							<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+							<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+							<li class="loopplan_list_item">プラン紹介('ω')ノ ★お試しプラン(新規登録月限定):324円 2枚/月 ★Bronzeプラン:1080円 6枚/月 ★Silverプラン:2160円 12枚/月 ★Goldプラン:5400円 無制限/月</li>
+						</ul>
 					</div>
 					<div class="topcontents">
 						<div class="news">

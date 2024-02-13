@@ -32,13 +32,19 @@
 					</tr>
 				</c:forEach>
 				</table>
-				<table>
+				<!-- 表の内容がないのでコメントにしてます
+				 <table>
 					<tr>
-						<td colspan="4">
+						<td colspan="4">-->
+
+						<br>
+
 						<input type="submit" name = "end" value="決済確定"  class="btn"/>
-						</td>
+
+						<br>
+					<!--  </td>
 					</tr>
-				</table>
+				</table>	-->
 				</form:form>
 			<p><a href="<c:url value='cart' />">カート確認</a></p>
 			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
