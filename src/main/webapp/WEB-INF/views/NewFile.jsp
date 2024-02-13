@@ -10,13 +10,30 @@
 <style>
 
 .errors {
-		font-family: 'Yomogi',cursive;
-		color: red;
-		font-weight: bold;
+	font-family: 'Yomogi',cursive;
+	color: red;
+	font-weight: bold;
 }
-
-ul{
-   list-style :見栄えの指定;
+ ul{
+    list-style :見栄えの指定;
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
 }
 
 </style>
