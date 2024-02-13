@@ -8,7 +8,13 @@
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
 <style>
+span {
+    background-color: #ffffc1;
 
+}
+.size_test {
+    font-size:  25px;    /* 文字サイズ指定 */
+}
 .errors {
 	font-family: 'Yomogi',cursive;
 	color: red;
@@ -41,13 +47,14 @@
 <body>
 <div class="newfile">
 <jsp:include page="header.jsp"/>
- 	<h1>店長川上の1日</h1>
+    <div class="size_test">
+ 	<h1><span>店長川上の1日</span></h1>
 		おはようございます！店長の川上です。<br>
   		皆さんは普段どんな音楽を聴いてますか？<br>
   		意外と流行りの曲を知らない人も多いのでは？？？？？<br>
 		そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
 	<br>
-    <h2><strong>最近流行りの今バズってる曲トップ10</strong></h2>
+    <h2><strong><span>最近流行りの今バズってる曲トップ10</span></strong></h2>
 		<ul>
 		    <li> 唱 / Ado</li>
 		    <li> 晩餐歌 / tuki.</li>
@@ -60,9 +67,10 @@
 		    <li> 人マニア / 原口沙輔</li>
 		    <li> LEAP HIGH! ～明日へ、めいっぱい～</li>
 		</ul>
-
+	</div>
 	<br>
- 	<h3><strong>TikTokの人気曲ランキング</strong></h3>
+	    <div class="size_test">
+ 	<h3><strong><span>TikTokの人気曲ランキング</span></strong></h3>
 		<ul>
 		    <li> 唱 / Ado</li>
 		    <li> アイドル / YOASOBI</li>
@@ -75,10 +83,9 @@
 		    <li> you are my curse / nyamura</li>
 		    <li> 最高到達点 SEKAI NO OWARI</li>
 		</ul>
-
 		知っている曲や気になる曲はありましたか？
 		素敵な音楽ライフを！
-
+	</div>
 <jsp:include page="footer.jsp" />
 </div>
 </body>
