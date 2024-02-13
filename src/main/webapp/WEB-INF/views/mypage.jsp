@@ -77,9 +77,11 @@
                     <td><input type="password" name="confirmPassword" /></td>
                 </tr>
     		</table>
+    		<br>
     		<input type="submit" value="更新" class="btn">
 		</form:form>
 		<!-- 退会フォーム -->
+			<br>
 		<form method="post" action="deleteAccount">
     		<input type="submit" value="退会" class="btn">
 		</form>
