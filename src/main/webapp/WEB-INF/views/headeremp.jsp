@@ -24,11 +24,10 @@
 	<header>
     	<form:form modelAttribute="memberModel">
 		<div class="logo">
-			<a href="top"  alt="トップページに戻る">
+			<a href="master"  alt="トップページに戻る">
 				<img src="resources/image/logo.png">
 				<h1>Music Life Agency</h1>
 			</a>
-			<a href="master">従業員画面作業へ（仮）</a>
 		</div>
 
 		 <!-- 各種ページのリンク -->
@@ -36,7 +35,7 @@
 
 		 	<!-- <a href="mypage">マイページ</a>｜<a href="cart">カート</a>｜<a href="b">履歴管理</a>|<a href="c">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　 -->
 
-		 	<a href="tenzai">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="e">情報管理</a>　
+		 	<a href="tenzai">在庫管理</a>｜<a href="d">督促管理</a>｜<a href="nagabuchi">今月の長渕剛</a>　
 
 		 </div>
 

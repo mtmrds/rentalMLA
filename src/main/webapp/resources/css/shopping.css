@@ -191,6 +191,16 @@ body {
 /*-------------------------------
 アイテム一覧ページ
 -------------------------------*/
+.newfile {
+	font-family: 'Yomogi',cursive;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+
+}
+
 .itemsearch {
 	font-family: 'Yomogi',cursive;
 	color: grey;
@@ -204,8 +214,6 @@ body {
 .btn-1 {
 	text-align:center;
 }
-
-
 /*-------------------------------
 ログインページ
 -------------------------------*/
@@ -218,10 +226,8 @@ body {
 	background-position: center;
 	min-height: 100vh;
 
+
 			}
-
-
-
 .loginpage table{
 	border-collapse: collapse;
 	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
@@ -376,7 +382,7 @@ body {
 
 }
 
-.fade-in-text{
+.fade-in-text {
   position: relative;
   font-size: 30px;
   opacity: 0; /* 初めは透明に設定 */
@@ -386,7 +392,12 @@ body {
 
 }
 
-.fade-in-text img{
+.fade-in-text p {
+	vertical-align:middle;
+	text-align: center;
+}
+
+.fade-in-text img {
 	vertical-align:middle;
 }
 
@@ -404,7 +415,6 @@ body {
     background-repeat:  no-repeat;                /* 画像の繰り返しを指定  */
     width:auto;                                   /* 横幅のサイズを指定    */
     height:400pX;								  /* 縦幅のサイズを指定    */
-
 }
 .mako {
 	text-align: center;
