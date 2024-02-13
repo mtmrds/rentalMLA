@@ -93,10 +93,6 @@ span {
 		    <li> 人マニア / 原口沙輔</li>
 		    <li> LEAP HIGH! ～明日へ、めいっぱい～</li>
 		</ul>
- </div>
-	<br>
- 	<h3><strong><span>TikTokの人気曲ランキング</span></strong></h3>
- 	  <div class="box1-4">
 	</div>
 	<br>
 	    <div class="size_test">
@@ -114,8 +110,6 @@ span {
 		    <li> 最高到達点 SEKAI NO OWARI</li>
 		</ul>
 </div>
-		知っている曲や気になる曲はありましたか？
-		素敵な音楽ライフを！
 		知っている曲や気になる曲はありましたか？
 		素敵な音楽ライフを！
 	</div>
