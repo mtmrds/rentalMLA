@@ -238,6 +238,12 @@ from {
 </div>
 
 <body>
+	<div>
+		<h1>俺の最新のミュージックライフ</h1>
+		<p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/jY9NKOjtBq4?si=R8-rzpYs94Zj4ofY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</p>
+	</div>
 	<div class="nagabuchi">
 <h2>
 	種子島の諸君！！！<br>
