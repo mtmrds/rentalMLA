@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*--------------------------------
+項目
+①ヘッダー部分
+---------------------------------*/
+
+/*--------------------------------
+①ヘッダー部分
+---------------------------------*/
+/*ロゴ*/
+.logotitle a {
+	display: flex;
+	width: 438px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.logotitle img {
+	height: 70px;
+	width: 70px;
+	margin: 10px 1px 10px 5px;
+	boder: 1px;
+}
+
+.logotitle h1 {
+	font-family: 'Sacramento', cursive;
+	font-size: 45px;
+	margin: 10px;
+	padding: 10px;
+	color: gray;
+}
+
+/*各種リンク*/
+.linkmenu {
+	font-family: 'Yomogi',cursive;
+	text-align: right;
+	font-size: 25px;
+}
