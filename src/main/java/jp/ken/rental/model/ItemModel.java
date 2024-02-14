@@ -7,8 +7,17 @@ public class ItemModel {
 	  private String type;
 	  private String category;
 	  private Integer quantity;
+	  private String image;
 	  private int cNo;
 	  private int tNo;
+
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 
 	public String getItemNo() {
 		return itemNo;

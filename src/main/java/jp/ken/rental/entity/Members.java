@@ -21,8 +21,12 @@ public class Members implements Serializable{
 	private String type;
 	private String category;
 	private Integer quantity;
+	private String image;
 	private int cNo;
 	private int tNo;
+
+
+
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
@@ -36,6 +40,15 @@ public class Members implements Serializable{
 			return null;
 		}
 	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 
 	public Integer getId() {
 		return id;
