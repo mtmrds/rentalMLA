@@ -1,4 +1,4 @@
-<div class="logo">
+<div class="logotitle">
 	<a href="top"  alt="トップページに戻る">
 		<img src="resources/image/logo.png">
 		<h1>Music Life Agency</h1>
