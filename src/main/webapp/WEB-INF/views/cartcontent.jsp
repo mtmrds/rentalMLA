@@ -9,8 +9,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>カート内</title>
+
 	</head>
 	<body>
+
 		<div class="cartcontent">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="itemModel">
@@ -35,11 +37,15 @@
 					</tr>
 				</c:forEach>
 			</table>
+
 		</form:form>
 		<br>
 		<form:form modelAttribute="loginModel">
 			<input type="submit"  name = "index" value="決済" class="btn">
+
 		</form:form>
+
+
 		<p>${message}</p>
 		<br>
 		<a href="top">トップに戻る</a>
