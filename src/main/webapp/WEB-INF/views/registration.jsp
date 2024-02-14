@@ -9,8 +9,15 @@
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
 
-<style>
 
+<style>
+/*
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+}
+*/
 
 </style>
 	</head>
@@ -102,20 +109,20 @@
 						</tr>
 						<tr>
 							<td align="center"><strong>プラン</strong></td>
-							<td>
+							<td style="border-right: none;">
 							<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
 							<br><br>
 							初月限定！<br>
 							月額324円<br>
 							2枚/月
 							</td>
-							<td>
+							<td style="border-right: none;">
 							<form:radiobutton path="plan" label="Bronzeプラン" value="Bronzeプラン" />
 							<br><br>
 							月額1080円<br>
 							6枚/月
 							</td>
-							<td>
+							<td style="border-right: none;">
 							<form:radiobutton path="plan" label="Silverプラン" value="Silverプラン" />
 							<br><br>
 							月額2160円<br>
