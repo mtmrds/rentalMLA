@@ -172,6 +172,7 @@
 <body>
 	<div class="toppage">
 		<jsp:include page="header.jsp"/>
+		<audio src="resources/music/08-Nerd-Strut-_Instrumental_.mp3" type="audio/mp3" autoplay loop></audio>
 		<form:form modelAttribute="loginModel">
 			<div class="loading-area">
 				<span>R</span>
