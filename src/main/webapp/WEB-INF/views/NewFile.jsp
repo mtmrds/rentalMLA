@@ -8,7 +8,15 @@
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
 <style>
-
+p {
+	padding: 50px;
+	font-size: 1.0em;
+	font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+p span {
+	font-size: 2.0em;
+	font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+}
 .newfile2 {
 list-style:none;
 }
@@ -17,7 +25,7 @@ list-style:none;
       float: right;
     }
 
-span {
+span2 {
     background-color: #ffffc1;
 }
 
@@ -79,19 +87,24 @@ span {
 <div class="newfile">
 <jsp:include page="header.jsp"/>
 <div class="newfile2">
+<div class="title-area">
+</div>
+
   	<li class="scroll-infinity__item"><img src="resources/image/neko.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/kinoko-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/ebi.gif" /></li>
  	<li class="scroll-infinity__item"><img src="resources/image/toraianguru-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/再生おにぎり-1.gif" /></li>
   	</div>
- 	<h1><span>店長川上の1日</span></h1>
-		おはようございます！店長の川上です。<br>
-  		皆さんは普段どんな音楽を聴いてますか？<br>
-  		意外と流行りの曲を知らない人も多いのでは？？？？？<br>
-		そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+ 	<h1><span2>店長川上の1日<span>&#128681;</span></span2></h1>
+
+		おはようございます！店長の川上です(｡･ω･｡)ﾉ
+          <br>
+  		皆さんは普段どんな音楽を聴いてますか<span>&#128580;</span>?<br>
+  		意外と流行りの曲を知らない人も多いのでは?????<br>
+		そこで今回は2024年にいま流行っている曲をここでご紹介～！<span>&#128077;&#128077;&#128077;</span><br>
 	<br>
-    <h2><strong><span>最近流行りの今バズってる曲トップ10</span></strong></h2>
+    <h2><strong><span2>最近流行りの今バズってる曲トップ10<span>&#128111;</span></span2></strong></h2>
   <div class="box1-4">
 		<ul>
 		    <li> 唱 / Ado</li>
@@ -108,7 +121,7 @@ span {
 	</div>
 	<br>
 	    <div class="size_test">
- 	<h3><strong><span>TikTokの人気曲ランキング</span></strong></h3>
+ 	<h3><strong><span2>TikTokの人気曲ランキング<span>&#128064;</span></span2></strong></h3>
 		<ul>
 		    <li> 唱 / Ado</li>
 		    <li> アイドル / YOASOBI</li>
@@ -123,7 +136,7 @@ span {
 		</ul>
 </div>
 		知っている曲や気になる曲はありましたか？
-		素敵な音楽ライフを！
+		素敵な音楽ライフを！<span>&#10024;</span>
 	</div>
 <jsp:include page="footer.jsp" />
 </div>
