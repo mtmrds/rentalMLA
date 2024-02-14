@@ -3,13 +3,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!-- フッター -->
-<!DOCTYPE html>
-<html>
-	<head>
-	</head>
-	<footer>
-		<div class="footer">
-			<p><small>&copy;株式会社 Music Life Agency</small></p>
-		</div>
-	</footer>
-</html>
+
+<footer>
+	<div class="footer">
+		<p><small>&copy;株式会社 Music Life Agency</small></p>
+	</div>
+</footer>
