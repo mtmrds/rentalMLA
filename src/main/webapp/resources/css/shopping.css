@@ -221,6 +221,36 @@ body {
 .btn-1 {
 	text-align:center;
 }
+
+/*流れる画像設定*/
+@keyframes infinity2-scroll-left {
+from {
+  transform: translateX(0);
+}
+ to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity2__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity2__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity2__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity2__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity2__item>img {
+  width: 100%;
+  height: 300px;
+}
+
 /*-------------------------------
 ログインページ
 -------------------------------*/
