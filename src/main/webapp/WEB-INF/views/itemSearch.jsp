@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <title>レンタルサイト 商品一覧画面</title>
 <style>
-@keyframes infinity-scroll-left {
+/* cssへ移動
+@keyframes infinity2-scroll-left {
 from {
   transform: translateX(0);
 }
@@ -18,25 +19,33 @@ from {
   transform: translateX(-100%);
 }
 }
-.scroll-infinity__wrap {
+.scroll-infinity2__wrap {
   display: flex;
   overflow: hidden;
 }
-.scroll-infinity__list {
+.scroll-infinity2__list {
   display: flex;
   list-style: none;
   padding: 0
 }
-.scroll-infinity__list--left {
+.scroll-infinity2__list--left {
   animation: infinity-scroll-left 20s infinite linear 0.5s both;
 }
-.scroll-infinity__item {
+.scroll-infinity2__item {
   width: calc(70vw / 6);
 }
-.scroll-infinity__item>img {
+.scroll-infinity2__item>img {
   width: 100%;
   height: 300px;
 }
+
+div.center {
+width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
+
 
 </style>
 
@@ -45,7 +54,9 @@ from {
     <div class="itemsearch">
         <jsp:include page="header.jsp"/>
 
-<main>
+<div class="center">
+<h1>MUSICLIFE　商品検索画面</h1>
+</div>
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
   <ul class="scroll-infinity__list scroll-infinity__list--left">
@@ -75,12 +86,23 @@ from {
     <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
     <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
   </ul>
+
+
+<main>
+<div class="scroll-infinity2">
+<div class="scroll-infinity2__wrap">
+  <jsp:include page="itemSearchimg.jsp"/>
+  
+
 </div>
 </div>
 		<form:form modelAttribute="itemModel">
+        <div class="center">
            <div>
-                検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
+                <h2>検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong><br>
+                のいずれかを入力してください</h2>
            </div>
+           <br>
             <div>
                  <label for="id"><strong>ID</strong></label>
                  <form:input path="itemNo"/>
@@ -88,12 +110,15 @@ from {
                  <form:input path="title"/>
                  <input type="submit" value="検索する" class="btn">
            </div>
+           <br>
            <div>
                  <c:out value="${message}"/>
            </div>
         </form:form>
             <c:if test="${!empty itemList}">
-                <table>
+
+                <table border="1" cellpadding="15" algin="center">
+
                     <tr>
                         <th>ID</th>
                         <th>画像</th>
@@ -117,7 +142,7 @@ from {
 								<form:hidden path="title" value="pick"/>
 								<c:choose>
 								<c:when test="${items.quantity > 0}">
-								<input type="submit" value="カートに入れる"/>
+								<input type="submit" value="カートに入れる" />
 								</c:when>
 								<c:otherwise>
 								<input type="button" value="在庫切れ" disabled="disabled"/>
@@ -129,7 +154,8 @@ from {
 					</c:forEach>
                 </table>
             </c:if>
-</main>
+            </div>
+
         <jsp:include page="footer.jsp"/>
     </div>
 </body>
