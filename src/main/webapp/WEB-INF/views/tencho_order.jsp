@@ -24,7 +24,7 @@
             <c:forEach var="listTenCart" items="${tenCartList}">
                 <tr>
                     <td>${listTenCart.itemNo }</td>
-                    <td>&nbsp;</td>
+                    <td><img src="${listTenCart.image }"width="100" height="150" /></td>
                     <td><c:out value="${listTenCart.title}"/></td>
                     <td><c:out value="${listTenCart.type}"/></td>
                     <td>

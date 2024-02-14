@@ -203,7 +203,7 @@ public class MembersDao {
 	}
 	//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定できるようにした
 	public int insertCart(Members members) {
-		String sql = "INSERT INTO history(title, type ,image) VALUES(?, ?)";
+		String sql = "INSERT INTO history(title, type ,image) VALUES(?, ?, ?)";
 		Object[] parameters = { members.getTitle(), members.getType(), members.getImage()};
 
 		TransactionStatus transactionStatus = null;
@@ -431,7 +431,7 @@ public class MembersDao {
 	}
 
 	public int insertTenCart(Members members) {
-		String sql = "INSERT INTO tencart(title, type,item_no) VALUES(?, ?, ?)";
+		String sql = "INSERT INTO tencart(title, type,item_no, image) VALUES(?, ?, ?, ?)";
 		Object[] parameters = { members.getTitle(), members.getType(),members.getItemNo() };
 
 		TransactionStatus transactionStatus = null;

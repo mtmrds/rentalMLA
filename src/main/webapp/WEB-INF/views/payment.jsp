@@ -26,7 +26,7 @@
 					</tr>
 					<c:forEach var="listCart" items="${cartList}">
 					<tr>
-						<td>&nbsp;</td><!-- 画像の引っ張り方不明の為空白にしています -->
+						<td><img src="${listCart.image }"width="100" height="150" /></td>
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
 					</tr>

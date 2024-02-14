@@ -34,6 +34,7 @@
 					<table>
 						<tr>
 							<th>ID</th>
+							<th>画像</th>
 							<th>タイトル</th>
 							<th>タイプ</th>
 							<th>カテゴリー</th>
@@ -43,6 +44,7 @@
 						<c:forEach var="items" items="${itemList}">
 							<tr>
 								<td><c:out value="${items.itemNo}"/></td>
+								<td><img src="${items.image }"width="100" height="150" /></td>
 								<td><c:out value="${items.title}"/></td>
 								<td><c:out value="${items.type}"/></td>
 								<td><c:out value="${items.category}"/></td>
