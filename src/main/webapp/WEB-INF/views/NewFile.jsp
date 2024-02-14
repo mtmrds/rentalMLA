@@ -8,6 +8,11 @@
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
 <style>
+
+.newfile2 {
+list-style:none;
+}
+
 .scroll-infinity__item{
       float: right;
     }
@@ -73,12 +78,13 @@ span {
 <body>
 <div class="newfile">
 <jsp:include page="header.jsp"/>
+<div class="newfile2">
   	<li class="scroll-infinity__item"><img src="resources/image/neko.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/kinoko-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/ebi.gif" /></li>
  	<li class="scroll-infinity__item"><img src="resources/image/toraianguru-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/再生おにぎり-1.gif" /></li>
-
+  	</div>
  	<h1><span>店長川上の1日</span></h1>
 		おはようございます！店長の川上です。<br>
   		皆さんは普段どんな音楽を聴いてますか？<br>
