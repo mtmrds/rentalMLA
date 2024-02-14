@@ -13,13 +13,75 @@
 			font-family: 'Yomogi',cursive;
 			color: red;
 			font-weight: bold;
+
 		}
+
+
+		@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+ to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+  height: 150px;
+}
 		</style>
 	</head>
 	<body>
 		<div class="loginpage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel" >
+<p>test</p>
+<div class="scroll-infinity">
+<div class="scroll-infinity__wrap">
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+</div>
+</div>
 			<table cellpadding="15" align="center">
 				<tr>
 					<td colspan="2" align="center">
@@ -44,14 +106,47 @@
 					</td>
 				</tr>
 				<tr>
-				<br>
+
 					<td class="btn-5"colspan="2" align="center">
 						<input type="submit" value="ログイン" class="btn">
 					</td>
-				<br>
+
 				</tr>
 
 				</table>
+
+				<div class="scroll-infinity">
+<div class="scroll-infinity__wrap">
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+  </ul>
+</div>
+</div>
+
 
 			</form:form>
 			<jsp:include page="footer.jsp"/>
