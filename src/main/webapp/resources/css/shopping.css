@@ -216,6 +216,12 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 100vh;
+
+}
+
+.itemsearch td{
+	table-layout: fixed;
+
 }
 
 .btn-1 {
