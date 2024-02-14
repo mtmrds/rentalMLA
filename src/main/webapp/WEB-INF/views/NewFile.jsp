@@ -91,7 +91,6 @@ span2 {
 </div>
 
   	<li class="scroll-infinity__item"><img src="resources/image/neko.gif" /></li>
-  	<li class="scroll-infinity__item"><img src="resources/image/kinoko-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/ebi.gif" /></li>
  	<li class="scroll-infinity__item"><img src="resources/image/toraianguru-1.gif" /></li>
   	<li class="scroll-infinity__item"><img src="resources/image/再生おにぎり-1.gif" /></li>
