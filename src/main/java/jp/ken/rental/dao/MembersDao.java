@@ -171,7 +171,7 @@ import jp.ken.rental.entity.Members;
 			}
 		}
 		public int insertItem(Members members) {
-			String sql = "INSERT INTO movitem(item_no, title, type, category, image) VALUES(?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO movitem(item_no, title, type, category, image) VALUES(?, ?, ?, ?, ?)";
 			Object[] parameters = { members.getItemNo(), members.getTitle(),
 					members.getType(), members.getCategory(), members.getImage() };
 			TransactionStatus transactionStatus = null;
@@ -203,8 +203,8 @@ import jp.ken.rental.entity.Members;
 		}
 		//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定できるようにした
 		public int insertCart(Members members) {
-	        String sql = "INSERT INTO history(title, type, item_no) VALUES(?, ?, ?)";
-	        Object[] parameters = { members.getTitle(), members.getType(), members.getItemNo() };
+	        String sql = "INSERT INTO history(title, type, item_no,image) VALUES(?, ?, ?, ?)";
+	        Object[] parameters = { members.getTitle(), members.getType(), members.getItemNo(),members.getImage() };
 
 	        TransactionStatus transactionStatus = null;
 	        DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
