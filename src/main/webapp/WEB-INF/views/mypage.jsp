@@ -40,7 +40,7 @@ from {
 </head>
 <body>
 	<div class="mypage">
-		<jsp:include page="mypageHeader.jsp"/>
+		<jsp:include page="header.jsp"/>
 
         <c:if test="${not empty successMessage}">
     			<p>${successMessage}</p>
@@ -171,6 +171,7 @@ from {
     		</ul>
     			</div>
     		</div>
+			</div>
 		<jsp:include page="footer.jsp"/>
     </div>
 </body>
