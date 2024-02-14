@@ -31,7 +31,6 @@
 			<div class="logo">
 				<a href="top"  alt="トップページに戻る">
 					<img src="resources/image/logo.png">
-					<audio src="resources/music/08-Nerd-Strut-_Instrumental_.mp3" type="audio/mp3" autoplay loop></audio>
 					<h1>Music Life Agency</h1>
 				</a>
 			</div>
