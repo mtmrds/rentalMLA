@@ -40,6 +40,7 @@
 		<form:form modelAttribute="loginModel">
 			<input type="submit"  name = "index" value="決済" class="btn">
 		</form:form>
+		<p>${message}</p>
 		<br>
 		<a href="top">トップに戻る</a>
 		<jsp:include page="footer.jsp"/>
