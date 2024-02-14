@@ -10,11 +10,6 @@
 		<title> 会員登録画面 </title>
 
 <style>
-.errors{
-		font-family: 'Yomogi',cursive;
-		color: red;
-		font-weight: bold;
-}
 
 
 </style>
