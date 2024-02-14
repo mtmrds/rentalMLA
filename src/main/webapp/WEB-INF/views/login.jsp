@@ -9,13 +9,6 @@
 	<meta charset="UTF-8">
 	<title>Music Life Agency</title>
 <style>
-.errors {
-			font-family: 'Yomogi',cursive;
-			color: red;
-			font-weight: bold;
-		}
-
-
 @keyframes infinity-scroll-left {
 from {
   transform: translateX(0);
