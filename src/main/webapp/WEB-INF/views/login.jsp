@@ -5,19 +5,18 @@
 <!-- ログイン画面 -->
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Music Life Agency</title>
-		<style>
-			.errors {
+<head>
+	<meta charset="UTF-8">
+	<title>Music Life Agency</title>
+<style>
+.errors {
 			font-family: 'Yomogi',cursive;
 			color: red;
 			font-weight: bold;
-
 		}
 
 
-		@keyframes infinity-scroll-left {
+@keyframes infinity-scroll-left {
 from {
   transform: translateX(0);
 }
@@ -44,43 +43,44 @@ from {
   width: 100%;
   height: 150px;
 }
-		</style>
-	</head>
-	<body>
-		<div class="loginpage">
-			<jsp:include page="header.jsp"/>
-			<form:form modelAttribute="loginModel" >
+</style>
+</head>
+
+<body>
+<div class="loginpage">
+<jsp:include page="header.jsp"/>
+<form:form modelAttribute="loginModel" >
 
 <div class="scroll-infinity">
-<div class="scroll-infinity__wrap">
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-</div>
+	<div class="scroll-infinity__wrap">
+		<ul class="scroll-infinity__list scroll-infinity__list--left">
+		  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		</ul>
+		<ul class="scroll-infinity__list scroll-infinity__list--left">
+		  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		</ul>
+		<ul class="scroll-infinity__list scroll-infinity__list--left">
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+		</ul>
+	</div>
 </div>
 			<table cellpadding="15" align="center">
 				<tr>
@@ -115,36 +115,36 @@ from {
 
 				</table>
 
-				<div class="scroll-infinity">
-<div class="scroll-infinity__wrap">
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
-  </ul>
-</div>
+<div class="scroll-infinity">
+	<div class="scroll-infinity__wrap">
+	  <ul class="scroll-infinity__list scroll-infinity__list--left">
+	  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	  </ul>
+	  <ul class="scroll-infinity__list scroll-infinity__list--left">
+	  	<li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	  </ul>
+	  <ul class="scroll-infinity__list scroll-infinity__list--left">
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif"  /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	    <li class="scroll-infinity__item"><img src="resources/image/ケーキ.gif" /></li>
+	  </ul>
+	</div>
 </div>
 
 

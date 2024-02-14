@@ -36,6 +36,11 @@
 	transform: translateY(5px);
 }
 
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+}
 
 
 /*--------------------------------
