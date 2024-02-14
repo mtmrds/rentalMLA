@@ -50,7 +50,7 @@ from {
 		<div class="loginpage">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="loginModel" >
-<p>test</p>
+
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
   <ul class="scroll-infinity__list scroll-infinity__list--left">
