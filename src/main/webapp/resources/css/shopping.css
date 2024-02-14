@@ -36,26 +36,31 @@
 	transform: translateY(5px);
 }
 
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+}
 
 
 /*--------------------------------
 ②ヘッダー
 --------------------------------*/
-.logo a {
+.logotitle a {
 	display: flex;
 	width: 438px;
 	color: inherit;
 	text-decoration: none;
 }
 
-.logo img {
+.logotitle img {
 	height: 70px;
 	width: 70px;
 	margin: 10px 1px 10px 5px;
 	boder: 1px;
 }
 
-.logo h1 {
+.logotitle h1 {
 	font-family: 'Sacramento', cursive;
 	font-size: 45px;
 	margin: 10px;
@@ -63,11 +68,13 @@
 	color: gray;
 }
 
-.linkpage ,p {
+.linkmenu {
 	font-family: 'Yomogi',cursive;
 	text-align: right;
 	font-size: 25px;
 }
+
+
 
 /* カート */
 /* 基本設定 */
@@ -214,6 +221,36 @@ body {
 .btn-1 {
 	text-align:center;
 }
+
+/*流れる画像設定*/
+@keyframes infinity2-scroll-left {
+from {
+  transform: translateX(0);
+}
+ to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity2__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity2__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity2__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity2__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity2__item>img {
+  width: 100%;
+  height: 300px;
+}
+
 /*-------------------------------
 ログインページ
 -------------------------------*/
@@ -235,18 +272,34 @@ body {
 
 }
 
-/*
-
-.loginpage table tr {
-	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+/*流れるgif設定*/
+@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
 }
-/*
-.loginpage table td {
-	border: double;
-
+ to {
+  transform: translateX(-100%);
 }
-*/
-
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+  height: 150px;
+}
 
 
 /*-------------------------------
@@ -328,7 +381,6 @@ body {
 	font-weight: bold;
 	color:black;
 }
-
 
 
 
