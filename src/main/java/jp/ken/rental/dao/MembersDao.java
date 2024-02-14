@@ -171,8 +171,9 @@ public class MembersDao {
 		}
 	}
 	public int insertItem(Members members) {
-		String sql = "INSERT INTO movitem(item_no, title, type, category) VALUES(?, ?, ?, ?, ?)";
-		Object[] parameters = { members.getItemNo(), members.getTitle(), members.getType(), members.getCategory() };
+		String sql = "INSERT INTO movitem(item_no, title, type, category, image) VALUES(?, ?, ?, ?, ?, ?)";
+		Object[] parameters = { members.getItemNo(), members.getTitle(),
+				members.getType(), members.getCategory(), members.getImage() };
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -202,8 +203,8 @@ public class MembersDao {
 	}
 	//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定できるようにした
 	public int insertCart(Members members) {
-		String sql = "INSERT INTO history(title, type) VALUES(?, ?)";
-		Object[] parameters = { members.getTitle(), members.getType() };
+		String sql = "INSERT INTO history(title, type ,image) VALUES(?, ?)";
+		Object[] parameters = { members.getTitle(), members.getType(), members.getImage()};
 
 		TransactionStatus transactionStatus = null;
 		DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
