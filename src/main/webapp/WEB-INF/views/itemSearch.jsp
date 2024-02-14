@@ -38,6 +38,7 @@ from {
   width: 100%;
   height: 300px;
 }
+*/
 
 div.center {
 width:700px;
@@ -59,43 +60,15 @@ text-align: center;
 </div>
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/masausa.jpg" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
-  </ul>
 
 
-<main>
+
 <div class="scroll-infinity2">
 <div class="scroll-infinity2__wrap">
   <jsp:include page="itemSearchimg.jsp"/>
-  
-
 </div>
 </div>
+</div><br>
 		<form:form modelAttribute="itemModel">
         <div class="center">
            <div>
