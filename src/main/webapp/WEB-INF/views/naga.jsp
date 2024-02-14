@@ -10,6 +10,11 @@
     <meta charset="UTF-8">
     <title>レンタルサイト 商品一覧画面</title>
 <style>
+body {
+  background-color: black; //これは赤色
+}
+
+
 @keyframes infinity-scroll-left {
 from {
   transform: translateX(0);
@@ -39,6 +44,40 @@ from {
 }
 .nagas{
 	text-align: center;
+}
+.nagass{
+	color: white;
+	text-align: center;
+}
+.nagasa{
+	font-size:5em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+
+	webkit-background-clip: text;
+}
+.nn{
+text-align: center;
+
+}
+.nagab{
+	color: white;
+	text-align: center;
+	background-color: gray;
+
+}
+.bi{
+font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+.f{
+background: gray;
+text-align: left;
+
 }
 
 </style>
@@ -80,16 +119,22 @@ from {
   </ul>
 </div>
 </div>
+<div class="nagass">
 		<h1>毎週のおすすめ</h1>
 
-	おはようございます！当店は長渕押しです<br>
-  	皆さんは普段どんな音楽を聴いてますか？<br>
-  	意外と流行りの曲を知らない人も多いのでは？？？？？<br>
-	そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+	おはようございます！当店は長渕押しです。皆さんは普段どんな音楽を聴いてますか？<br>
+  	意外と流行りの曲を知らない人も多いのでは？？？？？そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+	まずはこの前の新潟のジョギングから<br></div>
+	<div class="nn">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/tg19ldeDv_E?si=A-iQlMDhaVxVx2cD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
 	<br>
-	<strong><h3>プロフィール</h3></strong>
-	<img src="resources/itemimg/tamibuchi.jpg" width="200" height="300" />
+	<div class="nagab">
+	<div class="bi">
+	<strong><h3>  BIOGRAPHY</h3></strong>
+	</div>
+
+	<img src="resources/itemimg/naga.jpg" width="347" height="360" />
 	長渕 剛Tsuyoshi Nagabuchi
 	1956年9月7日生まれ
 	鹿児島県出身<br>
@@ -130,13 +175,15 @@ from {
 <br>
 さらに芸術分野では、1998年に東京・銀座の「日動画廊」に於いて初の詩画展を開催。2000年の第2回、加えて鹿児島、福岡、とそれぞれ約2万人を動員。<br>2013年～2015年にも全国各地で詩画展を開催している。<br>
 
-音楽のみに限らず、芸術、絵画のジャンルなどでも様々な魅力を発揮する彼の真摯な姿勢が、若者たちを中心に多くの支持を集めている。
-<a href="https://tsuyoshinagabuchi.com/fanclub/">俺のファンクラブ入会もよろしく</a>
+音楽のみに限らず、芸術、絵画のジャンルなどでも様々な魅力を発揮する彼の真摯な姿勢が、若者たちを中心に多くの支持を集めている。</div>
+</div>
+<div class="nagasa"><a href="https://tsuyoshinagabuchi.com/fanclub/">俺のファンクラブ入会もよろしく</a></div>
 
 <div class="nagas">
 <img src="resources/image/nagas.jpg" /></div>
 </main>
-        <jsp:include page="footer.jsp"/>
+<div class="f">
+        <jsp:include page="nagaf.jsp"/>
     </div>
 </body>
 </html>

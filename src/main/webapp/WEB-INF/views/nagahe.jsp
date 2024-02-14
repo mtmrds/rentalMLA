@@ -5,25 +5,25 @@
 <!-- ヘッダー -->
 <!DOCTYPE html>
 <html>
-	<head>
+<style>
+.naga{
+font-size:5em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
+	webkit-background-clip: text;
 
-		<!--  ファビコン -->
+}
+.loginname{
+background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
 
-		<!-- 出なくなったから再設定 -->
+}
 
-		<!-- 社名ロゴフォント -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 
-		<!-- その他文字フォント -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
-		<!-- CSSスタイルシート -->
-		<link href="resources/css/shopping.css" rel="stylesheet">
-	</head>
+</style>
 
 	<!-- ログイン後は名前を表示 -->
 	<header>
