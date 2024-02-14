@@ -30,18 +30,25 @@ public class CartCon {
 	    @RequestMapping(method = RequestMethod.GET)
 	    String viewCart(Model model) {
 	        model.addAttribute("cartList", membersDao.getCartList());
+
+
 	        return "cartcontent";
 	    }
 
 	    @RequestMapping(method = RequestMethod.POST, params = "index")
 	    String viewCart2(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
+	        if (membersDao.getCartList().isEmpty()) {
+	            model.addAttribute("message", "買い物カゴが空です");
+	            return "cartcontent";
+	        }
 	        return "payment";
 	    }
 
 	    @RequestMapping(method = RequestMethod.POST, params = "end")
 	    String viewCart3(Model model) {
 	        model.addAttribute("membersList", membersDao.getCartList());
+
 	        membersDao.clearCart(model);
 	        return "paymentComp";
 	    }
