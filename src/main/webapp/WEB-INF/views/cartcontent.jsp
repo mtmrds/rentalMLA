@@ -9,6 +9,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>カート内</title>
+
+
+
 <style>
 div.center {
 width:700px;
@@ -17,8 +20,10 @@ margin-left : auto;
 text-align: center;
 }
 </style>
+
 	</head>
 	<body>
+
 		<div class="cartcontent">
 			<jsp:include page="header.jsp"/>
 			<div class="center">
@@ -45,11 +50,15 @@ text-align: center;
 					</tr>
 				</c:forEach>
 			</table>
+
 		</form:form>
 		<br>
 		<form:form modelAttribute="loginModel">
 			<input type="submit"  name = "index" value="決済" class="btn">
+
 		</form:form>
+
+
 		<p>${message}</p>
 		<br>
 		</div>
