@@ -24,7 +24,7 @@
 					</tr>
         			<tr>
         				<td>${pickItem.itemNo }</td>
-        				<td><!-- 画像を表示させる --></td>
+        				<td><img src="${pickItem.image }"width="100" height="150" /></td>
          				<td>${pickItem.title }</td>
          				<td>${pickItem.type }</td>
         			</tr>
