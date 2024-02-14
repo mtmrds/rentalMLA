@@ -8,16 +8,25 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>決済確認画面</title>
+<style>
+div.center {
+width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
+</style>
 	</head>
 	<body>
 		<div class="payment">
 			<jsp:include page="header.jsp"/>
-			<main>
+			<div class="center">
+
 				<div class="paymenttitle">
-					<h1>決済確認画面</h1>
+					<h1>レンタルを確定しますか？</h1>
 				</div>
 				<form:form modelAttribute="itemModel">
-				<table border="1">
+				<table cellpadding="15" algin="center">
 				<!-- タイトルと商品画像 -->
 					<tr>
 						<th>画像</th>
@@ -32,24 +41,17 @@
 					</tr>
 				</c:forEach>
 				</table>
-				<!-- 表の内容がないのでコメントにしてます
-				 <table>
-					<tr>
-						<td colspan="4">-->
-
 						<br>
 
-						<input type="submit" name = "end" value="決済確定"  class="btn"/>
+						<input type="submit" name = "end" value="レンタル確定"  class="btn"/>
 
 						<br>
-					<!--  </td>
-					</tr>
-				</table>	-->
 				</form:form>
+			</div>
 			<p><a href="<c:url value='cart' />">カート確認</a></p>
 			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
 			<p><a href="<c:url value='top' />">トップに戻る</a></p>
-			</main>
+
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>

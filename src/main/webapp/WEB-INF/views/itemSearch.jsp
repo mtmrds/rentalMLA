@@ -38,7 +38,15 @@ from {
   width: 100%;
   height: 300px;
 }
-*/
+
+div.center {
+width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
+
+
 </style>
 
 </head>
@@ -46,17 +54,53 @@ from {
     <div class="itemsearch">
         <jsp:include page="header.jsp"/>
 
+<div class="center">
+<h1>MUSICLIFE　商品検索画面</h1>
+</div>
+<div class="scroll-infinity">
+<div class="scroll-infinity__wrap">
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/masausa.jpg" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+  	<li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
+  </ul>
+  <ul class="scroll-infinity__list scroll-infinity__list--left">
+    <li class="scroll-infinity__item"><img src="resources/itemimg/tonbo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/1tokyo.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/2sousou.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/3kusuriya.jpg"  /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/4go-rudennkamui.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/5kamera.jpg" /></li>
+    <li class="scroll-infinity__item"><img src="resources/itemimg/6mimiwo.jpg" /></li>
+  </ul>
+
+
 <main>
 <div class="scroll-infinity2">
 <div class="scroll-infinity2__wrap">
   <jsp:include page="itemSearchimg.jsp"/>
-  <jsp:include page="itemSearchimg.jsp"/>
-  <jsp:include page="itemSearchimg.jsp"/>
+  
+
 </div>
 </div>
 		<form:form modelAttribute="itemModel">
+        <div class="center">
            <div>
-                検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
+                <h2>検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong><br>
+                のいずれかを入力してください</h2>
            </div>
            <br>
             <div>
@@ -72,7 +116,9 @@ from {
            </div>
         </form:form>
             <c:if test="${!empty itemList}">
-                <table border="1">
+
+                <table border="1" cellpadding="15" algin="center">
+
                     <tr>
                         <th>ID</th>
                         <th>画像</th>
@@ -108,7 +154,8 @@ from {
 					</c:forEach>
                 </table>
             </c:if>
-</main>
+            </div>
+
         <jsp:include page="footer.jsp"/>
     </div>
 </body>
