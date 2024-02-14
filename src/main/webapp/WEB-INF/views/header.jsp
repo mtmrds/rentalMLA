@@ -3,20 +3,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!-- ヘッダー -->
-<!DOCTYPE html>
-<html>
 	<head>
 		<jsp:include page="linkpage.jsp" />
 	</head>
 	<!-- ログイン後は名前を表示 -->
-	<header>
+	<hedear>
 		<form:form modelAttribute="memberModel">
-			<div class="logo">
-				<a href="top"  alt="トップページに戻る">
-					<img src="resources/image/logo.png">
-					<h1>Music Life Agency</h1>
-				</a>
-			</div>
+			<jsp:include page ="logotitle.jsp" />
 			 <!-- 各種ページへのリンク -->
 			 <div class="linkpage">
 
