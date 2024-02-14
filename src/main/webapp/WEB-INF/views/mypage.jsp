@@ -23,7 +23,7 @@
 		</c:if>
         <div>
         <form:form modelAttribute="memberModel" method="post" action="editAccount">
-    			<table cellpadding="10" align="center">
+    			<table cellpadding="15" align="center">
         		<!-- 会員IDはシステム側で使うため一旦コメントアウト
         		<tr>
             		<td><strong>会員No</strong></td>
