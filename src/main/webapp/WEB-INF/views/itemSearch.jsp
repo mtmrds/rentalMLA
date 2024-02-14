@@ -37,6 +37,12 @@ from {
   width: 100%;
   height: 300px;
 }
+div.center {
+width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
 
 </style>
 
@@ -44,8 +50,9 @@ from {
 <body>
     <div class="itemsearch">
         <jsp:include page="header.jsp"/>
-
-<main>
+<div class="center">
+<h1>MUSICLIFE　商品検索画面</h1>
+</div>
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
   <ul class="scroll-infinity__list scroll-infinity__list--left">
@@ -78,8 +85,10 @@ from {
 </div>
 </div>
 		<form:form modelAttribute="itemModel">
+        <div class="center">
            <div>
-                検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
+                <h2>検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong><br>
+                のいずれかを入力してください</h2>
            </div>
             <div>
                  <label for="id"><strong>ID</strong></label>
@@ -93,7 +102,7 @@ from {
            </div>
         </form:form>
             <c:if test="${!empty itemList}">
-                <table>
+                <table border="1" cellpadding="15" algin="center">
                     <tr>
                         <th>ID</th>
                         <th>画像</th>
@@ -129,7 +138,8 @@ from {
 					</c:forEach>
                 </table>
             </c:if>
-</main>
+            </div>
+
         <jsp:include page="footer.jsp"/>
     </div>
 </body>

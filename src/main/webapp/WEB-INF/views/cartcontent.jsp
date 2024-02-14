@@ -9,12 +9,22 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>カート内</title>
+<style>
+div.center {
+width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
+</style>
 	</head>
 	<body>
 		<div class="cartcontent">
 			<jsp:include page="header.jsp"/>
+			<div class="center">
+			<h1>カート内商品</h1>
 			<form:form modelAttribute="itemModel">
-    			<table border="1">
+    			<table cellpadding="15" algin="center">
     				<tr>
 						<th>&nbsp;</th>
 						<th>画像</th>
@@ -42,7 +52,8 @@
 		</form:form>
 		<p>${message}</p>
 		<br>
-		<a href="top">トップに戻る</a>
+		</div>
+		<p><a href="<c:url value='top' />">トップに戻る</a></p>
 		<jsp:include page="footer.jsp"/>
 		</div>
 	</body>

@@ -8,13 +8,22 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>カートに入れるか選択</title>
+<style>
+div.center {
+    width:700px;
+margin-right: auto;
+margin-left : auto;
+text-align: center;
+}
+</style>
 	</head>
 	<body>
 		<div class="cartadd">
 			<jsp:include page="header.jsp"/>
+			<div class="center">
 			<h1>カートに商品を入れますか？</h1>
 			<form:form modelAttribute="itemModel">
-    			<table border="1">
+    			<table cellpadding="15" algin="center">
     			<!-- タイトルと商品画像 -->
 					<tr>
 						<th>ID</th>
@@ -28,9 +37,15 @@
          				<td>${pickItem.title }</td>
          				<td>${pickItem.type }</td>
         			</tr>
-        		</table>
-        			<p><input type="submit" value="カートIN"  class="btn btn-tag" ></p>
+        		</table></div>
+        	<div class="center">
+        	<p><input type="submit" value="カートIN"  class="btn btn-tag" ></p>
+        	</div>
         	</form:form>
+
+
+
+
 			<!-- 下記は直飛びなので、商品情報が入らない -->
 			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
 			<p><a href="<c:url value='top' />">トップに戻る</a></p>
