@@ -24,9 +24,7 @@ public class Members implements Serializable{
 	private String image;
 	private int cNo;
 	private int tNo;
-
-
-
+	private int orderItem;
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
@@ -72,6 +70,14 @@ public class Members implements Serializable{
 
 	public String getPhone() {
 		return phone;
+	}
+
+	public int getOrderItem() {
+		return orderItem;
+	}
+
+	public void setOrderItem(int orderItem) {
+		this.orderItem = orderItem;
 	}
 
 	public String getMail() {

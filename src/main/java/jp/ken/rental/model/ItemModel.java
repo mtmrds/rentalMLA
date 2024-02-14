@@ -10,6 +10,7 @@ public class ItemModel {
 	  private String image;
 	  private int cNo;
 	  private int tNo;
+	  private int orderItem;
 
 	public String getImage() {
 		return image;
@@ -60,5 +61,11 @@ public class ItemModel {
 	}
 	public void settNo(int tNo) {
 		this.tNo = tNo;
+	}
+	public int getOrderItem() {
+		return orderItem;
+	}
+	public void setOrderItem(int orderItem) {
+		this.orderItem = orderItem;
 	}
  }
