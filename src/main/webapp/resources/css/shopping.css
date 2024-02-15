@@ -587,3 +587,78 @@ from {
 .mako {
 	text-align: center;
 }
+
+
+/*--------ここから長渕----------*/
+
+.naganaga {
+  background-color: black; //これは赤色
+}
+
+
+@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+  to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+  height: 300px;
+}
+.nagas{
+	text-align: center;
+}
+.nagass{
+	color: white;
+	text-align: center;
+}
+.nagasa{
+	font-size:5em;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+
+	webkit-background-clip: text;
+}
+.nn{
+text-align: center;
+
+}
+.nagab{
+	color: white;
+	text-align: center;
+	background-color: gray;
+
+}
+.bi{
+font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+.f{
+background: gray;
+text-align: left;
+
+}
+
+
