@@ -11,4 +11,3 @@
 	<li class="scroll-infinity__item"><img src="resources/image/onpu2.png" /></li>
 	<li class="scroll-infinity__item"><img src="resources/image/onpu1.png" /></li>
 </ul>
-
