@@ -8,14 +8,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>決済確認画面</title>
-<style>
-div.center {
-width:700px;
-margin-right: auto;
-margin-left : auto;
-text-align: center;
-}
-</style>
+
 	</head>
 	<body>
 		<div class="payment">
@@ -26,15 +19,17 @@ text-align: center;
 					<h1>レンタルを確定しますか？</h1>
 				</div>
 				<form:form modelAttribute="itemModel">
-				<table cellpadding="15" algin="center">
+				<table border="1">
 				<!-- タイトルと商品画像 -->
 					<tr>
+						<th>ID</th>
 						<th>画像</th>
 						<th>タイトル</th>
 						<th>タイプ</th>
 					</tr>
 					<c:forEach var="listCart" items="${cartList}">
 					<tr>
+						<td>${listCart.itemNo }</td>
 						<td><img src="${listCart.image }"width="100" height="150" /></td>
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
