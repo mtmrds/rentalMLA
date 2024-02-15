@@ -34,7 +34,7 @@ background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
 
 				<a href="top"  alt="トップページに戻る">
 					<img src="resources/image/n.png">
-					<audio src="resources/music/08-Nerd-Strut-_Instrumental_.mp3" type="audio/mp3" autoplay loop></audio>
+					<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio>
 					<h1>Music Life Nagabuchi</h1>
 				</a>
 			</div>

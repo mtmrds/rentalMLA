@@ -10,123 +10,91 @@
     <meta charset="UTF-8">
     <title>レンタルサイト 商品一覧画面</title>
 <style>
-body {
-  background-color: black; //これは赤色
-}
+	body{
+  		background-color: black; //これは赤色
+		}
+	.nagas{
+		text-align: center;
+	}
+	.nagass{
+		color: white;
+		text-align: center;
+	}
+	.nagasa{
+		font-size:5em;
+		text-align:center;
+		line-height:0.95em;
+		font-weight:bold;
+		webkit-background-clip: text;
+	}
 
+	.nagab{
+		color: white;
+		text-align: center;
+		background-color: gray;
+	}
+	.bi{
+		font-family: 'Heebo', sans-serif;
+  	  font-weight: 500;
+  	  font-size: 5vw;
+  	  margin-bottom: 20px;
+   	 line-height: 1;
+	}
+	.f{
+		background: gray;
+		text-align: left;
+	}
+	.loop__box {
+    display: flex;
+    width: 100vw;
+	}
+	.loop__box img {
+ 	   min-width: 50vw;
+	}
+	.loop__box img:first-child {
+  	  animation: loop 50s -25s linear infinite;
+	}
+	.loop__box img:last-child {
+ 	   animation: loop2 50s linear infinite;
+	}
 
-@keyframes infinity-scroll-left {
-from {
-  transform: translateX(0);
-}
-  to {
-  transform: translateX(-100%);
-}
-}
-.scroll-infinity__wrap {
-  display: flex;
-  overflow: hidden;
-}
-.scroll-infinity__list {
-  display: flex;
-  list-style: none;
-  padding: 0
-}
-.scroll-infinity__list--left {
-  animation: infinity-scroll-left 20s infinite linear 0.5s both;
-}
-.scroll-infinity__item {
-  width: calc(70vw / 6);
-}
-.scroll-infinity__item>img {
-  width: 100%;
-  height: 300px;
-}
-.nagas{
-	text-align: center;
-}
-.nagass{
-	color: white;
-	text-align: center;
-}
-.nagasa{
-	font-size:5em;
-	text-align:center;
-	line-height:0.95em;
-	font-weight:bold;
-
-	webkit-background-clip: text;
-}
-.nn{
-text-align: center;
-
-}
-.nagab{
-	color: white;
-	text-align: center;
-	background-color: gray;
-
-}
-.bi{
-font-family: 'Heebo', sans-serif;
-    font-weight: 500;
-    font-size: 5vw;
-    margin-bottom: 20px;
-    line-height: 1;
-}
-.f{
-background: gray;
-text-align: left;
-
-}
-
+	@keyframes loop {
+  	  0% {
+ 	       transform: translateX(100%);
+ 		   }
+   	 to {
+        transform: translateX(-100%);
+   		 }
+	}
+	@keyframes loop2 {
+ 	   0% {
+ 	       transform: translateX(0);
+ 	   }
+   	 to {
+   	     transform: translateX(-200%);
+   		 }
+	}
 </style>
-
 </head>
 <body>
-    <div class="itemsearch">
+    <div class="bu">
         <jsp:include page="nagahe.jsp"/>
 
-<main>
-<div class="scroll-infinity">
-<div class="scroll-infinity__wrap">
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-  	<li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <a href="tamibuchi"><li class="scroll-infinity__item"><img src="resources/itemimg/tamibuchi.jpg" /></li></a>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-  </ul>
-  <ul class="scroll-infinity__list scroll-infinity__list--left">
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-    <li class="scroll-infinity__item"><img src="resources/itemimg/tuyoshi.jpg" /></li>
-  </ul>
-</div>
-</div>
-<div class="nagass">
-		<h1>毎週のおすすめ</h1>
+  <div class="loop__box">
+        <img src="resources/image/n2.jpg" alt="">
+         <img src="resources/image/n2.jpg" alt="">
+    </div>
 
-	おはようございます！当店は長渕押しです。皆さんは普段どんな音楽を聴いてますか？<br>
-  	意外と流行りの曲を知らない人も多いのでは？？？？？そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
-	まずはこの前の新潟のジョギングから<br></div>
-	<div class="nn">
+
+	<div class="nagass">
+		<h1>毎週のおすすめ</h1>
+			おはようございます！当店は長渕押しです。皆さんは普段どんな音楽を聴いてますか？<br>
+  			意外と流行りの曲を知らない人も多いのでは？？？？？そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+			まずはこの前の新潟のジョギングから<br>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/tg19ldeDv_E?si=A-iQlMDhaVxVx2cD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/qB3zuafTits?si=oyXmW2CShc4HwXA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/lH7lEy2Wwv8?si=8eFEDVmhL3hT2dXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/TCyMJ7CI43U?si=CXSoAvHI8K0BjOJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 	</div>
 	<br>
 	<div class="nagab">
@@ -135,9 +103,9 @@ text-align: left;
 	</div>
 
 	<img src="resources/itemimg/naga.jpg" width="347" height="360" />
-	長渕 剛Tsuyoshi Nagabuchi
-	1956年9月7日生まれ
-	鹿児島県出身<br>
+	長渕 剛&nbsp;&nbsp;&nbsp;Tsuyoshi&nbsp; Nagabuchi
+	&nbsp;&nbsp;1956年9月7日生まれ
+	&nbsp;&nbsp;鹿児島県出身<br>
 
 1978年シングル「巡恋歌」で本格デビュー。翌年にファースト・アルバム『風は南から』をリリースし、’80年「順子」でチャート１位を獲得する。<br>
 以後、’85年「勇次」、’87年「ろくなもんじゃねぇ」、’88年「乾杯」「とんぼ」など、’80年代を通じ数々のヒットを連発。<br>
@@ -176,14 +144,16 @@ text-align: left;
 さらに芸術分野では、1998年に東京・銀座の「日動画廊」に於いて初の詩画展を開催。2000年の第2回、加えて鹿児島、福岡、とそれぞれ約2万人を動員。<br>2013年～2015年にも全国各地で詩画展を開催している。<br>
 
 音楽のみに限らず、芸術、絵画のジャンルなどでも様々な魅力を発揮する彼の真摯な姿勢が、若者たちを中心に多くの支持を集めている。</div>
-</div>
+
 <div class="nagasa"><a href="https://tsuyoshinagabuchi.com/fanclub/">俺のファンクラブ入会もよろしく</a></div>
 
 <div class="nagas">
-<img src="resources/image/nagas.jpg" /></div>
-</main>
+<img src="resources/image/nagas.jpg" />
+</div>
+
 <div class="f">
         <jsp:include page="nagaf.jsp"/>
+    </div>
     </div>
 </body>
 </html>
