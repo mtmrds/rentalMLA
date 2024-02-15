@@ -13,4 +13,4 @@
 		<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
 		<!-- CSSスタイルシート -->
-		<link href="resources/css/shopping.css" rel="stylesheet">
+		<link href="resources/css/shopping2.css" rel="stylesheet">
