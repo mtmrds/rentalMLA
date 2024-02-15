@@ -4,15 +4,15 @@
 
 <!-- マイページ -->
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>マイページ</title>
-<style>
-@keyframes onpu-scroll-left {
-from {
-  transform: translateX(0);
-}
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>マイページ</title>
+	<style>
+	@keyframes onpu-scroll-left {
+	from {
+  	transform: translateX(0);
+	}
  to {
   transform: translateX(-100%);
 }
@@ -39,7 +39,7 @@ from {
 </style>
 </head>
 <body>
-	<div class="mypage">
+	<div class="page">
 		<jsp:include page="header.jsp"/>
 
         <c:if test="${not empty successMessage}">
