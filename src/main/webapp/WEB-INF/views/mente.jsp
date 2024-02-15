@@ -7,48 +7,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Music Life Agency</title>
-		<style>
-			.errors {
-			font-family: 'Yomogi',cursive;
-			color: red;
-			font-weight: bold;
-		}
-		 ul{
-    list-style :見栄えの指定;
-    background-color: gray;
-}
-
-		</style>
 </head>
 <body>
-	<div class="mente">
- <h1>メンテナンスのお知らせ</h1>
+<div class="mente">
+ 	<h1>メンテナンスのお知らせ</h1>
 
-	おはようございます！当店は今後全て長渕に変わります<br>
-  	皆さんは普段どんな音楽を聴いてますか？<br>
-  	意外と流行りの曲を知らない人も多いのでは？？？？？<br>
-	そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+		おはようございます！当店は今後全て長渕に変わります<br>
+	  	皆さんは普段どんな音楽を聴いてますか？<br>
+	  	意外と流行りの曲を知らない人も多いのでは？？？？？<br>
+		そこで今回は2024年にいま流行っている曲をここでご紹介～！<br>
+		<br>
+    <h2><strong>最近流行りの今バズってる曲トップ３</strong></h2>
+	<ul>
+	    <li> とんぼ</li>
+	    <li> 乾杯</li>
+	    <li> 巡恋歌</li>
+
+	</ul>
+
 	<br>
-    <strong><h3>最近流行りの今バズってる曲トップ３</h3></strong>
-<ul>
-    <li> とんぼ</li>
-    <li> 乾杯</li>
-    <li> 巡恋歌</li>
+  	<h3><strong>TikTokの人気曲ランキング</strong></h3>
 
-</ul>
+		おはようございます！当店はすべて長渕に変わります<br>
 
-<br>
-  <strong><h3>TikTokの人気曲ランキング</h3></strong>
+    <h4><strong>長渕トップ３</strong></h4>
 
-	おはようございます！当店はすべて長渕に変わります<br>
+	<ul>
+	    <li> とんぼ</li>
+	    <li> 乾杯</li>
+	    <li> 巡恋歌</li>
+	</ul>
 
-    <strong><h3>長渕トップ３</h3></strong>
-
-<ul>
-    <li> とんぼ</li>
-    <li> 乾杯</li>
-    <li> 巡恋歌</li>
-</ul>
-
-知っている曲や気になる曲はありましたか？
-素敵な音楽ライフを！
+		知っている曲や気になる曲はありましたか？
+		素敵な音楽ライフを！
+</div>
