@@ -8,36 +8,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>マイページ</title>
-	<link href="resources/css/shopping.css" rel="stylesheet">
-<style>
-@keyframes onpu-scroll-left {
-from {
-  	transform: translateX(0);
-}
- to {
-  transform: translateX(-100%);
-}
-}
-.scroll-onpu__wrap {
-  display: flex;
-  overflow: hidden;
-}
-.scroll-onpu__list {
-  display: flex;
-  list-style: none;
-  padding: 0
-}
-.scroll-onpu__list--left {
-  animation: onpu-scroll-left 20s infinite linear 0.5s both;
-}
-.scroll-onpu__item {
-  width: calc(70vw / 6);
-}
-.scroll-onpu__item>img {
-  width: 100%;
-  height: 150px;
-}
-</style>
 </head>
 <body>
 	<div class="page">
