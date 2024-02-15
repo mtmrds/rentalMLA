@@ -193,6 +193,10 @@ body {
 	vertical-align:middle;
 }
 
+/*店長川上の一日*/
+
+
+
 
 
 /*-------------------------------
@@ -228,7 +232,8 @@ body {
 	text-align:center;
 }
 
-/*流れる画像設定*/
+/*アイテム検索ページの流れる画像設定
+※ログインページと画像サイズが違うのでクラス分けてます*/
 @keyframes infinity2-scroll-left {
 from {
   transform: translateX(0);
@@ -278,7 +283,8 @@ from {
 
 }
 
-/*流れるgif設定*/
+/*ログインページの流れるgif設定
+※検索ページと画像サイズが違うのでクラス分けてます*/
 @keyframes infinity-scroll-left {
 from {
   transform: translateX(0);
