@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*--------------------------------
 項目
 共有部分
@@ -48,6 +47,7 @@
 .btn-img{
 	vertical-align:middle;
 }
+
 /*--------------------------------
 ヘッダー
 ---------------------------------*/
@@ -66,18 +66,16 @@
 	boder: 1px;
 }
 
-.logotitle h1 {
-	font-family: 'Sacramento', cursive;
-	font-size: 45px;
-	margin: 10px;
-	padding: 10px;
-	color: gray;
+/* ホバー時 */
+.btn-b:hover {
+	box-shadow: none;
+	transform: translateY(5px);
 }
 
-/*各種リンク*/
-.linkmenu {
-	font-family: 'Yomogi',cursive;
-	text-align: right;
+/*コンテンツメニューボタン共通設定*/
+.btn-img:hover{
+  opacity: 0.6;
+@@ -61,6 +81,9 @@
 	font-size: 25px;
 }
 
@@ -87,71 +85,21 @@
 /*--------------------------------
 ②ヘッダー
 ---------------------------------*/
+/*--------------------------------
+②ヘッダー
+---------------------------------*/
+
 
 /*--------------------------------
-トップページ
+ログインページ
 ---------------------------------*/
-/*トップページ*/
-.topselect a {
-	font-family: 'Yomogi',cursive;
-	font-size: 25px;
+/*ログイン画面の枠*/
+.logintable {
+	border-collapse: collapse;
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+	border-radius:50px;
 }
 
-/*トップタイトル*/
-.loading-area {
-	display: flex;
-	justify-content: center;
-	gap: 100px;
-}
-
-.loading-area span {
-	color:#61b0e2;
-	font-size: 6.5rem;
-	font-weight: bold;
-	animation: rotate 2s infinite linear;
-	text-transform: uppercase;
-	}
-
-	letter-spacing:-50px;
-	padding-top: 60px;
-	padding-bottom: 80px;
-}
-
-.loading-area span:nth-child(2) {
-	animation-delay: 0.1s;
-}
-
-.loading-area span:nth-child(3) {
-	animation-delay: 0.2s;
-}
-
-.loading-area span:nth-child(4) {
-	animation-delay: 0.3s;
-}
-
-.loading-area span:nth-child(5) {
-	animation-delay: 0.4s;
-}
-
-.loading-area span:nth-child(6) {
-	animation-delay: 0.5s;
-}
-
-.loading-area span:nth-child(7) {
-	animation-delay: 0.6s;
-}
-
-.loading-area span:nth-child(8) {
-	animation-delay: 0.7s;
-}
-
-.loading-area span:nth-child(9) {
-	animation-delay: 0.8s;
-}
-
-.loading-area span:nth-child(10) {
-	animation-delay: 0.9s;
-}
 
 @keyframes rotate {
 	70% {
@@ -162,82 +110,29 @@
 	}
 }
 
-/*トッププラン*/
-@keyframes loopplan {
+/*ログイン画面の流れる音符*/
+@keyframes infinity-scroll-left {
 	from {
 	transform: translateX(0);
 	}
-	to {
+	to	{
 	transform: translateX(-100%);
 	}
 }
-.loopplan_box {
-	display: flex;
-	overflow: hidden;
+
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
 }
 
-.loopplan_list {
-	display: flex;
-	list-style: none;
-	padding: 0;
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
 }
 
-.loopplan_list--left {
-	animation: loopplan 100s infinite linear 0.5s both;
-}
-
-.loopplan_list_item {
-	font-family: Yomogi',cursive;
-	color: grey;
-	width: calc(900vw / 3);
-	font-size: 50px;
-}
-
-/*トップセレクト整列*/
-.topselect {
-	text-align: center;
-}
-
-/*トップコンテンツ整列*/
-.topcontents  {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-/*トップコンテンツ枠*/
-.topcontents div {
-	margin: 2em;
-	padding:2em;/*内側余白*/
-	background-color:#fff;/*背景色*/
-	background-color:rgba(255,255,255,0.8);
-	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
-	border-radius: 30px;
-	height: 300px;
-	width: 500px;
-}
-
-/*NEWS*/
-.news {
-	overflow-y: scroll;
-}
-
-.news li {
-	font-size: 25px;
-}
-
-/*TOPIC*/
-.topic {
-	overflow-y: scroll;
-}
-
-.topic li {
-	font-size: 25px;
-}
-
-/*insta*/
-.insta {
-	overflow-y: scroll;
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
 }
 
 .insta {
@@ -247,10 +142,14 @@
 /*インスタ*/
 .instalogin p{
 	text-align: center;
+  
+.scroll-infinity__item {
+  width: calc(70vw / 6);
 }
 
-.instalogin img{
-	vertical-align:middle;
+.scroll-infinity__item img {
+  width: 100%;
+  height: 150px;
 }
 
 /*--------------------------------
