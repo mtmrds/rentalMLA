@@ -199,6 +199,7 @@
 /*トップセレクト整列*/
 .topselect {
 	text-align: center;
+
 }
 
 /*トップコンテンツ整列*/
@@ -206,6 +207,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 
 /*トップコンテンツ枠*/
@@ -218,7 +220,11 @@
 	border-radius: 30px;
 	height: 300px;
 	width: 500px;
+
+
 }
+
+
 
 /*NEWS*/
 .news {
@@ -245,15 +251,18 @@
 
 .insta {
 	font-size: 25px;
+
 }
 
 /*インスタ*/
 .instalogin p{
 	text-align: center;
+
 }
 
 .instalogin img{
 	vertical-align:middle;
+
 }
 
 

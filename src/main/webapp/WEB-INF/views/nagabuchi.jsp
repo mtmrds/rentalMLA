@@ -190,7 +190,6 @@ div.center {
 </head>
 <body>
 	<div class="itemsearch">
-
 		<jsp:include page="header.jsp"/>
 		<div class="loading-area">
 					<span>N</span>
@@ -213,12 +212,8 @@ div.center {
 					<span>H</span>
 					<span>I</span>
 		</div><br>
-
 <div class="scroll-infinity">
 <div class="scroll-infinity__wrap">
-
-
-
 <div class="scroll-infinity2">
 <div class="scroll-infinity2__wrap">
   <jsp:include page="nagabuchiimg.jsp"/>
@@ -262,7 +257,6 @@ div.center {
      					５：しあわせになろうよ<br>
     				</h2>
 				</ul>
-
 				<h1>知っている曲や気になる曲はありましたか？ありましたよね？？？
 					素敵な長渕ライフを！！！！</h1>
 				<h2>
@@ -271,7 +265,6 @@ div.center {
 					<a href="https://www.instagram.com/tsuyoshi_nagabuchi/">インスタはこちら</a>
 					<a href="https://www.youtube.com/channel/UCsQc7RfiO8e08JXeCGmmjCA">youtubeはこちら</a>
 				</h2>
-
 				<div class="center">
 					<p><a href="<c:url value='top' />">トップに戻る</a></p>
 				</div>
@@ -281,5 +274,3 @@ div.center {
 	</div>
 </body>
 </html>
-
-
