@@ -464,13 +464,29 @@ from {
 	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
 }
 
+/*※マイページにも設定適用*/
 .center {
 	text-align: center;
 }
 
+.center h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	color:black;
+}
 .center table{
 	margin-left: auto;
     margin-right: auto;
+}
+
+.center tr{
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+}
+
+.center td{
+	padding: 10px;
 }
 
 
