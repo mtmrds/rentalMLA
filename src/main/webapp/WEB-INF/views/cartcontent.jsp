@@ -10,17 +10,6 @@
 		<meta charset="UTF-8">
 		<title>カート内</title>
 
-
-
-<style>
-div.center {
-width:700px;
-margin-right: auto;
-margin-left : auto;
-text-align: center;
-}
-</style>
-
 	</head>
 	<body>
 
@@ -29,9 +18,9 @@ text-align: center;
 			<div class="center">
 			<h1>カート内商品</h1>
 			<form:form modelAttribute="itemModel">
-    			<table cellpadding="15" algin="center">
+    			<table border="1">
     				<tr>
-						<th>&nbsp;</th>
+						<th>ID</th>
 						<th>画像</th>
 						<th>タイトル</th>
 						<th>タイプ</th>
