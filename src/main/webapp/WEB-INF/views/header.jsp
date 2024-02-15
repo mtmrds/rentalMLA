@@ -5,7 +5,6 @@
 <!-- ヘッダー -->
 	<head>
 		<jsp:include page="linkpage.jsp" />
-		<link href="resources/css/shopping.css" rel="stylesheet">
 	</head>
 	<!-- ログイン後は名前を表示 -->
 	<div>
