@@ -383,6 +383,7 @@ from {
 	padding: 20px;
 	border-radius: 20px;
 	color:black;
+
 }
 
 
@@ -397,6 +398,7 @@ from {
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 100vh;
+	text-align: center;
 }
 
 .paymentcomptitle h1{
@@ -415,18 +417,7 @@ from {
   transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
   animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
   text-align: center;
-
 }
-
-.fade-in-text p {
-	vertical-align:middle;
-	text-align: center;
-}
-
-.fade-in-text img {
-	vertical-align:middle;
-}
-
 
 @keyframes fadeInFromBottom {
   to {
