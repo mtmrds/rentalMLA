@@ -22,7 +22,6 @@
 						<jsp:include page="itemSearchimg.jsp"/>
 					</div>
 				</div>
-				<form:form modelAttribute="itemModel">
 					<div class="itemsearch">
 						<h2>検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong><br>
 						のいずれかを入力してください</h2><br>
@@ -31,50 +30,48 @@
 						<label for="name"><strong>タイトル</strong></label>
 						<form:input path="title"/>
 						<input type="submit" value="検索する" class="btn-b"><br>
-					</div>
-					<div>
-						<c:out value="${message}"/>
-					</div>
-				</form:form>
-				<c:if test="${!empty itemList}">
-				<table border="1" cellpadding="15" algin="center">
-					<tr>
-						<th>ID</th>
-						<th>画像</th>
-						<th>タイトル</th>
-						<th>タイプ</th>
-						<th>カテゴリー</th>
-						<th>在庫</th>
-						<th>カート</th>
-					</tr>
-					<c:forEach var="items" items="${itemList}">
-					<tr>
-						<td><c:out value="${items.itemNo}"/></td>
-						<td><img src="${items.image }"width="100" height="150" /></td>
-						<td><c:out value="${items.title}"/></td>
-						<td><c:out value="${items.type}"/></td>
-						<td><c:out value="${items.category}"/></td>
-						<td><c:out value="${items.quantity}"/></td>
-						<td>
-							<form:form modelAttribute="itemModel">
-							<form:hidden path="itemNo" value="${items.itemNo }" />
-							<form:hidden path="title" value="pick"/>
-							<c:choose>
-							<c:when test="${items.quantity > 0}">
-								<input type="submit" value="カートに入れる" />
-							</c:when>
-							<c:otherwise>
-								<input type="button" value="在庫切れ" disabled="disabled"/>
-							</c:otherwise>
-							</c:choose>
-							</form:form>
-						</td>
-					</tr>
-					</c:forEach>
-				</table>
-				</c:if>
+						<div>
+							<c:out value="${message}"/>
+						</div>
+						<c:if test="${!empty itemList}">
+						<table border="1" cellpadding="15" algin="center">
+							<tr>
+								<th>ID</th>
+								<th>画像</th>
+								<th>タイトル</th>
+								<th>タイプ</th>
+								<th>カテゴリー</th>
+								<th>在庫</th>
+								<th>カート</th>
+							</tr>
+							<c:forEach var="items" items="${itemList}">
+							<tr>
+								<td><c:out value="${items.itemNo}"/></td>
+								<td><img src="${items.image }"width="100" height="150" /></td>
+								<td><c:out value="${items.title}"/></td>
+								<td><c:out value="${items.type}"/></td>
+								<td><c:out value="${items.category}"/></td>
+								<td><c:out value="${items.quantity}"/></td>
+								<td>
+									<form:form modelAttribute="itemModel">
+									<form:hidden path="itemNo" value="${items.itemNo }" />
+									<form:hidden path="title" value="pick"/>
+									<c:choose>
+									<c:when test="${items.quantity > 0}">
+										<input type="submit" value="カートに入れる" />
+									</c:when>
+									<c:otherwise>
+										<input type="button" value="在庫切れ" disabled="disabled"/>
+									</c:otherwise>
+									</c:choose>
+									</form:form>
+								</td>
+							</tr>
+							</c:forEach>
+						</table>
+						</c:if>
+						</div>
 			</form:form>
-
 		<jsp:include page="footer.jsp"/>
 		</div>
 	</body>
