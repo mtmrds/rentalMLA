@@ -8,14 +8,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>カートにセット</title>
-<style>
-div.center {
-    width:700px;
-margin-right: auto;
-margin-left : auto;
-text-align: center;
-}
-</style>
+
 	</head>
 	<body>
 		<div class="cartaddcomp">
