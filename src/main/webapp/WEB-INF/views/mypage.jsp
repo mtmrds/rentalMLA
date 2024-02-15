@@ -4,15 +4,16 @@
 
 <!-- マイページ -->
 <!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="UTF-8">
-			<title>マイページ</title>
-	<style>
-	@keyframes onpu-scroll-left {
-	from {
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>マイページ</title>
+	<link href="resources/css/shopping.css" rel="stylesheet">
+<style>
+@keyframes onpu-scroll-left {
+from {
   	transform: translateX(0);
-	}
+}
  to {
   transform: translateX(-100%);
 }
@@ -51,127 +52,88 @@
         <div>
         <form:form modelAttribute="memberModel" method="post" action="editAccount">
         	<div class="scroll-onpu">
-			<div class="scroll-onpu__wrap">
-			<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
-
-			<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
-    		<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
+				<div class="scroll-onpu__wrap">
+					<jsp:include page="logingif.jsp"/>
+					<jsp:include page="logingif.jsp"/>
+					<jsp:include page="logingif.jsp"/>
     			</div>
     		</div>
-    			<table cellpadding="15" align="center">
+		<div class="center">
+    		<h1>マイページ</h1>
+
+    			<table border="1">
         		<!-- 会員IDはシステム側で使うため一旦コメントアウト
         		<tr>
             		<td><strong>会員No</strong></td>
             		<td><p>${memberId}</p></td>
         		</tr>
         		-->
-        		<tr>
-            		<td><strong>氏名</strong></td>
-            		<td><form:input path="name" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>郵便番号</strong></td>
-            		<td><form:input path="zip" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>住所</strong></td>
-            		<td><form:input path="address" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>電話番号</strong></td>
-            		<td><form:input path="phone" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>メールアドレス</strong></td>
-            		<td><form:input path="mail" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>生年月日</strong></td>
-            		<td><form:input path="birthday" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>クレジットカード</strong></td>
-            		<td><form:input path="card" /></td>
-        		</tr>
-        		<tr>
-            		<td><strong>加入中のプラン</strong></td>
-            		<td>${memberModel.plan}</td>
-        		</tr>
-        		<tr>
-                    <td><strong>現在のパスワード</strong></td>
-                    <!--伏字っぽくしただけ  -->
-                    <td>**********</td>
-                </tr>
-         		<tr>
-            		<td><strong>新しいパスワード</strong></td>
-            		<td><input type="password" name="password" /></td>
-        		</tr>
-                <!-- パスワードの確認用フィールドを追加 -->
-                <tr>
-                    <td><strong>新しいパスワードを再入力</strong></td>
-                    <td><input type="password" name="confirmPassword" /></td>
-                </tr>
+	        		<tr>
+	            		<td><strong>氏名</strong></td>
+	            		<td><form:input path="name" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>郵便番号</strong></td>
+	            		<td><form:input path="zip" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>住所</strong></td>
+	            		<td><form:input path="address" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>電話番号</strong></td>
+	            		<td><form:input path="phone" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>メールアドレス</strong></td>
+	            		<td><form:input path="mail" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>生年月日</strong></td>
+	            		<td><form:input path="birthday" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>クレジットカード</strong></td>
+	            		<td><form:input path="card" /></td>
+	        		</tr>
+	        		<tr>
+	            		<td><strong>加入中のプラン</strong></td>
+	            		<td>${memberModel.plan}</td>
+	        		</tr>
+	        		<tr>
+	                    <td><strong>現在のパスワード</strong></td>
+	                    <!--伏字っぽくしただけ  -->
+	                    <td>**********</td>
+	                </tr>
+	         		<tr>
+	            		<td><strong>新しいパスワード</strong></td>
+	            		<td><input type="password" name="password" /></td>
+	        		</tr>
+	                <!-- パスワードの確認用フィールドを追加 -->
+	                <tr>
+	                    <td><strong>新しいパスワードを再入力</strong></td>
+	                    <td><input type="password" name="confirmPassword" /></td>
+	                </tr>
     		</table>
+    		</div>
     		</form:form>
+    	</div>
     		<br>
-    		<div class=selectbtn>
+    		<div class="selectbtn">
 				<input type="submit" value="更新" class="btn">
 			<!-- 退会フォーム -->
-			<form method="post" action="deleteAccount">
+				<form method="post" action="deleteAccount">
     			<input type="submit" value="退会" class="btn">
-			</form>
+				</form>
 			</div>
        	<div class="scroll-onpu">
 			<div class="scroll-onpu__wrap">
-			<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
-
-			<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
-    		<ul class="scroll-onpu__list scroll-onpu__list--left">
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu1.png" width= "300"height= "auto"></li>
-    			<li class="scroll-onpu__item"><img src="resources/image/onpu2.png" width= "300"height= "auto"></li>
-    		</ul>
-    			</div>
-    		</div>
+				<jsp:include page="logingif.jsp"/>
+				<jsp:include page="logingif.jsp"/>
+				<jsp:include page="logingif.jsp"/>
 			</div>
+    	</div>
+		</div>
 		<jsp:include page="footer.jsp"/>
     </div>
 </body>
