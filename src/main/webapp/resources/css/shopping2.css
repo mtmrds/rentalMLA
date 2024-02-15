@@ -41,6 +41,40 @@
 /*コンテンツメニューボタン共通設定*/
 .btn-img:hover{
   opacity: 0.6;
+  transition: 0.8s;
+}
+
+.btn-img{
+	vertical-align:middle;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+/*ロゴ*/
+.logotitle a {
+	display: flex;
+	width: 438px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.logotitle img {
+	height: 70px;
+	width: 70px;
+	margin: 10px 1px 10px 5px;
+	boder: 1px;
+}
+
+/* ホバー時 */
+.btn-b:hover {
+	box-shadow: none;
+	transform: translateY(5px);
+}
+
+/*コンテンツメニューボタン共通設定*/
+.btn-img:hover{
+  opacity: 0.6;
 @@ -61,6 +81,9 @@
 	font-size: 25px;
 }
@@ -51,15 +85,56 @@
 /*--------------------------------
 ②ヘッダー
 ---------------------------------*/
-@@ -138,6 +161,7 @@
+/*--------------------------------
+②ヘッダー
+---------------------------------*/
+
+
+/*--------------------------------
+ログインページ
+---------------------------------*/
+/*ログイン画面の枠*/
+.logintable {
+	border-collapse: collapse;
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+	border-radius:50px;
+}
+
+
+@keyframes rotate {
+	70% {
+	transform: rotateX(0deg);
+	}
+	100% {
 	transform: rotateX(360deg);
 	}
 }
 
-/*トッププラン*/
-@keyframes loopplan {
+/*ログイン画面の流れる音符*/
+@keyframes infinity-scroll-left {
 	from {
-@@ -219,6 +243,7 @@
+	transform: translateX(0);
+	}
+	to	{
+	transform: translateX(-100%);
+	}
+}
+
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 20s infinite linear 0.5s both;
+}
+
 .insta {
 	font-size: 25px;
 }
@@ -67,7 +142,14 @@
 /*インスタ*/
 .instalogin p{
 	text-align: center;
-@@ -229,8 +254,48 @@
+  
+.scroll-infinity__item {
+  width: calc(70vw / 6);
+}
+
+.scroll-infinity__item img {
+  width: 100%;
+  height: 150px;
 }
 
 /*--------------------------------
