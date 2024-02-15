@@ -122,15 +122,6 @@ body {
 /*-------------------------------
 ③トップページ
 -------------------------------*/
-.toppage {
-	font-family: 'Yomogi',cursive;
-	color: grey;
-	background-image: url(../image/pink.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	min-height: 100vh;
-}
 
 .toppage a {
 	font-family: 'Yomogi',cursive;
@@ -143,24 +134,13 @@ body {
 	text-align: center;
 }
 
-.topselect {
-	text-align: center;
 
-}
 
 .body {
 	height: 100px;
 }
 
-.news {
-	margin: 2em;
-	padding:2em;/*内側余白*/
-	background-color:#fff;/*背景色*/
-	box-shadow: 0 0 6px 1px #66CCFF, 0 0 6px 1px #66CCFF inset;/*ふわりとした影*/
-	border-radius: 30px;
-	height: 300px;
-	width: 500px;
-}
+
 
 .newstitle {
     position: relative;
@@ -173,25 +153,10 @@ body {
     font-size: 26px;
   }
 
-.insta p{
-	text-align: center;
 
-}
-.insta img{
-	vertical-align:middle;
-
-
-}
 
 /* マウスを乗せたときの動き */
-.btn-img:hover{
-  opacity: 0.6;
-  transition: 0.8s;
-}
 
-.btn-img{
-	vertical-align:middle;
-}
 
 
 
