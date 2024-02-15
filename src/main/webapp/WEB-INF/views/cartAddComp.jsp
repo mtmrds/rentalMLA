@@ -5,6 +5,7 @@
 <!-- カート確認 -->
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>カートにセット</title>
@@ -12,6 +13,7 @@
 <body>
 	<div class="cartaddcomp">
 		<jsp:include page="header.jsp"/>
+
 			<div class="center">
 				<h1>カートに商品を入れました</h1>
 				<p><a href="<c:url value='cart' />">カート確認</a>
