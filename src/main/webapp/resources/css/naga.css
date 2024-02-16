@@ -27,7 +27,6 @@
 
 .nagaimg {
 	display: flex;
-	width: 100vw;
 }
 
 .nagaimg img {
@@ -57,6 +56,10 @@ body {
 
 .naganote h1 {
 	font-size:50px;
+}
+.nagamenu table{
+	background-color: #696969;
+
 }
 
 .nagamenu td {
@@ -89,7 +92,25 @@ body {
 	text-align: center;
 }
 
+
 /*今月の長渕*/
 .nagabuchi h5 {
 	width: 100%;
+
+/*---
+長渕フッター
+---*/
+.nagafooter{
+	display: flex;
+	width: 100%;
 }
+.nagamenu table{
+	width: 1000px;
+	height: 300px;
+}
+.naganaga {
+	text-align: right;
+	color: white;
+}
+
+
