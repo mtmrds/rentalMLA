@@ -85,16 +85,16 @@
 	                   			<td><input type="password" name="confirmPassword" /></td>
 	               			</tr>
     					</table>
-    					<div class="selectbtn">
-							<input type="submit" value="更新" class="btn">
-						</div>
+    					<br>
+							<input type="submit" value="更新" class="btn-b">
 					</form:form>
-    			</div>
-    			<br>
+					<br>
 				<!-- 退会フォーム -->
-				<form method="post" action="deleteAccount">
-    				<input type="submit" value="退会" class="btn">
-				</form>
+					<form method="post" action="deleteAccount">
+    				<input type="submit" value="退会" class="btn-b">
+					</form>
+
+				</div>
 			</div>
        		<div class="scroll-onpu">
 				<div class="scroll-onpu__wrap">

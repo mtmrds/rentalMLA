@@ -8,6 +8,7 @@
 トップページ
 ログインページ
 商品一覧検索
+マイページ
 ---------------------------------*/
 /*--------------------------------
 共通部分
@@ -338,3 +339,61 @@
   width: 250px;
   height: 350px;
 }
+
+/*-------------------------------
+マイページ
+-------------------------------*/
+/*流れる音符画像*/
+@keyframes onpu-scroll-left {
+from {
+  	transform: translateX(0);
+}
+ to {
+  transform: translateX(-100%);
+}
+}
+.scroll-onpu__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-onpu__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-onpu__list--left {
+  animation: onpu-scroll-left 20s infinite linear 0.5s both;
+}
+.scroll-onpu__item {
+  width: calc(70vw / 6);
+}
+.scroll-onpu__item>img {
+  width: 100%;
+  height: 150px;
+}
+
+/* centerクラス他のJSPにも適用されてます*/
+.center {
+	text-align: center;
+}
+
+.center h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	color:black;
+}
+.center table{
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.center tr{
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+}
+
+.center td{
+	padding: 10px;
+}
+
