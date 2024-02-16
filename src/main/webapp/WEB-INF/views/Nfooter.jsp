@@ -39,5 +39,8 @@ width: 650px;height: 200px;
 			</table>
 		</div>
 	</div>
-	<p><small>&copy;2024 Office Music Life Naga</small><p>
+	<p class="naganaga"><small>&copy;2024 Office Music Life Naga</small></p>
+
+
+
 </footer>
