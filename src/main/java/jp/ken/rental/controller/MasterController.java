@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import jp.ken.rental.dao.MembersDao;
@@ -29,6 +30,7 @@ public class MasterController {
 		model.addAttribute("headline", "商品検索");
         return "tenchoEmp";
 	}
+	//商品一覧を検索する処理。顧客用の検索ページをベースに作成
 	@RequestMapping(value = "/master", method = RequestMethod.POST)
 	public String masterSearchPost(@ModelAttribute ItemModel itemModel, Model model) {
 
@@ -81,22 +83,74 @@ public class MasterController {
         return "tenCartAdd";
 	}
 	@RequestMapping(value = "/adminCart", method = RequestMethod.POST)
-	public String masterCartPost(@ModelAttribute ItemModel itemModel, Model model) {
-		//historyに入る
-		Members pickItem = membersDao.pickItemById(Integer.parseInt(mId));
-		model.addAttribute("pickItem", pickItem);
+	String masterCartPost(Model model, @RequestParam("itemNo") Integer itemNo,
+							@RequestParam("orderItem") Integer orderItem){
 
-		List<Members> tenCartList = membersDao.getTenCartList();
-		model.addAttribute("cartList", tenCartList);
+		// itemNo と orderItem が null でないことをチェック
+		if (itemNo != null && orderItem != null) {
+			// updateQuantity メソッドを呼び出して数量を更新
+	        int updatedRows = membersDao.updateQuantity(itemNo, orderItem);
 
-		int numberOfRow = membersDao.insertTenCart(pickItem);
+	        if (updatedRows > 0) {
+	            // 更新が成功した場合はtenkakuteiにリダイレクト
+	        	//動作確認用のプリントライン
+	        	//System.out.println(itemNo);
+	        	//System.out.println(orderItem);
+	        	// 商品情報を取得し、注文情報を新規登録する
+	        	Members members = membersDao.pickItemById(itemNo);
+	        	int numberOfRowsAffected = 0;
 
-	    //members.setItemNo(Integer.parseInt(itemModel.getItemNo()));
-	    if (numberOfRow == 0) {
-	    	//下記は必要に応じて使うか検討する
-	        //model.addAttribute("message", "登録に失敗しました。");
-	        return "tenchoEmp";
+	        	if (members != null) {
+	        		members.setOrderItem(orderItem);
+	        		// 注文情報をデータベースに登録する
+	        		numberOfRowsAffected = membersDao.insertTenCart(members);
+
+	        		if (numberOfRowsAffected > 0) {
+			        	// 登録が成功した場合はtenkakuteiにリダイレクト
+			        	return "tenkakutei";
+			        } else {
+			        	// 登録に失敗した場合はリダイレクト
+			        	//動作確認用のプリントライン
+			        	//System.out.println("登録失敗");
+			        	return "tencho_order";
+			        }
+	        	} else {
+	        		// 商品情報の取得に失敗した場合はリダイレクト
+	        		//動作確認用のプリントライン
+	        		//System.out.println("商品情報取得失敗");
+	        		return "tencho_order";
+	        	}
+	        } else {
+	            // 更新に失敗した場合はリダイレクト
+	        	//動作確認用のプリントライン
+	        	//System.out.println("更新失敗");
+	        	return "tencho_order";
+	        }
+	    } else {
+	    	// itemNo または orderItem が提供されていない場合はリダイレクト
+	    	//動作確認用のプリントライン
+	    	//System.out.println("パラメータ系のエラー？");
+	    	return "tencho_order";
+        }
+	}
+	//従業引用操作で使う
+	@RequestMapping(value = "/orderHistory", method = RequestMethod.GET)
+	String viewTenCart(Model model) {
+		model.addAttribute("tenCartList", membersDao.getTenCartList());
+	    return "tencho_order";
+	}
+	//発注を取り消すときの処理
+	@RequestMapping(value = "/orderHistory", method = RequestMethod.POST)
+	public String removeOrder(@RequestParam("orderNo") Integer orderNo) {
+	    // tencartテーブルから注文情報を取得
+	    Members order = membersDao.pickTenCartByOrderNo(orderNo);
+	    if (order != null) {
+	        // movItemのquantityを減少させる
+	        membersDao.decreaseQuantity(order.getItemNo(), order.getOrderItem());
+	        // tencartテーブルから注文情報を削除
+	        membersDao.removeTen(orderNo);
 	    }
-	    return "tenCartAddComp";
+	    // 成功時は再度カートのページにリダイレクト
+	    return "redirect:/orderHistory";
 	}
 }

@@ -22,12 +22,18 @@
 						<th>画像</th>
 						<th>タイトル</th>
 						<th>タイプ</th>
+						<th>レンタル数量</th>
 					</tr>
 	        		<tr>
 	        			<td>${pickItem.itemNo }</td>
 	        			<td><img src="${pickItem.image }"width="100" height="150" /></td>
 	         			<td>${pickItem.title }</td>
 	         			<td>${pickItem.type }</td>
+	         			<td>
+                			<form:select path="quantity">
+                   				<form:options items="${quantityOptions}" />
+                			</form:select>
+            			</td>
 	        		</tr>
 	        	</table>
 

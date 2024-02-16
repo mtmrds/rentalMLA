@@ -8,12 +8,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 import jp.ken.rental.groups.Group1;
 
 public class LoginModel implements Serializable {
-	//一般的に、メールアドレス+パスワードでログイン認証するパターンが多いので、それでいいかも？
-	//ので、loginIdは一旦コメントアウトします(jspも調整します) 元村
-	/*
-	@NotEmpty(message = "ログインIDは必須です。")
-	private String loginId;
-	*/
+
+	private Integer userId;
+
 	@NotEmpty(message = "メールアドレスが未入力です")
 	@Email(message = "メールアドレスを入力して下さい",
 	groups = Group1.class)
@@ -41,5 +38,11 @@ public class LoginModel implements Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 }
