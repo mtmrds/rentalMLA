@@ -140,7 +140,6 @@
 							<td class="btn-1">
 								<input type="submit"  value="登録する" class="btn">
 							</td>
-
 				</form:form>
 			</main>
 				<jsp:include page="footer.jsp" />

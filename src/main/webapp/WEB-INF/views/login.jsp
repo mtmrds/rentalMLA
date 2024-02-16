@@ -8,7 +8,6 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Music Life Agency</title>
-
 	</head>
 	<body>
 		<div class="page">

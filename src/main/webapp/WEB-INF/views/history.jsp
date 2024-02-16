@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <!-- jsp:useBean id="login_user_bean" scope="session" class="login.LoginUserBean" -->
 
-<%-- 購入履歴画面 --%>
+<!-- 購入履歴画面 -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,11 +23,7 @@ body{
 
 </style>
     <body>
-
-
-
         <jsp:include page="header.jsp"/>
-
         <h1><jsp:getProperty name="login_user_bean" property="name" />さんの購入履歴</h1>
         <%-- ShoppingServletで付加したattribute: historyをリクエストスコープからBeanクラスのListを取得 --%>
         <!--  ArrayList<HistoryBean> historyList = (ArrayList<HistoryBean>) request.getAttribute("history");  -->
