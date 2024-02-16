@@ -21,15 +21,13 @@
 							<jsp:include page="logingif.jsp"/>
 						</div>
 					</div>
+					<div class="logintitle">
+					<h1>ログイン画面</h1>
+					</div>
 					<table class="logintable" cellpadding="15" align="center">
 						<tr>
-							<td colspan="2" align="center">
-							<h2>ログイン</h2>
-							</td>
-						</tr>
-						<tr>
 							<td>
-							<h3>メールアドレス:</h3>
+								<h3>メールアドレス:</h3>
 							</td>
 							<td>
 							<form:input path="mail"/>
@@ -38,7 +36,7 @@
 						</tr>
 						<tr>
 							<td>
-							<h3>パスワード:</h3>
+								<h3>パスワード:</h3>
 							</td>
 							<td>
 								<form:password path="password" />
