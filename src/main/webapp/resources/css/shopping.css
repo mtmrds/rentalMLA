@@ -362,6 +362,7 @@ from {
 	color:black;
 }
 
+/* shopping2へ移動
 @keyframes onpu-scroll-left {
 from {
   	transform: translateX(0);
@@ -389,6 +390,7 @@ from {
   width: 100%;
   height: 150px;
 }
+*/
 
 /*-------------------------------
 決済確認画面
