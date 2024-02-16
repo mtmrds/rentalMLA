@@ -20,20 +20,22 @@
 			<form:form modelAttribute="itemModel">
     			<table border="1">
     				<tr>
-						<th>ID</th>
+						<!-- <th>ID</th> -->
 						<th>画像</th>
 						<th>タイトル</th>
 						<th>タイプ</th>
-						<th>&nbsp;</th>
+						<th>レンタル数量</th>
+						<th>商品削除</th>
 					</tr>
 					<c:forEach var="listCart" items="${cartList}">
 					<tr>
-						<td>${listCart.itemNo }</td>
+						<!-- <td>${listCart.itemNo }</td> -->
 						<td><img src="${listCart.image }"width="100" height="150" /></td>
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
+						<td><c:out value="${listCart.ordersItem}"/></td>
 						<td>
-							<form:hidden path="cNo" value="${listCart.cNo}" />
+							<form:hidden path="historyNo" value="${listCart.historyNo}" />
 							<input type="submit" name="delete" value="削除">
 						</td>
 					</tr>
@@ -43,7 +45,7 @@
 		</form:form>
 		<br>
 		<form:form modelAttribute="loginModel">
-			<input type="submit"  name = "index" value="決済" class="btn">
+			<input type="submit"  name = "index" value="レンタル手続きへ" class="btn">
 
 		</form:form>
 

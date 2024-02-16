@@ -22,14 +22,14 @@
 				<table border="1">
 				<!-- タイトルと商品画像 -->
 					<tr>
-						<th>ID</th>
+						<!-- <th>ID</th> -->
 						<th>画像</th>
 						<th>タイトル</th>
 						<th>タイプ</th>
 					</tr>
 					<c:forEach var="listCart" items="${cartList}">
 					<tr>
-						<td>${listCart.itemNo }</td>
+						<!-- <td>${listCart.itemNo }</td> -->
 						<td><img src="${listCart.image }"width="100" height="150" /></td>
 						<td><c:out value="${listCart.title}"/></td>
 						<td><c:out value="${listCart.type}"/></td>
@@ -38,10 +38,11 @@
 				</table>
 						<br>
 
-						<input type="submit" name = "end" value="レンタル確定"  class="btn"/>
+						<input type="submit" name="end" value="レンタル確定"  class="btn"/>
 
 						<br>
 				</form:form>
+
 			</div>
 			<p><a href="<c:url value='cart' />">カート確認</a></p>
 			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>

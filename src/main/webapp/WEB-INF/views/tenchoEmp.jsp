@@ -10,9 +10,9 @@
 		<meta charset="UTF-8">
 		<title>レンタルサイト 商品一覧画面</title>
 	</head>
-	<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
-	<body style="background-color: gray;">
-		<!--  <div class="itemsearch"> -->
+		<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
+		<body style="background-color: gray;">
+			<!--  <div class="itemsearch"> -->
 			<jsp:include page="headeremp.jsp"/>
 				<main>
 					<form:form modelAttribute="itemModel">
@@ -50,10 +50,10 @@
 								<td><c:out value="${items.category}"/></td>
 								<td><c:out value="${items.quantity}"/></td>
 								<td>
-  									<form:form modelAttribute="itemModel" method="post">
+									<form:form modelAttribute="itemModel" method="post">
 										<form:hidden path="itemNo" value="${items.itemNo }" />
 										<form:hidden path="title" value="pick"/>
-										<input type="submit" value="カートに入れる(従業員用 仮)"/>
+										<input type="submit" value="発注する"/>
 									</form:form>
 								</td>
 							</tr>
@@ -62,6 +62,5 @@
 					</c:if>
 				</main>
 			<jsp:include page="footer.jsp"/>
-		<!-- </div> -->
-	</body>
+		</body>
 </html>

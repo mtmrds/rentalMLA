@@ -9,45 +9,35 @@
     <meta charset="UTF-8">
     <title>発注商品一覧</title>
 </head>
-<body style="background-color: gray;">
-    <jsp:include page="headeremp.jsp"/>
-
-    <form:form modelAttribute="itemModel">
-        <table border="1">
-            <tr>
-                <th>&nbsp;</th>
-                <th>画像</th>
-                <th>タイトル</th>
-                <th>タイプ</th>
-                <th>&nbsp;</th>
-            </tr>
-            <c:forEach var="listTenCart" items="${tenCartList}">
-                <tr>
-                    <td>${listTenCart.itemNo }</td>
-                    <td><img src="${listTenCart.image }"width="100" height="150" /></td>
-                    <td><c:out value="${listTenCart.title}"/></td>
-                    <td><c:out value="${listTenCart.type}"/></td>
-                    <td>
-                        <form:hidden path="tNo" value="${listTenCart.tNo}" />
-                        <input type="submit" name="delete" value="削除">
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
-
-    <!-- プルダウンメニューを追加 -->
-    <form action="/tenzai" method="post">
-    	<label for="itemNo">商品番号:</label>
-    	<input type="text" id="itemNo" name="itemNo"><br><br>
-
-   		<label for="additionalQuantity">数量:</label>
-    	<input type="text" id="additionalQuantity" name="additionalQuantity"><br><br>
-
-    	<input type="submit" value="発注確定">
-	</form>
-    </form:form>
-
-
-    <jsp:include page="footer.jsp"/>
-</body>
+	<body style="background-color: gray;">
+    	<jsp:include page="headeremp.jsp"/>
+	    <form:form modelAttribute="itemModel">
+    	   	<table border="1">
+            	<tr>
+           			<th>ID</th>
+               		<th>画像</th>
+               		<th>タイトル</th>
+               		<th>タイプ</th>
+               		<th>発注数</th>
+               		<th>発注日時</th>
+               		<th>取消処理</th>
+           		</tr>
+           		<c:forEach var="listTenCart" items="${tenCartList}">
+               		<tr>
+                   		<td>${listTenCart.itemNo }</td>
+                   		<td><img src="${listTenCart.image }"width="100" height="150" /></td>
+                   		<td><c:out value="${listTenCart.title}"/></td>
+                   		<td><c:out value="${listTenCart.type}"/></td>
+                		<td><c:out value="${listTenCart.orderItem}"/></td>
+                		<td><c:out value="${listTenCart.orderDate}"/></td>
+                   		<td>
+                       		<form:hidden path="orderNo" value="${listTenCart.orderNo}" />
+                       		<input type="submit" name="delete" value="発注を取り消す">
+                   		</td>
+               		</tr>
+           		</c:forEach>
+       		</table>
+    	</form:form>
+    	<jsp:include page="footer.jsp"/>
+	</body>
 </html>

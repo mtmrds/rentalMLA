@@ -13,13 +13,13 @@
 		<div class="paymentcomp">
 			<jsp:include page="headeremp.jsp"/>
 				<div class="paymentcomptitle">
-					<h1>発注完了画面</h1>
+					<h1>発注完了</h1>
 				</div>
 				<div class="fade-in-text">
-					<p>店長ありがとうございました(^_-)-☆</p>
+					<p>発注完了しました</p>
 					<img src="resources/image/お辞儀.png"/>
 				</div>
-				<p><a href="<c:url value='master' />">戻る(仮)</a></p>
+				<p><a href="<c:url value='master' />">従業員用ページトップ</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>

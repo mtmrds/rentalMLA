@@ -8,7 +8,7 @@
 <title>店長用カート完了</title>
 </head>
 <body>
-	<p><a href="<c:url value='master' />">tenchoEmp.jspに戻る(仮です。表現変えるかも)</a></p>
+	<p><a href="<c:url value='master' />">tenchoEmp.jspに戻る</a></p>
 
 </body>
 </html>

@@ -1,11 +1,12 @@
 package jp.ken.rental.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Members implements Serializable{
-	private Integer id;
+	private int id;
 	private String password;
 	private String name;
 	private String zip;
@@ -22,9 +23,14 @@ public class Members implements Serializable{
 	private String category;
 	private Integer quantity;
 	private String image;
-	private int cNo;
-	private int tNo;
+	private int historyNo;
+	private int orderNo;
 	private int orderItem;
+	private Timestamp orderDate;
+	//顧客注文用
+	private int ordersItem;
+	private Integer userId;
+
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
@@ -39,16 +45,7 @@ public class Members implements Serializable{
 		}
 	}
 
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
-
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -70,14 +67,6 @@ public class Members implements Serializable{
 
 	public String getPhone() {
 		return phone;
-	}
-
-	public int getOrderItem() {
-		return orderItem;
-	}
-
-	public void setOrderItem(int orderItem) {
-		this.orderItem = orderItem;
 	}
 
 	public String getMail() {
@@ -116,19 +105,35 @@ public class Members implements Serializable{
 		return quantity;
 	}
 
-	public int getcNo() {
-		return cNo;
+	public String getImage() {
+		return image;
 	}
 
-	public int gettNo() {
-		return tNo;
+	public int getHistoryNo() {
+		return historyNo;
 	}
 
-	public static SimpleDateFormat getDateformat() {
-		return dateFormat;
+	public int getOrderNo() {
+		return orderNo;
 	}
 
-	public void setId(Integer id) {
+	public int getOrderItem() {
+		return orderItem;
+	}
+
+	public Timestamp getOrderDate() {
+		return orderDate;
+	}
+
+	public int getOrdersItem() {
+		return ordersItem;
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -188,11 +193,31 @@ public class Members implements Serializable{
 		this.quantity = quantity;
 	}
 
-	public void setcNo(int cNo) {
-		this.cNo = cNo;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public void settNo(int tNo) {
-		this.tNo = tNo;
+	public void setHistoryNo(int historyNo) {
+		this.historyNo = historyNo;
+	}
+
+	public void setOrderNo(int orderNo) {
+		this.orderNo = orderNo;
+	}
+
+	public void setOrderItem(int orderItem) {
+		this.orderItem = orderItem;
+	}
+
+	public void setOrderDate(Timestamp orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public void setOrdersItem(int ordersItem) {
+		this.ordersItem = ordersItem;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 }
