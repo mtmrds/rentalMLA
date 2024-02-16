@@ -8,18 +8,6 @@
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
-
-
-<style>
-/*
-.errors{
-		font-family: 'Yomogi',cursive;
-		color: red;
-		font-weight: bold;
-}
-*/
-
-</style>
 	</head>
 	<body>
 		<div class="registration">
@@ -93,7 +81,13 @@
 							<img src="resources/cardbrand/jcb.png" height="50px" width="70px" />
 							<img src="resources/cardbrand/amex.png" height="50px" width="70px" />
 							<br>
-							<form:input path="card" size="50"/>
+							<form:input path="card" placeholder="Card Number"  size="25"/>
+							<br>
+							<!-- その他のカード情報path名とりあえずnameで設定しています 変更してください～
+							エラーでたからとりあえずコメントアウトしてます～
+							<form:input path="name"  placeholder="Name" size="25"/>
+							<form:input path="name"  placeholder="MM / YY" size="15"/>
+							<form:input path="name"  placeholder="CCV" size="5"/>-->
 							<br>
 							<form:errors path="card" element="span" cssClass="errors"/>
 							</td>
@@ -137,9 +131,8 @@
 						</tr>
 					</table>
 							<br>
-							<td class="btn-1">
-								<input type="submit"  value="登録する" class="btn">
-							</td>
+								<input type="submit"  value="登録する" class="btn-b">
+
 				</form:form>
 			</main>
 				<jsp:include page="footer.jsp" />
