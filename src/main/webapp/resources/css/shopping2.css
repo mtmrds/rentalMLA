@@ -9,6 +9,7 @@
 ログインページ
 商品一覧検索
 マイページ
+会員登録ページ
 ---------------------------------*/
 /*--------------------------------
 共通部分
@@ -384,6 +385,7 @@ from {
 	border-radius: 20px;
 	color:black;
 }
+
 .center table{
 	margin-left: auto;
     margin-right: auto;
@@ -396,4 +398,46 @@ from {
 .center td{
 	padding: 10px;
 }
+
+/*-------------------------------
+会員登録ページ
+-------------------------------*/
+.errors{
+		font-family: 'Yomogi',cursive;
+		color: red;
+		font-weight: bold;
+}
+
+.registration {
+	font-family: 'Yomogi',cursive;
+	color: grey;
+	background-image: url(../image/pink.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.registration table{
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.registration table tr {
+	background-image: linear-gradient(40deg, #e2c6ff 0%, #a3d1ff 74%);
+	text-align: left;
+}
+
+.registrationtitle h1 {
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color:black;
+	text-align: center;
+}
+
 

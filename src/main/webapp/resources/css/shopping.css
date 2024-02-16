@@ -36,13 +36,14 @@
 	transform: translateY(5px);
 }
 
+/*　shopping2へ移動
 .errors{
 		font-family: 'Yomogi',cursive;
 		color: red;
 		font-weight: bold;
 }
 
-
+*/
 /*--------------------------------
 ②ヘッダー
 --------------------------------*/
@@ -297,6 +298,8 @@ from {
 /*-------------------------------
 会員登録ページ
 -------------------------------*/
+
+/* shopping2へ移動
 .registration {
 	font-family: 'Yomogi',cursive;
 	color: grey;
@@ -320,7 +323,7 @@ from {
 	font-weight: bold;
 	color:black;
 }
-
+*/
 
 /*-------------------------------
 ⑦マイページ
