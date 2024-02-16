@@ -19,6 +19,9 @@ p{
 .nagabuchi h1,h2,h3,h4,h5{
 	font-size: 40px;
 }
+.nagabuchi h5 {
+	width:100%;
+}
 </style>
 </head>
 <body>
@@ -87,7 +90,7 @@ p{
      					４：巡恋歌<br>
      					５：しあわせになろうよ<br>
     				</p>
-				<h4>知っている曲や気になる曲はありましたか？ありましたよね？？？
+				<h4>知っている曲や気になる曲はありましたか？ありましたよね？？？<br>
 					素敵な長渕ライフを！！！！</h4>
 				<h5>
 					<a href="https://tsuyoshinagabuchi.com/fanclub/">ファンクラブはこちら</a>

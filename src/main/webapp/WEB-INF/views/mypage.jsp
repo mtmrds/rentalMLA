@@ -12,7 +12,6 @@
 	<body>
 		<div class="page">
 			<jsp:include page="header.jsp"/>
-
         	<c:if test="${not empty successMessage}">
     			<p>${successMessage}</p>
 			</c:if>

@@ -93,6 +93,10 @@ body {
 }
 
 
+/*今月の長渕*/
+.nagabuchi h5 {
+	width: 100%;
+
 /*---
 長渕フッター
 ---*/
@@ -108,4 +112,5 @@ body {
 	text-align: right;
 	color: white;
 }
+
 
