@@ -122,6 +122,10 @@
 	font-size: 25px;
 }
 
+.linkmenu img{
+	vertical-align: middle;
+}
+
 
 /*--------------------------------
 フッター
@@ -140,6 +144,10 @@
 .topselect a {
 	font-family: 'Yomogi',cursive;
 	font-size: 25px;
+}
+
+.topselect img{
+		vertical-align: middle;
 }
 
 /*トップタイトル*/
@@ -318,7 +326,16 @@
 	border-radius:50px;
 }
 
-
+.logintitle h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color:black;
+	text-align: center;
+}
 
 
 /*--------------------------------
