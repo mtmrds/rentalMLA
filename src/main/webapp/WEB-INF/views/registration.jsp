@@ -132,6 +132,7 @@
 					</table>
 							<br>
 								<input type="submit"  value="登録する" class="btn-b">
+
 				</form:form>
 			</main>
 				<jsp:include page="footer.jsp" />

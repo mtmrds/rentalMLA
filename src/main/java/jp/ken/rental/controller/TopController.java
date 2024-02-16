@@ -53,7 +53,7 @@ public String toNewFile1() {
 }
 @RequestMapping(value = "/naga", method = RequestMethod.GET)
 public String toNewFile2() {
-	return "naga";
+	return "Nnaga";
 }
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
