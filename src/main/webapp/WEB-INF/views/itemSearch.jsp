@@ -17,6 +17,7 @@
 					<div class="scroll-infinity">
 						<div class="scroll-infinity__wrap">
 							<jsp:include page="itemSearchimg.jsp"/>
+							<jsp:include page="itemSearchimg.jsp"/>
 						</div>
 					</div>
 						<div class="itemsearch">
@@ -30,10 +31,11 @@
 							<div>
 								<c:out value="${message}"/>
 							</div>
+							<br>
 						</div>
-					</form:form>
+			</form:form>
 					<c:if test="${!empty itemList}">
-						<table border="1" cellpadding="15" algin="center">
+						<table border="1">
 							<tr>
 								<th>ID</th>
 								<th>画像</th>
@@ -69,7 +71,7 @@
 							</c:forEach>
 						</table>
 					</c:if>
+					<jsp:include page="footer.jsp"/>
 				</div>
-			<jsp:include page="footer.jsp"/>
 		</body>
 </html>
