@@ -89,14 +89,7 @@ body {
 .naganote h1 {
 	font-size:50px;
 }
-.nagamenu table{
-	background-color: #696969;
 
-}
-
-.nagamenu td {
-	color: white;
-}
 
 .biography {
 	color: white;
@@ -129,19 +122,29 @@ body {
 /*今月の長渕*/
 .nagabuchi h5 {
 	width: 100%;
+}
 
 /*--------------
 長渕フッター
 ----------------*/
 
-
 .nagamenu table{
-	width: 1000px;
-	height: 300px;
+	width: 1032px;;
+	height: 200px;
+	background-color: gray;
+
+
+}
+
+.nagamenu tr{
+	background-color: gray;
+	text-align: left;
+
 }
 
 .nagamenu td{
 	text-align: left;
+	color: white;
 }
 
 
