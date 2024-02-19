@@ -1,5 +1,6 @@
 package jp.ken.rental.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -158,7 +159,7 @@ public class MembersDao {
 			return null;
 		}
 	}
-	//pickした商品情報を取る
+	//従業員用のメソッド。itemNoを利用して商品情報を検索する
 	public Members pickItemById(Integer itemNo) {
 		String sql = "SELECT * FROM movitem WHERE item_no=?";
 		Object[] parameters = { itemNo };
@@ -169,6 +170,18 @@ public class MembersDao {
 			e.printStackTrace();
 			return null;
 		}
+	}
+	//利用者用のメソッド。categoryでも商品を検索できる
+	public List<Members> pickItemByCategory(String category) {
+	    String sql = "SELECT * FROM movitem WHERE category=?";
+	    Object[] parameters = { category };
+	    try {
+	        List<Members> membersList = jdbcTemplate.query(sql, parameters, membersMapper);
+	        return membersList;
+	    } catch (EmptyResultDataAccessException e) {
+	        e.printStackTrace();
+	        return new ArrayList<Members>();
+	    }
 	}
 	public int insertItem(Members members) {
 		String sql = "INSERT INTO movitem(item_no, title, type, category, image) VALUES(?, ?, ?, ?, ?)";
@@ -195,16 +208,16 @@ public class MembersDao {
 			}
 			return numberOfRow;
 	}
-	//cart用
+	//利用者が使用するcartの処理を199行目以降に記載
 	public List<Members> getCartList(){
 		String sql = "SELECT * FROM history";
 		List<Members> cartList = jdbcTemplate.query(sql, membersMapper);
 		return cartList;
 	}
-	//主キー（item_no）の重複はできないので、タイトル+タイプで商品を特定
+	//カートINボタンを押下したときの処理。historyテーブルに該当の商品情報が入る。
 	public int insertCart(Members members) {
-	    String sql = "INSERT INTO history(mail, title, type, ordersItem, image) VALUES(?, ?, ?, ?, ?)";
-	    Object[] parameters = { members.getMail(), members.getTitle(), members.getType(),
+	    String sql = "INSERT INTO history(mail, item_no, title, type, ordersItem, image) VALUES(?, ?, ?, ?, ?, ?)";
+	    Object[] parameters = { members.getMail(), members.getItemNo(), members.getTitle(), members.getType(),
 	    						members.getOrdersItem(), members.getImage() };
 
 	    TransactionStatus transactionStatus = null;
@@ -230,8 +243,9 @@ public class MembersDao {
 	}
 	//レンタル履歴をordersテーブルへ登録
 	public int insertOrders(Members members) {
-	    String sql = "INSERT INTO orders(mail, title, type, ordersItem, image) VALUES(?, ?, ?, ?, ?)";
-	    Object[] parameters = { members.getMail(), members.getTitle(), members.getType(), members.getOrdersItem(), members.getImage() };
+	    String sql = "INSERT INTO orders(mail, item_no, title, type, ordersItem, image) VALUES(?, ?, ?, ?, ?, ?)";
+	    Object[] parameters = { members.getMail(), members.getItemNo(), members.getTitle(), members.getType(),
+								members.getOrdersItem(), members.getImage() };
 
 	    TransactionStatus transactionStatus = null;
 	    DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
@@ -252,6 +266,32 @@ public class MembersDao {
 	        }
 	    }
 	    return numberOfRow;
+	}
+	//レンタル中の処理用にrentalテーブルへ登録
+	public int insertRental(Members members) {
+	    String sql = "INSERT INTO myrental(mail, item_no, title, type, ordersItem, image) VALUES(?, ?, ?, ?, ?, ?)";
+	    Object[] parameters = { members.getMail(), members.getItemNo(), members.getTitle(), members.getType(),
+	    						members.getOrdersItem(), members.getImage() };
+
+	    TransactionStatus transactionStatus = null;
+	    DefaultTransactionDefinition transactionDefinition = new DefaultTransactionDefinition();
+
+	    int numberOfRow = 0;
+	    try {
+	        transactionStatus = transactionManager.getTransaction(transactionDefinition);
+	        numberOfRow = jdbcTemplate.update(sql, parameters);
+	        transactionManager.commit(transactionStatus);
+	    } catch(DataAccessException e){
+	        e.printStackTrace();
+	        transactionManager.rollback(transactionStatus);
+	    } catch(TransactionException e) {
+	        e.printStackTrace();
+
+	    if(transactionStatus != null) {
+	    	transactionManager.rollback(transactionStatus);
+	    }
+	}
+		    return numberOfRow;
 	}
 	public Members getCartListId(Members cartListNo) {
 		String sql = "SELECT * FROM history WHERE historyNo=?";
@@ -307,17 +347,21 @@ public class MembersDao {
 	        return false;
 	        }
 	}
-	//カートから削除する処理。在庫を加算。
-	public int remove(int historyNo) {
-	    String updateStockSql = "UPDATE movitem SET quantity = quantity + (SELECT ordersItem FROM history WHERE historyNo=?)";
-
+	public int remove(int historyNo, int removedQuantity) {
 	    // 対応する商品の在庫を増加させる
-	    jdbcTemplate.update(updateStockSql, historyNo);
+	    String updateStock = "UPDATE movitem SET quantity = quantity + ? WHERE item_no = (SELECT item_no FROM history WHERE historyNo=?)";
+	    jdbcTemplate.update(updateStock, removedQuantity, historyNo);
 
 	    // history テーブルから削除
-	    String deleteHistorySql = "DELETE FROM history WHERE historyNo=?";
+	    String deleteSql = "DELETE FROM history WHERE historyNo=?";
 	    Object[] parameters = { historyNo };
-	    return jdbcTemplate.update(deleteHistorySql, parameters);
+	    return jdbcTemplate.update(deleteSql, parameters);
+	}
+
+	// 削除される商品の数量を取得するメソッド
+	public int getRemovedQuantity(int historyNo) {
+	    String selectQuantity = "SELECT ordersItem FROM history WHERE historyNo=?";
+	    return jdbcTemplate.queryForObject(selectQuantity, Integer.class, historyNo);
 	}
 	//adminテーブルに登録されている従業員情報を取得する
 	public int clearCart(Model model) {
@@ -414,20 +458,7 @@ public class MembersDao {
 		    }
 		    return numberOfRow;
 	}
-	/*
-	//いるかも？？item_noを使う
-	public Members pickTenItemById(Members member) {
-		String sql = "INSERT INTO tencart(title, type,item_no) VALUES(?, ?, ?)";
-		Object[] parameters = { member.getTitle(), member.getType(),member.getItemNo() };
-		try {
-			Members members = jdbcTemplate.queryForObject(sql, parameters, membersMapper);
-			return members;
-			} catch(EmptyResultDataAccessException e){
-				e.printStackTrace();
-				return null;
-			}
-	}
-	*/
+
 	//takahiro力作！！！
 	//以下は従業員用のクエリ。tencartテーブルを使用
 	public List<Members> getTenCartList(){
@@ -503,4 +534,33 @@ public class MembersDao {
 	    		return 0;
 	    	}
 	}
+	//以下はレンタルした履歴用。ordersテーブルを使用
+	public List<Members> getOrdersList(){
+		String sql = "SELECT * FROM orders";
+		List<Members> ordersList = jdbcTemplate.query(sql, membersMapper);
+		return ordersList;
+	}
+	//履歴削除機能
+	public int removeOrders(int ordersNo) {
+		String sql = "DELETE FROM orders WHERE ordersNo=?";
+		Object[] parameters = { ordersNo };
+		return jdbcTemplate.update(sql, parameters);
+	}
+	//レンタル商品の返却機能
+	public int returnItem(int rentalNo) {
+        String sql = "DELETE FROM myrental WHERE rentalNo = ?";
+        Object[] parameters = { rentalNo };
+        return jdbcTemplate.update(sql, parameters);
+    }
+	//レンタル中の商品用
+	public List<Members> getRentalList(){
+		String sql = "SELECT * FROM myrental";
+		List<Members> rentalList = jdbcTemplate.query(sql, membersMapper);
+		return rentalList;
+	}
+    //返却処理後に更新されたレンタル履歴を再取得するメソッド
+    public List<Members> getUpdatedOrdersList() {
+        String sql = "SELECT * FROM myrental";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Members>(Members.class));
+    }
 }

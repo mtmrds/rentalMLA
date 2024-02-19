@@ -22,7 +22,6 @@ public class MypageController {
 	@Autowired
 	private MembersDao membersDao;
 
-
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
 	public String showMyPage(Model model, HttpSession session) {
 	    LoginModel loginModel = (LoginModel)session.getAttribute("loginModel");
@@ -119,5 +118,24 @@ public class MypageController {
 	    System.out.println("マイページへ飛ぶ");
 	    return "mypage";
 	}
-
+	@RequestMapping(value = "/showOrders", method = RequestMethod.GET)
+	public String ordersItemGet(Model model) {
+		model.addAttribute("ordersList", membersDao.getOrdersList());
+		return "ordersItem";
+	}
+	@RequestMapping(value = "/showOrders", method = RequestMethod.POST)
+	public String ordersItemPost(@RequestParam("ordersNo") Integer ordersNo) {
+		membersDao.removeOrders(ordersNo);
+		return "redirect:/showOrders";
+	}
+	@RequestMapping(value = "/returnItem", method = RequestMethod.GET)
+	public String returnItemGet(Model model) {
+		model.addAttribute("rentalList", membersDao.getRentalList());
+		return "rentalItem";
+	}
+	@RequestMapping(value = "/returnItem", method = RequestMethod.POST)
+    public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
+        membersDao.returnItem(rentalNo);
+        return "redirect:/showOrders";// 返却処理後は、再びレンタル履歴ページにリダイレクト
+}
 }

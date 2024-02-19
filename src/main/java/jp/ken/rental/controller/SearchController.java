@@ -33,55 +33,40 @@ public class SearchController {
 	}
 	@RequestMapping(value = "/search", method = RequestMethod.POST)
 	public String searchItemPost(@ModelAttribute ItemModel itemModel, Model model) {
-		boolean itemNoIsEmpty = itemModel.getItemNo().isEmpty();
-		boolean titleIsEmpty = itemModel.getTitle().isEmpty();
+	    boolean titleIsEmpty = itemModel.getTitle().isEmpty();
+	    boolean categoryIsEmpty = itemModel.getCategory().isEmpty();
 
-		if(itemModel.getTitle().equals("pick")) {
-			mId = itemModel.getItemNo();
+	    if (itemModel.getTitle().equals("pick")) {
+	        mId = itemModel.getItemNo();
+	        return "redirect:/setCartAdd";
+	    }
 
+	    if (titleIsEmpty && !categoryIsEmpty) {
+	        // カテゴリで検索
+	        List<Members> itemList = membersDao.pickItemByCategory(itemModel.getCategory());
+	        if (itemList.isEmpty()) {
+	            model.addAttribute("message", "該当データがありません");
+	        } else {
+	            model.addAttribute("itemList", itemList);
+	        }
+	    } else if (titleIsEmpty) {
+	        //全件検索
+	        List<Members> itemList = membersDao.getItemList();
+	        model.addAttribute("itemList", itemList);
+	        //System.out.println("原因1");//全件検索の成功
+	    } else {
+	        List<Members> itemList = membersDao.getListByItemTitle(itemModel.getTitle());
+	        if (itemList.isEmpty()) {
+	            model.addAttribute("message", "該当データがありません");
+	            System.out.println("原因4");
+	        } else {
+	            model.addAttribute("itemList", itemList);
+	        }
+	    }
 
-		    return "redirect:/setCartAdd";
-		}
-		if(itemNoIsEmpty && titleIsEmpty) {
-			//全件検索
-			List<Members> itemList = membersDao.getItemList();
-			model.addAttribute("itemList", itemList);
-			//System.out.println("原因1");//全件検索の成功
+	    model.addAttribute("headline", "商品検索");
 
-		} else if(!itemNoIsEmpty && titleIsEmpty) {
-
-			try {
-				Integer itemNo = new Integer(itemModel.getItemNo());
-				Members members = membersDao.pickItemById(itemNo);
-
-				if(members == null) {
-					model.addAttribute("message", "該当データがありません");
-					System.out.println("原因2");
-				} else {
-					List<Members>itemList = new ArrayList<Members>();
-					itemList.add(members);
-					model.addAttribute("itemList", itemList);
-				}
-			} catch(NumberFormatException e) {
-				model.addAttribute("message", "IDが不正です");
-				System.out.println("原因3");
-			}
-		} else if(itemNoIsEmpty && !titleIsEmpty) {
-			List<Members>itemList = membersDao.getListByItemTitle(itemModel.getTitle());
-
-			if(itemList.isEmpty()) {
-				model.addAttribute("message", "該当データがありません");
-				System.out.println("原因4");
-			} else {
-				model.addAttribute("itemList", itemList);
-			}
-		} else {
-			model.addAttribute("message", "IDまたはタイトルのいずれかを入力してください");
-			System.out.println("原因6");
-		}
-		model.addAttribute("headline", "商品検索");
-
-		return "itemSearch";
+	    return "itemSearch";
 	}
 	@RequestMapping(value = "/setCartAdd", method = RequestMethod.GET)
 	public String toCartGet(Model model) {
