@@ -26,6 +26,7 @@
 	min-height: 100vh;
 }
 
+
 /*共通ボタンの設定*/
 .btn-b {
 	display: inline-block;
@@ -525,6 +526,10 @@ from {
   transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
   animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
   text-align: center;
+}
+
+.fade-in-text img{
+	vertical-align: middle; /* 文字中央に持って来る*/
 }
 /*--------------------------------
 共通部分
