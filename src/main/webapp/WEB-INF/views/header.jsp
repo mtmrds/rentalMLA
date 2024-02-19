@@ -16,11 +16,11 @@
 
 			 <!--ログイン後だけ表示できる-->
 			<div class="loginname">
-				<p>
-					<c:if test="${!empty loginModel.name}">
-						<p>ようこそ、${loginModel.name}さん</p>
-						<p><a href="logout">ログアウト</a></p>
-						<p><a href="nagabuchi">今月の長渕剛</a></p>
+				<br>
+				<c:if test="${!empty loginModel.name}">
+					ようこそ、${loginModel.name}さん<br>
+						<a href="logout">ログアウト</a><br>
+						<a href="nagabuchi">今月の長渕剛</a>
 					</c:if>
 			</div>
 		</form:form>

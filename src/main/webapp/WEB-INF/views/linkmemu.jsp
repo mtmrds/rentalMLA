@@ -19,7 +19,6 @@
 		<!-- カート -->
         <a href="cart" class="btn-img">
             <img src="resources/image/カート.png" width= "60"height= "auto">カート</a>
-
         <!-- レンタル履歴・返却 -->
         <a href="showOrders" class="btn-img">
             <img src="resources/image/メモのアイコン3.png" width="50"height="auto">レンタル履歴・返却</a>
