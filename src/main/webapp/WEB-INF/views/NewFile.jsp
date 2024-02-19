@@ -8,15 +8,6 @@
 			<meta charset="UTF-8">
 			<title>Music Life Agency</title>
 			<style>
-
-
-
-
-
-
-
-
-
 .pic-container {
     display: flex;
     justify-content: center;
@@ -27,7 +18,6 @@
     box-sizing: border-box;
     background-color: #fefefe;
     background-color: #ffffc1;
-
 }
 .size_test {
     font-size:  25px;    /* 文字サイズ指定 */
