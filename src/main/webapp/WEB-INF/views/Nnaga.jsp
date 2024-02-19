@@ -12,12 +12,12 @@
 </head>
 <body>
 	<jsp:include page="Nheader.jsp"/>
+
 		<div class="nagaimg">
-			<img src="resources/image/n2.jpg" alt="">
-			<img src="resources/image/n2.jpg" alt="">
-			<img src="resources/image/n2.jpg" alt="">
-			<img src="resources/image/n2.jpg" alt="">
+			<img src="resources/Nclub/n3.jpg">
+			<img src="resources/Nclub/n3.jpg">
 		</div>
+
 		<div class="naganote">
 					<h1>毎週のおすすめ</h1>
 					<p>おはようございます！当店は長渕推しです。皆さんは普段どんな音楽を聴いてますか？<br>
@@ -34,17 +34,19 @@
 			<div>
 				<div class="biography">
 					<div class="naga-btitle">
-						<strong><h3>BIOGRAPHY</h3></strong>
+						<h3><strong>BIOGRAPHY</strong></h3>
 					</div>
 					<br>
 					<div class="profile">
+
 						<div class="prophote">
 							<img src="resources/itemimg/naga.jpg" width="347" height="360" />
-						</div>
+
 						<div class="phofile1">
 							長渕 剛(Tsuyoshi&nbsp;Nagabuchi)<br>
 							1956年9月7日生まれ<br>
 							鹿児島県出身<br>
+						</div>
 						</div>
 						<div class="profile2">
 							1978年シングル「巡恋歌」で本格デビュー。翌年にファースト・アルバム『風は南から』をリリースし、’80年「順子」でチャート１位を獲得する。<br>

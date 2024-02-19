@@ -25,21 +25,56 @@
 	background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
 }
 
+/*流れる画像設定*/
 .nagaimg {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    img {
+        width: 100vw;
+        height: 100%;
+
+        &:first-child {
+            animation: slide1 60s -30s linear infinite;
+        }
+
+        &:last-child {
+            animation: slide2 60s linear infinite;
+        }
+    }
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+
+/*プロフィール*/
+.prophote{
 	display: flex;
+
+
+
+
 }
 
-.nagaimg img {
-	min-width: 50vw;
-}
 
-.nagaimg img:first-child {
-	animation: loop 50s -25s linear infinite;
-}
-
-.nagaimg img:last-child {
-	animation: loop2 50s linear infinite;
-}
 
 
 /*---
@@ -91,6 +126,7 @@ body {
 .nagaphoto2{
 	text-align: center;
 }
+
 
 
 /*今月の長渕*/
