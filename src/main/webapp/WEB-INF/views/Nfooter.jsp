@@ -10,23 +10,18 @@
 		<div class="nagamenu">
 			<table>
 				<tr>
-					<td rowspan="3">OFFICIAL MENU</td>
-					<td>(仮１)</td>
-					<td>&nbsp;</td>
-					<td>(仮１)</td>
-					<td>&nbsp;</td>
+					<td rowspan="3" width="150">OFFICIAL MENU</td>
+					<td width="438">(仮１)</td>
+					<td width="438">(仮１)</td>
 				</tr>
 				<tr>
+					<td>(仮２)FUN CLUB</td>
 					<td>(仮２)</td>
-					<td>FUN CLUB</td>
-					<td>(仮２)</td>
-					<td>&nbsp;</td>
 				</tr>
 				<tr>
 					<td>(仮３)</td>
-					<td>&nbsp;</td>
 					<td>(仮３)</td>
-					<td>&nbsp;</td>
+
 				</tr>
 			</table>
 		</div>
