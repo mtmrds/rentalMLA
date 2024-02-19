@@ -1,74 +1,152 @@
 @charset "UTF-8";
+/*---
+長渕ヘッダー
+---*/
+.nagaheader {
+	font-size:50px;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
+	webkit-background-clip: text;
+	}
 
-
-/*naga.jsp*/
-
-.naganaga {
-  background-color: black; //これは赤色
+.nagaheader h1 {
+	font-size: 50px;
+	color: red;
 }
 
-
-@keyframes infinity-scroll-left {
-from {
-  transform: translateX(0);
+.nagalogin {
+	background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
 }
+
+.nagalogout {
+	background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
+}
+
+/*流れる画像設定*/
+.nagaimg {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    img {
+        width: 100vw;
+        height: 100%;
+
+        &:first-child {
+            animation: slide1 60s -30s linear infinite;
+        }
+
+        &:last-child {
+            animation: slide2 60s linear infinite;
+        }
+    }
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(100%);
+  }
   to {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
-.scroll-infinity__wrap {
-  display: flex;
-  overflow: hidden;
+
+
+/*プロフィール*/
+.prophote{
+	display: flex;
+
+
+
+
 }
-.scroll-infinity__list {
-  display: flex;
-  list-style: none;
-  padding: 0
+
+
+
+
+/*---
+長渕ページ
+---*/
+body {
+	background-color: black;
 }
-.scroll-infinity__list--left {
-  animation: infinity-scroll-left 20s infinite linear 0.5s both;
-}
-.scroll-infinity__item {
-  width: calc(70vw / 6);
-}
-.scroll-infinity__item>img {
-  width: 100%;
-  height: 300px;
-}
-.nagas{
-	text-align: center;
-}
-.nagass{
+
+.naganote {
 	color: white;
 	text-align: center;
 }
-.nagasa{
+
+.naganote h1 {
+	font-size:50px;
+}
+.nagamenu table{
+	background-color: #696969;
+
+}
+
+.nagamenu td {
+	color: white;
+}
+
+.biography {
+	color: white;
+	text-align: center;
+	background-color: gray;
+}
+
+.naga-btitle {
+	font-family: 'Heebo', sans-serif;
+	font-weight: 500;
+	font-size: 5vw;
+	margin-bottom: 20px;
+	line-height: 1;
+}
+
+.nagaclub{
 	font-size:5em;
 	text-align:center;
 	line-height:0.95em;
 	font-weight:bold;
-
 	webkit-background-clip: text;
 }
-.nn{
-text-align: center;
 
-}
-.nagab{
-	color: white;
+.nagaphoto2{
 	text-align: center;
-	background-color: gray;
+}
 
-}
-.bi{
-font-family: 'Heebo', sans-serif;
-    font-weight: 500;
-    font-size: 5vw;
-    margin-bottom: 20px;
-    line-height: 1;
-}
-.f{
-background: gray;
-text-align: left;
 
+
+/*今月の長渕*/
+.nagabuchi h5 {
+	width: 100%;
+
+/*---
+長渕フッター
+---*/
+.nagafooter{
+	display: flex;
+	width: 100%;
 }
+.nagamenu table{
+	width: 1000px;
+	height: 300px;
+}
+.naganaga {
+	text-align: right;
+	color: white;
+}
+
+

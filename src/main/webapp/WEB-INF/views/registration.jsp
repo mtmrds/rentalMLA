@@ -8,18 +8,6 @@
 	<head>
 		<meta charset=UTF-8>
 		<title> 会員登録画面 </title>
-
-
-<style>
-/*
-.errors{
-		font-family: 'Yomogi',cursive;
-		color: red;
-		font-weight: bold;
-}
-*/
-
-</style>
 	</head>
 	<body>
 		<div class="registration">
@@ -144,6 +132,7 @@
 					</table>
 							<br>
 								<input type="submit"  value="登録する" class="btn-b">
+
 				</form:form>
 			</main>
 				<jsp:include page="footer.jsp" />

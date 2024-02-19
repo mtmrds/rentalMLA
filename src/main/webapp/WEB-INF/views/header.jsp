@@ -22,7 +22,6 @@
 						<p><a href="logout">ログアウト</a></p>
 						<p><a href="nagabuchi">今月の長渕剛</a></p>
 					</c:if>
-				</p>
 			</div>
 		</form:form>
 	</div>

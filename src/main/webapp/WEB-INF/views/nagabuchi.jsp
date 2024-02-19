@@ -7,6 +7,22 @@
 <head>
 <meta charset=UTF-8>
 <title>Music Life Agency</title>
+<style>
+p{
+	font-size: 30px;
+}
+
+.nagabuchi{
+	text-align: center;
+}
+
+.nagabuchi h1,h2,h3,h4,h5{
+	font-size: 40px;
+}
+.nagabuchi h5 {
+	width:100%;
+}
+</style>
 </head>
 <body>
 
@@ -41,55 +57,52 @@
 </div>
 </div>
 <br>
-		<div class="itemsearch">
-			<div>
+		<div class="nagabuchi">
+
 				<h1>俺の最新のミュージックライフ</h1>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/jY9NKOjtBq4?si=R8-rzpYs94Zj4ofY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</div>
-			<div class="nagabuchi">
-				<h2>
+
+				<p>
 					種子島の諸君！！！<br>
 					俺の名前は長渕剛！歌手活動をしています！<br>
   					皆さんは普段どんな音楽を聴いてますか？<br>
   					長渕ですか？？剛ですか？？それともNAGABUCHI TSUYOSHIですか？？？<br>
   					意外と俺の曲ばかりで、流行りの曲を知らない人も多いのでは？？？？<br>
 					そこで今回は2024年にいま長渕が個人的に流行っていると思う、<br>
-					そんなおすすめの最新曲をここでご紹介するぜ！！！！<br></h2><br>
+					そんなおすすめの最新曲をここでご紹介するぜ！！！！<br>
+				</p><br>
 
-    			<strong><h1>最近流行りの今バズってる俺的トップ５</h1></strong>
-				<ul>
-					<h2>
+    			<h2><strong>最近流行りの今バズってる俺的トップ５</strong></h2>
+					<p>
      					１：とんぼ<br>
      					２：しゃぼん玉<br>
      					３：乾杯<br>
      					４：巡恋歌<br>
      					５：しあわせになろうよ<br>
-    				</h2>
-				</ul><br>
-				<strong><h1>TikTokで人気の俺のランキング</h1></strong>
-				<strong><h1>長渕トップ３</h1></strong>
-				<ul>
-					<h2>
+    				</p>
+				<br>
+				<h3><strong>TikTokで人気の俺のランキング</strong></h3>
+				<h4><strong>長渕トップ３</strong></h4>
+					<p>
      					１：とんぼ<br>
      					２：しゃぼん玉<br>
      					３：乾杯<br>
      					４：巡恋歌<br>
      					５：しあわせになろうよ<br>
-    				</h2>
-				</ul>
-				<h1>知っている曲や気になる曲はありましたか？ありましたよね？？？
-					素敵な長渕ライフを！！！！</h1>
-				<h2>
+    				</p>
+				<h4>知っている曲や気になる曲はありましたか？ありましたよね？？？<br>
+					素敵な長渕ライフを！！！！</h4>
+				<h5>
 					<a href="https://tsuyoshinagabuchi.com/fanclub/">ファンクラブはこちら</a>
 					<a href="https://twitter.com/nagabuchi_staff">X(旧ツイッター)はこちら</a>
 					<a href="https://www.instagram.com/tsuyoshi_nagabuchi/">インスタはこちら</a>
 					<a href="https://www.youtube.com/channel/UCsQc7RfiO8e08JXeCGmmjCA">youtubeはこちら</a>
-				</h2>
+				</h5>
 				<div class="center">
 					<p><a href="<c:url value='top' />">トップに戻る</a></p>
 				</div>
 				<jsp:include page="footer.jsp" />
-			</div>
+
 		</div>
 	</div>
 </body>

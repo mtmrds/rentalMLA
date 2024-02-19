@@ -12,7 +12,6 @@
 	<body>
 		<div class="page">
 			<jsp:include page="header.jsp"/>
-
         	<c:if test="${not empty successMessage}">
     			<p>${successMessage}</p>
 			</c:if>
@@ -39,50 +38,82 @@
         					</tr>
         					-->
 	        				<tr>
-	           					<td><strong>氏名</strong></td>
-	           					<td><form:input path="name" /></td>
+	           					<td align="center"><strong>氏名</strong></td>
+	           					<td colspan="4"><form:input path="name" /></td>
 	        				</tr>
 	        				<tr>
-	          					<td><strong>郵便番号</strong></td>
-	           					<td><form:input path="zip" /></td>
+	          					<td align="center"><strong>郵便番号</strong></td>
+	           					<td colspan="4"><form:input path="zip" /></td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>住所</strong></td>
-	           					<td><form:input path="address" /></td>
+	           					<td align="center"><strong>住所</strong></td>
+	           					<td colspan="4"><form:input path="address" /></td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>電話番号</strong></td>
-	           					<td><form:input path="phone" /></td>
+	           					<td align="center"><strong>電話番号</strong></td>
+	           					<td colspan="4"><form:input path="phone" /></td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>メールアドレス</strong></td>
-	           					<td><form:input path="mail" /></td>
+	           					<td align="center"><strong>メールアドレス</strong></td>
+	           					<td colspan="4"><form:input path="mail" /></td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>生年月日</strong></td>
-	           					<td><form:input path="birthday" /></td>
+	           					<td align="center"><strong>生年月日</strong></td>
+	           					<td colspan="4"><form:input path="birthday" /></td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>クレジットカード</strong></td>
-	           					<td><form:input path="card" /></td>
+	           					<td align="center"><strong>クレジットカード</strong></td>
+	           					<td colspan="4">
+	           						<img src="resources/cardbrand/visa.png" height="50px" width="70px"/>
+									<img src="resources/cardbrand/master.png" height="50px" width="70px" />
+									<img src="resources/cardbrand/jcb.png" height="50px" width="70px" />
+									<img src="resources/cardbrand/amex.png" height="50px" width="70px" />
+									<br>
+									<form:input path="card" />
+	           					</td>
 	        				</tr>
 	        				<tr>
-	           					<td><strong>加入中のプラン</strong></td>
-	           					<td>${memberModel.plan}</td>
+	           					<td align="center"><strong>加入中のプラン</strong>
+	           					<br>${memberModel.plan}</td>
+	           					<td style="border-right: none;">
+							<form:radiobutton path="plan" label="お試しプラン" value="お試しプラン" checked="checked" />
+							<br><br>
+							初月限定！<br>
+							月額324円<br>
+							2枚/月
+							</td>
+							<td style="border-right: none;">
+							<form:radiobutton path="plan" label="Bronzeプラン" value="Bronzeプラン" />
+							<br><br>
+							月額1080円<br>
+							6枚/月
+							</td>
+							<td style="border-right: none;">
+							<form:radiobutton path="plan" label="Silverプラン" value="Silverプラン" />
+							<br><br>
+							月額2160円<br>
+							6枚/月
+							</td>
+							<td>
+							<form:radiobutton path="plan" label="Goldプラン" value="Goldプラン" />
+							<br><br>
+							月額5400円<br>
+							無制限<br>
+							</td>
 	        				</tr>
 	        				<tr>
-	               				<td><strong>現在のパスワード</strong></td>
+	               				<td align="center"><strong>現在のパスワード</strong></td>
 	                   			<!--伏字っぽくしただけ  -->
-	                   			<td>**********</td>
+	                   			<td colspan="4">**********</td>
 	               			</tr>
 	        				<tr>
-	           					<td><strong>新しいパスワード</strong></td>
-	           					<td><input type="password" name="password" /></td>
+	           					<td align="center"><strong>新しいパスワード</strong></td>
+	           					<td colspan="4"><input type="password" name="password" /></td>
 	        				</tr>
 	               			<!-- パスワードの確認用フィールドを追加 -->
 	               			<tr>
-	                   			<td><strong>新しいパスワードを再入力</strong></td>
-	                   			<td><input type="password" name="confirmPassword" /></td>
+	                   			<td align="center"><strong>新しいパスワードを再入力</strong></td>
+	                   			<td colspan="4"><input type="password" name="confirmPassword" /></td>
 	               			</tr>
     					</table>
     					<br>

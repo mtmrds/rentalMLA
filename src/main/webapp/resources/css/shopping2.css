@@ -49,7 +49,7 @@
   transition: 0.8s;
 }
 
-.btn-img{
+.btn-img {
 	vertical-align:middle;
 }
 
@@ -88,6 +88,26 @@
   height: 150px;
 }
 
+/*スクロールバー*/
+body {
+	overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/*スクロールバーのツマミの部分*/
+::-webkit-scrollbar-thumb {
+  background: #ff8095;
+  border-radius: 5px;
+}
+
+/*スクロールバーにグラデーションを反映*/
+::-webkit-scrollbar-track {
+   background: linear-gradient(pink,orchid);
+}
 
 /*--------------------------------
 ヘッダー
@@ -122,6 +142,16 @@
 	font-size: 25px;
 }
 
+.loginname {
+	font-family: 'Yomogi',cursive;
+	text-align: right;
+	font-size: 25px;
+}
+
+.linkmenu img {
+	vertical-align: middle;
+}
+
 
 /*--------------------------------
 フッター
@@ -140,6 +170,10 @@
 .topselect a {
 	font-family: 'Yomogi',cursive;
 	font-size: 25px;
+}
+
+.topselect img{
+		vertical-align: middle;
 }
 
 /*トップタイトル*/
@@ -216,6 +250,7 @@
 	transform: translateX(-100%);
 	}
 }
+
 .loopplan_box {
 	display: flex;
 	overflow: hidden;
@@ -241,7 +276,6 @@
 /*トップセレクト整列*/
 .topselect {
 	text-align: center;
-
 }
 
 /*トップコンテンツ整列*/
@@ -249,7 +283,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 
 /*トップコンテンツ枠*/
@@ -262,8 +295,6 @@
 	border-radius: 30px;
 	height: 300px;
 	width: 500px;
-
-
 }
 
 
@@ -293,20 +324,51 @@
 
 .insta {
 	font-size: 25px;
-
 }
 
 /*インスタ*/
-.instalogin p{
+.instalogin p {
 	text-align: center;
-
 }
 
 .instalogin img{
 	vertical-align:middle;
-
 }
 
+/*店長川上の1日*/
+p {
+	padding: 50px;
+	font-size: 1.0em;
+	font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+p span2 {
+	font-size: 2.0em;
+	font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
+}
+
+span2 {
+	background-color: #ffffc1;
+}
+
+.kawaimg {
+list-style:none;
+}
+
+.scroll-infinity__item {
+	float: right;
+	width: calc(70vw / 6);
+}
+
+.scroll-infinity__item>img {
+	width: 100%;
+}
+
+/* メンテナンスページ*/
+.mente ul {
+	list-style :見栄えの指定;
+	background-color: gray;
+}
 
 /*--------------------------------
 ログインページ
@@ -318,7 +380,16 @@
 	border-radius:50px;
 }
 
-
+.logintitle h1{
+	background-color: hotpink;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	color:black;
+	text-align: center;
+}
 
 
 /*--------------------------------
@@ -351,7 +422,7 @@ from {
 }
  to {
   transform: translateX(-100%);
-}
+	}
 }
 .scroll-onpu__wrap {
   display: flex;
@@ -378,7 +449,7 @@ from {
 	text-align: center;
 }
 
-.center h1{
+.center h1 {
 	background-color: hotpink;
 	opacity: 0.4;
 	padding: 20px;
@@ -386,7 +457,7 @@ from {
 	color:black;
 }
 
-.center table{
+.center table {
 	margin-left: auto;
     margin-right: auto;
 }
@@ -439,5 +510,6 @@ from {
 	color:black;
 	text-align: center;
 }
+
 
 
