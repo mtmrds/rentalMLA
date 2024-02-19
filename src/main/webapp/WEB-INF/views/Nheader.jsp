@@ -2,9 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 <!-- ヘッダー -->
 <div>
 		<link href="resources/css/naga.css" rel="stylesheet">
+
 		<!--<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio> -->
 </div>
 <!-- ログイン後は名前を表示 -->
@@ -14,7 +18,7 @@
 			<a href="top"  alt="トップページに戻る">
 				<img src="resources/Nclub/liveon.png">
 			</a>
-			<h1>Music Life </h1><h1>Nagabuchi</h1>
+			<h1>Music Life Nagabuchi</h1>
 		</div>
 		<!-- 各種ページへのリンク -->
 		<div class="nagalogin">

@@ -10,11 +10,16 @@
 	color: transparent;
 	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
 	webkit-background-clip: text;
+
 	}
 
 .nagaheader h1 {
 	font-size: 50px;
-	color: red;
+	color: purple;
+  	font-family: "Rock Salt", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+
 }
 
 .nagalogin {
@@ -68,9 +73,12 @@
 /*プロフィール*/
 .prophote{
 	display: flex;
-	width: 100px;
-
+	justify-content: center;
+	align-items: end;
+	font-size: xxx-large;
 }
+
+
 
 
 
@@ -87,8 +95,9 @@ body {
 }
 
 .naganote h1 {
-	font-size:50px;
+		font-size:50px;
 }
+
 
 
 .biography {
@@ -127,19 +136,20 @@ body {
 /*--------------
 長渕フッター
 ----------------*/
+/*画像とテーブルの横並び設定*/
+.nagafooter{
+	display: flex;
+}
 
 .nagamenu table{
 	width: 1032px;;
 	height: 200px;
 	background-color: gray;
-
-
 }
 
 .nagamenu tr{
 	background-color: gray;
 	text-align: left;
-
 }
 
 .nagamenu td{
@@ -148,11 +158,9 @@ body {
 }
 
 
+/*会社名表示位置*/
 .naganaga p{
 	text-align: right;
 	color: white;
 }
 
-.nagafooter{
-	display: flex;
-}
