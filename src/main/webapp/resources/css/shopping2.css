@@ -10,6 +10,7 @@
 商品一覧検索
 マイページ
 会員登録ページ
+カートコンテンツ
 ---------------------------------*/
 /*--------------------------------
 共通部分
@@ -322,10 +323,6 @@ body {
 	overflow-y: scroll;
 }
 
-.insta {
-	font-size: 25px;
-}
-
 /*インスタ*/
 .instalogin p {
 	text-align: center;
@@ -511,5 +508,24 @@ from {
 	text-align: center;
 }
 
+/*会員登録完了*/
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
 
+  }
+}
 
+.fade-in-text {
+  position: relative;
+  font-size: 30px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+  text-align: center;
+}
+/*--------------------------------
+共通部分
+---------------------------------*/
+/**/
