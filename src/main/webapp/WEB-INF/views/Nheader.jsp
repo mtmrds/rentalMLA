@@ -9,8 +9,7 @@
 <div>
 		<link href="resources/css/naga.css" rel="stylesheet">
 
-		<!--<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio> -->
-</div>
+		<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio>
 <!-- ログイン後は名前を表示 -->
 <div>
 	<form:form modelAttribute="memberModel">
