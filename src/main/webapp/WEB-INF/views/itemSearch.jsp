@@ -22,12 +22,14 @@
 						</div>
 					</div>
 						<div class="itemsearch">
-							<h2>検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong><br>
-								のいずれかを入力してください</h2><br>
-							<label for="id"><strong>ID</strong></label>
-							<form:input path="itemNo"/>
+							<h2>検索条件を指定する場合は
+								<strong>「タイトル名」</strong>、<strong>「カテゴリー」</strong>
+								のいずれかを入力してください</h2>
+								<h3><strong>空欄の状態で「検索する」を押すとすべての商品を表示します</strong></h3><br>
 							<label for="name"><strong>タイトル</strong></label>
 							<form:input path="title"/>
+							<label for="category"><strong>カテゴリ</strong></label>
+							<form:input path="category"/>
 							<input type="submit" value="検索する" class="btn-b"><br>
 							<div>
 								<c:out value="${message}"/>
@@ -38,35 +40,40 @@
 					<c:if test="${!empty itemList}">
 						<table border="1">
 							<tr>
-								<th>ID</th>
 								<th>画像</th>
 								<th>タイトル</th>
 								<th>タイプ</th>
 								<th>カテゴリー</th>
 								<th>在庫</th>
-								<th>カート</th>
+								<th>カート追加</th>
 							</tr>
 							<c:forEach var="items" items="${itemList}">
 								<tr>
-									<td><c:out value="${items.itemNo}"/></td>
 									<td><img src="${items.image }"width="100" height="150" /></td>
 									<td><c:out value="${items.title}"/></td>
 									<td><c:out value="${items.type}"/></td>
 									<td><c:out value="${items.category}"/></td>
 									<td><c:out value="${items.quantity}"/></td>
 									<td>
-										<form:form modelAttribute="itemModel">
-											<form:hidden path="itemNo" value="${items.itemNo }" />
-											<form:hidden path="title" value="pick"/>
-											<c:choose>
-												<c:when test="${items.quantity > 0}">
-													<input type="submit" value="カートに入れる" />
-												</c:when>
-												<c:otherwise>
-													<input type="button" value="在庫切れ" disabled="disabled"/>
-												</c:otherwise>
-											</c:choose>
-										</form:form>
+										<c:choose>
+                            				<c:when test="${empty loginModel.name}">
+                                				<input type="button" value="ログインしてください" disabled="disabled"/>
+                            				</c:when>
+                            				<c:otherwise>
+                                				<form:form modelAttribute="itemModel">
+                                    				<form:hidden path="itemNo" value="${items.itemNo}"/>
+                                    				<form:hidden path="title" value="pick"/>
+                                    				<c:choose>
+                                        				<c:when test="${items.quantity > 0}">
+                                            				<input type="submit" value="カートに入れる"/>
+                                        				</c:when>
+                                        				<c:otherwise>
+                                            				<input type="button" value="在庫切れ" disabled="disabled"/>
+                                        				</c:otherwise>
+                                    				</c:choose>
+                                				</form:form>
+                            				</c:otherwise>
+                        				</c:choose>
 									</td>
 								</tr>
 							</c:forEach>

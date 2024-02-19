@@ -41,7 +41,6 @@
         	</form:form>
         	</div>
 
-			<!-- 下記は直飛びなので、商品情報が入らない -->
 			<p><a href="<c:url value='search' />">検索画面に戻る</a></p>
 			<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			<jsp:include page="footer.jsp"/>

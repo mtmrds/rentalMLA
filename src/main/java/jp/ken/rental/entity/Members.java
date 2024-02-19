@@ -24,12 +24,13 @@ public class Members implements Serializable{
 	private Integer quantity;
 	private String image;
 	private int historyNo;
-	private int orderNo;
+	private int ordersNo;
 	private int orderItem;
 	private Timestamp orderDate;
 	//顧客注文用
 	private int ordersItem;
-	private Integer userId;
+	private Timestamp ordersDate;
+	private int rentalNo;
 
 
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
@@ -113,8 +114,8 @@ public class Members implements Serializable{
 		return historyNo;
 	}
 
-	public int getOrderNo() {
-		return orderNo;
+	public int getOrdersNo() {
+		return ordersNo;
 	}
 
 	public int getOrderItem() {
@@ -129,8 +130,12 @@ public class Members implements Serializable{
 		return ordersItem;
 	}
 
-	public Integer getUserId() {
-		return userId;
+	public Timestamp getOrdersDate() {
+		return ordersDate;
+	}
+
+	public int getRentalNo() {
+		return rentalNo;
 	}
 
 	public void setId(int id) {
@@ -201,8 +206,8 @@ public class Members implements Serializable{
 		this.historyNo = historyNo;
 	}
 
-	public void setOrderNo(int orderNo) {
-		this.orderNo = orderNo;
+	public void setOrdersNo(int ordersNo) {
+		this.ordersNo = ordersNo;
 	}
 
 	public void setOrderItem(int orderItem) {
@@ -217,7 +222,11 @@ public class Members implements Serializable{
 		this.ordersItem = ordersItem;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setOrdersDate(Timestamp ordersDate) {
+		this.ordersDate = ordersDate;
+	}
+
+	public void setRentalNo(int rentalNo) {
+		this.rentalNo = rentalNo;
 	}
 }
