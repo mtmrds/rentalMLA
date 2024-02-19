@@ -18,7 +18,6 @@
     box-sizing: border-box;
     background-color: #fefefe;
     background-color: #ffffc1;
-
 }
 .size_test {
     font-size:  25px;    /* 文字サイズ指定 */
