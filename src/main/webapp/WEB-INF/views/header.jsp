@@ -21,6 +21,7 @@
 					ようこそ、${loginModel.name}さん<br>
 						<a href="logout">ログアウト</a><br>
 						<a href="nagabuchi">今月の長渕剛</a>
+						<a href="Nnaga">おすすめ</a>
 					</c:if>
 			</div>
 		</form:form>
