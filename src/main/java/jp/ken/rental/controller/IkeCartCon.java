@@ -42,4 +42,8 @@ public class IkeCartCon {
 	public String toTamibuchi(Model model) {
         return "tamibuchi";
 	}
+	@RequestMapping(value = "/Nnaga",method = RequestMethod.GET)
+	public String toNaga(Model model) {
+        return "Nnaga";
+	}
 }
