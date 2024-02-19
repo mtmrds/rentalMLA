@@ -4,8 +4,6 @@
 
 		<!--  ファビコン -->
 
-		<!-- 出なくなったから再設定 -->
-
 		<!-- 社名ロゴフォント -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
