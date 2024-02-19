@@ -2,45 +2,39 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-
-<style>
-.aw{
-background-color: black;
-background-size:cover;
-width: 650px;height: 200px;
-}
-
-</style>
 <footer>
 	<div class="nagafooter">
-		<div class="nagaimg">
+		<div class="nagaimg2">
 			<img src="resources/Nclub/liveon.png">
 		</div>
 		<div class="nagamenu">
 			<table>
 				<tr>
-					<td>OFFICIAL MENU</td>
-					<td>
-						<ul>
-							<li>(仮１)</li>
-							<li>(仮２)</li>
-							<li>(仮３)</li>
-						</ul>
-					</td>
+					<td rowspan="3">OFFICIAL MENU</td>
+					<td>(仮１)</td>
+					<td>&nbsp;</td>
+					<td>(仮１)</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>(仮２)</td>
 					<td>FUN CLUB</td>
-					<td>
-						<ul>
-							<li>(仮１)</li>
-							<li>(仮２)</li>
-							<li>(仮３)</li>
-						</ul>
-					</td>
+					<td>(仮２)</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>(仮３)</td>
+					<td>&nbsp;</td>
+					<td>(仮３)</td>
+					<td>&nbsp;</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-	<p class="naganaga"><small>&copy;2024 Office Music Life Naga</small></p>
 
+	<div class="naganaga">
+	<p><small>&copy;2024 Office Music Life Naga</small></p>
+	</div>
 
 
 </footer>
