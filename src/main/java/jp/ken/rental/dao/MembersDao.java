@@ -547,16 +547,33 @@ public class MembersDao {
 		return jdbcTemplate.update(sql, parameters);
 	}
 	//レンタル商品の返却機能
-	public int returnItem(int rentalNo) {
-        String sql = "DELETE FROM myrental WHERE rentalNo = ?";
-        Object[] parameters = { rentalNo };
-        return jdbcTemplate.update(sql, parameters);
+	public int getRentalQuantity(int rentalNo) {
+	    String renQuantity = "SELECT ordersItem FROM myrental WHERE rentalNo=?";
+	    return jdbcTemplate.queryForObject(renQuantity, Integer.class, rentalNo);
+	}
+	public int returnItem(int rentalNo, int quantity) {
+	    //myrentalテーブルから商品情報を取得
+	    String selectSql = "SELECT item_no FROM myrental WHERE rentalNo = ?";
+	    Integer itemNo = jdbcTemplate.queryForObject(selectSql, Integer.class, rentalNo);
+
+	    if (itemNo == null) {
+	        // レンタルNoに対応する商品が見つからない場合のエラーハンドリング
+	        return 0; // または適切なエラー処理を行う
+	    }
+	    //movItemテーブルのquantityを更新する
+	    String updateSql = "UPDATE movItem SET quantity = quantity + ? WHERE item_no = ?";
+	    int updatedRows = jdbcTemplate.update(updateSql, quantity, itemNo);
+	    //myrentalテーブルから商品を返却する
+	    String deleteSql = "DELETE FROM myrental WHERE rentalNo = ?";
+	    jdbcTemplate.update(deleteSql, rentalNo);
+
+	    return updatedRows;
     }
 	//レンタル中の商品用
-	public List<Members> getRentalList(){
-		String sql = "SELECT * FROM myrental";
-		List<Members> rentalList = jdbcTemplate.query(sql, membersMapper);
-		return rentalList;
+		public List<Members> getRentalList() {
+	    String sql = "SELECT * FROM myrental";
+	    List<Members> rentalList = jdbcTemplate.query(sql, membersMapper);
+	    return rentalList;
 	}
     //返却処理後に更新されたレンタル履歴を再取得するメソッド
     public List<Members> getUpdatedOrdersList() {
