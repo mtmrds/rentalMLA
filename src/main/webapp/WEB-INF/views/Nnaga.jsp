@@ -31,7 +31,6 @@
 		</div>
 		<br>
 		<br>
-			<div>
 				<div class="biography">
 					<div class="naga-btitle">
 						<h3><strong>BIOGRAPHY</strong></h3>
@@ -42,11 +41,11 @@
 						<div class="prophote">
 							<img src="resources/itemimg/naga.jpg" width="347" height="360" />
 
-						<div class="phofile1">
-							長渕 剛(Tsuyoshi&nbsp;Nagabuchi)<br>
-							1956年9月7日生まれ<br>
-							鹿児島県出身<br>
-						</div>
+							<div class="phofile1">
+								長渕 剛(Tsuyoshi&nbsp;Nagabuchi)<br>
+								1956年9月7日生まれ<br>
+								鹿児島県出身<br>
+							</div>
 						</div>
 						<div class="profile2">
 							1978年シングル「巡恋歌」で本格デビュー。翌年にファースト・アルバム『風は南から』をリリースし、’80年「順子」でチャート１位を獲得する。<br>
@@ -89,13 +88,14 @@
 						</div>
 					</div>
 				</div>
+				<br>
 				<div class="nagaclub">
 					<a href="https://tsuyoshinagabuchi.com/fanclub/">俺のファンクラブ入会もよろしく</a>
 				</div>
 				<div class="nagaphoto2">
 					<img src="resources/image/nagas.jpg" />
-				</div>
-			</div>
+
 		<jsp:include page="Nfooter.jsp"/>
+		</div>
 	</body>
 </html>

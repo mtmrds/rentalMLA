@@ -68,12 +68,9 @@
 /*プロフィール*/
 .prophote{
 	display: flex;
-
-
-
+	width: 100px;
 
 }
-
 
 
 
@@ -133,20 +130,26 @@ body {
 .nagabuchi h5 {
 	width: 100%;
 
-/*---
+/*--------------
 長渕フッター
----*/
-.nagafooter{
-	display: flex;
-	width: 100%;
-}
+----------------*/
+
+
 .nagamenu table{
 	width: 1000px;
 	height: 300px;
 }
-.naganaga {
+
+.nagamenu td{
+	text-align: left;
+}
+
+
+.naganaga p{
 	text-align: right;
 	color: white;
 }
 
-
+.nagafooter{
+	display: flex;
+}
