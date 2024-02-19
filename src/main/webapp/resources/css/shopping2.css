@@ -49,7 +49,7 @@
   transition: 0.8s;
 }
 
-.btn-img{
+.btn-img {
 	vertical-align:middle;
 }
 
@@ -146,10 +146,10 @@ body {
 	font-family: 'Yomogi',cursive;
 	text-align: right;
 	font-size: 25px;
+}
 
-.linkmenu img{
+.linkmenu img {
 	vertical-align: middle;
-
 }
 
 
@@ -250,6 +250,7 @@ body {
 	transform: translateX(-100%);
 	}
 }
+
 .loopplan_box {
 	display: flex;
 	overflow: hidden;
@@ -275,7 +276,6 @@ body {
 /*トップセレクト整列*/
 .topselect {
 	text-align: center;
-
 }
 
 /*トップコンテンツ整列*/
@@ -283,7 +283,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 
 /*トップコンテンツ枠*/
@@ -296,8 +295,6 @@ body {
 	border-radius: 30px;
 	height: 300px;
 	width: 500px;
-
-
 }
 
 
@@ -327,18 +324,15 @@ body {
 
 .insta {
 	font-size: 25px;
-
 }
 
 /*インスタ*/
-.instalogin p{
+.instalogin p {
 	text-align: center;
-
 }
 
 .instalogin img{
 	vertical-align:middle;
-
 }
 
 /*店長川上の1日*/
@@ -347,7 +341,8 @@ p {
 	font-size: 1.0em;
 	font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-p span {
+
+p span2 {
 	font-size: 2.0em;
 	font-family: apple color emoji,segoe ui emoji,noto color emoji,android emoji,emojisymbols,emojione mozilla,twemoji mozilla,segoe ui symbol;
 }
@@ -368,7 +363,6 @@ list-style:none;
 .scroll-infinity__item>img {
 	width: 100%;
 }
-
 
 /* メンテナンスページ*/
 .mente ul {
@@ -428,7 +422,7 @@ from {
 }
  to {
   transform: translateX(-100%);
-}
+	}
 }
 .scroll-onpu__wrap {
   display: flex;
@@ -455,7 +449,7 @@ from {
 	text-align: center;
 }
 
-.center h1{
+.center h1 {
 	background-color: hotpink;
 	opacity: 0.4;
 	padding: 20px;
@@ -463,7 +457,7 @@ from {
 	color:black;
 }
 
-.center table{
+.center table {
 	margin-left: auto;
     margin-right: auto;
 }

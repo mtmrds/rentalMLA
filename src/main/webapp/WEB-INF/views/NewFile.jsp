@@ -8,15 +8,6 @@
 			<meta charset="UTF-8">
 			<title>Music Life Agency</title>
 			<style>
-
-
-
-
-
-
-
-
-
 .pic-container {
     display: flex;
     justify-content: center;
