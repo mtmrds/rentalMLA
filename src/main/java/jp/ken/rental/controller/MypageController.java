@@ -67,7 +67,6 @@ public class MypageController {
 	    }
 	    return "mypage";
 	}
-	//memberModelをセッションに入れてるからjspで保持される
 	@RequestMapping(value = "/editAccount", method = RequestMethod.POST)
 	public String editAccount(@ModelAttribute("memberModel") Members member, @RequestParam("confirmPassword") String confirmPassword, Model model, HttpSession session) {
 
@@ -88,7 +87,6 @@ public class MypageController {
 	                    return "mypage";
 	                }
 	            }
-
 	            existingMember.setName(member.getName());
                 existingMember.setZip(member.getZip());
                 existingMember.setAddress(member.getAddress());
@@ -121,6 +119,7 @@ public class MypageController {
 	@RequestMapping(value = "/showOrders", method = RequestMethod.GET)
 	public String ordersItemGet(Model model) {
 		model.addAttribute("ordersList", membersDao.getOrdersList());
+		model.addAttribute("rentalList", membersDao.getRentalList());
 		return "ordersItem";
 	}
 	@RequestMapping(value = "/showOrders", method = RequestMethod.POST)
@@ -128,14 +127,10 @@ public class MypageController {
 		membersDao.removeOrders(ordersNo);
 		return "redirect:/showOrders";
 	}
-	@RequestMapping(value = "/returnItem", method = RequestMethod.GET)
-	public String returnItemGet(Model model) {
-		model.addAttribute("rentalList", membersDao.getRentalList());
-		return "rentalItem";
-	}
 	@RequestMapping(value = "/returnItem", method = RequestMethod.POST)
-    public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
-        membersDao.returnItem(rentalNo);
-        return "redirect:/showOrders";// 返却処理後は、再びレンタル履歴ページにリダイレクト
-}
+	public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
+		int upQuantity = membersDao.getRentalQuantity(rentalNo);
+		membersDao.returnItem(rentalNo, upQuantity);
+	    return "redirect:/showOrders";
+	}
 }

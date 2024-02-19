@@ -24,10 +24,11 @@ public class Members implements Serializable{
 	private Integer quantity;
 	private String image;
 	private int historyNo;
-	private int ordersNo;
+	private int orderNo;
 	private int orderItem;
 	private Timestamp orderDate;
 	//顧客注文用
+	private int ordersNo;
 	private int ordersItem;
 	private Timestamp ordersDate;
 	private int rentalNo;
@@ -114,8 +115,8 @@ public class Members implements Serializable{
 		return historyNo;
 	}
 
-	public int getOrdersNo() {
-		return ordersNo;
+	public int getOrderNo() {
+		return orderNo;
 	}
 
 	public int getOrderItem() {
@@ -124,6 +125,10 @@ public class Members implements Serializable{
 
 	public Timestamp getOrderDate() {
 		return orderDate;
+	}
+
+	public int getOrdersNo() {
+		return ordersNo;
 	}
 
 	public int getOrdersItem() {
@@ -206,8 +211,8 @@ public class Members implements Serializable{
 		this.historyNo = historyNo;
 	}
 
-	public void setOrdersNo(int ordersNo) {
-		this.ordersNo = ordersNo;
+	public void setOrderNo(int orderNo) {
+		this.orderNo = orderNo;
 	}
 
 	public void setOrderItem(int orderItem) {
@@ -216,6 +221,10 @@ public class Members implements Serializable{
 
 	public void setOrderDate(Timestamp orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public void setOrdersNo(int ordersNo) {
+		this.ordersNo = ordersNo;
 	}
 
 	public void setOrdersItem(int ordersItem) {
