@@ -14,7 +14,8 @@
 			<div class="page">
 			<jsp:include page="header.jsp"/>
 			<form:form modelAttribute="itemModel">
-				<h1 style="text-align: center">商品検索画面</h1>
+			<div class="center">
+				<h1>商品検索画面</h1>
 					<div class="scroll-infinity">
 						<div class="scroll-infinity__wrap">
 							<jsp:include page="itemSearchimg.jsp"/>
@@ -36,7 +37,9 @@
 							</div>
 							<br>
 						</div>
+						</div>
 			</form:form>
+			<div class="center">
 					<c:if test="${!empty itemList}">
 						<table border="1">
 							<tr>
@@ -79,6 +82,7 @@
 							</c:forEach>
 						</table>
 					</c:if>
+					</div>
 					<jsp:include page="footer.jsp"/>
 				</div>
 		</body>
