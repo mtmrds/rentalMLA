@@ -330,6 +330,9 @@ body {
 	overflow-y: scroll;
 }
 
+.Ntube li {
+	font-size: 25px;
+}
 
 /*インスタ*/
 .instalogin p {
