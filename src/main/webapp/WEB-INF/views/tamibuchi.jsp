@@ -13,6 +13,11 @@
 <body>
 	<div class="page">
 		<jsp:include page="header.jsp"/>
+		<div class="center">
+			<img src="resources/Nclub/tamimacho1.gif" width="400" height="300" />
+			<img src="resources/Nclub/tamimacho2.gif" width="400" height="300" />
+			<img src="resources/Nclub/tamigun.gif" width="400" height="300" />
+		</div>
 			<div class="loading-area">
 				<span>正</span>
 				<span>解</span>
@@ -28,8 +33,6 @@
 				<span>う</span>
 				<span>！</span>
 			</div>
-
-
 			<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			<jsp:include page="footer.jsp"/>
 

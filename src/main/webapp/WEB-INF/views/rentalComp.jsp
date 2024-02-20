@@ -11,18 +11,19 @@
 	<link href="resources/css/shopping.css" rel="stylesheet">
 </head>
 <body>
-	<div class="paymentcomp">
+	<div class="page">
 		<jsp:include page="header.jsp"/>
-			<div class="paymentcomptitle">
+			<div class="center">
 				<h1>レンタル完了画面</h1>
-			</div>
+
 			<div class="fade-in-text">
-				<p>レンタルありがとうございました(^_-)-☆</p>
+				レンタルありがとうございました(^_-)-☆
 				<img src="resources/image/お辞儀.png"/>
 			</div>
 
-			<p><a href="<c:url value='search' />">検索画面に戻る</a>
-			|<a href="<c:url value='top' />">トップに戻る</a></p>
+			<a href="<c:url value='search' />">検索画面に戻る</a>
+			|<a href="<c:url value='top' />">トップに戻る</a>
+			</div>
 		<jsp:include page="footer.jsp"/>
 	</div>
 </body>
