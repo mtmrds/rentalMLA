@@ -9,10 +9,12 @@
     <meta charset="UTF-8">
     <title>発注商品一覧</title>
 </head>
-	<body style="background-color: gray;">
+	<body>
+		<div class="emp">
     	<jsp:include page="headeremp.jsp"/>
+    	<div class="center2">
 	    <form:form modelAttribute="itemModel">
-    	   	<table border="1">
+    	   	<table>
             	<tr>
            			<th>ID</th>
                		<th>画像</th>
@@ -38,6 +40,8 @@
            		</c:forEach>
        		</table>
     	</form:form>
+    	</div>
     	<jsp:include page="footer.jsp"/>
+    	</div>
 	</body>
 </html>

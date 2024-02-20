@@ -11,21 +11,25 @@
 		<title>レンタルサイト 商品一覧画面</title>
 	</head>
 		<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
-		<body style="background-color: gray;">
+		<body>
+		<div class="emp">
 			<!--  <div class="itemsearch"> -->
 			<jsp:include page="headeremp.jsp"/>
 				<main>
+				<div class="center2">
 					<form:form modelAttribute="itemModel">
 						<div >
 							検索条件を指定する場合は<strong>「ID」</strong>または<strong>「タイトル名」</strong>のいずれかを入力してください
 						</div>
+						<br>
 						<div>
 							<label for="id"><strong>ID</strong></label>
 							<form:input path="itemNo"/>
 							<label for="name"><strong>タイトル</strong></label>
 							<form:input path="title"/>
-							<input type="submit" value="在庫一覧（仮）" class="btn">
+							<input type="submit" value="在庫一覧" class="btn">
 						</div>
+						<br>
 						<div>
 							<c:out value="${message}"/>
 						</div>
@@ -60,7 +64,9 @@
 						</c:forEach>
 					</table>
 					</c:if>
+					</div>
 				</main>
 			<jsp:include page="footer.jsp"/>
+			</div>
 		</body>
 </html>

@@ -325,6 +325,15 @@ body {
 	overflow-y: scroll;
 }
 
+/*Ntube*/
+.Ntube {
+	overflow-y: scroll;
+}
+
+.Ntube li {
+	font-size: 25px;
+}
+
 /*インスタ*/
 .instalogin p {
 	text-align: center;
@@ -533,6 +542,39 @@ from {
 
 .fade-in-text img{
 	vertical-align: middle; /* 文字中央に持って来る*/
+}
+
+/*--------------------------------
+従業員ページ
+---------------------------------*/
+.center2 {
+	text-align: center;
+}
+
+.center2 h1 {
+	background-color: #c0c0c0;
+	opacity: 0.4;
+	padding: 20px;
+	border-radius: 20px;
+	color:black;
+}
+
+.center2 table {
+	margin-left: auto;
+    margin-right: auto;
+
+}
+
+.center2 tr{
+	background-color: #a69abd;
+}
+
+.center2 td{
+	padding: 10px;
+}
+
+.emp {
+	background-color: gray;
 }
 /*--------------------------------
 共通部分

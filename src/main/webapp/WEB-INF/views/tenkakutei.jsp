@@ -9,17 +9,18 @@
 		<meta charset="UTF-8">
 		<title>発注完了画面</title>
 	</head>
-	<body style="background-color: gray;">
-		<div class="paymentcomp">
+	<body>
+		<div class="emp">
 			<jsp:include page="headeremp.jsp"/>
-				<div class="paymentcomptitle">
+				<div class="center2">
 					<h1>発注完了</h1>
-				</div>
+
 				<div class="fade-in-text">
-					<p>発注完了しました</p>
+					発注完了しました
 					<img src="resources/image/お辞儀.png"/>
 				</div>
-				<p><a href="<c:url value='master' />">従業員用ページトップ</a></p>
+				<a href="<c:url value='master' />">従業員用ページトップ</a>
+				</div>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>
