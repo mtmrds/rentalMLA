@@ -325,7 +325,6 @@ public class MembersDao {
 	            transactionManager.commit(transactionStatus);
 	            return true;
 	        } else {
-	            // 在庫がない場合はエラーメッセージを表示してfalseを返す
 	            System.out.println("在庫が不足しています。");
 	            return false;
 	        }
