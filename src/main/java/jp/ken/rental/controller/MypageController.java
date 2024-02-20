@@ -122,12 +122,12 @@ public class MypageController {
 		model.addAttribute("rentalList", membersDao.getRentalList());
 		return "ordersItem";
 	}
-	@RequestMapping(value = "/showOrders", method = RequestMethod.POST)
+	@RequestMapping(value = "/showOrders", method = RequestMethod.POST, params = "dl")
 	public String ordersItemPost(@RequestParam("ordersNo") Integer ordersNo) {
 		membersDao.removeOrders(ordersNo);
 		return "redirect:/showOrders";
 	}
-	@RequestMapping(value = "/returnItem", method = RequestMethod.POST)
+	@RequestMapping(value = "/showOrders", method = RequestMethod.POST, params = "back")
 	public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
 		int upQuantity = membersDao.getRentalQuantity(rentalNo);
 		membersDao.returnItem(rentalNo, upQuantity);
