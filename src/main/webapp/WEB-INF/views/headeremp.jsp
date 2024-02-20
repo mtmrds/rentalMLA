@@ -14,7 +14,7 @@
 			</div>
 		 	<!-- 各種ページのリンク -->
 		 	<div class="linkpage">
-		 		<a href="orderHistory">発注履歴・発注取消</a>｜<a href="nagabuchi">今月の長渕剛</a>　
+		 		<a href="orderHistory">発注履歴・発注取消</a>｜<a href="search">一般レンタル
 			 </div>
 			<div class="loginname">
 				<p>
