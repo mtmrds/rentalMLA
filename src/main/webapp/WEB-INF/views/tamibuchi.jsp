@@ -33,7 +33,6 @@
 				<span>う</span>
 				<span>！</span>
 			</div>
-
 			<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			<jsp:include page="footer.jsp"/>
 
