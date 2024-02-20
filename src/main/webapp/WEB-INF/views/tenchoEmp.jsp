@@ -24,7 +24,7 @@
 							<form:input path="itemNo"/>
 							<label for="name"><strong>タイトル</strong></label>
 							<form:input path="title"/>
-							<input type="submit" value="在庫一覧（仮）" class="btn">
+							<input type="submit" value="在庫一覧" class="btn">
 						</div>
 						<div>
 							<c:out value="${message}"/>
