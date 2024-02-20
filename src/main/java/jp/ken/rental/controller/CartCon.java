@@ -19,6 +19,7 @@ import jp.ken.rental.model.ItemModel;
 @Controller
 @SessionAttributes({"loginModel", "cartList", "membersList", "memberModel"})
 public class CartCon {
+
 	@Autowired
 	private MembersDao membersDao ;
 
@@ -37,23 +38,22 @@ public class CartCon {
 	@RequestMapping(value = "/cart", method = RequestMethod.POST, params = "index")
 	String viewCart2(Model model) {
 		model.addAttribute("membersList", membersDao.getCartList());
-
+		//空チェック
 		if (membersDao.getCartList().isEmpty()) {
 			model.addAttribute("message", "買い物カゴが空です");
 			return "cartcontent";
 		}
 		return "rentalCheck";
 	}
+	//カート追加完了時の処理
 	@RequestMapping(value = "/cart", method = RequestMethod.POST, params = "end")
 	String rentalConfirm(@ModelAttribute("cartList") List<Members> cartList, Model model, SessionStatus sessionStatus) {
-
 	    // カートが空の場合はエラーメッセージを表示してカートコンテンツページにリダイレクト
 	    if (cartList == null || cartList.isEmpty()) {
 	        model.addAttribute("message", "カートが空です");
 	        return "redirect:/cart";
 	    }
-
-	    // カート内の商品情報をorderテーブルに挿入する処理を実行
+	    // カート内の商品情報をorderテーブルに挿入する処理を実行。例外対処
 	    try {
 	        for (Members member : cartList) {
 	            // orderテーブルに商品情報を挿入する処理を実行
@@ -72,6 +72,7 @@ public class CartCon {
 	        return "redirect:/cart";
 	    }
 	}
+	//カートに追加した商品を削除する
 	@RequestMapping(value = "/cart", method = RequestMethod.POST, params = "delete")
 	String viewCart4(@RequestParam("delete") String delete, @RequestParam("historyNo") int historyNo, Model model) {
 	    if (delete != null && delete.equals("削除")) {

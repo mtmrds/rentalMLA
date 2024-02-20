@@ -19,14 +19,21 @@ import jp.ken.rental.model.LoginModel;
 @Controller
 @SessionAttributes({"loginModel", "memberModel"})
 public class MypageController {
+
 	@Autowired
 	private MembersDao membersDao;
 
+	//マイページを表示するGETリクエストを処理。セッションからログイン情報を取得し、ユーザーの情報を表示
+	//HttpSessionからloginModelという名前の属性を取得
+	//getAttributeメソッドでセッションから指定された名前の属性を取得
+	//HttpSessionオブジェクトであるsessionから、"loginModel"という名前の属性を取得し、LoginModel型の変数loginModelにキャスト
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
 	public String showMyPage(Model model, HttpSession session) {
 	    LoginModel loginModel = (LoginModel)session.getAttribute("loginModel");
-
+	    //ログインモデルがnullでないかつメールアドレスがnullでない場合に、メールアドレスを使用してユーザーをデータベースから検索
 	    if (loginModel != null && loginModel.getMail() != null) {
+	    	//loginModelがnullでない場合は、getMail()メソッドを使用してログインモデルからメールアドレスを取得
+	    	//メールアドレスがnullでない場合、そのメールアドレスを持つユーザーをデータベースから取得
 	        Members member = membersDao.getMembersByMail(loginModel.getMail());
 
 	        if (member != null) {
@@ -49,6 +56,7 @@ public class MypageController {
 	    }
 	    return "mypage";
 	}
+	//アカウントを削除するPOSTリクエストを処理。ログイン中のユーザーのアカウントを削除し、セッションをクリアしてログインページにリダイレクト
 	@RequestMapping(value = "/deleteAccount", method = RequestMethod.POST)
 	public String deleteAccount(Model model, SessionStatus sessionStatus,
 								@ModelAttribute("loginModel") LoginModel loginModel) {
@@ -67,9 +75,14 @@ public class MypageController {
 	    }
 	    return "mypage";
 	}
+	//アカウント情報を編集するPOSTリクエストを処理。ユーザーの新しい情報を取得し、データベースに保存。
+	//パスワードが一致しない場合やデータベースの更新に失敗した場合にエラーメッセージを表示
+	//@RequestParam("confirmPassword") String confirmPassword　→　確認用のパスワードを表すパラメータ。
+	//このパラメータは、新しいパスワードと一致するかどうかを確認するために使用。
 	@RequestMapping(value = "/editAccount", method = RequestMethod.POST)
-	public String editAccount(@ModelAttribute("memberModel") Members member, @RequestParam("confirmPassword") String confirmPassword, Model model, HttpSession session) {
-
+	public String editAccount(@ModelAttribute("memberModel") Members member,
+								@RequestParam("confirmPassword") String confirmPassword,
+								Model model, HttpSession session) {
 	    LoginModel loginModel = (LoginModel) session.getAttribute("loginModel");
 
 	    if (loginModel != null && loginModel.getMail() != null) {
@@ -87,6 +100,8 @@ public class MypageController {
 	                    return "mypage";
 	                }
 	            }
+	            //ユーザーが提供した新しいアカウント情報を、既存のメンバーオブジェクトに設定
+	            //memberオブジェクトから取得した値を、既存のexistingMemberオブジェクトの対応するフィールドに設定
 	            existingMember.setName(member.getName());
                 existingMember.setZip(member.getZip());
                 existingMember.setAddress(member.getAddress());
@@ -116,17 +131,22 @@ public class MypageController {
 	    System.out.println("マイページへ飛ぶ");
 	    return "mypage";
 	}
+	//レンタル商品の履歴とレンタル中の商品を表示する
 	@RequestMapping(value = "/showOrders", method = RequestMethod.GET)
 	public String ordersItemGet(Model model) {
 		model.addAttribute("ordersList", membersDao.getOrdersList());
 		model.addAttribute("rentalList", membersDao.getRentalList());
 		return "ordersItem";
 	}
+	//レンタル中の商品履歴を削除する
+	//@RequestParam("ordersNo") Integer ordersNoは、リクエストパラメータから注文番号（ordersNo）を受け取る
 	@RequestMapping(value = "/showOrders", method = RequestMethod.POST, params = "dl")
 	public String ordersItemPost(@RequestParam("ordersNo") Integer ordersNo) {
 		membersDao.removeOrders(ordersNo);
 		return "redirect:/showOrders";
 	}
+	//レンタル中の商品を返却し、myrentalテーブルから削除する。movItemテーブルの商品在庫を返却分追加する
+	//@RequestParam("rentalNo") Integer rentalNoは、リクエストパラメータから注文番号（rentalNo）を受け取る
 	@RequestMapping(value = "/showOrders", method = RequestMethod.POST, params = "back")
 	public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
 		int upQuantity = membersDao.getRentalQuantity(rentalNo);

@@ -62,7 +62,6 @@ public class MembersDao {
 				return null;
 			}
 	}
-	//nameだった部分をmailに修正
 	public Members getMembersByUserPass(String mail, String password){
 			String sql = "SELECT * FROM members WHERE mail = ? AND password = ?;";
 			Object[] parameters = { mail, password};
@@ -317,7 +316,6 @@ public class MembersDao {
 	        transactionStatus = transactionManager.getTransaction(transactionDefinition);
 	        // 商品の在庫を取得
 	        int currentStock = jdbcTemplate.queryForObject(getStockSql, new Object[]{itemNo}, Integer.class);
-
 	        // 在庫が選択された数量以上ある場合
 	        if (currentStock >= quantity) {
 	            // 在庫を減らす
@@ -325,13 +323,12 @@ public class MembersDao {
 	            transactionManager.commit(transactionStatus);
 	            return true;
 	        } else {
-	            // 在庫がない場合はエラーメッセージを表示してfalseを返す
+	            // 在庫がない場合はエラーメッセージを表示
 	            System.out.println("在庫が不足しています。");
 	            return false;
 	        }
 	    } catch (EmptyResultDataAccessException e) {
 	        e.printStackTrace();
-
 	        // トランザクションロールバック
 	        if (transactionStatus != null) {
 	            transactionManager.rollback(transactionStatus);
@@ -339,7 +336,6 @@ public class MembersDao {
 	        return false;
 	    } catch (Exception e) {
 	        e.printStackTrace();
-
 	        // トランザクションロールバック
 	        if (transactionStatus != null) {
 	            transactionManager.rollback(transactionStatus);
@@ -406,7 +402,7 @@ public class MembersDao {
                 transactionManager.commit(transactionStatus);
                 return true;
 	            } else {
-	            	// 在庫がない場合はエラーメッセージを表示してfalseを返す
+	            	// 在庫がない場合はエラーメッセージを表示
 	                System.out.println("在庫が不足しています。");
 	            return false;
 	            }
@@ -466,7 +462,7 @@ public class MembersDao {
 		List<Members> tenCartList = jdbcTemplate.query(sql, membersMapper);
 		return tenCartList;
 	}
-	//従業員用カートテーブル。インサート
+	//従業員用カートテーブル
 	public int insertTenCart(Members members) {
 		String sql = "INSERT INTO tencart(title, type, item_no, orderItem, image) VALUES(?, ?, ?, ?, ?)";
 	    Object[] parameters = { members.getTitle(), members.getType(), members.getItemNo(), members.getOrderItem(), members.getImage() }; // 追加
@@ -557,8 +553,7 @@ public class MembersDao {
 	    Integer itemNo = jdbcTemplate.queryForObject(selectSql, Integer.class, rentalNo);
 
 	    if (itemNo == null) {
-	        // レンタルNoに対応する商品が見つからない場合のエラーハンドリング
-	        return 0; // または適切なエラー処理を行う
+	        return 0;
 	    }
 	    //movItemテーブルのquantityを更新する
 	    String updateSql = "UPDATE movItem SET quantity = quantity + ? WHERE item_no = ?";

@@ -26,7 +26,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center"><strong>郵便番号</strong></td><!-- ハイフンありなしは検討します  元村 -->
+								<td align="center"><strong>郵便番号</strong></td>
 								<td colspan="4">
 									<form:input path="zip" size="50" /><br>
 									例）1020074

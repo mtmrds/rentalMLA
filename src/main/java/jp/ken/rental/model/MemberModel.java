@@ -32,7 +32,6 @@ public class MemberModel {
 	private String mail;
 
 	@NotEmpty(message = "誕生日が未入力です")
-	//@DateFormat(message = "誕生日を正しく入力して下さい",groups = Group1.class)
 	private String birthday;
 
 	@NotEmpty(message = "カード情報が未入力です")

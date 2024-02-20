@@ -28,15 +28,8 @@
     			</div>
 				<div class="center">
     				<h1>マイページ</h1>
- <!--下記は現在の情報表示と更新する際の入力フォーム。form:formの閉じタグの位置は変更NG（更新ができなくなる）-->
     				<form:form modelAttribute="memberModel" method="post" action="editAccount">
     					<table border="1">
-        					<!-- 会員IDはシステム側で使うため一旦コメントアウト
-        					<tr>
-            					<td><strong>会員No</strong></td>
-            					<td><p>${memberId}</p></td>
-        					</tr>
-        					-->
 	        				<tr>
 	           					<td align="center"><strong>氏名</strong></td>
 	           					<td colspan="4"><form:input path="name" /></td>

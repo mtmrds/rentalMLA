@@ -10,7 +10,6 @@
 		<meta charset="UTF-8">
 		<title>レンタルサイト 商品一覧画面</title>
 	</head>
-		<!-- バックが従業員ページいじるために背景色変えてます　元村 -->
 		<body style="background-color: gray;">
 			<!--  <div class="itemsearch"> -->
 			<jsp:include page="headeremp.jsp"/>
