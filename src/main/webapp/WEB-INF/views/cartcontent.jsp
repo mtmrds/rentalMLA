@@ -55,9 +55,9 @@
 						</c:otherwise>
 						</c:choose>
 						<p>${message}</p>
-						<br>
+
+				<a href="<c:url value='top' />">トップに戻る</a>
 				</div>
-				<p><a href="<c:url value='top' />">トップに戻る</a></p>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>
