@@ -12,17 +12,17 @@
 			<jsp:include page ="logotitle.jsp" />
 
 		 	<!-- 各種ページのリンク -->
-		 	<div class="linkpage">
+		 	<div class="linkmenu">
 		 		<a href="orderHistory">発注履歴・発注取消</a>｜<a href="search">一般レンタル</a>
 			 </div>
 			<div class="loginname">
-				<p>
+
 					<c:if test="${not empty loginModel.name}">
 						お疲れ様です、㊓${loginModel.name}さん
 						<br>
 						<a href="logout">ログアウト</a>
 					</c:if>
-				</p>
+
 			</div>
 		 </form:form>
 	</div>
