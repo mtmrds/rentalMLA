@@ -9,12 +9,13 @@
 		<meta charset="UTF-8">
 		<title>カートに入れるか選択</title>
 	</head>
-		<body style="background-color: gray;">
-			<div class="cartadd">
+		<body>
+			<div class="emp">
 				<jsp:include page="headeremp.jsp"/>
+				<div class="center2">
 				<h1>発注する商品の数量を入力してください</h1>
 				<form:form modelAttribute="itemModel">
-  					<table border="1">
+  					<table>
         			<!-- タイトルと商品画像 -->
         				<tr>
             				<th>ID</th>
@@ -29,13 +30,16 @@
             				<td>${pickItem.type }</td>
         				</tr>
     				</table>
+    				<br>
     				商品ID：${pickItem.itemNo }
     				<input type="hidden" id="itemNo" name="itemNo" value="${pickItem.itemNo}">
     				<label for="additionalQuantity">数量:</label>
     				<input type="text" id="orderItem" name="orderItem"><br><br>
     				<input type="submit" value="発注確定">
 				</form:form>
-				<p><a href="<c:url value='master' />">トップに戻る</a></p>
+				<br>
+				<a href="<c:url value='master' />">トップに戻る</a>
+				</div>
 			<jsp:include page="footer.jsp"/>
 		</div>
 	</body>
