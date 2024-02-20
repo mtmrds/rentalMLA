@@ -12,7 +12,7 @@
 	<body style="background-color: gray;">
     	<jsp:include page="headeremp.jsp"/>
 	    <form:form modelAttribute="itemModel">
-    	   	<table border="1">
+    	   	<table>
             	<tr>
            			<th>ID</th>
                		<th>画像</th>
