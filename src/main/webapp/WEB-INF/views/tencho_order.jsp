@@ -40,6 +40,7 @@
            		</c:forEach>
        		</table>
     	</form:form>
+    	<a href="master">従業員画面作業へ</a>
     	</div>
     	<jsp:include page="footer.jsp"/>
     	</div>
