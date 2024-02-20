@@ -40,7 +40,8 @@
 					<div class="topcontents">
 						<jsp:include page ="news.jsp" />
 						<jsp:include page ="topic.jsp" />
-						<jsp:include page ="insta.jsp" /><!-- CSS後で修正ベースUP‐手島 -->
+						<jsp:include page ="insta.jsp" />
+						<jsp:include page = "Ntube.jsp" />
 					</div>
 			</form:form>
 			<jsp:include page="footer.jsp" />
