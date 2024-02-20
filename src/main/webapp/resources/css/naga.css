@@ -24,10 +24,14 @@
 
 .nagalogin {
 	background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
+	text-align: right;
+	font-size: 25px;
 }
 
 .nagalogout {
 	background: linear-gradient(90deg, #b39855 0%, #fff9e6 50%, #b39855 100%);
+	text-align: right;
+	font-size: 25px;
 }
 
 /*流れる画像設定*/
