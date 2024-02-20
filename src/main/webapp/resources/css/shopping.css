@@ -325,6 +325,12 @@ body {
 	overflow-y: scroll;
 }
 
+/*Ntube*/
+.Ntube {
+	overflow-y: scroll;
+}
+
+
 /*インスタ*/
 .instalogin p {
 	text-align: center;
