@@ -127,7 +127,7 @@ public class MypageController {
 		membersDao.removeOrders(ordersNo);
 		return "redirect:/showOrders";
 	}
-	@RequestMapping(value = "/returnItem", method = RequestMethod.POST)
+	@RequestMapping(value = "/showOrders", method = RequestMethod.POST)
 	public String returnItemPost(@RequestParam("rentalNo") Integer rentalNo) {
 		int upQuantity = membersDao.getRentalQuantity(rentalNo);
 		membersDao.returnItem(rentalNo, upQuantity);
