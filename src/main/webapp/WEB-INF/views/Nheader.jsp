@@ -6,10 +6,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 <!-- ヘッダー -->
-<div>
-		<link href="resources/css/naga.css" rel="stylesheet">
+<link href="resources/css/naga.css" rel="stylesheet">
 
-		<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio>
+<audio src="resources/music/naga1.m4a" type="audio/m4a" autoplay loop></audio>
 <!-- ログイン後は名前を表示 -->
 <div>
 	<form:form modelAttribute="memberModel">
@@ -30,13 +29,14 @@
 		</div>
 		<!--ログイン後だけ表示できる-->
 		<div class="nagalogout">
-			<p>
+
 				<c:if test="${not empty loginModel.name}">
-					<p>ようこそ、${loginModel.name}さん</p>
-					<p><a href="logout">ログアウト</a></p>
-					<p><a href="nagabuchi">今月の長渕剛</a></p>
+					ようこそ、${loginModel.name}さん
+				<br>
+					<a href="logout">ログアウト</a>
+					<a href="nagabuchi">今月の長渕剛</a>
 				</c:if>
-			</p>
+
 		</div>
 	</form:form>
 </div>
