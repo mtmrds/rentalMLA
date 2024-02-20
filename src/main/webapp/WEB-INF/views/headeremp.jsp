@@ -9,7 +9,7 @@
 	</head>
 	<div>
 		<form:form modelAttribute="memberModel">
-			<jsp:include page ="logotitle.jsp" />
+			<!--<jsp:include page ="logotitle.jsp" />-->
 
 		 	<!-- 各種ページのリンク -->
 		 	<div class="linkmenu">
