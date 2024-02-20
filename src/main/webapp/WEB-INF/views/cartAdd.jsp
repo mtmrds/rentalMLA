@@ -38,9 +38,10 @@
 				</table>
 				<p><input type="submit" value="カートIN"  class="btn-b" ></p>
 				</form:form>
-			</div>
+
 			<a href="<c:url value='search' />">検索画面に戻る</a>
 			<a href="<c:url value='top' />">トップに戻る</a>
+			</div>
 			<jsp:include page="footer.jsp"/>
 	</div>
 	</body>
