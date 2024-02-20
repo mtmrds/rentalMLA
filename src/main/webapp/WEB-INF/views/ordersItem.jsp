@@ -62,7 +62,7 @@
 					<td><c:out value="${listRental.ordersItem}"/></td>
 					<td><c:out value="${listRental.ordersDate}"/></td>
 					<td>
-						<form action="returnItem" method="post">
+						<form action="showOrders" method="post">
 							<input type="hidden" name="rentalNo" value="${listRental.rentalNo}" />
 							<input type="submit" name="back" value="返却">
 						</form>
